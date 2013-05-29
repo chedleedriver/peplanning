@@ -1,0 +1,12 @@
+<?php if ($this->level>=5){?>
+<script>
+$(function() {
+   $(window).bind('load', function() {
+      $("div.downloadLink").delay(5000).append('<iframe width="0" height="0" frameborder="0" src="/resource-downloads/<?php echo $this->download?>"></iframe>'); 
+   });
+});
+</script>
+<div class="downloadLink">Your download will start shortly, if it fails to start click <a href="/resource-downloads/<?php echo $this->download?>">here to download</a></div>
+<?php } else {?>
+<div class="downloadLink">You must be subscribed, for details on how to click <a>here</a></div>
+<?php } ?>

@@ -1,0 +1,90 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<!-- user input dialog -->
+<div id="Register_content">
+        <div id="Register_header"><span>Register for PE Planning - it's FREE</span></div>
+        <div id="Register_subheader" class="overlay_subheader">
+            <?php if ($this->reason){
+                switch($this->reason){
+                    case "none":
+                        $head = "<span>Already registered with PEplanning? <a href=\"javascript:void(0);\" onclick=\"javascript:showOverlay('Login')\">Sign In!</a></span>";
+                        $top_para = "<p>We'd like to show you how we can support you with your PE</p>";
+                        break;
+                    case "create_limit":
+                        $head = "<span>To Plan further lessons with PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "print_limit":
+                        $head = "<span>To experience more of PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "edit_limit":
+                        $head = "<span>To experience more of PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "print_lesson_limit":
+                        $head = "<span>To print lesson plans with PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "edit_lesson_limit":
+                        $head = "<span>To edit lesson plans with PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "rename_lesson_limit":
+                        $head = "<span>To rename lesson plans with PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                    case "delete_lesson_limit":
+                        $head = "<span>To delete lesson plans with PEplanning you need to register with us</span>";
+                        $top_para = "<p>PEplanning is a subscription service. to give everyone the opportunity to further explore our service without committment, you must become a 'Registered User'</p>";
+                        break;
+                }
+                } else {
+                    $head = "<span>Already registred with PEplanning? <a href=\"javascript:void(0);\" onclick=\"javascript:showOverlay('Login')\">sign in</a></span>";
+                    $top_para = "<p>We'd like to show you how we can support you with your PE</p>";
+                }
+                echo $head;?>
+        </div>
+        <table id="popup_register_contents">
+            <tr>
+                <td valign="top"><div id="Register_info">
+                        <?php echo $top_para;?>
+                        <p>By registering you can: </p>
+                        <table id="">
+                            <tr>
+                                <td class="tick_small"/><td>Create more lesson plans</td>
+                            </tr>
+                            <tr>
+                                <td class="tick_small"/><td>Use our lesson editing service</td>
+                            </tr>
+                            <tr>
+                                <td class="tick_small"/><td>See how quick and easy lesson planning is with our service</td>
+                            </tr>
+                        </table>                       
+                        <p> Are you the schools PE Coordinator? click <a href="/learn/slide3">here</a></p>
+                        <p>To find out why we are asking you to register click <a href="javascript:void(0)" onclick="javascript:showRestriction('<?php echo $this->reason?>')">here</a></p>
+                    </div>
+                </td>
+                <td><div id="Register_form"><?php echo $this->form; ?></div></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="reg_form_buttons">
+                        <div id="button_area_reg"><a href="javascript:void(0)" onclick="javascript:doProcess('Register');"><span>Register</span></a></div>
+                        <div id="button_area_cancel_reg"><a href="javascript:void(0)" onclick="javascript:closeIt('Register_div');"><span>Cancel</span></a></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>

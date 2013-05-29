@@ -1,0 +1,101 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="slide_3_more">
+                                    <table>
+                                        <tr>
+                                            <td valign="top">
+                                                <h2>Pay for PE Planning</h2>
+                                                <div class="my-rule"></div>
+                                                    <p>The PEplanning service is available in 2 ways.</p>
+                                                    
+                                                   <ul class="no_bullet">                                                        
+                                                        <li><a href="/learn/peschool"><img border="0" src="/img/resources_img_title_peschool.png"></a></li><br>
+                                                        <table id="peschool_subscription_table">
+                                                            <tr>
+                                                                <td class="table_header">School Size</td><td class="table_header" style="width:170px;">Annual Subscription Cost</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="desc">5 classes or fewer</td>
+                                                                <td class="prices">&pound;100</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="desc">6 to 12 classes</td>
+                                                                <td class="prices">&pound;175</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="desc">More than 12 classes</td>
+                                                                <td class="prices">&pound;225</td>
+                                                            </tr>
+                                                        </table><br>
+                                                        <li><a href="/learn/peteacher"><img border="0" src="/img/resources_img_title_peteacher.png"></a></li>
+                                                            <p>&pound;60 + VAT</p>
+                                                            </ul>
+                                                <h2>To place your order...</h2>
+                                                <div class="my-rule" style="font-family:Arial; font-style:normal; font-size:13px;">
+                                                <p>Complete the form below and a representative from PE Planning will be in touch to discuss payment options</p>
+                                                <p>If you are unsure about anything feel free to contact Matthew and he will be happy to answer any questions you may have.</p>
+                                                <p>Email: <a href="mailto:matthew.dykes@peplanning.org.uk">matthew.dykes@peplanning.org.uk</a><br />
+                                                   Call: +44 (0) 1535 644 777</p>
+
+                                                   <div id="Payment_form"><?php echo $this->form; ?>
+                                                   <div id="payment_form_buttons">
+                                                    <div id="payment_btn">
+                                                        <a href="javascript:void(0)" onclick="javascript:doProcess('payment');"><span>Submit Your Order</span></a>
+                                                    </div>
+                                                   </div>
+                                                   </div>
+                                                
+                                                <!--<p><a href="/createaplan">Try it yourself</a> or <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">register</a></p>-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>

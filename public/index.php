@@ -11,6 +11,10 @@ defined('APPLICATION_ENV')
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     realpath(APPLICATION_PATH . '/../library'),
+    realpath('/var/simplesamlphp/lib'),
+//    realpath(APPLICATION_PATH . '/forms'),
+//    realpath(APPLICATION_PATH . '/models'),
+//    realpath(APPLICATION_PATH . '/models/DbTable'),
     get_include_path(),
 )));
 

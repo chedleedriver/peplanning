@@ -1,0 +1,97 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div class="submenu_learnmore">
+                                                    <a href="/staffroom"><span>back to the Staffroom</span></a>
+                                                </div>
+                                                <div>
+                                                    <h2>How to use the Staffroom</h2>
+                                                    <p>In the Staffroom you can print, edit and work with the lesson plans you have created</p>
+                                                    <h3>To get going….</h3>
+                                                    <p>Select the Unit you wish to work with from My Plans – click on it</p>
+                                                    <ul>
+                                                        <li>The Unit will then appear in the central area</li>
+                                                    </ul>
+                                                    <p>Once the unit of work is open you have several options:</p>
+                                                    <ul>
+                                                        <li><b>Print a specific lesson plan</b> – Click on the ‘print icon’ next to the lesson you want to print</li>
+                                                        <ul><li>A PDF of this lesson will be created for you to print</li></ul>
+                                                        <li><b>Edit a specific lesson plan</b> – Click on ‘edit’ next to the lesson you want to edit</li>
+                                                        <ul><li>You will be taken to the editing screens where you can tailor the lesson to meet your requirements</li></ul>
+                                                        <li><b>Print the entire unit of work</b> – in the ‘Options’ drop down menu you can select to print all the lesson plans in this unit of work</li>
+                                                        <li><b>Edit the entire unit of work</b> – in the ‘Options’ drop down menu you can select to ‘Edit’ Unit. This will take you to the editing screens where you can tailor all the lessons in the unit to meet your requirements</li>
+                                                        <li><b>Rename a unit of work</b> – in the ‘Options’ drop down menu you can select to ‘Rename’ a unit of work. The unit will be saved in My Plans under this new name </li>
+                                                        <li><b>Delete a unit of work</b> – in the ‘Options’ drop down menu you can select to ‘Delete’ a unit of work. Doing this will permanently remove the unit from My Plans </li>
+                                                        <li><b>Load the assessment for the unit of work</b> – at the bottom of each unit of work is the link to the assessment options for the unit. Clicking on this will take you to these options</li>
+                                                        <li><b>Additional Lesson Resources</b> – clicking on the title of an individual lesson plan will give you an overview of the lesson and any available ‘additional resources’ specific to this lesson can be downloaded</li>
+                                                    </ul>
+                                                    <p>Resource Support</p>
+                                                    <p><a href="mailto:Richard.Logan@peplanning.org.uk">Richard.Logan@peplanning.org.uk</a></p>
+                                                    <p>IT Support</p>
+                                                    <p><a href="mailto:Steve@peplanning.org.uk">Steve@peplanning.org.uk</a></p>
+
+                                                    <p>Or</p>
+
+                                                    <p>Telephone Enquires:</p>
+                                                    <p>All Enquires</p>
+                                                    <p>01535 644 777</p>
+
+                                                    <p>Also see our <a href="/learn/faqs">FAQ section</a> for further information</p>
+                                                    <p>or <a href="/resource-downloads/Guide to using PEplanning v1.0.pdf">click here</a> to obtain our detailed guide to using PEplanning</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>

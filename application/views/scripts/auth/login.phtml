@@ -1,0 +1,140 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } 
+?>
+
+<!-- fixed items -->
+    <table id="page_position">
+        <tr>
+            <td>
+                <table id="centerpage_shell" align="center">
+                    <tr>
+                        <td>
+                            <table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title"></div>
+                                        <div id="videoplayer_content">
+                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                            <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
+                                        </div>
+                                    </td>
+                                </tr>                                
+                            </table>
+                            <table id="register_btn">
+                                <tr>
+                                    <td>
+                                        <a href="/auth/subscribe"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                                                        
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- end of fixed items -->
+
+<div id="main_feature">
+        <!-- slides -->        
+        <div class="scrollable" id="scroller">
+            <div id="left_grad"></div>
+            <div class="items">                
+                <div id="slide1">
+                    <a id="link_poster_homepage" href="/createaplan" style="color:#1aa6ab; "><span>5 step planning processing</span></a>
+                    <div id="slide1_content">
+                        <div id="slide1_learnmore" class="learnmore"><a href="/aboutus"><span>learn more</span></a></div>
+                        
+                        <!-- For IE7 only -->
+                        <div id="get_started" class="ie7">
+                            <table id="register_btn">
+                                <tr>
+                                    <td>
+                                        <a href="javascript:void(0)" onclick="javascript:boxAction('freetrial');"><span>free trial button</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title"></div>
+                                        <div id="videoplayer_content">
+                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                            <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
+                                        </div>
+                                    </td>
+                                </tr>                                
+                            </table>                          
+                        </div>
+                        <!-- end IE7 only -->
+                    </div>
+                </div>
+                
+            </div>
+            <div id="right_grad"></div>
+        </div>        
+        <br clear="all" />            
+        <div id="feature_arrows">
+            <div id="arrow_left" class="prev browse left"><span>left</span></div>
+            <div id="arrow_right" class="next browse right"><span>right</span></div>
+        </div>
+</div>    
+
+<div id="Login_div">
+<!-- user input dialog -->
+    <div id="Login_content" class="overlay_content">
+        <div id="Login_header" class="overlay_header"><span>Sign In</span></div>
+        <div id="Login_subheader" class="overlay_subheader"><span>Don't have a PEplanning account? <a href="/auth/subscribe">Try it free!</a></span></div>
+        <div id="Login_title" class="overlay_title"><span>Sign in with your PEplanning Account</span></div>
+        <div id="Login_form"><?php echo $this->form; ?></div>
+        <div id="Login_footer" class="overlay_footer">
+            <?php 
+                if($this->fail==1) echo "<span class='error'>incorrect username or password</span> - ";
+                if($this->fail==2) echo "<span class='error'>please enter a username <u>and</u> password</span> - ";
+            ?>
+            <a href="javascript:void(0)" onclick="javascript:forgotPassword();">forgotten password?</a>
+        </div>
+        <div id="Login_buttons">
+            <div id="button_area"><a href="javascript:void(0)" onclick="javascript:doProcess('Login');"><span>Sign In</span></a></div>
+            <div id="btn_cancel"><a href="javascript:void(0)" onclick="javascript:closeIt('Login_div');"><span>Cancel</span></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#Login_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#Login_div").overlay().load();
+    $("#password").keyup(function(event){
+    if(event.keyCode == 13){
+        doProcess('Login');
+    }
+    });
+</script>
