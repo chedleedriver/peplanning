@@ -57,53 +57,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                }
                   
             }
-/*        try {
-            // Autoload simplesamlphp classes.
-            if(!file_exists("/var/simplesamlphp/lib/_autoload.php")) {
-            throw(new Exception("simpleSAMLphp lib loader file does not exist: ".
-            "/var/simplesamlphp/lib/_autoload.php"));
-            }
- 
-            include_once("/var/simplesamlphp/lib/_autoload.php");
-            $as = new SimpleSAML_Auth_Simple('rm');
- 
-            // Take the user to IdP and authenticate.
-            $as->requireAuth();
-            $valid_saml_session = $as->isAuthenticated();
- 
-            } catch (Exception $e) {
-            // SimpleSAMLphp is not configured correctly.
-            throw(new Exception("SSO authentication failed: ". $e->getMessage()));
-            return;
-            }
- 
-        if (!$valid_saml_session) {
-            // Not valid session. Redirect a user to Identity Provider
-            try {
-                $as = new SimpleSAML_Auth_Simple('rm');
-                $as->requireAuth();
-                } catch (Exception $e) {
-                // SimpleSAMLphp is not configured correctly.
-                throw(new Exception("SSO authentication failed: ". $e->getMessage()));
-            return;
-                }
-            }
- 
-        // At this point, the user is authenticated by the Identity Provider, and has access
-        // to the attributes received with SAML assertion.
-        $attributes = $as->getAttributes();
- 
-        // The print_r response of $as->getAttributes() look something like this:
-        //Array (
-        //      [first_name] => Array ( [0] => John )
-        //      [last_name] => Array ( [0] => Doe )
-        //      [email] => Array ( [0] => john.doe@webtrafficexchange.com )
-        //)
-         
-        $firstname = $attributes['first_name'][0];
-        $lastName = $attributes['last_name'][0];
-        $email = $attributes['email'][0];
-*/    }
+    }
     
     protected function _initView()
     {
