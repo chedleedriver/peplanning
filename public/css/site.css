@@ -338,7 +338,7 @@ ul {list-style: square; }
 
         #myplans {border:0px dashed #000; width:248px; max-height:518px; background-color:#f6f6f6;}
 
-        #myplans_header {background: url('/img/bg_myplans_header') no-repeat 0 0; width:248px; height:77px; }
+        #myplans_header {background: url('/img/bg_myplans_header.png') no-repeat 0 0; width:248px; height:77px; }
         #myplans_header span {visibility: hidden;}
 
         #myplans_content {border:0px dashed #000; width:248px; font-size:13px; font-weight:bold; color:#808386;}
@@ -540,16 +540,16 @@ ul {list-style: square; }
             font-size:12px;
             color: #000;
         }
-        #Register_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:731px; height:512px; text-align:left;}
-        #Login_div {background: url('/img/bg_panel_signin') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
-        #password_div {background: url('/img/bg_panel_signin') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
-        #edituser_div {background: url('/img/bg_panel_signin') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
-        #feedback_div {background: url('/img/bg_panel_reg') no-repeat;display:none; width:731px; height:512px; text-align:left;}
-        #Subscribe_div {background: url('/img/bg_panel_reg') no-repeat;display:none; width:731px; height:512px; text-align:left;}
-        #sub_message_div {background: url('/img/bg_panel_reg') no-repeat;display:none; width:731px; height:512px; text-align:left;}
-        #Trial_div {background: url('/img/bg_panel_trial');background-repeat: no-repeat; background-size: 731px 630px; display:none; width:731px; height:630px; text-align:left; top:-5px;}
-        #New_Unit_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:659px; height:493px; text-align:left;}
-        #contact_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:659px; height:493px; text-align:left;}
+        #Register_div {background: url('/img/bg_panel_reg.png') no-repeat; display:none; width:731px; height:512px; text-align:left;}
+        #Login_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
+        #password_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
+        #edituser_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
+        #feedback_div {background: url('/img/bg_panel_reg.png') no-repeat;display:none; width:731px; height:512px; text-align:left;}
+        #Subscribe_div {background: url('/img/bg_panel_reg.png') no-repeat;display:none; width:731px; height:512px; text-align:left;}
+        #sub_message_div {background: url('/img/bg_panel_reg.png') no-repeat;display:none; width:731px; height:512px; text-align:left;}
+        #Trial_div {background: url('/img/bg_panel_trial.png');background-repeat: no-repeat; background-size: 731px 630px; display:none; width:731px; height:630px; text-align:left; top:-5px;}
+        #New_Unit_div {background: url('/img/bg_panel_reg.png') no-repeat; display:none; width:659px; height:493px; text-align:left;}
+        #contact_div {background: url('/img/bg_panel_reg.png') no-repeat; display:none; width:659px; height:493px; text-align:left;}
 
 /* right */
 a.right 	{ background-position: 0 -30px; clear:right; margin-right: 0px;}
