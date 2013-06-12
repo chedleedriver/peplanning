@@ -1,11 +1,18 @@
 <?
-define('FPDF_FONTPATH','/var/www/html/tplan/font/');
-define ('IMAGE_PATH','/var/www/html/tplan/images/');
-define ('DIAGRAM_PATH','diagrams/');
-define ('RESOURCE_PATH','resources/');
-define ('DOC_ROOT','/tplan/');
-define ('FILE_ROOT','/var/www/html/tplan/');
-define ('HOME_URL','http://www.peplanning.org.uk/');
-$tp = mysql_pconnect("localhost", "tp", "enquiry") or trigger_error(mysql_error(),E_USER_ERROR);
-mysql_select_db("tplan", $tp);
+defined('FPDF_FONTPATH')
+    || define('FPDF_FONTPATH',realpath(dirname(__FILE__) . '/tplan/font/'));
+defined('IMAGE_PATH')
+    || define ('IMAGE_PATH',realpath(dirname(__FILE__) . '/tplan/images/'));
+defined('DIAGRAM_PATH')
+    || define ('DIAGRAM_PATH','diagrams/');
+defined('RESOURCE_PATH')
+    || define ('RESOURCE_PATH','resources/');
+defined('DOC_ROOT')
+    || define ('DOC_ROOT','/tplan/');
+defined('FILE_ROOT')
+    || define ('FILE_ROOT',realpath(dirname(__FILE__) . '/tplan/'));
+defined('HOME_URL')
+    || define ('HOME_URL',$_SERVER['URI']);
+$tp = mysql_pconnect("peplanning-db.my.phpcloud.com", "peplanning", "ferd1nand") or trigger_error(mysql_error(),E_USER_ERROR);
+mysql_select_db("peplanning", $tp);
 ?>
