@@ -5,7 +5,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     
 /**
 * init jquery view helper, enable jquery, jqueryui, jquery ui css
-*/
+
 
     protected function _initJquery() {
 
@@ -22,7 +22,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      ->uiEnable()
      ->setCdnSsl(true);//enable ui
 
-}
+}*/
     protected function _initSession()
     {
         if(!Zend_Auth::getInstance()->hasIdentity())  
