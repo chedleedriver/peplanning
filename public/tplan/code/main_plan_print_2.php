@@ -96,15 +96,15 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     if ($activity_equipment) {
         if ($activity_equipment['equipment']) {
             if (!in_array($activity_equipment['equipment'],$equipment_arr)) {
-            if (!$equipment) $equipment=$activity_equipment['equipment'];
+            if (!isset($equipment)) $equipment=$activity_equipment['equipment'];
             else $equipment=$equipment.", ".$activity_equipment['equipment'];
             $equipment_arr[]=$activity_equipment['equipment'];}
             }
     }
 //    print_r(mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]));
 }
-if(($print_all=='y')&&($lesson_num==1)) $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
-elseif ($print_all=='y') $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
+if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+elseif (isset($print_all)=='y') $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
 else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
