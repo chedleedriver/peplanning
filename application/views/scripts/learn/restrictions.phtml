@@ -1,0 +1,139 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="restrictions">
+                                    <table id="restrictions_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div id="restrictions">
+                                                    <table id="restrictions_content">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <h2>PE Planning Service Restrictions and Control</h2>
+                                                                <ul class="res-section">
+                                                                    <li><a href="#res_why">Why do we limit access?</a></li>
+                                                                    <li><a href="#res_how">How do we limit access?</a></li>
+                                                                    <li><a href="#res_listing">What access do we control?</a></li>
+                                                                    <li><a href="#res_register">Registering and Subscribing</a></li>
+                                                                </ul>
+                                                                <h3 id="res_why">Why do we Limit Access?</h3>
+                                                                    <div class="res-answers"><p>PEplanning is a service that schools, teachers and coaches subscribe to. As with any new product some people like to test a new service before they buy it. We have therefore set the website up so that anyone browsing the site is a ‘Guest’ and can experience the full range of PEplanning services, to see how it can benefit them.</p></div>
+                                                                    <h3 id="res_how">How do we limit access?</h3>
+                                                                    <div class="res-answers">
+                                                                        <p>Guest users are able to experience every part of PEplannings services once. You can create one unit of work, following the 5 steps. You will then be able to print and edit the first lesson in this unit and access the relevant assessment modules</p>
+                                                                        <p>To further access our services you can ‘Register for Free’, there is no further obligation to purchase when you do this. You will then be able to create more units of work, printing and editing the first lesson in each unit you create. This allows you to see the range of topics we have to offer.</p>
+                                                                        <p>Are you your schools PE Coordinator? If so let us know and we can arrange a full access trail for you, <a href="/learn/slide3">click here to find out more</a></p>
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                <h3 id="res_listing">What Access do we Control?</h3>
+                                                                <ul>
+                                                                        <li><b>Creating Plans limit</b>
+                                                                            <ul>
+                                                                                <li>Guest User – you can only create one unit of work to see how quick and easy the 5 steps are to create a full PE unit of work</li>
+                                                                                <li>Registered User – you can create as many units of work as you like and are able to print and edit the first lesson in any of the units you create</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                        </li>    
+                                                                    <li><b>Printing Lessons limit</b>
+                                                                            <ul>
+                                                                                <li>Guest User – you can only print lesson one of the first unit of work you create</li>
+                                                                                <li>Registered User – you can print the first lesson of any unit of work you create. There is no limit on the number of units you can create</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                        </li>  
+                                                                    <li><b>Editing Lesson limit</b>
+                                                                            <ul>
+                                                                                <li>Guest User – you can only edit lesson one of the first unit of work you create</li>
+                                                                                <li>Registered User – you can edit the first lesson of any unit of work you create. There is no limit on the number of units you can create</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                     </li>
+                                                                     <li><b>Assessment limit</b>
+                                                                            <ul>
+                                                                                <li>Guest User – you can only access the assessment modules for the one unit of work you have created</li>
+                                                                                <li>Registered User – You can access the assessment modules for all the units of work you create. There is no limit on the number of units you can create</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                        </li>
+                                                                <li><b>Renaming unit limit</b>
+                                                                            <ul>
+                                                                                <li>You can only rename a unit of work you have created as a registered or subscribed user</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                        </li>
+                                                                <li><b>Deleting unit limit</b>
+                                                                            <ul>
+                                                                                <li>You can only delete a unit of work you have created as a registered or subscribed user</li>
+                                                                            </ul>
+                                                                            <p><a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Register</a> now to lift this restriction</p>
+                                                                            
+                                                                        </li>
+                                                                </ul> 
+                                                                <h3 id="res_register">Registering and Subscribing</h3>
+                                                                    <div class="res-answers">
+                                                                    <p>Registering – you can <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">register</a> to PEplanning for free and there is no obligation to go any further if you do register. Registering simply allows you to further experience the services we have to offer and see how they can benefit you.</p>
+                                                                    <p>Subscribing – if you like what you have seen you can subscribe to our service. To find out more about subscribing <a href="/pricesandservices">here</a> or <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">here</a> to subscribe</p>
+                                                                    </div>
+                                                                <p><i>If you any further concerns over the service restrictions and controls <a href="/contactus">Contact us here</a></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>

@@ -1,0 +1,82 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="peteacher_more">
+                                    <table id="peteacher_more_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <h2>PEteacher - The individual option</h2>
+                                                <h2>What is PE Teacher?</h2>
+                                                    <p>The PE resources for an individual class teacher, PEteacher allows you to use our service to deliver high quality physical education to your class.</p>
+                                                <h2>What you get - the benefits</h2>
+                                                    <ul>
+                                                        <li>One PEplanning account for your personal use</li>
+                                                        <li>Access to all our PE topics at all National Curriculum levels</li>
+                                                        <li>Assessment for Learning for your class</li>
+                                                        <li>Access to our personal lesson planning service where you can create plans to suit your exact requirements</li>
+                                                    </ul>
+                                                <!--<h2>Sign me up</h2>-->
+                                                    <p>To see how easy planning your PE is with PEteacher have a go for yourself <a href="/createaplan">here </a></p>
+                                                    <p>If you would like any further information about our PEteacher service, please feel free to contact Matthew:</p>
+                                                    <p>Email to <a href="mailto:matthew.dykes@peplanning.org.uk">matthew.dykes@peplanning.org.uk</a> or telephone 01535 644 777</p>
+                                                    <p>Or take a look at our <a href="/learn/faqs">Frequently Asked Questions</a>
+                                                <h2>Why choose PE Teacher?</h2>
+                                                    <ul>
+                                                        <li>To quickly and easily plan high quality PE for your class</li>
+                                                        <li>Deliver your PE with confidence</li>
+                                                    </ul>
+                                                        <p><a href="/createaplan">Try it yourself</a> or <a href="/auth/subscribe">Try it for free</a></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+

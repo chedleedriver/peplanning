@@ -1,0 +1,75 @@
+<div id="view-content">
+	<?php 
+        function checkBase64Encoded($encodedString) {
+    $length = strlen($encodedString);
+    
+    // Check every character.
+    for ($i = 0; $i < $length; ++$i) {
+      $c = $encodedString[$i];
+      if (
+        ($c < '0' || $c > '9')
+        && ($c < 'a' || $c > 'z')
+        && ($c < 'A' || $c > 'Z')
+        && ($c != '+')
+        && ($c != '/')
+        && ($c != '=')
+      ) {
+        // Bad character found.
+        return false;
+      }
+    }
+    // Only good characters found.
+    return true;
+  }
+function no_magic_quotes($query) {
+        $data = explode("\\",$query);
+        $cleaned = implode("",$data);
+        return $cleaned;
+}
+function utf2ascii($s)
+  {
+      static $tbl =
+      array(
+      "\xc3\xa1"=>"a","\xc3\xa4"=>"a","\xc4\x8d"=>"c","\xc4\x8f"=>"d",
+      "\xc3\xa9"=>"e","\xc4\x9b"=>"e","\xc3\xad"=>"i","\xc4\xbe"=>"l",
+      "\xc4\xba"=>"l","\xc5\x88"=>"n","\xc3\xb3"=>"o","\xc3\xb6"=>"o",
+      "\xc5\x91"=>"o","\xc3\xb4"=>"o","\xc5\x99"=>"r","\xc5\x95"=>"r",
+      "\xc5\xa1"=>"s","\xc5\xa5"=>"t","\xc3\xba"=>"u","\xc5\xaf"=>"u",
+      "\xc3\xbc"=>"u","\xc5\xb1"=>"u","\xc3\xbd"=>"y","\xc5\xbe"=>"z",
+      "\xc3\x81"=>"A","\xc3\x84"=>"A","\xc4\x8c"=>"C","\xc4\x8e"=>"D",
+      "\xc3\x89"=>"E","\xc4\x9a"=>"E","\xc3\x8d"=>"I","\xc4\xbd"=>"L",
+      "\xc4\xb9"=>"L","\xc5\x87"=>"N","\xc3\x93"=>"O","\xc3\x96"=>"O",
+      "\xc5\x90"=>"O","\xc3\x94"=>"O","\xc5\x98"=>"R","\xc5\x94"=>"R",
+      "\xc5\xa0"=>"S","\xc5\xa4"=>"T","\xc3\x9a"=>"U","\xc5\xae"=>"U",
+      "\xc3\x9c"=>"U","\xc5\xb0"=>"U","\xc3\x9d"=>"Y","\xc5\xbd"=>"Z");
+      return strtr($s, $tbl);
+  }
+
+        
+        
+        foreach($this->themes as $theme){
+                $notes_out='';
+                if (checkBase64Encoded($this->escape($theme->theme_notes))) $notes_arr=unserialize(base64_decode($this->escape($theme->theme_notes)));
+                else $notes_arr=unserialize($this->escape($theme->theme_notes));
+                if ($notes_arr==false) $notes_arr=explode('^',$this->escape($theme->theme_notes));
+		for ($n=0;$n<count($notes_arr);$n++)
+		{ if ($notes_arr[$n]) $notes_out=$notes_out.no_magic_quotes(utf2ascii($notes_arr[$n]))."<br><br>";}
+		echo $theme_description=str_replace("^","-",$notes_out);
+		}?>
+    <br /><br />
+    <?php if(sizeof($this->resources)>0)
+
+         echo "<span class='title_resources'>Resources</span>";
+        foreach($this->resources as $resource)
+        {
+            //echo $this->escape($resource->id)."</br>";
+            //echo $this->escape($resource->content_id)."</br>";
+        if($this->escape($resource->type)!='url') $location=substr($this->escape($resource->location),14);
+        else $location=$this->escape($resource->location);
+        
+        ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><span><?echo $this->escape($resource->description); ?></span></a></p><?
+             //echo $this->escape($resource->name)."</br>";
+        }?>
+</div>
+<div id="inform_panel"><div class="panel_cell" id="panel_cell_1"><a href="javascript:void(0)" onclick="$.alerts._hide();printLesson(<?php echo $this->lessonNum.",".$this->unitId?>);"><span>print</span></a></div><div class="panel_cell" id="panel_cell_2"><a href="javascript:void(0)" onclick="$.alerts._hide();editLesson(<?php echo $this->unitId.",".$this->lessonNum.",'newPlan',0,0"?>);"><span>edit</span></a></div><div class="panel_cell" id="panel_cell_3"><a href="javascript:void(0)" onclick="$.alerts._hide();"><span>close</span></a></div></div>
+					

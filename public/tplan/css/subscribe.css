@@ -1,0 +1,83 @@
+.text_field:active,.text_field:focus{outline-color:-moz-use-text-color;outline-style:none;outline-width:0;}
+.error-occurred{color:#801b1b;border-color:#e5a3a3;background-color:#ffcfcf;padding:3px 10px;-webkit-border-radius:5px;-moz-border-radius:5px;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+body#new.account .subpage #content .wrapper,body#create.account .subpage #content .wrapper{min-height:550px;height:auto;}
+body#new.account.ie7 .subpage #content .wrapper,body#create.account.ie7 .subpage #content .wrapper{min-height:580px;}
+.content-heading{margin:20px 25px 25px;}
+.content-heading .heading{line-height:1;padding-bottom:24px;}
+.content-heading .heading h2{font-family:Gill, Helvetica, sans-serif;font-size:26px;font-weight:bold;letter-spacing:-1px;margin:0!important;}
+.content-heading .heading .sign-in{float:right;font-size:10px;color:#666;}
+.content-heading .heading p{color:#829f5e;}
+.content-heading p{font-size:14px;color:#666;}
+#invite_by_email .input-text-too-long{padding-top:1em;height:1em;color:red;}
+#content-footer{position:relative;margin:0;}
+#content-footer-header{width:87px;height:77px;position:absolute;top:-40px;left:620px;}
+.subpage #content p#content-footer-navigation{width:100%;text-align:center;margin:0 1em 1em 1em;}
+#content-footer-content{background-color:#DDEEF6;padding:15px 0 10px 0;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;}
+body#new.account #content-footer-content,body#create.account #content-footer-content{padding:30px 0 20px;}
+#content-footer-content p{font:11px/18px Lucida Grande,Arial,sans-serif;color:#797b79;text-align:center;margin:0!important;}
+#signup-form input.text_field:focus{border-color:#aaa;background-color:#fafafa;}
+#signup-form input.text_field{font-family:Gill, Helvetica, sans-serif;font-size:18px;width:300px;}
+#signup-form table{border-collapse:collapse;margin-bottom:20px;}
+#signup-form td,#signup-form th{padding:0 0 15px 0;vertical-align:top;}
+#signup-form th{font-size:16px;font-weight:normal;text-align:right;color:#666;padding-right:10px;width:200px;vertical-align:middle;}
+#signup-form th .printable-version{font-size:12px;}
+#signup-form td #tos{height:5em;border-color:#DDD;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:8px 0 8px 8px;display:block;overflow-x:hidden;overflow-y:auto;border:1px solid #DDD;}
+#signup-form td #tos,#signup-form td .tos-agree{width:455px;}
+#signup-form td #tos:focus{border-color:#AAA;}
+body.ie7 #signup-form th{font-weight:bold;}
+#signup-form td.col-field{width:300px;}
+#signup-form .fieldWithErrors input{background-color:inherit;}
+#signup-form td.col-help{width:450px;}
+#signup-form td.col-help .label-box{display:none;font-size:12px;color:#666;border:1px solid #dbdbdb;border-left:2px solid #dbdbdb;-moz-border-radius-topright:10px;-moz-border-radius-bottomright:10px;-webkit-border-top-right-radius:10px;-webkit-border-bottom-right-radius:10px;padding:.85em 10px .85em 30px;line-height:1.45em;background:#f2f2f2 url(https://www.peplanning.org.uk/tplan/images/signup_info.gif) no-repeat 13px 50%;text-transform:lowercase;}
+.ie #signup-form td.col-help .label-box{padding:.85em 10px .80em 30px;}
+#signup-form td.col-help .label-box .pstrength-text{text-transform:none;font-weight:normal;}
+#signup-form td.col-help .label-box.password-invalid{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_info.gif);padding-left:30px;}
+#signup-form td.col-help .label-box.password-weak{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_check_weak.gif);padding-left:30px;color:#80461b;border-color:#e5bda3;background-color:#ffe2cf;}
+#signup-form td.col-help .label-box.password-good{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_check_good.gif);padding-left:30px;color:#80621b;border-color:#e5d5a3;background-color:#fff0cf;}
+#signup-form td.col-help .label-box.password-strong{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_check_strong.gif);padding-left:30px;color:#78801b;border-color:#e3e5a3;background-color:#f5ffcf;}
+#signup-form td.col-help .label-box.password-verystrong{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_check.gif);padding-left:30px;color:#2a801b;border-color:#e1efdb;background-color:#f0fee9;}
+body.ie7 #signup-form td.col-help .label-box{margin-top:1px;}
+#signup-form table td.col-help .label-box.good{background-image:url(https://www.peplanning.org.uk/tplan/images/signup_check.gif);border-color:#e1efdb;background-color:#f0fee9;}
+#signup-form table td.col-help .label-box.error{background-image:none;padding-left:10px;color:#801b1b;border-color:#e5a3a3;background-color:#ffcfcf;}
+#signup-form tr.captcha-solved td p{color:#801b1b;border:1px solid #dbdbdb;background-color:#f2f2f2;margin-top:5px;padding:5px 0 5px 10px;-webkit-border-radius:5px;-moz-border-radius:5px;color:#666;}
+#signup-form tr.full-name th,#signup-form tr.full-name td,#signup-form tr.telephone th,#signup-form tr.telephone td,#signup-form tr.school-name th,#signup-form tr.school-name td,#signup-form tr.address-1 th,#signup-form tr.address-1 td,#signup-form tr.postcode th,#signup-form tr.postcode td,#signup-form tr.screen-name th,#signup-form tr.screen-name td{padding-bottom:0;}
+#signup-form tr.email th,#signup-form tr.email td{padding-bottom:0;}
+#signup-form tr.email-updates td{color:#666;}
+#signup-form tr.email-updates td input,#signup-form tr.email-updates td label{vertical-align:middle;}
+#signup-form tr.captcha th{padding-top:9%;}
+#signup-form tr.email-updates td #scoop{width:450px;}
+#signup-form .field-desc{font-size:10px;display:block;color:#666;padding-top:.3em;}
+#signup-form strong.valid{color:#2c811d;}
+#signup-form strong.invalid{color:#963b3b;}
+.captcha label{color:#666;display:inline-block;width:140px;}
+.captcha label.title{color:#666;margin:75px 10px 0 0;vertical-align:top;width:140px;}
+.captcha p.instructions{color:#666;font-size:13px;margin-bottom:25px!important;}
+.captcha #recaptcha_widget{display:inline-block;}
+.captcha .footer-buttons{display:inline-block;margin:10px 5px;}
+.recaptcha_is_showing_audio .recaptcha_only_if_image,.recaptcha_isnot_showing_audio .recaptcha_only_if_audio,.recaptcha_had_incorrect_sol .recaptcha_only_if_no_incorrect_sol,.recaptcha_nothad_incorrect_sol .recaptcha_only_if_incorrect_sol{display:none;}
+#signup-form #recaptcha_widget{position:relative;font-size:12px;width:468px;overflow:hidden;}
+#signup-form #recaptcha_data{width:306px;}
+#signup-form #recaptcha_image{border:1px solid #ddd;border-bottom:none;padding:2px;padding-bottom:0;-webkit-border-top-left-radius:5px;-moz-border-radius-topleft:5px;}
+#signup-form #recaptcha_response_field{width:288px;-webkit-border-top-left-radius:0;-moz-border-radius-topleft:0;-webkit-border-bottom-right-radius:0;-moz-border-radius-bottomright:0;-webkit-border-top-right-radius:0;-moz-border-radius-topright:0;font-weight:bold;}
+#signup-form #recaptcha_response_field:focus{background-color:#fafafa;border-color:#999;}
+#signup-form #recaptcha_controls{position:absolute;width:141px;font-size:10px;color:#666;border-top:1px solid #dbdbdb;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background-color:#f2f2f2;padding:8px 10px 8px 10px;right:0;top:0;bottom:0;-moz-border-radius-topright:10px;-moz-border-radius-bottomright:10px;-webkit-border-top-right-radius:10px;-webkit-border-bottom-right-radius:10px;}
+body.ie7 #signup-form #recaptcha_controls{bottom:1px;}
+#signup-form #recaptcha_controls h3{margin:0 0 .5em 0;font-size:10px;}
+#signup-form #recaptcha_controls ul{margin:0 0 8px 0;padding:0;list-style-type:none;}
+#signup-form #recaptcha_controls li{margin-bottom:3px;}
+#signup-form #recaptcha_controls li a{padding-left:18px;}
+#signup-form #recaptcha_controls li.reload a{background:url(https://www.peplanning.org.uk/tplan/images/signup_captcha_reload.gif) no-repeat 0 50%;}
+#signup-form #recaptcha_controls li.recaptcha_only_if_image a{background:url(https://www.peplanning.org.uk/tplan/images/signup_captcha_audio.gif) no-repeat 0 50%;}
+#signup-form #recaptcha_controls p{margin:0;}
+#signup-form #recaptcha_controls #recaptcha_powered,#signup-form #recaptcha_controls #recaptcha_help{font-size:9px;color:#999;}
+#signup-form #recaptcha_controls #recaptcha_help{margin-top:5px;}
+#signup-form #recaptcha_errors{margin-top:10px;}
+#signup-form #discoverable_by_email{color:#666;margin-top:5px;}
+#signup-form .instruction{color:#666;font-size:10px;margin-top:5px;}
+body.ie7 #signup-form #recaptcha_errors{width:450px;}
+.side-section{width:400px;margin:0 0 0 0;line-height:15px;font-size:11px;-moz-border-radius:3px 3px 3px 3px;border:1px solid #CCCCCC;padding:4px 5px;}
+.content-section fieldset.common-form th{padding-left:0;}
+.side-section p,p.explanation{line-height:15px!important;margin-bottom:10px!important;color:#555;}
+p.explanation{padding:0 0 0 0;margin-bottom:5px!important;}

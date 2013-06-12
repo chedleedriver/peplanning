@@ -1,0 +1,16 @@
+<div id="view-content" class="ui-widget">
+    <select id="combobox">
+        <option value=""></option>
+	<?php 
+        if($this->notopic) echo "you must tell me what topic";  
+        else {
+        if($this->noaction) echo "you must tell me what to do";
+            else {
+            foreach ($this->items as $item) :
+            echo "<option value=".$item->id.">".$item->description."</option>";
+            endforeach;
+            }
+        }            
+        ?>
+        </select>
+</div>

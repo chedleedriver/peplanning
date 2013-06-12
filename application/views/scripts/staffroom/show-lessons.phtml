@@ -1,0 +1,72 @@
+
+                    <div id="menu_options">
+                        <div id="options_items_btn" onclick='showOptions("#options_items")'></div>
+                        <div id="options_items">
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",0,\"newPlan\",0,".$this->unit_level?>)'>Edit Unit</a></li>
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:printLesson(<?php echo "0,".$this->unit_id?>)'>Print Unit</a></li>
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:assessUnit(<?php echo $this->unit_topic.",".$this->unit_level.",".$this->unit_id?>)'>Assess Unit</a></li>
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:renameUnit(<?php echo $this->unit_id?>)'>Rename Unit</a></li>
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:deleteUnit(<?php echo $this->unit_id?>)'>Delete Unit</a></li>
+                            <!--<li><a href='javascript:void(0)' onclick='javascript:createUnit()'>Create Unit</a></li>-->
+                            <li><a class="options_item" href='javascript:void(0)' onclick='javascript:showOptions("#options_items");'>Close</a></li>
+                        </div>
+                    </div>
+                    <div id="mylessons_title">
+                        <table>
+                            <tr>
+                                <td><span id="mylessons_subtitle" style="font-size:11px; color:#808386;">YOUR OPENED UNIT OF WORK</span></td>
+                            </tr>
+                            <tr>
+                                <td><label id="mylessons_name"><?php echo $this->unit_description?></label></td>
+                            </tr>
+                        </table>                       
+                        
+                    </div>
+                                   
+                     <div id="mylessons_content">
+                        <?php $num_planned_lessons = count($this->lessons);
+                        $lesson_status=array();
+                        for($n=1;$n<=$this->unit_numlessons;$n++)
+                        {
+                            $lesson_status[$n]='u';
+                        }
+                        if ($num_planned_lessons>0){
+                            $l=0;
+                            //print_r($this->lessons);
+                            foreach($this->lessons as $lesson){
+                                $lesson_status[$lesson->lesson_num]=$l;
+                                $l++;
+                                }
+                            for($i=1;$i<=$this->unit_numlessons;$i++){
+                            $j=$i+1;
+                            if ((!$lesson_status[$i])||($lesson_status[$i]!='u'))
+                                { ?>
+                                <div class="lesson_listing"><p>
+                                <a href='javascript:void(0)' onclick='javascript:showLessonDetails(<?php echo $this->unit_topic.",\"".$this->unit_level."\",".$this->escape($this->lessons[$lesson_status[$i]]->theme_id).",\"Lesson ".$i." - ".$this->escape($this->lessons[$lesson_status[$i]]->theme)."\",".$this->escape($this->lessons[$lesson_status[$i]]->lesson_num).",".$this->unit_id.",".$this->escape($this->lessons[$lesson_status[$i]]->id)?>);'><?php echo "Lesson ".$i.". ".$this->escape($this->lessons[$lesson_status[$i]]->theme).""?></a>
+                                <a href='javascript:void(0)' onclick='javascript:printLesson(<?php echo $this->escape($this->lessons[$lesson_status[$i]]->lesson_num).",".$this->unit_id?>)'class='printer'><span>print plan</span></a>
+                                <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$this->escape($this->lessons[$lesson_status[$i]]->lesson_num).",\"newPlan\",".$this->escape($this->lessons[$lesson_status[$i]]->id).",\"".$this->unit_level."\""?>)' style='font-size:11px; font-weight:normal; color:#666; padding-right:10px; float:right;' >edit</a></p>
+                                </div>
+                                <?php }
+                            else {?>
+                            <div class="lesson_listing"><p>
+                            <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$i.",\"newPlan\",0,".$this->unit_level?>)'><?php echo "Lesson ".$i.". Not yet planned"?></a>
+                            <a href='javascript:void(0)' onclick='javascript:jAlert("you must edit this lesson before you can print it")'class='printer'><span>print plan</span></a>
+                            <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$i.",\"newPlan\",0,".$this->unit_level?>)' style='font-size:11px; font-weight:normal; color:#666; padding-right:10px; float:right;' >edit</a></p>
+                            </div>
+                            <?php }
+                            } 
+                        }else {
+                            for($i=1;$i<=$this->unit_numlessons;$i++){?>
+                            <div class="lesson_listing"><p>
+                            <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$i.",\"newPlan\",0,".$this->unit_level?>)'><?php echo $i.". Not yet planned"?></a>
+                            <a href='javascript:void(0)' onclick='javascript:jAlert("you must edit this lesson before you can print it")'class='printer'><span>print plan</span></a>
+                            <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$i.",\"newPlan\",0,".$this->unit_level?>)' style='font-size:11px; font-weight:normal; color:#666; padding-right:10px; float:right;' >edit</a></p>
+                            </div>
+                            <?php }
+                        } ?>
+                    </div>
+<script>
+$(".lesson_listing:even").css("background-color", "#ffffff");
+$(".lesson_listing:odd").css("background-color", "#eeeeee");
+</script>
+                                         

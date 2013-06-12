@@ -1,0 +1,151 @@
+<? session_start();
+include ("functions.php");
+$mode=$_GET['mode'];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Plan</title>
+<link href="/tplan/styles/tp.css" rel="stylesheet" type="text/css" />
+<link href="/tplan/styles/default.css" rel="stylesheet" type="text/css" />
+<link href="/tplan/styles/lightbox.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="JavaScript" type="text/javascript" src="/tplan/code/prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="/tplan/code/lightbox.js"></script>
+
+<body>
+<form id="tplan" name="tplan">
+<table class="plan" width="1256" border="1" cellpadding="0" cellspacing="0" id="table_plan">
+  <tr>
+    <td colspan="2" scope="title"><a href="text.html" class="lbOn">School</a></td>
+    <td width="168" scope="title">Topic</td>
+    <td width="89" scope="title">Year</td>
+    <td width="92" scope="title">Class</td>
+    <td width="168" scope="title">Level</td>
+  </tr>
+  <tr>
+    <td colspan="2" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"><input type="text" id="school" name="school" size="100%"/></td>
+    <td width="168" id="topic_cell" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+    <td width="89" id="year_cell" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+    <td id="class_cell" width="92" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+    <td width="168" id="level_cell" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+  </tr>
+  <tr>
+    <td width="242" scope="title">Theme</td>
+    <td id="theme_cell" colspan="5" scope="entry" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" scope="title">Learning Objectives</td>
+    <td colspan="2" scope="title">Equipment</td>
+    <td colspan="2" scope="title">TA</td>
+  </tr>
+  <tr>
+    <td scope="title">1.</td>
+    <td scope="entry" id="objectives_cell_1"  width="481" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td scope="entry" id="equipment_cell_1" colspan="2" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+    <td scope="entry" colspan="2" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" rowspan="3" valign="top"><input type="text" id="ta" name="ta" size="30" /></td>
+  </tr>
+  <tr>
+    <td scope="title">2.</td>
+    <td scope="entry" id="objectives_cell_2"  width="481" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td scope="entry" id="equipment_cell_2" colspan="2" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+  </tr>
+  <tr>
+    <td scope="title">3.</td>
+    <td scope="entry" id="objectives_cell_3"  width="481" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td scope="entry" id="equipment_cell_3" colspan="2" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'"></td>
+  </tr>
+  <tr>
+    <td colspan="6" scope="title">Cross Curricular Opportunities</td>
+  </tr>
+  <tr>
+    <td scope="title">Literacy Keywords</td>
+    <td scope="entry" id="keywords_cell" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="20">&nbsp;</td>
+    <td scope="title">Citizenship</td>
+    <td scope="entry" id="citizenship_cell"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="20" colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="title">Numeracy</td>
+    <td scope="entry" id="numeracy_cell"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="10">&nbsp;</td>
+    <td scope="title">ICT</td>
+    <td scope="entry" id="ict_cell"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="10" colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="title">SEN</td>
+    <td scope="entry" id="sen_cell"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="10">&nbsp;</td>
+    <td scope="title">Risk Assessment</td>
+    <td scope="entry" id="risk_assessment_cell"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="10" colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="title">Lesson Part</td>
+    <td scope="title">Content</td>
+    <td scope="title">Teaching Points</td>
+    <td scope="title">Strand</td>
+    <td scope="title">Image</td>
+    <td scope="title">Time</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_1"  onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'" height="30">&nbsp;</td>
+    <td id="content_cell_1" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_1" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_1" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_1" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_1" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_2" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_2" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_2" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_2" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_2" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_2" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_3" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_3" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_3" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_3" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_3" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_3" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_4" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_4" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_4" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_4" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_4" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_4" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_5" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_5" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_5" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_5" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_5" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_5" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_6" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_6" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_6" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_6" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_6" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_6" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="entry" id="lesson_part_cell_7" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="content_cell_7" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="point_cell_7" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="strand_cell_7" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="image_cell_7" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+    <td id="time_cell_7" scope="entry" height="30" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+  <tr>
+    <td scope="title">Evaluation</td>
+    <td scope="entry" colspan="5" onMouseOver="this.style.backgroundColor='#FFFFFF'" onMouseOut="this.style.backgroundColor='#FFFFCC'">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

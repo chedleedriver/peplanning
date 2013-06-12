@@ -1,0 +1,40 @@
+/* {{{ Text and Links */
+
+body {
+	font-family: "Lucida Grande",Verdana,Sans-serif;
+        font-size:11px;
+	color: #000000;
+}
+a:link,
+a:visited {
+	font-family: Arial;
+        text-decoration: none;
+	color: #000000;
+}
+
+a:hover,
+a:active {
+	font-family: "Lucida Grande",Verdana,Sans-serif;
+        text-decoration: none;
+	color: #829f5e;
+}
+.teacher {
+        width: 1000px;
+        margin: auto;
+	text-align: left;
+	position: relative;
+	z-index: 1;
+        font-family: "Lucida Grande",Verdana,Sans-serif;
+        font-size:14px;
+	text-decoration: none;
+	color: #999999;
+}
+.teacher a {
+        font-family:"Lucida Grande",Verdana,Sans-serif;
+        font-size:10px;
+	text-decoration: none;
+	color: #999999;
+}
+.teacher a:hover {
+        color: #829f5e;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <script type="text/javascript">
+
+function ajaxRequest(){
+ var activexmodes=["Msxml2.XMLHTTP", "Microsoft.XMLHTTP"] //activeX versions to check for in IE
+ if (window.ActiveXObject){ //Test for support for ActiveXObject in IE first (as XMLHttpRequest in IE7 is broken)
+  for (var i=0; i<activexmodes.length; i++){
+   try{
+    return new ActiveXObject(activexmodes[i])
+   }
+   catch(e){
+    //suppress error
+   }
+  }
+ }
+ else if (window.XMLHttpRequest) // if Mozilla, Safari etc
+  return new XMLHttpRequest()
+ else
+  return false
+}
+
+var mygetrequest=new ajaxRequest()
+mygetrequest.onreadystatechange=function(){
+ if (mygetrequest.readyState==4){
+  if (mygetrequest.status==200 || window.location.href.indexOf("http")==-1){
+   document.getElementById("result").innerHTML=mygetrequest.responseText
+  }
+  else{
+   alert("An error has occured making the request")
+  }
+ }
+}
+var namevalue=encodeURIComponent(document.getElementById("name").value)
+var agevalue=encodeURIComponent(document.getElementById("age").value)
+mygetrequest.open("GET", "tutorial.php?name="+namevalue+"&age="+agevalue, true)
+mygetrequest.send(null)
+
+
+function ajaxget(){
+var mygetrequest=new ajaxRequest()
+mygetrequest.onreadystatechange=function(){
+if (mygetrequest.readyState==4){
+if (mygetrequest.status==200 || window.location.href.indexOf("http")==-1){
+document.getElementById("result").innerHTML=mygetrequest.responseText
+}
+else{
+alert("An error has occured making the request")
+}
+}
+}
+var namevalue=encodeURIComponent(document.getElementById("name").value)
+var agevalue=encodeURIComponent(document.getElementById("age").value)
+mygetrequest.open("GET", "tutorial.php?name="+namevalue+"&age"+agevalue, true)
+mygetrequest.send(null)
+
+}
+
+
+
+</script>
+
+
+
+<form method="get" action="">
+name: <input type="text" id="name" name="name" size="25" /> <br />
+age: &nbsp; <input type="text" id="age" name="age" size="25" /> <br />
+<input type="button" value="submit" onClick="ajaxget()" />
+</form>
+
+<p><b>Result:</b><span id="result"></span></p>
+</html>

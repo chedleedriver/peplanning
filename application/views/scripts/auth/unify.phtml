@@ -1,0 +1,39 @@
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="activate">
+                                    <table id="activate_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div>
+                                                    <?php if($this->sso==1){?>
+                                                            <h2>We have logged you in using your RM Unify </h2>
+                                                            <h2>You will now be taken to the 'Create a Plan' page to start using PE Planning...</h2>
+                                                            <META http-equiv="refresh" content="5;URL=http://<?php echo $_SERVER['HTTP_HOST']?>/createaplan">
+                                                        <?php }
+                                                    else {?>
+                                                    <h2>Sorry but we are unable to sign in using your RM Unify credentials. Please contact your system administrator</h2>
+                                                    <?php }?>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php if($this->activated==1){?>
+
+<?php }?>

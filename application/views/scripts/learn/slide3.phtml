@@ -1,0 +1,80 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="slide_3_more">
+                                    <table id="slide_3_more_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <h2>Try PEplanning free for 30 days</h2>
+                                                <div class="my-rule">
+                                                    <p>The PEplanning free trial is a great way to experience our lesson planning service. </p>
+                                                    <p>Your free trial includes:</p>
+                                                   <ul>                                                        
+                                                        <li>Use of our unique lesson planner</li>
+                                                        <li>Access to our full range of PE topics</li>
+                                                        <li>Use of Assessment for Learning resources</li>                                                        
+                                                   </ul>
+                                                    
+                                                <div id="Trial_form"><?php echo $this->action('trial','auth'); ?></div>
+                                                
+                                                <h2>No small print...</h2>
+                                                <div class="my-rule" style="font-family:Arial; font-style:normal; font-size:13px;">
+                                                <p>There is no obligation to purchase after your free trial, all we guarantee is that you will see the positive impact PEplanning will have on your pupils.</p>
+                                                <p>However, if you are unsure about anything feel free to contact Matthew and he will be happy to answer any questions you may have.</p>
+                                                <p>Email: <a href="mailto:matthew.dykes@peplanning.org.uk">matthew.dykes@peplanning.org.uk</a><br />
+                                                   Call: +44 (0) 1535 644 777</p>
+
+                                                <!--<p><a href="/createaplan">Try it yourself</a> or <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">register</a></p>-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+

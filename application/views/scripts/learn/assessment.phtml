@@ -1,0 +1,81 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div>
+                                                    <h2>Which Assessment Should I Use</h2>
+                                                    <p>The assessment area enables you to accurately grade your class. We provide three types of assessment which directly link to the units of work you created in your ‘My Plans’, using this area will give you access to: 
+                                                    <ul>
+                                                        <li>Whole Class Assessment</li>
+                                                        <li>Individual pupil Assessment</li>
+                                                        <li>Teachers Assessment for grading the children </li>
+                                                    </ul>
+                                                    <p>If you click on any of the above you get the explanations below:</p>
+                                                    <h3>Class Assessment (Print Off)</h3>
+                                                    <p>Print ‘I CAN’ statements for sharing learning objectives, ideal for making a display at the start of your unit of work, this will allow you to visually share your objectives, enabling the children to see their progression throughout each lesson.
+</p>
+                                                    <h3>Individual Assessment (Print Off)</h3>
+                                                    <p>Print individual ‘Assessment for Learning’ worksheets, this can be used as a more thorough way for each child to track their own progress. Individual Assessment enables the children to write next to each ‘I can’ statement to show how they achieved the learning objective.
+</p>
+                                                    <h3>Teacher Assessment (Save to your Computer)</h3>
+                                                    <p>Assess each child against the learning objectives from your unit of work, simply save the Teacher Assessment spreadsheet to your computer and then enter the children’s names in your class and grade them.
+</p>
+<p><b><i>Please Note, we do not store any information about the children you are teaching in the PE Planning system</i></b></p>
+    
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
