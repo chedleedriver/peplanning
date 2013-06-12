@@ -10,7 +10,7 @@ $this->headTitle()->setSeparator(' - ');
 $this->headTitle('Delivering high quality teaching resources, for Primary School PE');
 $this->headLink()->prependStylesheet($this->baseUrl().$site_css);
 $this->headScript()->appendFile($jq_tools_js);
-//$this->headScript()->appendFile($jq_crypt_js);
+$this->headScript()->appendFile($jq_crypt_js);
 $this->headScript()->appendFile($alerts_js);
 $this->headScript()->appendFile($main_js);
 
@@ -79,7 +79,6 @@ $this->headScript()->appendFile($main_js);
         <?php echo $this->headMeta(); ?>
     </head>
     <body>
-        <?php echo $this->jQuery();?>
         <?php echo $this->headScript(); ?>
         <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
         <script type="text/javascript" charset="utf-8" src="<?php echo $protocol?>widgets.twimg.com/j/2/widget.js"></script>
