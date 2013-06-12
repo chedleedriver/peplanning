@@ -12,7 +12,7 @@ defined('DOC_ROOT')
 defined('FILE_ROOT')
     || define ('FILE_ROOT',realpath(dirname(__FILE__) . '/tplan/'));
 defined('HOME_URL')
-    || define ('HOME_URL',$_SERVER['URI']);
+    || define ('HOME_URL',$_SERVER['SERVER_NAME']);
 $tp = mysql_pconnect("peplanning-db.my.phpcloud.com", "peplanning", "ferd1nand") or trigger_error(mysql_error(),E_USER_ERROR);
 mysql_select_db("peplanning", $tp);
 ?>
