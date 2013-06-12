@@ -2256,7 +2256,6 @@ function deleteSelectedItemsFromList(sourceList)
       	}
    	}
 }
-<!--
 // Add the selected items in the parent by calling method of parent
 function addSelectedItemsToParent(properties) 
 {
