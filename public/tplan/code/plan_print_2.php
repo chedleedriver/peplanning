@@ -609,9 +609,9 @@ fwrite($pdfIn,$strContent);
 fclose($pdfIn);
 //echo("<script type='text/javascript'>window.open('/tplan/code/send_pdf_2.php?file=$file&orientation=landscape')</script>");
 // Clean up after ourselves
-$htmlFile=FILE_ROOT.'/tmp/'.$file.'.html';
-$pdfFile=FILE_ROOT.'/tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd(realpath(dirname(__FILE__)) . "/../public/tplan/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-center [page] --footer-font-size 8 $htmlFile $pdfFile"));
+$htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
+$pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
+$success=passthru(escapeshellcmd(realpath(dirname(__FILE__)) . "/../wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-center [page] --footer-font-size 8 $htmlFile $pdfFile"));
 $browsePDF=fopen($pdfFile,'r');
 $pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
