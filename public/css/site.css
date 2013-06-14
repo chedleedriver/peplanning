@@ -218,7 +218,7 @@ ul {list-style: square; }
 #contact_form {font-size:12px;color:#666; line-height:18px;width:60%; float:left; border-right:0px dashed #d0d0d0; height:400px;}
 #contact_form td, #contact_twitter td {text-align:justify; padding-right:15px; padding-top:5px;padding-bottom:5px; vertical-align:top;}
 #contact_twitter td {padding-left:15px;}
-#contact_twitter {width:40%; float:right; border-left:1px dashed #d0d0d0;}
+#contact_twitter {width:40%; border-left:1px dashed #d0d0d0;}
 #form_title {text-align:left; width:161px; height:19px; background: url('/img/title_getintouch.png') no-repeat;}
 #twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:relative; left:22px; z-index:1020;}
 #tweetbox {position:relative; top:-20px;}
