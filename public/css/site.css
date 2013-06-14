@@ -226,7 +226,7 @@ ul {list-style: square; }
 
 .twtr-join-conv {color:#808386 !important; border-bottom:1px dotted #808386;}
 .twtr-join-conv a:hover {color:#808386 !important; border-bottom:1px dotted #1aa6ab !important; text-decoration:none !important;}
-.twitter-logo {position:relative; top:-28px; background: url('/img/twitter_logo.png') no-repeat 0 0 !important; display:block; height:20px; width:100px; z-index:99999;}
+.twitter-logo {position:relative; top:-28px;  display:block; height:20px; width:100px; z-index:99999;}
 
 
 /*---- LAYOUT: GET IN TOUCH --------------------------------------------------*/
