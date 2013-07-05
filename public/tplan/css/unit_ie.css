@@ -1,0 +1,646 @@
+*
+{
+margin:0;
+padding:0;
+border:none;
+}
+
+html,body {
+	height: 100%;
+	margin: 0 0 1px;
+	padding: 0;
+}
+
+body {
+	font-family: Arial;
+	font-size: 12px;
+        behavior: url("css/csshover3.htc");
+        background-color: #ffffff;
+}
+
+td {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+th {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+ul {
+	font-family: Arial;
+	font-size: 12px;
+	font-weight:normal;
+	list-style:none;
+}
+
+li {
+	text-align:left;
+	font-size: 12px;
+/*	list-style-image: none;
+    background-repeat: no-repeat;
+    background-position: left center;*/
+  	padding-left : 15px;
+}
+
+li:hover {
+	cursor:pointer;
+	font-weight:bold;
+}
+
+p {
+	text-align:center;
+	font-size: 12px;
+}	
+input {
+	font-family: Arial;
+	font-size: 12px;
+	text-decoration: none;
+}
+h6 ul{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight:normal;
+	text-decoration:none;
+}
+a {
+	font-family: Arial;
+	font-size: 12px;
+	font-weight:normal;
+	text-decoration:none;
+}
+.bodystyle {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.small {
+	font-family: Arial;
+	font-size: 9px;
+}
+
+.medium {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.big {
+	font-family: Arial;
+	font-size: 16px;
+}
+
+.xbig {
+	font-family: Arial;
+	font-size: 24px;
+}
+
+.expanded {
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 2px;
+}
+
+.justified {
+	font-family: Arial;
+	text-align: justify;
+}
+
+.footer {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #999999;
+}
+
+.box1 {
+	padding: 3px;
+	border-width: thin;
+	border-style: solid;
+	border-color: #CCCCCC #666666 #666666 #CCCCCC;
+}
+
+.box2 {
+	font-style: italic;
+	word-spacing: 2pt;
+	padding: 3px;
+	border-width: thin;
+	border-style: solid;
+}
+.hidden {
+	visibility: hidden;
+}
+.revealed {
+	visibility: visible;
+}
+#header {
+  width: 79%;
+  margin-left:0;
+  margin-right:10%;
+  text-align:center;
+  vertical-align:middle;
+  text-shadow:#000000;
+  font-size:18px;
+  font-weight:bold;
+  font-family: Arial;
+  padding-top:20px;
+}
+#leftcol {
+  float: left;
+  width: 10%;
+  height: 500px;
+}
+#rightcol {
+  float: right;
+  width: 10%;
+  height: 500px;
+}
+#content {
+  background: #fff;
+  float: left;
+  width: 79%;
+  height: 500px;
+}
+#footer {
+  background: #fff;
+  clear: both;
+  width: 100%;
+}
+.leftcol {
+  float: left;
+  width: 40%;
+  height: 550px;
+  font-size:18px;
+  font-family: Arial;
+  border:solid;
+  border-width:1px;
+  border-color:#CCCCCC;
+  padding:10px;
+}
+.leftcol li{
+  font-size:18px;
+}
+.leftcol li:hover{
+  font-size:18px;
+  font-family: Arial;
+	font-weight:bold;
+  cursor:pointer;
+}
+.rightcol {
+	float: right;
+	width: 55%;
+	height: 550px;
+	padding:10px;
+  font-size:18px;
+  border:solid;
+  border-width:1px;
+  border-color:#CCCCCC;
+}
+#listcol* {
+  float: left;
+  width: 40%;
+  height: 500px;
+}
+#detailcol* {
+	float: right;
+	width: 60%;
+	height: 500px;
+}
+.leftactcol {
+  float: left;
+  width: 40%;
+  height: 400px;
+  font-size:12px;
+}
+.rightactcol {
+	float: right;
+	width: 55%;
+	height: 300px;
+    font-size:12px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC;
+	padding:10px; 	
+}
+.leftactcollist:hover  {
+	font-weight:bold;
+	cursor:pointer;
+}
+.rightactcollist {
+}
+.leftobjcol {
+  float: left;
+  width: 60%;
+  height: 400px;
+  font-size:12px;
+}
+.rightobjcol {
+	float: right;
+	width: 40%;
+	height: 400px;
+  font-size:12px;
+}
+.leftobjcollist:hover{
+  cursor: pointer; 
+	font-weight:bold;
+}
+.lefttopiccollist{
+  cursor: pointer; 
+}
+.lefttopiccollist:hover{
+	font-weight:bold;
+  cursor: pointer; 
+}
+.rightobjcollist {
+}
+#tabs li .ui-icon-close { 
+  float: left; 
+  margin: 0.4em 0.2em 0 0; 
+  cursor: pointer; 
+ }
+#objtabs_1 li .ui-icon-close { 
+  float: left; 
+  margin: 0.4em 0.2em 0 0; 
+  cursor: pointer; 
+ }
+.add-tab {
+  cursor:pointer;
+}
+#content_container {
+	position:absolute;
+	width: 600px;
+	margin: 0px;
+	padding: 0px; 	
+	font-size: 12px;
+	height:400px;
+	
+}
+#content_container p {
+	text-align:left;
+}
+#content_container b {
+	text-align:left;
+	font-weight:bold;
+}
+#content_container li {
+	text-align:left;
+}
+#content_container li:hover {
+	font-weight:bold;
+	cursor:pointer;
+}
+#content_description {
+	width:220px;
+	height:300px;
+	padding:10px; 	
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC;
+	overflow:auto;	
+}
+#content_middle_top {
+	width:200px;
+	padding:10px; 	
+	margin-right:10px;
+	margin-bottom:10px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#content_middle_middle {
+	width:200px;
+	padding:10px; 	
+	margin-bottom:10px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#content_middle_bottom {
+	width:200px;
+	padding:10px; 	
+	margin-bottom:10px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#content_right {
+	position:absolute;
+	padding:10px; 	
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC;	
+}
+#content_bottom_left {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:20px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#inactive_content_bottom_left {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:20px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+  	font-size:12px;
+  	font-family:Arial;
+	font-weight:lighter;
+}
+#content_bottom_middle {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:210px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#inactive_content_bottom_middle {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:210px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+  	font-size:12px;
+  	font-family: Arial;
+	font-weight:lighter;
+}
+#content_bottom_right {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:400px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC; 	
+}
+#inactive_content_bottom_right {
+	position:absolute;
+	width:150px;
+	padding:10px; 	
+	margin-top:20px;
+	margin-left:400px;
+	border:solid;
+	border-width:1px;
+	border-color:#CCCCCC;
+  	font-size:12px;
+  	font-family: Arial;
+	font-weight:lighter;
+}
+#content_bottom_left:hover {
+	font-weight:bold;
+	cursor:pointer;
+}
+#content_bottom_middle:hover {
+	font-weight:bold;
+	cursor:pointer;
+}
+#content_bottom_right:hover {
+	font-weight:bold;
+	cursor:pointer;
+}
+.list_div {
+	width:350px;
+	height:280px;
+	overflow:auto;
+}
+.list_div li {
+	text-align:left;
+	font-size: 12px;
+	list-style-image: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+  	padding-left : 15px;
+}
+.list_div li:hover {
+	font-weight:bold;
+	cursor:pointer;
+} 
+.list_div li:visited {
+	font-weight:bold;
+	cursor:pointer;
+} 
+.colmask {
+		position:relative;	/* This fixes the IE7 overflow hidden bug */
+		clear:both;
+		float:left;
+		width:100%;			/* width of whole page */
+		overflow:hidden;		/* This chops off any overhanging divs */
+	}
+	.colmask b {
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+}
+	.colmask li, p, input {
+	text-align:left;
+	font-size: 12px;
+}
+	.colmask li:hover {
+	font-weight:bold;
+	cursor:pointer;
+} 
+	/* common column settings */
+	.colright,
+	.colmid,
+	.colleft {
+		float:left;
+		width:100%;			/* width of page */
+		position:relative;
+	}
+	.col1,
+	.col2,
+	.col3 {
+		float:left;
+		position:relative;
+		padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+						only padding top and bottom is included here, make it whatever value you need */
+		overflow:hidden;
+	}
+	/* 3 Column settings */
+	.threecol {
+		background:#fff;		/* right column background colour */
+	}
+	.threecol .colmid {
+		right:40%;			/* width of the right column */
+		background:#fff;		/* center column background colour */
+	}
+	.threecol .colleft {
+		right:30%;			/* width of the middle column */
+		background:#fff;	/* left column background colour */
+	}
+	.threecol .col1 {
+		width:30%;			/* width of center column content (column width minus padding on either side) */
+		left:100%;			/* 100% plus left padding of center column */
+	}
+	.threecol .col2 {
+		width:30%;			/* Width of left column content (column width minus padding on either side) */
+		left:40%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	}
+	.threecol .col3 {
+		width:40%;			/* Width of right column content (column width minus padding on either side) */
+		left:70%;			/* Please make note of the brackets here:
+						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+	}
+	.doublepage {
+		background:#fff;		/* right column background colour */
+	}
+	.doublepage .colleft {
+		right:50%;			/* right column width */
+		background:#fff;		/* left column background colour */
+	}
+	.doublepage .col1 {
+		width:46%;			/* left column content width (column width minus left and right padding) */
+		left:52%;			/* right column width plus left column left padding */
+		border:solid;
+		border-width:1px;
+		border-color:#CCCCCC; 	
+	}
+	.doublepage .col2 {
+		width:46%;			/* right column content width (column width minus left and right padding) */
+		left:56%;			/* (right column width) plus (left column left and right padding) plus (right column left padding) */
+		border:solid;
+		border-width:1px;
+		border-color:#CCCCCC; 	
+	}	#footer {
+		clear:both;
+		float:left;
+		width:100%;
+		height:75px;
+	}
+	.analysisthreecol {
+		background:#fff;		/* right column background colour */
+	}
+	.analysisthreecol .colmid {
+		right:40%;			/* width of the right column */
+		background:#fff;		/* center column background colour */
+	}
+	.analysisthreecol .colleft {
+		right:30%;			/* width of the middle column */
+		background:#fff;	/* left column background colour */
+	}
+	.analysisthreecol .col1 {
+		width:30%;			/* width of center column content (column width minus padding on either side) */
+		left:100%;			/* 100% plus left padding of center column */
+		border:solid;
+		border-width:1px;
+		border-color:#CCCCCC; 	
+	}
+	.analysisthreecol .col2 {
+		width:30%;			/* Width of left column content (column width minus padding on either side) */
+		left:40%;
+		border:solid;
+		border-width:1px;
+		border-color:#CCCCCC; 	
+			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	}
+	.analysisthreecol .col3 {
+		width:40%;			/* Width of right column content (column width minus padding on either side) */
+		left:70%;
+		border:solid;
+		border-width:1px;
+		border-color:#CCCCCC; 	
+			/* Please make note of the brackets here:
+						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+	}
+	/* Header styles */
+    #header {
+        clear:both;
+        float:left;
+        width:100%;
+		}
+	#header {
+/*		border-bottom:1px solid #000; */
+	}
+	#header p,
+	#header h1,
+	#header h2 {
+	    padding:.4em 15px 0 15px;
+        margin:0;
+	}
+	#header ul {
+	    clear:left;
+	    float:left;
+	    width:100%;
+	    list-style:none;
+	    margin:10px 0 0 0;
+	    padding:0;
+	}
+	#header ul li {
+	    display:inline;
+	    list-style:none;
+	    margin:0;
+	    padding:0;
+	}
+	#header ul li a {
+	    display:block;
+	    float:left;
+	    margin:0 0 0 1px;
+	    padding:3px 10px;
+	    text-align:center;
+	    background:#eee;
+	    color:#000;
+	    text-decoration:none;
+	    position:relative;
+	    left:15px;
+		line-height:1.3em;
+	}
+	#header ul li a:hover {
+		font-weight:bold;
+		color:#fff;
+	}
+	#header ul li a.active,
+	#header ul li a.active:hover {
+	    color:#fff;
+	    background:#000;
+	    font-weight:bold;
+	}
+	#header ul li a span {
+	    display:block;
+	}
+	/* 'widths' sub menu */
+	#layoutdims {
+		clear:both;
+		background:#eee;
+		border-top:4px solid #000;
+		margin:0;
+		padding:6px 15px !important;
+		text-align:right;
+	}
+	/* Footer styles */
+	#footer {
+        clear:both;
+        float:left;
+        width:100%;
+/*		border-top:1px solid #000; */
+    }
+    #footer p {
+        padding:10px;
+        margin:0;
+    }
+.clickable-cell{
+	cursor:pointer;
+	font-weight:bold;
+        background:#d2e0a9;
+	}
+.saveable-cell:hover{
+	cursor:pointer;
+	font-weight:bold;
+        background:#d2e0a9;
+	}
+#tabs { margin-top: 1em; }
+#tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+.ui-widget { font-family: Arial; font-size: 1.02em; }
+.ui-accordion-content{ zoom: 1; } 

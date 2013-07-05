@@ -1,0 +1,98 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+    <!--<div id="staffroom_welcome">
+        <div id="staffroom_welcome_content">
+            <span>Hi
+                    <?php if ($this->level==0){?>
+                        <a href='javascript:void(0)'><b><?php echo $this->username?></b></a>, you are visiting</span>
+                    <?php }
+                    elseif (($this->level>=1)&&($this->level<=5)) {?>
+                        <a href='javascript:void(0)' onclick="javascript:editUser(<? echo $this->id?>)"><b><? echo $this->username?></b></a>, you are signed in</span>
+                       <?php }
+                       else {?>
+                        <a href='/tplan/DB_Maintenance'><b><? echo $this->username?></b></a>, you are signed in</span>
+            <?php }?>
+            <?php if (($this->level>=5)){?>
+            <div id="badge_staffroom">
+                <a href="/staffroom"><span>Back to the PEplanning Staffroom</span></a>
+            </div>
+            <?}?>
+            </div>
+    </div>-->
+    <div id="resources" align="center">
+        <table id="resources_table" class="stage" border="0">
+            <tr>
+                <td colspan="3">
+                    <div class="resources_backto_staffroom"><a href="/staffroom"><span>back to Staffroom</span></a></div>
+                    <div id="resources_title" align="left">
+                        <div id="resources_img_title"><span>Additional Resources</span></div>
+                        <div id="resources_subtitle"><span>Our additional resources are designed to support you in delivering a complete school sports programme.</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="resources_left_section" valign="top">
+                    <a id="resources_img_sportsday" class="resources_img_display" href="/resources/dinnertime-delighters/" alt="click to view 'Dinnertime Delighters'" title="click to view 'Dinnertime Delighters'"><span>Dinnertime Delighters</span></a>
+                    <a id="resources_img_longterm" class="resources_img_display" href="/resources/long-term-guidance/"><span>Long Term Plan Guidance</span></a>
+                    <a id="resources_img_sportsday" class="resources_img_display" href="/resources/sports-day-guidance/" alt="click to view 'Sports Day Guidance'" title="click to view 'Sports Day Guidance'"><span>Sports Day Guidance</span></a>
+                    <a id="resources_img_festivals" class="resources_img_display" href="/resources/sports-festival-plans/" alt="click to view 'Sports Festivals plans'" title="click to view 'Sports Festivals plans'"><span>Sports Festivals Plans</span></a>
+                    <a id="resources_img_gym_rc_index" class="resources_img_display" href="/resources/gym-resource-cards/" alt="click to view 'Gymnastics Resource Cards'" title="click to view 'Gymnastics Resource Cards'"><span>Gymnastics Resource Cards</span></a>
+                    <a id="resources_img_festivals" class="resources_img_display" href="/resources/sports-festival-plans/" alt="click to view 'Additional Lesson Plans'" title="click to view 'Additional Lesson Plans'"><span>Additional Lesson Plans</span></a>
+                    
+                </td>
+                <td id="left_section_spacing"></td>
+                <td id="middle_section" valign="top">
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/dinnertime-delighters/" alt="click to view 'dinnertime-delighters'" title="click to view 'dinnertime-delighters'">Dinnertime Delighters</a></span></p>
+                        <span class="resources_midsection_desc"><p>Make the dinner break active and fun</p><a href="/resources/dinnertime-delighters/">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/long-term-guidance">Long Term Planning Guidance</a></span></p>
+                        <span class="resources_midsection_desc"><p>How to effectively use PEplanning in your curriculum delivery.</p><a href="/resources/long-term-guidance/">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/sports-day-guidance/" alt="click to view 'Sports Day Guidance'" title="click to view 'Sports Day Guidance'">Sports Day Guidance</a></span></p>
+                        <span class="resources_midsection_desc"><p>Our guide to delivering a competitive, engaging, whole school sports day.</p><a href="/resources/sports-day-guidance/">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/sports-festival-plans/" alt="click to view 'Sports Festival Plans'" title="click to view 'Sports Festival Plans'">Sports Festival Plans</a></span></p>
+                        <span class="resources_midsection_desc"><p>Our range of festival resources are designed to support you in delivering intra-school festivals.</p><a href="/resources/sports-festival-plans/">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/gym-resource-cards/" alt="click to view 'Gymnastics Resource Cards'" title="click to view 'Gymnastics Resource Cards'">Gymnastics Resource Cards</a></span></p>
+                        <span class="resources_midsection_desc"><p>Resource cards to support the teaching of the gymnastic 'Key Shapes'.</p><a href="/resources/gym-resource-cards/">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/additional-lesson-plans/" alt="click to view 'Additional Lesson Plans'" title="click to view 'Sports Festival Plans'">Additional Lesson Plans</a></span></p>
+                        <span class="resources_midsection_desc"><p>We have a range of additional national curriculum linked lesson plans available</p><a href="/resources/additional-lesson-plans/">View resource</a></span>
+                    </div>
+                    
+                </td>
+                <td id="resources_right_section" valign="top" class="vindent_right" rowspan="0">
+                    <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                    </div>
+               </td>
+            </tr>
+        </table>
+    </div>
+    <div id="status_bar" style="display:none;"></div>

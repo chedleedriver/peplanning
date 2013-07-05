@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+
+#login_form	      { width:100px; margin:0 auto; height:0px; padding:0px 0;
+			background: transparent url(../images/form_bg.pn) no-repeat;
+                        position:relative; }
+
+form fieldset	      { font-family:Arial, Helvetica, sans-serif; font-size:1em;
+			margin:0px 0px 0px 0px; width:140px; position:relative;
+			border:0; display:block; padding: 0px 0px 0px; }
+
+form fieldset legend  { border-width:1px; border-style:solid; border-color:#BBBB66; color:#3D7169;
+			font-weight:bold; font-variant:small-caps; font-size:140%; padding:4px 8px;
+			margin:0px 0px 10px 0px; position:relative; top: -12px; background:white; }
+
+label.error           { font-weight:normal;color:red;text-align:center;width:145px; padding-left:25px;
+                        background: transparent url(../images/cancel.png) no-repeat scroll left; }
+label.errorlog        { font-weight:normal;color:red;text-align:center;width:135px; padding-left:25px;
+                        background: transparent url(../images/cancel.png) no-repeat scroll left; }
+
+input.text-input      { margin:4px;padding:2px 0;color:#333; }
+input.text-inputlog   { margin:4px;padding:2px 0;color:#333; }
+
+label#userlog_label   { position:absolute; top:0; left:0; }
+input#userlog         { position:absolute; top:0; left:30px; }
+label#userlog_error   { position:absolute; top:32px; left:33px; }
+label#userlog_error2  { position:absolute; top:32px; left:33px; }
+
+label#emailr_label    { position:absolute; top:45px; left:0px; }
+input#emailr          { position:absolute; top:45px; left:110px; }
+label#emailr_error    { position:absolute; top:67px; left:120px; }
+
+label#passlog_label   { position:absolute; top:50px; left:0px; }
+input#passlog         { position:absolute; top:50px; left:30px; }
+label#passlog_error   { position:absolute; top:82px; left:33px; }
+label#passlog_error2  { position:absolute; top:82px; left:33px; }
+
+#message              { text-align:center;width:780px;margin:0px 0 0 0px; }
+#messagelog           { text-align:left;width:250px;margin:5px 0px 0px 20px; }
+
+#message h2           { font-family: Rockwell, Georgia, Arial;font-size:150%;color:black; }
+#messagelog h2        { font-family: Rockwell, Georgia, Arial; font-size:150%;color:#b7cc79; }
+
+#message p	      { color:black;font-weight:normal; width:700; text-align:center }
+#messagelog p	      { color:#888888;font-weight:normal; width:250; text-align:left;margin:2px 0px 0px 0px; }

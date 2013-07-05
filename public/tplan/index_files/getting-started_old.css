@@ -1,0 +1,228 @@
+body {
+    background-position: center -80px;
+}
+
+#wrapper {
+    background: transparent url(mainbg.jpg) no-repeat center top;
+}
+
+#main-feature h2 { margin-right: 0; font-family: Rockwell;}
+#main-feature h3 {
+	margin-right: 0;
+	margin-left: 32px;
+	font-family: Rockwell;}
+
+
+#main-feature p {
+    margin-bottom: 0;
+    margin-right: 425px;
+	text-align: justify;
+	font-size: 80%;
+	font-family: sans-serif;
+	color: #666666;
+}
+
+
+#central #main-feature { min-height: 187px; }
+
+* html #central #main-feature { height: 187px; /* Hack for IE6 */ }
+
+/* {{{ Page this thing up */
+
+#gettingstarted-feature {
+    margin: 0 10px;
+    font-size: 110%;
+	font-family: Rockwell;
+}
+
+.js #gettingstarted-feature {
+    overflow: hidden;
+    height: 525px;
+    width: 950px;
+    margin: 0 0 0 10px;
+    background: url(feature-background.png) 0 50px no-repeat;
+}
+
+#gettingstarted-nav {
+    margin: 0;
+    padding: 0;
+    left: auto;
+}
+
+#gettingstarted-nav li {
+    background: none;
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 0 5px 0;
+    min-height: 60px;
+}
+
+.js #gettingstarted-nav li {
+    background-image: url(tab-background.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#gettingstarted-nav li a {
+    display: block;
+    font-size: 150%;
+    text-align: center;
+    padding: 10px 35px 8px 35px;
+    border-right: 1px solid #d7d5d1;
+}
+
+#gettingstarted-nav li.first {
+    background-position: left top;
+    padding-left: 10px;
+}
+
+#gettingstarted-nav li.last {
+    background-position: right top;
+    padding-right: 15px;
+}
+#gettingstarted-nav li.last a {
+    border-right: 0;
+}
+
+#gettingstarted-nav li a.selected:link,
+#gettingstarted-nav li a.selected:visited {
+    color: #4B4740;
+    outline: none;
+}
+
+#gettingstarted-nav li a.selected:hover,
+#gettingstarted-nav li a.selected:active { text-decoration: none; font-family: Rockwell;}
+
+#gettingstarted-nav.pager-selected-feature-work    li#work-link    { background-position: left   -80px; }
+#gettingstarted-nav.pager-selected-feature-learn   li#learn-link   { background-position: center -80px; }
+#gettingstarted-nav.pager-selected-feature-play    li#play-link    { background-position: center -80px; }
+#gettingstarted-nav.pager-selected-feature-connect li#connect-link { background-position: right  -80px; }
+
+.gettingstarted-feature-contents {
+    clear: both;
+    padding: 5px 35px;
+}
+
+.gettingstarted-feature-contents h3 { font-size: 130%; margin-top: 10px; margin-left: 0px; font-family: Rockwell; }
+.gettingstarted-feature-contents h5 { font-size: 200%; text-decoration: bold; margin-top: 20px; margin-left: -20px; font-family: Rockwell; }
+.gettingstarted-feature-contents h4 { font-size: 100%;  font-family: Rockwell;}
+
+.gettingstarted-feature-contents p { margin-bottom: 2em; font-size: 95%;font-family: Rockwell;}
+
+.gettingstarted-feature-contents h4 a img {
+    float: right;
+    padding: 0 0 0 1em;
+}
+
+.gettingstarted-feature-contents .try-this {
+    background: url(column-divider.png) top left no-repeat;
+    padding-top: 35px;
+    margin-top: 35px;
+}
+
+.col1 {
+    float: left;
+    width: 435px;
+    margin-right: 35px;
+    background: #fff;
+}
+
+.col2 {
+    float: left;
+    width: 385px;
+    background: #fff;
+}
+
+.col3 {
+    float: left;
+    width: 325px;
+	margin-left: 35px;
+	margin-right: 0px;
+    background: #FFF;
+}
+
+/* gettingstarted-feature-contents2  -
+Designed to give more functionality for the second tab.
+*/
+.gettingstarted-feature-contents2 {
+    clear: both;
+    padding: 5px 35px;
+}
+
+.gettingstarted-feature-contents2 h3 { font-size: 130%; margin-top: 10px; margin-bottom: 50px; margin-left: -35px; font-family: Rockwell; }
+.gettingstarted-feature-contents2 h4 { font-size: 100%; font-family: Rockwell;}
+.gettingstarted-feature-contents2 h5 { font-size: 200%; margin-top: 20px; margin-left: -20px; font-family: Rockwell; }
+
+.gettingstarted-feature-contents2 p { margin-bottom: 2em; font-size: 95%;font-family: Rockwell;}
+/*.gettingstarted-feature-contents2 br {  font-size: 95%;font-family: Rockwell;} */
+
+.gettingstarted-feature-contents2 h4 a img {
+    float: right;
+    padding: 0 0 0 1em;
+}
+
+.gettingstarted-feature-contents2 .try-this {
+    background: url(column-divider.png) top left no-repeat;
+    padding-top: 35px;
+    margin-top: 35px;
+}
+
+.col1 {
+    float: left;
+    width: 435px;
+    margin-right: 35px;
+    background: #fff;
+}
+
+.col2 {
+    float: left;
+    width: 385px;
+    background: #fff;
+}
+
+.col3 {
+    float: left;
+    width: 325px;
+	margin-left: 35px;
+	margin-right: 0px;
+    background: #FFF;
+}
+
+
+/* Footer Features  -
+toDO:
+1. look into the slight gap at the bottom???
+*/
+
+#peplanning-info,
+#itf-info {
+    float: left;
+    width: 315px;
+    padding: 28px 20px 80px 50px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    margin: 1em 20px 1em 20px;
+    color: #afaba3;
+    display: inline;
+}
+
+#peplanning-info {
+    background-image: url();
+}
+
+#itf-info { background-image: url(); }
+
+#peplanning-info h3,
+#itf-info h3 {
+    margin: 0 0 10px 0;
+    color: #807970;
+    font-size: 175%;
+}
+
+/* mylocal adjustments - ignore for now*/
+.locale-es-CL .col1 p {
+
+margin-bottom:0.8em;
+
+}

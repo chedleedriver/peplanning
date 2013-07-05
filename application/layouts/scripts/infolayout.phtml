@@ -1,0 +1,362 @@
+<?php
+$site_css="/css/site.css?".time();
+$main_js="/js/main.js?".time();
+$alerts_js="/js/jquery.alerts.js?".time();
+$jq_tools_js="/js/jquery.tools.min.js?".time();
+$jq_crypt_js="/js/jquery.jcryption.min.js?".time();
+$jq_js="/js/jquery-1.7.1.min.js?".time();
+$jq_ui_js="/js/jquery-ui-1.8.24.min.js?".time();
+echo $this->doctype();
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Delivering high quality teaching resources, for Primary School PE');
+$this->headLink()->prependStylesheet($this->baseUrl().$site_css);
+$this->headScript()->appendFile($this->baseUrl().$jq_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_ui_js);
+$this->headScript()->appendFile($jq_tools_js);
+$this->headScript()->appendFile($jq_crypt_js);
+$this->headScript()->appendFile($alerts_js);
+$this->headScript()->appendFile($main_js);
+
+        $u_agent = $_SERVER['HTTP_USER_AGENT'];
+        $ub = '';
+        if(preg_match('/MSIE 7.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 7.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie7.css');
+        }
+        if(preg_match('/MSIE 8.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 8.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie8.css');
+        }
+        if(preg_match('/MSIE 9.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 9.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie9.css');
+            //echo $ub;
+        }
+        if(preg_match('/MSIE 10.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 10.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie10.css');
+            //echo $ub;
+        }
+        elseif(preg_match('/Firefox/i',$u_agent))
+        {
+            $ub = "Mozilla Firefox";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/firefox.css');
+        }
+        elseif(preg_match('/Chrome/',$u_agent))
+        {
+            $ub = "Google Chrome";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/chrome.css');
+            $myvar = 'safecss';
+        }
+        elseif(preg_match('/Safari/i',$u_agent))
+        {
+            $ub = "Apple Safari";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari.css');
+        }
+        elseif(preg_match('/Flock/i',$u_agent))
+         {
+            $ub = "Flock";
+            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+        }
+        elseif(preg_match('/Opera/i',$u_agent))
+        {
+            $ub = "Opera";
+            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+        }
+        elseif(preg_match('/Netscape/i',$u_agent))
+        {
+            $ub = "Netscape";
+            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+        }
+        //echo $ub;?>
+<html>
+    <head>
+        <!-- meta tag for safari mobile -->
+        <meta name="viewport" content="width=1200" />
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headMeta(); ?>
+    </head>
+    <body>
+        <?php echo $this->headScript(); ?>
+        <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
+        <script type="text/javascript" charset="utf-8" src="<?php echo $protocol?>widgets.twimg.com/j/2/widget.js"></script>
+        <?php  include('menu.php');  ?>
+        <?php echo $this->layout()->content; ?>
+
+<!--
+This div is a placeholder for the register and login forms that we want to present as dialogs
+-->
+
+  <div id="Register_div" z-index="999999">
+      <div id="Register-content">
+          <!-- modal dialog goes here via ajax-->
+      </div>
+  </div>
+<div id="Login_div" z-index="999">
+      <div id="Login-content">
+          <!-- modal dialog goes here via ajax-->
+      </div>
+  </div> 
+<div id="Subscribe_div" z-index="999">
+      <div id="Subscribe-content">
+          <!-- modal dialog goes here via ajax-->
+      </div>
+</div><div id="Trial_div" z-index="999">
+      <div id="Trial-content">
+          <!-- modal dialog goes here via ajax-->
+      </div>
+  </div>
+<?php if(substr($_SERVER[REQUEST_URI],1,4) != "auth"){?> 
+<div id="contact_section">
+    <div id="contact_content" class="stage">
+        <table id="contact_form" border="0">            
+            <tr>
+                <td><?php $this->action('contact','auth')?></td>
+            </tr>
+        </table>
+        <table id="contact_twitter" border="0">
+            <tr>
+                <td id="twitter_title"/>
+            </tr>
+            <tr>
+                <td id="tweetbox"> 
+                     <!--<script>
+                    new TWTR.Widget({
+                        version: 2,
+                        type: 'search',
+                        search: 'peplanning',
+                        interval: 24000,
+                        title: '',
+                        subject: '',
+                        width: 'auto',
+                        height: 410,
+                        theme: {
+                            shell: {
+                            background: '#ffffff',
+                            color: '#ffffff'
+                            },
+                            tweets: {
+                            background: '#ffffff',
+                            color: '#666666',
+                            links: '#666666'
+                            }
+                        },
+                        features: {
+                            scrollbar: false,
+                            loop: false,
+                            live: true,
+                            behavior: 'all'
+                        }
+                        }).render().start();
+                        
+                    </script>-->
+                    <div class="twitter-logo"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="twitter-timeline"  href="https://twitter.com/search?q=peplanning"  data-widget-id="345504291697598464">Tweets about "peplanning"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </td>
+            </tr>    
+                 
+        </table>
+    </div>
+</div>
+<div id="footer_ruleoff">
+    <div id="footer_ruleoff_content" class="stage"></div>
+</div>
+<div id="sitemap">
+    <table id="sitemap_content" class="stage">
+        <tr>
+            <td class="sitemap_section">National Curriculum</td>
+            <td class="sitemap_section">Example Plans</td>
+            <td class="sitemap_section">Assistance</td>
+            <td class="sitemap_section"><a href="/learn/partners/" title="Visit our Partners page">Partners</a></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.education.gov.uk/schools/teachingandlearning/curriculum/primary/b00199167/pe/ks1" target="_blank">Current NCPE Key stage 1</a></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=gymnastics" target="_blank">Gymnastics Level 1/2</a></td>
+            <td><a href="/pricesandservices">Prices and Services</a></td>
+            <td><a href="http://www.5-a-day.tv/" target="_blank">5-a-day-tv</a></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.education.gov.uk/schools/teachingandlearning/curriculum/primary/b00199167/pe/ks2" target="_blank">Current NCPE Key stage 2</a></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=tennis" target="_blank">Tennis Level 2</a></td>
+            <td><a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">Purchase PEplanning</a></td>
+            <td><a href="http://www.sportsuk.org.uk/" target="_blank">Sports UK</a></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.education.gov.uk/" target="_blank">Department for Education (DfE)</a></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=hockey" target="_blank">Hockey Level 2/3</a></td>
+            <td><a href="/contactus">Contact Us</a><a href="/learn/faqs">FAQs</a></td>
+            <td><a href="http://www.itfacilitas.co.uk" target="_blank">IT Facilitas</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=rounders" target="_blank">Rounders Level 3</a></td>
+            <td><a href="/learn/faqs">FAQs</a></td>
+            <td><a href="http://www.ictinspires.co.uk" target="_blank">ICT Inspires</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=athletics" target="_blank">Athletics Level 3/4</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/tplan/lesson_sample_2.php?topic=football" target="_blank">Football Level 4</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<div id="footer">
+    <table border="0" id="footer_content" class="stage">
+        <tr>
+            <td>
+                <div id="company_details">Copyright &copy; 2012 PE Planning. All rights reserved.&nbsp;&nbsp;<a href="http://www.peplanning.org.uk/tplan/termsandconditions.php">Terms of Use</a></div>
+            </td> 
+        </tr>
+        <tr>
+            <td id="footer_text">
+                <p><a href="/">Home</a> &nbsp;|&nbsp; <a href="/aboutus">About Us</a> &nbsp;|&nbsp; <a onclick="javascript:showOverlay('Register');">Register</a> &nbsp;|&nbsp; <a href="/createaplan">Plan a Lesson</a> &nbsp;|&nbsp; <a href="/staffroom">Staffroom</a>&nbsp;|&nbsp; <a href="/contactus">Contact</a></p>
+                <p><b>PE Planning</b> &nbsp;Innovation House, Devonshire Street, Keighley, BD21 2AU &nbsp; Tel. +44 (0) 1535 644777 &nbsp; &nbsp;Email. <a href="mailto:matt@peplanning.org.uk">matt@peplanning.org.uk</a></p>
+            </td>
+            <td id="itf_logo"><a href="http://www.itfacilitas.co.uk"><span>itfacilitas</span></a></td>
+        </tr>
+    </table>
+</div>
+        <script>
+
+        $(document).ready(function() {
+
+        var root = $("#scroller").scrollable({circular: false}).autoscroll({ interval: 1000, autoplay: false });
+
+        window.api = root.data("scrollable");
+
+        $("#browsable").scrollable().navigator();
+
+        var register = $("#Register_div").overlay({
+
+	// some mask tweaks suitable for modal dialogs
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+	closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+
+        var signin = $("#Login_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+
+        var subscribe = $("#Subscribe_div").overlay({
+
+	// some mask tweaks suitable for modal dialogs
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+
+        var trial = $("#Trial_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	}
+        });
+
+        var lesson = $("#Lesson_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+
+        var contact = $("#contact_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	}
+        });
+
+        showContact();
+
+        $("#register_form").submit(function(e) {
+
+	// close the overlay
+	register.eq(1).overlay().close();
+
+	// get user input
+	var input = $("input", this).val();
+
+	// do something with the answer
+	//triggers.eq(1).html(input);
+
+	// do not submit the form
+	//return e.preventDefault();
+    });
+        $("#signin_form").submit(function(e) {
+
+	// close the overlay
+        signin.eq(1).overlay().close();
+
+	// get user input
+	var input = $("input", this).val();
+
+	// do something with the answer
+	//triggers.eq(1).html(input);
+
+	// do not submit the form
+	//return e.preventDefault();
+    });
+
+});
+         </script>
+         <?php }?>
+    </body>
+</html>

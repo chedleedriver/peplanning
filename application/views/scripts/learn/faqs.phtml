@@ -1,0 +1,231 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}
+$_GET['a'] = (isset($_GET['a']) ? $_GET['a'] : 0);
+?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div id="faq">
+                                                    <table id="faq_content">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <h2>FAQs</h2>
+                                                                <ul class="faq-section">
+                                                                    <li><a href="#faq_products">Products and Services</a></li>
+                                                                    <li><a href="#faq_planning">Lesson Planning</a></li>
+                                                                   <!--<li><a href="#faq_register">Registering</a></li>-->
+                                                                    <li><a href="#faq_subscribe">Subscribing</a></li>
+                                                                    <li><a href="#faq_general">General</a></li>
+                                                                    <li><a href="#faq_technical">Technical</a></li>
+                                                                </ul>
+                                                                <p id="faq_products">Products and Services</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#product_a1');">What is PEschool?</a></li>
+                                                                        <div id="product_a1" class="faq-answers"><p>The subscription option for schools wishing to subscribe to PEplanning. More information about PEschool can be found <a href="/learn/peschool">here</a></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#product_a2');">What is PEcoach?</li></a>
+                                                                        <div id="product_a2" class="faq-answers"><p>The subscription option for coaches and coaching companies wishing to subscribe to PEplanning. More information about PEcoach can be found <a href="/learn/pecoach">here</a></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#product_a3');">What is PEteacher?</li></a>
+                                                                        <div id="product_a3" class="faq-answers"><p>The subscription option for the individual wishing to subscribe to PEplanning. More information about PEteacher can be found <a href="/learn/peteacher">here</a> </p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#product_a4');">How often is the resource updated?</li></a>
+                                                                        <div id="product_a4" class="faq-answers"><p>The PEplanning team are constantly working on adding new content and updating the content already within the service. All new content and updates are available to subscribed users at no extra cost</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#product_a5');">How is PEplanning linked to the national curriculum?</li></a>
+                                                                        <div id="product_a5" class="faq-answers"><p>All our units of work are derived from current QCDA schemes of work. We carefully select learning objectives from here and make them specific to the sports we have available in PEplanning.</p></div>
+                                                                    </ul>
+                                                                <p id="faq_planning">Lesson Planning</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a1');">How do I create a lesson plan?</a></li>
+                                                                        <div id="planning_a1" class="faq-answers"><p>Creating lesson plans is very straight forward with PEplanning. Simply complete the 5 steps on the ‘Plan a Lesson’ page. To plan a lesson yourself click <a href="/createaplan">here</a></p><p>With PEplanning it is also possible to create your own lesson plans using our personal lesson planning tool. You can create lessons this way from the staffroom, to create your own lessons click <a href="/staffroom">here</a><i> This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">subscribed</a> users of PEplanning</i></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a2');">How do I create my own lesson plans?</a></li>
+                                                                        <div id="planning_a2" class="faq-answers"><p>PEplanning allows you to create your own personalised lesson plans using our personal lesson planning tool. Our unique service allows you to create your own personalised lesson plans. To have a go at creating your own lesson plans click <a href="/createaplan">here</a>. <i>This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">subscribed</a> users of PEplanning</i></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a3');">How do I edit my lesson plans?</a></li>
+                                                                        <div id="planning_a3" class="faq-answers"><p>You can edit the lesson plans you create so they meet your exact requirements. Once you have created your lesson plans they are saved in the Staffroom, from there you can access the editing area. Simply select the unit of work you wish to edit from ‘My Plans’ and click on ‘edit’ next to the plan you wish to edit.  To have a go at editing your plans click <a href="/staffroom">here</a><i> This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">registered</a> users of PEplanning</i></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a4');">How do I print my lesson plans?</a></li>
+                                                                        <div id="planning_a4" class="faq-answers"><p>You can print individual lesson plans you create by clicking on the printer icon in the lesson listing in the Staffroom, or from the lesson editing tool. There is a facility to print a whole unit under the options menu in the Staffroom. If you have problems with the print function you may find the answer <a href="#faq_technical">here</a></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a5');">How do I load assessment?</a></li>
+                                                                        <div id="planning_a5" class="faq-answers"><p>PEplanning also provides a comprehensive assessment service that compliments all the lesson plans you create. Our assessment includes:</p>
+                                                                            <ul>
+                                                                                <li>Teacher Assessment – national curriculum based assessment for each child</li>
+                                                                                <li>Individual Assessment – pupil worksheets for pupils to assess their own development</li>
+                                                                                <li>Class Assessment – ‘I Can’ statements that can be used as displays for pupils</li>
+                                                                            </ul>
+                                                                            <p>You can access your assessments from the <a href="/staffroom">Staffroom</a> </p>
+                                                                        </div>
+                                                                        <!--<li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a5');">How is PEplanning linked to the national curriculum?</a></li>
+                                                                        <div id="planning_a5" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a6');">How do we know the activities you have in your resource work?</a></li>
+                                                                        <div id="planning_a6" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a7');">Do you have to following the timings in the lesson plans?</a></li>
+                                                                        <div id="planning_a7" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a8');">Do I have to follow the group sizes stated in the activities?</a></li>
+                                                                        <div id="planning_a8" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a9');">What should I do if I don’t have a big enough area to set out the activity as described in the activity in my lesson plan?</a></li>
+                                                                        <div id="planning_a9" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a10');">What should I do if I don’t have the equipment stated in my lesson plan?</a></li>
+                                                                        <div id="planning_a10" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a11');">What equipment does the resource require?</a></li>
+                                                                        <div id="planning_a11" class="faq-answers"><p></p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#planning_a12');">What is the risk assessment section on my lesson plans?</a></li>
+                                                                        <div id="planning_a12" class="faq-answers"><p></p></div>
+                                                                        -->
+                                                                    </ul>
+                                                                <!--<p id="faq_register">Registering</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#register_a1');">How do I register?</a></li>
+                                                                        <div id="register_a1" class="faq-answers"><p>Registering is very straight forward, all you need to do is complete the <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Registration Process </a>. It is free and there is no further obligation. </p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#register_a2');">What does registering mean?</a></li>
+                                                                        <div id="register_a2" class="faq-answers"><p>Registering allows you further access to the site and the opportunity to further experience the services we offer. Registering is free with no further obligation to purchase our service. We may contact you from time to time to see how you found the experience. The information you provide will only be used by PEplanning, see our Privacy Policy for more information.</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#register_a3');">What happens when I register?</a></li>
+                                                                        <div id="register_a3" class="faq-answers"><p>Once you have completed the <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Registration Process </a> you will immediately be sent a confirmation email to the email account you registered with. To complete your registration you must follow the instructions in this confirmation email to activate your PEplanning account and further experience the benefits of registering.</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#register_a4');">What if I don't receive the confirmation email?</a></li>
+                                                                        <div id="register_a4" class="faq-answers"><p>First of all check your junk mail folder in case the message has been placed there as SPAM. If you don't find it there, you can click <a href="javascript:void(0)" onclick="javascript:reactivateAccount();">here  </a>to reactivate the account, then follow the instructions in this email to activate your PEplanning account.</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#register_a5');">What can I do when I register?</a></li>
+                                                                        <div id="register_a5" class="faq-answers"><p>Registering allows you to further explore the services we have to offer. You can create more lesson plans and experience our personalised lesson planning service to see how quick and easy your PE lesson planning can be. Click <a href="javascript:void(0)" onclick="javascript:showRestriction('All');">here </a>for a full list of service restrictions and controls </p></div>
+                                                                        </ul>-->
+                                                                
+                                                                <!--<p id="faq_subscribe">Subscribing</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a1');">How much does it cost?</a></li>
+                                                                        <div id="subscribe_a1" class="faq-answers"><p>Subscription price depends on the product you purchase</p>
+                                                                            <ul>
+                                                                                <li>i. PEschool subscriptions start from £175</li>
+                                                                                <li>ii. PEteacher £60 + VAT</li>
+                                                                                <li>iii. PEcoach – quotes available upon request</li>
+                                                                            </ul>
+                                                                            <p>More information on pricing is available on our <a href="/pricesandservice">Prices and Services Page</a></p>
+                                                                        </div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a2');">How do I subscribe?</a></li>
+                                                                        <div id="subscribe_a2" class="faq-answers"><p style="text-align:left;">You can subscribe to any of our products <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">here</a> or contact Matthew via E:Matthew.Dykes@peplanning.org.uk or T: 01535 644 777</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a3');">What is the ’30 day free trial’?</a></li>
+                                                                        <div id="subscribe_a3" class="faq-answers"><p>We understand the importance of trialling a new service before you purchase it. Our free 30 day trial allows you to do just this. It gives you the opportunity to trial and explore our service for yourself for 30 days. There is no obligation to purchase our product after you trial. To sign up for your free trail <a href="/learn/slide3">click here</a> </p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a4');">Who is the 30 day free trial for?</a></li>
+                                                                        <div id="subscribe_a4" class="faq-answers"><p>Everyone! If you work in primary schools and teach PE our 30 day free trial gives you the opportunity to see how our service can support you. To sign up for your free trail <a href="/learn/slide3"> click here</a></p>
+                                                                        <p>If you work in a primary school please pass on the trial information to your PE coordinator so they too can see how our service can support everyone in your school</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a5');">What happens at the end of your trial?</a></li>
+                                                                        <div id="subscribe_a5" class="faq-answers"><p>We will contact you to let you know your trial has come to an end and provide you with the necessary information should you wish to subscribe to our service.</p>
+                                                                        <p>If you feel PEplanning is not for you at this time then we will simply downgrade your account so you have restricted access to the site. You can then come back to your account at any time and subscribe to our service in the future if you wish.</p></div>
+                                                                        </ul>-->
+                                                                
+                                                                <p id="faq_subscribe">Subscribing</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a1');">What is the 'Free Subscription'?</a></li>
+                                                                        <div id="subscribe_a1" class="faq-answers"><p>We understand the importance of testing a new service before you purchase it. Our free 30 day subscription allows you to do just this. It gives you the opportunity to trial and explore our service for yourself for 30 days. There is no obligation to purchase our product after this. To create your free subscription account <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">click here</a></p>
+                                                                        </div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a2');">Who is the Free Subscription for?</a></li>
+                                                                        <div id="subscribe_a2" class="faq-answers"><p style="text-align:left;">Everyone! If you work in primary schools and teach PE our 30 day free subscription gives you the opportunity to see how our service can support you. To create your free subscription account <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">click here</a></p>
+                                                                        <p>If you work in a primary school please pass on the trial information to your PE coordinator so they too can see how our service can support everyone in your school</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a3');">What happens when your free subscription ends?</a></li>
+                                                                        <div id="subscribe_a3" class="faq-answers"><p>We will contact you to let you know your trial has come to an end and provide you with the necessary information should you wish to upgrade to a full subscription.</p>
+                                                                        <p>If you purchase PEplanning at any point during the 30 days you will be eligible for a 10% discount of your subscription cost</p>
+                                                                        <p>If you feel PEplanning is not for you at this time we will simply downgrade your account so you have restricted access to the site. You can then come back to your account at any time and subscribe to our service in the future if you wish.</p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#subscribe_a4');">How do I purchase PEplanning?</a></li>
+                                                                        <div id="subscribe_a4" class="faq-answers"><p>You can subscribe in full to any of our products <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">here</a></p>
+                                                                        </ul>
+                                                                
+                                                                
+                                                                <p id="faq_general">General</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#general_a1');">If my question is not covered here what can I do?</a></li>
+                                                                        <div id="general_a1" class="faq-answers"><p>You can contact us at any time and we will be happy to answer any further questions you may have. To find the best way to deal with your enquiry please see our <a href="/contactus">Contact Us page</a> or complete the ‘Get in touch’ form below</p></div>
+                                                                    </ul> 
+                                                                <p id="faq_technical">Technical</p>
+                                                                    <ul>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#technical_a1');">Why doesn't my lesson print out?</a></li>
+                                                                        <div id="technical_a1" class="faq-answers"><p>The print facility relies on the use of Pop-ups. Some people may have Pop-ups disabled in their browser settings. To check your settings and enable Pop-ups see the relevent instructions below</p>
+                                                                                                                 <p><b>Internet Explorer</b>  
+                                                                                                                 <ul><li>From the menu select <u>Tools</u> (in IE9 this is the cog in the top right hand corner)</li>
+                                                                                                                     <li>Select <u>Internet Options</u> from the menu</li> 
+                                                                                                                     <li>Select the <u>Privacy</u> tab.</li>
+                                                                                                                     <li>If there is a tick next to <u>'Turn on Pop-up Blocker'</u> you can either remove this or</li>
+                                                                                                                     <li>Click on <u>Settings</u></li>
+                                                                                                                     <li>Type '*.peplanning.org.uk' (without the quotes) in the box and click <u>Add</u></li>
+                                                                                                                     <li>Close all the windows and retry the print option</li>
+                                                                                                                 </ul>
+                                                                                                                 </p>
+                                                                                                                 <p><b>Mozilla Firefox</b>
+                                                                                                                 <ul><li>You need to find the <u>Options</u> or <u>Preferences</u> menu option. (The location and name varies from one version to another)</li>
+                                                                                                                     <li>Select the <u>Content</u> tab.</li>
+                                                                                                                     <li>If there is a tick next to <u>'Block Pop-up Windows'</u> you can either remove this or</li>
+                                                                                                                     <li>Click on <u>Exceptions</u></li>
+                                                                                                                     <li>Type 'www.peplanning.org.uk' (without the quotes) in the box and click <u>Allow</u></li>
+                                                                                                                     <li>Close all the windows and retry the print option</li>
+                                                                                                                 </ul>
+                                                                                                                 </p>
+                                                                                                                 <p><b>Google Chrome</b>
+                                                                                                                 <ul><li>Click on the <u>Spanner Icon</u> (in the top right hand corner)</li>
+                                                                                                                     <li>Select <u>Settings</u> from the menu</li> 
+                                                                                                                     <li>Select the <u>Show Advanced Settings</u> from the link at the bottom of the page.</li>
+                                                                                                                     <li>Click on <u>Content Settings</u></li>
+                                                                                                                     <li>If option to <u>'Do not allow any site to show pop-ups'</u> is selected, you can either change this to 'Allow...'  or</li>
+                                                                                                                     <li>Click on <u>Manage Exceptions</u></li>
+                                                                                                                     <li>Type 'www.peplanning.org.uk' (without the quotes) in the box and hit enter</li>
+                                                                                                                     <li>Close all the windows and retry the print option</li>
+                                                                                                                 </ul>
+                                                                                                                 </p></div>
+                                                                        <li><a href="javascript:void(0)" onclick="javascript:myToggle('#technical_a2');">Why don't I see the padlock when I put my password in?</a></li>
+                                                                        <div id="technical_a2" class="faq-answers"><p>The padlock indicates that you are connecting to a site using ssl encryption. We don't use that site wide as it would impair performance. We DO encrypt all sensitive data though when you log in or register</p></div>
+                                                                    </ul> 
+                                                                <p>If you would like further answers <a href="/contactus">Contact us here</a></p>
+                                                                <p>or <a href="/resource-downloads/Guide to using PEplanning v1.0.pdf">click here</a> to obtain our detailed guide to using PEplanning</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php 
+
+if($_GET['a']) echo "<script type='text/javascript'>myToggle('#".$_GET['a']."')</script>";
+
+?>

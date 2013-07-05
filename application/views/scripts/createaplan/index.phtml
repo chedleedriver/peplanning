@@ -1,0 +1,294 @@
+<? if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?}?>
+<!--<div id="drawer">Please fill in the empty fields marked with a <samp style="color:red">red</samp> border.</div>-->
+
+    <div id="main_feature">
+        <div id="pageheader_planalesson">
+            <!--<div id="title_planalesson"></div>-->
+            <div><span>Using PEplanning couldn’t be easier…simply complete our 5 easy steps to create your lesson plans</span></div>
+        </div>
+
+        <!-- slides -->
+        <div id="planlesson_content">
+            <!-- the form -->
+            <form action="#">
+                <div id="wizard">
+                    <ul id="status">
+                        <li class="active">1. NC Level</li>
+                        <li>2. Select Activities</li>
+                        <li>3. Lessons</li>
+                        <li>4. Name your plan</li>
+                        <li>5. Create</li>
+                    </ul>
+
+                    <div class="items">
+                        <!-- page1 -->
+                        <div class="page">
+                            <h2>
+                                <strong>Step 1: </strong> At what National Curriculum level would you like to create your unit of work?
+                                <em>Select the National Curriculum level that is most appropriate for your class</em>
+                            </h2>
+                            <ul>
+                                <div class="hide"><input id="select_level_overlay" value="Select level" readonly/></div>
+                                <li class="required">
+                                    <label>                                        
+                                        <select name="sel_level" id="sel_level" class="styled-select" onchange="updateSelect('sel_level','select_level_overlay')">
+                                            <option value="99">Select level</option>
+                                            <option value="0.0">Foundation</option>
+                                            <option value="1.0">Level 1</option>
+                                            <option value="1.5">Level 1/2</option>
+                                            <option value="2.0">Level 2</option>
+                                            <option value="2.5">Level 2/3</option>
+                                            <option value="3.0">Level 3</option>
+                                            <option value="3.5">Level 3/4</option>
+                                            <option value="4.0">Level 4</option>
+                                        </select>                                        
+                                    </label>
+                                </li>
+                                <li class="clearfix"><div id="step1_cont" class="btn_continue"><a class="next right"><span>continue</span></a></div></li>
+                            </ul>
+                            <table id="step1_help" class="help">
+                                <tr>
+                                    <td class="info"></td>
+                                    <td class="info_content">By using National Curriculum levels you can create highly specific lesson plans that will contain appropriate activities, for the pupils in your class.</td>
+                                </tr>
+                            </table>                      
+                        </div>
+                        <!-- page2 -->
+                        <div class="page">
+                            <h2>
+                                <strong>Step 2: </strong>&nbsp;Select the activity you would like to teach <b></b>
+                                <em>From the National Curriculum level you selected these activities are suitable for your class</em>
+                            </h2>
+                            <ul>
+                                <div class="hide"><input id="select_activity_overlay" value="Select Activity"/></div>
+                                <li class="required">
+                                    <label>
+                                        <select name="sel_topic" id ="sel_topic" class="styled-select" size="1" onchange="updateSelect('sel_topic','select_activity_overlay')"><!-- onchange="javascript:getLessonNumbers();"-->
+                                            <option value="99">Select Activity</option>
+
+                                            </optgroup>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="clearfix">
+                                    <div id="step2_back" class="btn_back"><a class="prev"><span>back</span></a></div>
+                                    <div id="step2_cont" class="btn_continue"><a class="next right"><span>continue</span></a></div>
+                                </li>
+                                <br clear="all" />
+                            </ul>
+                            <table id="step2_help" class="help">
+                                <tr>
+                                    <td class="info"></td>
+                                    <td class="info_content">We have split the various sports you can teach into the PE activity areas as set out in the National Curriculum.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- page3 -->
+                        <div class="page">
+                            <h2><strong>Step 3: </strong> Select the number of lessons you would like to create for this unit of work
+                                <!--<em>- You can create units of work to be delivered over half or full terms<br />- Create one off PE lessons</em>--> 
+                            </h2>
+                            <ul>
+                                <div class="hide"><input id="select_lessons_overlay" value="Select number"/></div>
+                                <li class="required">
+                                    <label>
+                                        <select name="sel_num_lessons" class="styled-select" id="sel_num_lessons" size="1" onchange="updateSelect('sel_num_lessons','select_lessons_overlay')">
+                                            <option value="99">Select number</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="clearfix">
+                                    <div id="step3_back" class="btn_back"><a class="prev"><span>back</span></a></div>
+                                    <div id="step3_cont" class="btn_continue"><a class="next right"><span>continue</span></a></div>
+                                </li>
+                                <br clear="all" />
+                            </ul>
+                            <table id="step3_help" class="help">
+                                <tr>
+                                    <td class="info"></td>
+                                    <td class="info_content">Our service allows you to:<br />- Create units of work to be delivered over half or full terms<br />- Create one off PE lessons</td>
+                                </tr>
+                            </table>
+                        </div>
+                  <!-- page4 -->
+                <div class="page">
+                    <h2>
+                        <strong>Step 4: </strong> Give your unit of work a title <b></b>
+                        <!--<em><b>eg. Year 3 Hockey – Summer 1</b><br /></em>-->
+                    </h2>
+                    <ul>                        
+                        <li class="required">
+                            <label><input id="unit_title" type="text" value="Enter Your Title" onfocus="if(this.value=='Enter Your Title'){this.value='';}" onblur="if(this.value == ''){this.value='Enter Your Title'}"/></label>
+                        </li>
+                        <li class="clearfix">
+                            <div id="step4_back" class="btn_back"><a class="prev"><span>back</span></a></div>
+                            <div id="step4_cont" class="btn_continue"><a onclick="updateSummary()" class="next right"><span>continue</span></a></div>
+                        </li>
+                        <br clear="all" />
+                    </ul>
+                    <table class="help">
+                        <tr>
+                            <td class="info"></td>
+                            <td class="info_content">All the units of work you create with PEplanning are saved in your Staff Room. Giving the unit a title allows you to easily find and identify it at a later date.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- page5 -->
+                <div class="page">
+                    <h2>
+                        <strong>Step 5: </strong>Create Plans<b></b>
+                        <!--<em>You are now a happy member of PE Planning. Go to the Staffroom to do further work with your plan.</em>-->
+                    </h2>                   
+                    <table id="staffroom_intro" class="step5">
+                        <tr>
+                            <td id="staffroom_intro_title"><span>Staffroom</span></td>
+                        </tr>
+                        <tr>
+                            <td id="staffroom_intro_content">
+                                <span>Check the summary is correct and then click "create plan" where you will be taken to the Staffroom to print or work with your plan.</span>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <table id="summary" class="step5">
+                        <tr>
+                            <td colspan="2"><span id="sum_title">A summary of your plan so far...</span></td>
+                        </tr>                        
+                        <tr>
+                            <td class="sum_title">Teaching level </td><td id="sum_1"></td>
+                            <!--<td class="sum_title">Teaching level </td><td id="sum_answer"><input id="sum_1" value="" readonly/></td>-->
+                        </tr>
+                        <tr>
+                            <td class="sum_title">Activity </td><td id="sum_2"></td>
+                            <!--<td class="sum_title">Activity </td><td><input id="sum_2" value="" readonly/></td>-->
+                        </tr>
+                        <tr>
+                            <td class="sum_title">Number of lessons </td><td id="sum_3"></td>
+                            <!--<td class="sum_title">Number of lessons </td><td><input id="sum_3" value="" readonly/></td>-->
+                        </tr>
+                        <tr>
+                            <td class="sum_title">Your lesson plan name </td><td id="sum_4"></td>
+                            <!--<td>Your lesson plan name </td><td><input id="sum_4" value="" readonly /></td>-->
+                        </tr>                    
+                    </table>                    
+                    <table id="step5_buttons">
+                        <tr>
+                            <td>
+                                <div id="step5_back" class="btn_back"><a class="prev"><span>back</span></a></div>
+                            </td>
+                            <td>
+                                <div id="step5_cont" class="btn_createplan"><a onclick="createPlan('setplan',<?php echo $this->userlevel?>)"><span>continue</span></a></div>
+                            </td>
+                        </tr>
+                    </table>
+                        
+                    
+                </div>
+            </div><!--items-->
+        </div><!--wizard-->
+    </form>
+</div> <!-- end of main feature-->
+
+<script>
+  $(function() {
+      var root = $("#wizard").scrollable();
+
+      // some variables that we need
+    var api = root.scrollable(), drawer = $("#drawer");
+
+    // validation logic is done inside the onBeforeSeek callback
+    api.onBeforeSeek(function(event, i) {
+
+   if (api.getIndex() < i) {                      
+
+		         // 1. get current page
+		         var page = root.find(".page").eq(api.getIndex()),
+
+			 // 2. .. and all required fields inside the page
+			 inputs = page.find(".required :input").removeClass("error"),
+
+			 // 3. .. which are empty
+			 empty = inputs.filter(function() {			 
+			 return (($(this).val() == '99')||($(this).val() == 'Enter Your Title'));
+                         });
+
+		         // if there are empty fields, then
+		         if (empty.length) {
+
+			 // slide down the drawer
+			 drawer.slideDown(function()  {
+
+			 // colored flash effect
+			 drawer.css("backgroundColor", "#229");
+			 setTimeout(function() { drawer.css("backgroundColor", "#fff"); }, 1000);
+			 });
+
+			 // add a CSS class name "error" for empty & required fields
+			 empty.addClass("error");                         
+                         if(document.getElementById('select_level_overlay').value == "Select level"){
+                             $("#select_level_overlay").addClass('error');}
+                         else if(document.getElementById('select_activity_overlay').value == "Select Activity"){
+                             $("#select_level_overlay").removeClass('error');
+                             $("#select_lessons_overlay").removeClass('error');
+                             $("#unit_title").removeClass('error');
+                             $("#select_activity_overlay").addClass('error');}
+                         else if(document.getElementById('select_lessons_overlay').value == "Select number"){
+                             $("#select_level_overlay").removeClass('error');
+                             $("#select_activity_overlay").removeClass('error');
+                             $("#select_lessons_overlay").addClass('error');}
+                         else if(document.getElementById('unit_title').value == "Enter Your Title") {
+                             $("#select_lessons_overlay").removeClass('error');
+                             $("#unit_title").addClass('error');}
+                         else{$("#unit_title").removeClass('error');}
+
+			 return false;
+
+		         // everything is good
+		         } else {
+
+			 // hide the drawer
+			 drawer.slideUp();
+		         }
+
+	                 }
+
+	                 // update status bar
+	                 $("#status li").removeClass("active").eq(i).addClass("active");
+
+                         });
+
+                             // if tab is pressed on the next button seek to next page
+    root.find("button.next").keydown(function(e) {
+    if (e.keyCode == 9) {
+
+    // seeks to next tab by executing our validation routine
+    api.next();
+    e.preventDefault();
+    }
+    });
+    $("#status_bar").progressbar();
+});
+</script>

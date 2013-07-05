@@ -1,0 +1,1416 @@
+
+/*---- CSS FOR SAFARI -------------------------------*/
+
+html {outline: none;}
+body {font-family: Arial, Helvetica, Verdana; margin:0px; border: 0px;}
+a {cursor: pointer; color: #666666; text-decoration: none;}
+a img {border:none;}
+table {border-collapse: collapse;}
+optgroup {color:#666; font-weight: normal; background-color:#f1f1f1; padding-left:30px;}
+textarea {font-family: Arial, Verdana, Sans-serif; padding-top:5px; resize:none;}
+select {overflow: hidden;}
+#exposeMask {width:2000px !important;}
+.hide {display:none;}
+
+.ie7 {display: none;}
+.firefox {display:none;}
+.hidechrome {display:none;}
+
+.learnmore a {background: url(/img/sprite_btn_learnmore.png) no-repeat 0 0; height:32px; width:111px; display:block;}
+.learnmore a:hover {background: url(/img/sprite_displaybuttons.png) no-repeat 0 -32px; height:32px; width:111px; display:block;}
+.learnmore span {visibility: hidden; *+z-index:999999999999;}
+
+#sel_topic option {padding-left:30px; margin-left:40px; color:#808386;}
+
+
+
+
+#content {width:100%;}
+
+.site_width{ width:987px; min-width: 987px; max-width:987px; }
+.site_width td {text-align: center;}
+
+/*---- General PopUp related content -----------------------------------------*/
+.popup_input {border:0px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 0px;
+              -webkit-appearance: none;
+              height:38px; border:none; outline:none; font-size:16px; font-weight:bold; color:#666; padding-left:8px;
+            position:relative; left:111px; top:-22px;}
+
+
+
+/*----- Main Menu (banner) -------------------------------------------------- */
+#menu { background-image: url('/img/bg_menu.png');background-repeat:repeat-x; width:100%; height:64px; text-align: center; position:relative; top:0px;}
+#menu table {width:987px; border:0px dashed #000;}
+#menu td {border:0px dashed #000;}
+#logo {height:64px; min-width:285px; max-width:285px; width:285px;
+       position:relative; top:5px;}
+#logo a { height:64px; background-image: url('/img/logo_peplanning.png'); background-repeat:no-repeat; display:block;}
+#logo a span{visibility:hidden;}
+
+.menu_item {min-width:100px; min-height:50px; }
+.menu_item a { min-width:100px; max-width: 126px; height:63px; max-height:63px; font-size:17px; font-weight:bold; color:#ffffff; position:relative; display:block;
+                *+ max-width: 200px;}
+.menu_item a:hover {
+    min-width:100px; height:63px; max-height:63px;
+    font-size:17px; font-weight:bold; color:#ffffff;
+    background-image: url('/img/bg_menu_item.png');
+    background-repeat:repeat-x;
+    position:relative;
+    top:-2px;
+    left:0px;
+    display:block;
+}
+.menu_item a span {position:relative; top:22px; left:-2px; display: block;}
+.menu_item a:hover span {position:relative; top:24px; display: block;}
+
+#div1{position:absolute; left:426px;}
+#div2{position:absolute; left:543px;}
+#div3{position:absolute; left:667px;}
+#div4{position:absolute; left:787px;}
+#div5{position:absolute; left:907px;}
+
+
+
+.divider {background: url('/img/img_menu-divider.png') no-repeat; width:2px; height:64px; position:relative; top:0px; left:1px; display:block; z-index:1500;}
+
+#register {position:relative; right:-6px; border:0px; outline:none; *left:-10px; *top:20px; *+ right:0px;}
+#register a {width:90px; height:25px; position:relative; background: url('/img/sprite_smallbuttons.png') no-repeat 0px -100px; display:block;}
+#register a:hover {background: url('/img/sprite_smallbuttons.png') no-repeat 0px -125px;}
+#register a span {visibility:hidden;}
+
+#signin {position:relative; *+left:-20px; *+top:20px;}
+#signin a {width:90px; height:25px; position:relative; background: url('/img/sprite_smallbuttons.png') no-repeat 0px 0px; display:block;}
+#signin a:hover {background: url('/img/sprite_smallbuttons.png') no-repeat 0px -25px;}
+#signin a span {visibility:hidden;}
+
+#signout {position:relative; *+left:-20px; *+top:20px;}
+#signout a {width:90px; height:25px; position:relative; background: url('/img/sprite_smallbuttons.png') no-repeat 0px -50px; display:block; *right:-18px; }
+#signout a:hover {background: url('/img/sprite_smallbuttons.png') no-repeat 0px -75px; }
+#signout a span {visibility:hidden;}
+
+#subscribe {position:relative; right:-6px; *right:-18px; *+top:20px; *+left:-15px; *+right:0px;}
+#subscribe a {width:90px; height:25px; position:relative; background: url('/img/sprite_smallbuttons.png') no-repeat 0px -150px; display:block; }
+#subscribe a:hover{background: url('/img/sprite_smallbuttons.png') no-repeat 0px -175px;}
+#subscribe a span {visibility:hidden;}
+
+
+
+#stage td {font-family:Arial, Helvetica, Verdana; font-size:17px; font-weight:bold; color:#ffffff; text-align:center;}
+
+
+
+#slide1 {position:relative; top:0px; min-height:650px; max-width:492px; background: url('/img/bg_slide1.png') no-repeat; }
+#slide1_content {position:relative; top:90px; left:100px; text-align:justify; border:0px dashed #000; height:400px; width:470px;}
+#slide1_content p {border:0px dashed #000; color: #ee803a; font-weight:bold; font-size: 15px;}
+#slide1_body_text1 {font-size:13px; width:470px; position:relative; top:15px;}
+#slide1_body_text2 p {color: #666; font-weight:normal; font-size: 12px; position:relative; top:75px;}
+#slide1_body_text1 p {color: #666; font-weight:normal; font-size: 12px;}
+#slide1_learnmore {position:relative; top:105px; left:320px; width:111px; *top:235px; *+top:120px;}
+
+#WIPP_benefits_table {margin-top:30px; font-size:18px; font-weight:normal; color:#808386;}
+#WIPP_benefits_table td {height:21px; vertical-align:top; padding-left:5px;}
+
+.tick_small {background: url('/img/ticks_small.png') no-repeat 0 0; height:21px; max-height:21px; width:28px; display:block;}
+.tick_large {background: url('/img/sprite_ticks.png') no-repeat 0 -23px; height:29px; width:28px;}
+
+#slide2 {position:relative; top:0px; min-height:650px; max-height:650px; max-width:492px; background: url('/img/bg_slide2.png') no-repeat; z-index:1002; *margin-top:40px; *+top:-30px;}
+#slide2 h2 {position:relative; top:-40px; left:30px;}
+#slide2_content {border:0px dashed #000; height:380px; width:425px; min-width:425px; max-width: 425px; position:relative; top:180px;/*top:192px;*/ left:190px;}
+#slide2_content span {color: #77af0c; width:425px; min-width:425px; max-width: 425px;}
+#slide2_body_text {position:relative; top:70px; font-style: italic; font-size:16px; padding-top:5px; width:425px; min-width:425px; max-width: 425px;}
+#slide2_body_text p {color: #333; font-size:18px; width:425px; min-width:425px; max-width: 425px;}
+#slide2_title {height:52px; width:425px; min-width:425px;  max-width: 425px; background: url(/img/slide2_title_helenclitheroe.png) no-repeat; *margin-top:20px;}
+#slide2_title_text {position:relative; top:95px; text-align:justify; font-size: 14px; font-weight: bold; color: #77af0c; width:425px; min-width:425px; max-width: 425px;
+                    padding-top:10px; *+top:100px;}
+#slide2_bottom {position:relative; top:100px; width:425px; min-width:425px; max-width: 425px;}
+#slide2_bottom p {font-weight:bold; font-size: 14px; color:#999;}
+#slide2_bottom a {color:#ee803a;}
+#slide2_button {position:relative; top:120px; left:330px;}
+
+#slide3_body_text p{}
+#slide3_body_text2 p{}
+#slide3_bottom_text p{}
+
+/*--- slide 3 ----*/
+#slide3 {position:relative;top:0px;min-height:650px; max-height:650px; max-width:492px; background: url('/img/bg_slide3.png') no-repeat; z-index:1002;}
+#slide3_content {border:0px dashed #000; color: #77af0c; width:420px; min-width:420px; max-width: 420px; position:relative; top:90px; left:58px;}
+#slide3_content p {border:0px dashed #000; color: #ee803a; font-weight:bold; font-size: 15px;}
+#slide3_body_text {width:420px; min-width:420px; max-width: 420px;}
+#slide3_body_text p {color:#666; font-size:12px; font-weight:normal; position:relative; *top:40px;}
+#slide3_body_text2 {width:420px; min-width:420px; max-width: 420px; position:relative; top:120px;}
+#slide3_body_text2 p{color:#77af0c; font-size:15px; font-weight:bold; position:relative; *top:60px;}
+#slide3_body_text2 span {color:#999; font-size:12px; font-style: italic;}
+#slide3_bottom_text {width:420px; min-width:420px; max-width: 420px; position:relative; top:180px; *+ top:100px;}
+#slide3_bottom_text p, #slide3_bottom_text a {color: #ff5900; font-weight:bold;font-size: 15px; text-align:center; position:relative; *top:80px;}
+#slide3_button {position: relative; top:90px; *top:180px; *+top:185px;}
+
+#slide1, #slide2, #slide3, #slide4 {width:987px; min-width:987px; max-width:987px;}
+
+#page_position {position:absolute; top:110px; width:100%; border:0px dashed #000;}
+#page_dividers {position:absolute; width:100%;}
+#divider_shell {position:relative; top:-65px; left:-137px; width:987px;}
+
+#centerpage_shell {border:0px dashed #000; position:relative; left:35px; width:987px; height:600px;}
+
+/*#videoplayer {position:relative; top:0px; right:0px; width:305px; height:293px; background: url('/img/bg_videoplayer.png') no-repeat 0 0;}*/
+#videoplayer {z-index:1701; position:relative; top: -153px; right:0px; float:right; width:305px; height:293px; background: url('/img/bg_videoplayer.png') no-repeat 0 0;}
+
+#videoplayer_title {position:relative; top:20px; left:40px; width:215px; min-width:215px; max-width:215px; height:34px; min-height:34px; max-height:34px; *top:15px;}
+
+#videoplayer_content {border:0px dashed #000; position:relative; top:125px; left:20px; max-width:200px; min-height:150px; font-size: 12px; color:#666; *top:48px; *+top:10px;}
+/*#videoplayer_content a {background: url('/img/btn_startplanning') no-repeat 0 0px; width:116px; height: 16px; display:block;}
+#videoplayer_content a:hover {background: url('/img/btn_startplanning') no-repeat 0 -16px; width:116px; height: 16px; display:block;}*/
+#videoplayer_content a {position:relative; top:12px; left:0px; letter-spacing:0px;}
+#videoplayer_content a span {color:#9d9b9b; font-size:23px; font-weight:normal; padding-bottom:0px; border-bottom:1px dotted #d0d0d0;}
+#videoplayer_content a span:hover {color:#77af0c; font-size:23px; font-weight:normal; padding-bottom:0px; border-bottom:1px dotted #d0d0d0;}
+#videoplayer_content p {color:#808386; font-size:13px; font-weight:normal;}
+
+#videoplayer_text {color:#666; position:relative; top:23px; left:33px; text-align:left; width:250px; font-size:11px;}
+#videoplayer_text a {color:#0181BD;}
+#videoplayer_text a:hover {text-decoration: underline;}
+
+#register_btn {border:0px; outline:none; position:relative; top:225px; left:275px; float:right; width:203px; z-index:9990; *top:140px; *+top:240px;}
+#register_btn a {background: url('/img/btn_registerfree.png') no-repeat 0 0; display:block; height:208px; width:203px; z-index:999;}
+#register_btn span {visibility:hidden;}
+
+/*---- Homepage - product boxes ----------------------------------------------*/
+#products {width:100%; height:500px; font-size:12px; color:#808386;}
+
+.panel_content{position:relative; top:-55px; left:0px; width:297px; max-width:297px; margin-right:18px; font-size:12px; color:#666;}
+.panel_content p {text-align:left; padding-left:18px;padding-right:18px;}
+.panel_header{font-weight:bold; font-size: 15px; color: #808386;}
+
+#peschool {float:left; width:297px; height:424px; background:url('/img/panel_peschool.png') no-repeat; position:relative; top:2px;}
+#peschool .panel_header{border:0px dashed #000; *top:10px;}
+#peschool_content {border:0px dashed #000; position:relative; top:92px; *+top:112px;}
+#peschool_learnmore {position:relative; top:73px; left:163px; *top:17px;}
+
+#peteacher {margin-left:auto; margin-right:auto; width:297px; max-width:297px; height:424px; background:url('/img/panel_peteacher.png') no-repeat bottom center; }
+#peteacher .panel_header {border:0px dashed #000; *top:10px; *left:10px;}
+#peteacher_content {border:0px dashed #000; position:relative; top:-27px; *+left:20px; *+top:-5px; }
+#peteacher_learnmore {position:relative; top:130px; left:163px; *+top:80px;}
+
+#pecoach {float:right; width:297px; max-width:297px; height:424px; background:url('/img/panel_pecoach.png') no-repeat bottom right; }
+#pecoach .panel_header{border:0px dashed #000; *top:10px; *left:10px;}
+#pecoach_content {border:0px dashed #000; position:relative; top:94px; *+top:-8px; *+left:40px;   }
+#pecoach_learnmore {position:relative; top:125px; left:163px; *top:70px; *left:0px; *+top:78px; *+left:157px;}
+
+
+/*---- SITEMAP ---------------------------------------------------------------*/
+/* ----- SP Edit ------- added padding for FF----------*/
+#sitemap {height:200px; background-color: #f9f9f9; border-bottom:1px dashed #d0d0d0; padding: 20px;}
+.sitemap_section {width:25%; min-width:25%;max-width:25%; font-size:15px; color:#666; font-weight:bold; position:relative; top:-5px;}
+
+#contact_section {height:550px; border-top:1px dashed #d0d0d0;}
+#contact {border:0px dashed #000; position:relative; left:-40px; }
+#contact_content {position:relative; top:20px;}
+#contact_form {font-size:12px;color:#666; line-height:18px;width:60%; float:left; border-right:0px dashed #d0d0d0; height:400px;}
+#contact_form td, #contact_twitter td {text-align:justify; padding-right:15px; padding-top:5px;padding-bottom:5px; vertical-align:top;}
+#contact_twitter td {padding-left:15px;}
+#contact_twitter {width:40%; float:right; border-left:1px dashed #d0d0d0;}
+#form_title {text-align:left; width:161px; height:19px; background: url('/img/title_getintouch.png') no-repeat;}
+#twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:relative; left:22px; z-index:1020;}
+#tweetbox {position:relative; top:-20px;}
+#sitemap_content a:hover {text-decoration:underline;}
+
+.twtr-join-conv {color:#808386 !important; border-bottom:1px dotted #808386;}
+.twtr-join-conv a:hover {color:#808386 !important; border-bottom:1px dotted #1aa6ab !important; text-decoration:none !important;}
+.twitter-logo {position:relative; top:-28px; background: url('/img/twitter_logo.png') no-repeat 0 0 !important; display:block; height:20px; width:100px; z-index:99999;}
+
+
+/*----- ADDITIONAL RESOURCES -------------------------------------------------*/
+.resources_mydisplay {display:block; height:115px; max-height:115px; border:0px dashed #000; vertical-align: middle; margin-bottom:38px;}
+.resources_img_display {display:block; height:115px; max-height:115px; border:0px dashed #000; vertical-align: middle; margin-bottom:38px;}
+
+#resources {font-family: Arial, Verdana, Helvetica, sans-serif; font-size:13px; color:#666; line-height:18px; margin-left:auto; margin-right:auto; width:987px;}
+#resources_left_section {width:200px;}
+#resources_title {}
+#resources_img_title span {visibility:hidden;}
+#resources_img_title {background: url('/img/resources_img_title.png') no-repeat 0 0; display:block; width:366px; height:28px; margin-top:20px; margin-bottom: 13px;}
+
+#resources_subtitle {margin-bottom: 28px; text-align:justify; color:#808386;}
+
+#resources_img_longterm {background: url('/img/resources_img_longterm.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_sportsday {background: url('/img/resources_img_festivals.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_rugby {background: url('/img/resources_img_rugby.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_volleyball {background: url('/img/resources_img_volleyball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_golf {background: url('/img/resources_img_golf.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_basketball {background: url('/img/resources_img_basketball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_title_basketball {background: url('/img/resources_img_title_basketball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+#resources_img_title_volleyball {background: url('/img/resources_img_title_volleyball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+#resources_img_title_add_lesson_plans {background: url('/img/resources_img_title_add_lesson_plans.png') no-repeat 0 0; display:block; width:555px; height:50px;margin-top:30px;}
+#resources_img_festivals {background: url('/img/resources_img_sportsday.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_gym_rc {background: url('/img/resources_img_gym_rc.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_gym_rc_index {background: url('/img/resources_img_gym_rc_index.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_longterm span, #resources_img_sportsday span, #resources_img_festivals span, #resources_img_gym_rc span, #resources_img_gym_rc_index span {visibility:hidden;}
+
+.resources_midsection_subtitle {font-weight:bold; text-align:left; display:block;}
+.resources_midsection_desc {font-weight:normal; text-align:justify; display:block;}
+.resources_midsection_desc a {text-decoration:underline; color:#1aa6ab;}
+.resources_midsection_desc a:hover {text-decoration:underline; color: #ee803a;}
+
+#badge_staffroom {float:right; position:relative; top:-12px;}
+#badge_staffroom a {background:url('/img/icon_staffroom.png') no-repeat 0 0; display:block; height:67px; width:186px;}
+#badge_staffroom a span {visibility:hidden;}
+
+    /*---- Long Term Guidance ----*/
+    #resources_img_title_longterm {background: url('/img/resources_img_title_longterm.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_longterm span {visibility: hidden;}
+
+    /*---- Sports Day Guidance ----*/
+    #resources_img_title_sportsday {background: url('/img/resources_img_title_sportsday.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_sportsday span {visibility: hidden;}
+
+    #resources_img_sportsdayoutline {background: url('/img/resources_img_sportsdayoutline.png') no-repeat 0 0; height:115px; display:block; margin-top:20px;}
+    #resources_img_sportsdayoutline span {visibility: hidden;}
+    #resources_img_sportsday_eventcards {background: url('/img/resources_img_sportsday_eventcards.png') no-repeat 0 0; height:115px; display:block; margin-top:20px;}
+    #resources_img_sportsday_eventcards span {visibility: hidden;}
+
+    /*---- Sports Festival Plans ----*/
+    #resources_img_title_festival {background: url('/img/resources_img_title_festivals.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+
+    #resources_img_festivals_athletics {background: url('/img/resources_img_festivals_athletics.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_gym {background: url('/img/resources_img_festivals_gym.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_ttennis {background: url('/img/resources_img_festivals_ttennis.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_rounders {background: url('/img/resources_img_festivals_rounders.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_saf {background: url('/img/resources_img_festivals_saf.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_netball {background: url('/img/resources_img_festivals_netball.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+
+    #resources_img_festivals_rounders span, #resources_img_festivals_saf span, #resources_img_festivals_netball span, #resources_img_basketball span, #resources_img_title_basketball span,
+    #resources_img_title_add_lesson_plans span, #resources_img_golf span,  #resources_img_volleyball span,  #resources_img_rugby span {visibility: hidden;}
+
+    .resources_backlink {height:25px; border-bottom: 1px dotted #d0d0d0; margin-top:15px; color:#1aa6ab;}
+    .resources_backlink a {width:200px; background: url('/img/sprite_icons_gui.png') no-repeat 0 0; width:12px; height:12px; display:block; color:#1aa6ab;}
+    .resources_backlink span {margin-left:22px; position:relative; top:-2px; width:200px; display:block;}
+    .resources_backlink span:hover { margin-left:22px; position:relative; top:-2px; text-decoration:underline; color:#1aa6ab; display:block;}
+
+    .resources_backto_staffroom {height:25px; border-bottom: 1px dotted #d0d0d0; margin-top:15px; color:#1aa6ab; text-align:left;}
+    .resources_backto_staffroom a {background: url('/img/sprite_icons_gui.png') no-repeat 0 0; width:12px; height:12px; display:block; color:#1aa6ab;}
+    .resources_backto_staffroom span {margin-left:22px; position:relative; top:-2px; width:200px; display:block;}
+    .resources_backto_staffroom span:hover {margin-left:22px; position:relative; top:-2px; text-decoration:underline; color: #1aa6ab; display:block;}
+
+    #resources_right_section {float:right; border:0px dashed #000; position:relative; top:-80px;}
+    /*----------Gym Resource Cards-------------------------------------------------*/
+    #resources_img_title_gym_rc {background: url('/img/resources_img_title_gym_rc.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_gym_rc span {visibility: hidden;}
+
+/*---- FOOTER ----------------------------------------------------------------*/
+
+#footer{
+    font-size:11px;
+    text-align:left;
+    color:#333;
+    height:90px;
+    background-color: #f5f5f5;
+}
+#footer a{
+    color:#666666;
+}
+#footer_content{
+    position:relative;
+    top:0px;
+    text-align:left;
+    color:#666;
+    font-size:11px;
+    border-collapse: collapse;
+}
+#footer_text a {border-bottom: 1px solid #666666;}
+#footer_ruleoff{height:7px;background:url('/img/bg_footer.gif') repeat-x;}
+#footer_ruleoff a {border-bottom:1px solid #666666;}
+#itf_logo{width:152px; height:37px; vertical-align: top; position:relative; top:8px;}
+#itf_logo a {width:152px; height:37px; background:url('/img/logo_itf.png') no-repeat; display: block;}
+#itf_logo span {visibility:hidden;}
+#company_details {font-size:12px; color:#666; position:relative; top:-27px;}
+#company_details a {color:#666; text-decoration:underline;}
+#company_details a:hover {color:#1aa6ab; text-decoration:underline;}
+
+/* ---- MAIN FEATURE - Scroller ----------------------------------------------*/
+
+#main_feature {width:100%; height:100%; background:url(/img/bg_grass_sky.png) repeat-x; min-height:720px; max-height: 720px; border:0px dashed #000;}
+#arrow_left, #arrow_right {position:relative; top:-450px; border: 1px solid #000; display:block; z-index: 9999999999; cursor:pointer;}
+#arrow_left span, #arrow_right span{visibility: hidden;}
+#arrow_left {width:46px; height:74px; border: 0px solid #ffffff; outline-style:none; background:url(/img/feature_arrow_left_up.png) no-repeat; float:left;}
+#arrow_left:hover {width:46px; height:74px; outline:none; background:url(/img/feature_arrow_left_down.png) no-repeat;}
+#arrow_right {width:46px; height:74px; border: 0px solid #ffffff; outline-style:none; background:url(/img/feature_arrow_right_up.png) no-repeat; float:right;}
+#arrow_right:hover {width:46px; height:74px; outline:none; background: url('/img/feature_arrow_right_down.png') no-repeat 0 0;}
+
+.scrollable {border:0px dashed #000; position:relative; top:20px; overflow:hidden; width: 990px; height:655px; margin-right:auto; margin-left:auto;}
+.scrollable .items {width:20000em; position:absolute; clear:both;}
+.items div {float:left; width:100%; position:relative; top:-22px;}
+.scrollable .active {border:2px solid #000; position:relative; cursor:default;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---- POPUP REGISTER --------------------------------------------------------*/
+#name_reg_msg, #email_reg_msg, #email_confirm_reg_msg, #password_reg_msg, #role_reg_msg {text-align:left;}
+
+#role_reg_msg {position:relative; top:-190px;}
+#email_reg_msg {}
+#email_confirm_reg_msg {top:-228px;}
+#password_reg_msg {top:-209px;}
+
+#select_reg {display: none;}
+
+#reg_form_buttons {position:relative; top:-41px;}
+
+/*---- POPUP SUBSCRIBE BOX ---------------------------------------------------
+#Subscribe {position:absolute; top:85px;}
+
+#name_sub, #email_sub, #email_confirm_sub, #school_sub, #postcode_sub {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:36px;
+           border:none; outline:none; padding-left:8px; padding-top:3px;
+           font-size:16px; color:#666;}
+
+#name_sub {position:relative; top:-30px;}
+#name_sub_msg {position:relative; top:47px;}
+
+#email_sub {position:relative; top:-30px;}
+#email_sub_msg {border:0px dashed #000; position:relative; top:-228px;}
+
+#school_sub {position:relative; top:-30px;}
+#school_sub_msg {position:relative; top:-208px;}
+
+#postcode_sub {position:relative; top:-30px;}
+#postcode_sub_msg {position:relative; top:-190px;}
+
+#type_sub {position:relative; top:-31px; background: url('/img/sprite_regform.png') no-repeat 0 -80px; overflow:hidden; font-size:16px; color:#666; width:334px;
+           padding-top:9px; padding-left:5px; height:40px; border:0px; outline:none; -webkit-appearance: none;}
+
+#select_sub {display:none;}
+
+#sub_form_buttons {position:relative; top:190px;}
+*/
+/*--- POPUP FREE TRIAL BOX ------------------------------------------*/
+#name_trial, #email_trial, #email_confirm_trial, #school_trial, #postcode_trial, #telephone_trial {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+#role_trial {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_trial:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+#name_trial_msg, #email_trial_msg, #email_confirm_trial_msg, #telephone_trial_msg, #school_trial_msg, #postcode_trial_msg, #role_trial_msg {text-align:left;}
+
+        #name_trial {position:relative; top:-20px; }
+        #name_trial_msg {position:relative; top:55px; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_trial {position:relative; top:-25px; }
+        #email_trial_msg { border:1px dashed #000; position:relative; top:-343px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_trial {position:relative; top:-30px; }
+        #email_confirm_trial_msg { position:relative; top:-325px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_trial {position:relative; top:-30px; }
+        #school_trial_msg {position:relative; top:-288px;font-size:11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_trial{position:relative; top:-30px; }
+        #postcode_trial_msg {position:relative; top:-272px;font-size:11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_trial{position:relative; top:-30px; }
+        #telephone_trial_msg {position:relative; top:-308px;font-size:11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #role_trial {position:relative; top:-31px;}
+        #role_trial_msg {position:relative; top:-253px;font-size:11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+#select_trial {display:none;}
+
+#trial_form_buttons {border:0px dashed #000; position:relative; top:0px; left:0px;}
+
+/*---- CREATE A PLAN ---------------------------------------------------------*/
+.sum_title {width:150px; color:#77af0c; text-align:left;}
+
+/*---- buttons ----*/
+
+    #step1_cont{border:0px dashed #000; position:relative; top: 155px; left:720px;}
+    #step2_back{border:0px dashed #000; position:relative; top: 155px; left:-1px;}
+    #step2_cont{border:0px dashed #000; position:relative; top: 155px; left:540px;}
+    #step3_back{border:0px dashed #000; position:relative; top: 179px; left:-1px;}
+    #step3_cont{border:0px dashed #000; position:relative; top: 180px; left:540px;}
+    #step4_back{border:0px dashed #000; position:relative; top: 181px; left:-1px;}
+    #step4_cont{border:0px dashed #000; position:relative; top: 181px; left:540px;}
+
+    #step5_buttons {width:100%; position:relative;top:70px;}
+    #step5_back{border:0px dashed #000; float:left; position:relative; top:0px; left:-2px;}
+    #step5_cont{border:0px dashed #000; float:right; position:relative; top:0px; left:-50px;}
+
+    .step5{width:400px; margin-left:20px; margin-right:20px; border: 1px dotted #d0d0d0;}
+    .step5 td {padding:8px; vertical-align: middle; text-align: left;}
+
+
+/*----- CREATE YOUR OWN PLAN (level5) ----------------------------------------*/
+#createunit {text-align:center; border:0px dashed #000;}
+#createunit dd {-moz-margin-start:0px; -khtml-margin-start:0px;}
+
+#intro-label,#own_sel_level-label, #own_sel_topic-label, #own_sel_num_lessons-label, #plan_type-label,
+#ownplan_level_overlay-label, #ownplan_sel_level_overlay-label, #ownplan_topic_overlay-label, #ownplan_numlessons_overlay-label {display:none;}
+
+#ownplan_level_overlay, #ownplan_topic_overlay, #ownplan_numlessons_overlay {
+    font-size:16px; font-weight:normal; color:#666; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+    width:334px; height:34px; padding-top:5px; padding-left:8px; border:none; outline:none;}
+
+#ownplan_level_overlay {border:0px dashed #000; position:absolute; top:130px; left:133px;} /*position:absolute; top:140px; left:50px;*/
+#ownplan_topic_overlay {border:0px dashed #000; position:absolute; top:182px; left:133px;}
+#ownplan_numlessons_overlay {border:0px dashed #000; position:absolute; top:235px; left:133px;}
+
+#own_sel_level, #own_sel_topic, #own_sel_num_lessons {background: url('/img/sprite_regform.png') no-repeat 0 -80px; width:334px; height:40px;
+                                                      border:none; outline:none; padding-left:5px; padding-top:5px; font-size:16px; color:#666; -moz-appearance:none; margin-bottom:13px;
+position:relative; left:134px;}
+#own_sel_level:hover, #own_sel_topic:hover, #own_sel_num_lessons:hover {cursor:pointer;  position:relative; left:134px;}
+#own_sel_level {margin-top:15px;}
+
+
+
+
+/*----- STAFFROOM ------------------------------------------------------------*/
+#staffroom_welcome {background-color:#f5f5f5; height:75px; border-bottom: 1px dashed #d0d0d0; font-size:13px; color:#808386; font-weight:normal;}
+#staffroom_welcome_content{ width:987px; margin-left:auto; margin-right:auto; padding-top:20px;}
+#staffroom_welcome_content .button {background: url('/img/sprite_staffroom.png') no-repeat 0 -43px; width:198px; height:43px; display:block;}
+#staffroom_welcome_content .button:hover {background: url('/img/sprite_staffroom.png') no-repeat 0 0px; width:198px; height:43px; display:block;}
+
+#badge_freetrial {float:right;}
+#badge_freetrial a {background: url('/img/badge_freetrial.png') no-repeat 0 0; display:block; height:40px; width:230px;}
+#badge_freetrial a span {visibility:hidden;}
+
+#staffroom {width:987px; min-height:550px; margin-left:auto; margin-right:auto; margin-top:30px; margin-bottom:30px; border:0px dashed #000;}
+
+        /*--- Staffroom Admin Area ---*/
+        .vindent_middle {position:relative; top:33px;}
+        /* SP Edit removed top:52px */
+
+        .vindent_right {position:relative;}
+
+        #left_section_spacing {width:15px; max-width:15px;}
+        #left_section {min-width:158px; border:0px dashed #000;}
+        /*--- My Plans ---*/
+
+
+        #myplans {border:0px dashed #000; width:248px; max-height:518px; background-color:#f6f6f6;}
+
+        #myplans_header {background: url('/img/bg_myplans_header') no-repeat 0 0; width:248px; height:77px; }
+        #myplans_header span {visibility: hidden;}
+
+        #myplans_content {border:0px dashed #000; width:248px; font-size:13px; font-weight:bold; color:#808386;}
+            #items {border:0px dashed #000; width:248px;}
+                #myplans_item {border:0px dashed #000; margin-bottom:0px; width:218px; padding-left: 15px; padding-right:15px; background: url('/img/item_divider.png') no-repeat bottom; }
+                #myplans_item_item {border:0px dashed #000; height:80px; width:218px; padding-top:20px; font-size:13px; font-weight:bold;}
+                #myplans_item_item span {border:0px dashed #000; vertical-align: middle;}
+                #myplans_item_item .item_title:hover {text-decoration: underline; cursor:pointer;}
+
+                #sprite_bg_myplans_scroll {background: url('/img/sprite_bg_myplans_scroll.png') no-repeat; display:block; width:248px; height:45px; border:0px dashed #000;}
+                .date {font-size:11px; font-weight:normal;}
+
+                #viewmore_up {float:left; position:relative; top:0px; left:0px; border:0px dashed #000;}
+                #viewmore_up a {background: url('/img/sprite_bg_myplans_scroll.png') no-repeat 0 -45px; width:124px; height:45px; display:block; position:relative; top:-1px;}
+                #viewmore_up a:hover{background: url('/img/sprite_bg_myplans_scroll.png') no-repeat 0 -90px; display:block; position:relative; top:-1px;}
+                #viewmore_up span {visibility:hidden;}
+
+                #viewback_down {float:right; position:relative; top:0px; left:0px;}
+                #viewback_down a {background: url('/img/sprite_bg_myplans_scroll.png') no-repeat -124px -45px; width:124px; height:45px; display:block; position:relative; top:-1px;}
+                #viewback_down a:hover{background: url('/img/sprite_bg_myplans_scroll.png') no-repeat -124px -90px; display:block; position:relative; top:-1px;}
+                #viewback_down span {visibility:hidden;}
+
+        /*---- VERTICAL SCROLL ------*/
+
+            .vertical {position:relative; overflow:hidden; height:400px;max-height:400px; width: 248px; background-color:#f6f6f6;}
+            .items {position:absolute; height:20000em; margin: 0px;}
+            #myplans_scroll div {position:relative; top:0px; width:218px;}
+
+            .item {border:0px dashed #ddd; margin:0px 0; padding:0px; font-size:12px; color:#808386; height:80px;}
+
+            #actions {border:0px dashed #000; width:248px;}
+            #actions a {font-size:11px; cursor:pointer; color:#666;}
+            #actions a:hover {text-decoration:underline; color:#000;}
+            .disabled {visibility: visible;}
+            .next {float:right;}
+
+/*--- Lesson Area ---*/
+
+    /* central area */
+    #middle_section {border:0px dashed #000; width:542px; max-width:542px; margin-left:auto; margin-right:auto;}
+
+        #menu_options {border:0px dashed #000; float:right; position:relative; left:20px; z-index:1400;}
+            #options_items_btn {background: url('/img/btn_options.png') no-repeat 0 0; width:88px; height:10px; cursor: pointer;}
+                #options_items {position:absolute; background-color: #ffffff; border:1px solid #d0d0d0; width:100px;}
+                    #options_items li {list-style-type: none; padding-left:15px; padding-top:5px; padding-bottom: 5px; border-bottom: 1px dashed #d0d0d0; font-size:13px; font-weight:normal;}
+                    #options_items li:hover {text-decoration:underline;}
+                    #options_items span {visibility:hidden;}
+
+        #mylessons_title {border-bottom:1px dashed #d0d0d0;}
+        #mylessons_subtitle {font-size:11px; font-weight:normal; letter-spacing: 1px; color:#808386; font-family: Arial; position:relative;}
+        #mylessons_name {border-bottom:0px dashed #d0d0d0; font-size: 24px; font-weight:normal; color:#808386;}
+        #mylessons_content {font-size:14px; font-weight:normal;}
+        #mylessons_content a {font-size:13px; font-weight:normal; color:#666; border-bottom: 1px dotted #d0d0d0;}
+        #mylessons_content a:hover {color:#77af0c;}
+        #mylessons_content span {visibility:hidden;}
+
+        /* Staffroom Icons - this section contains CSS for all the icons used in the central area of the staffroom */
+
+        .printer {background: url('/img/icon_print.png') no-repeat 0 0; width:14px; height:14px; float:right;}
+        .printer:hover {background: url('/img/icon_print.png') no-repeat 0 -14px; width:14px; height:14px; float:right;}
+
+/*--- Staffroom Marketing & Promotion section ---*/
+#right_section {float:right; border:0px dashed #000;}
+
+                #my_boxes {width:158px; max-width:158px; min-height:500px;}
+
+                .promobox {width:158px; height:155px; margin-bottom:10px; color:#808386;}
+                .promotitle {position:relative; left:30px;}
+                .box_content {width:125px; padding-left:15px; padding-right:15px;}
+                .box_link {display:block; height:11px;}
+
+                #box_register {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1240px;}
+                #box_register_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 0;}
+                #box_register_title a span {visibility:hidden;}
+
+                #box_subscribe {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1395px;}
+                #box_subscribe_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -11px;}
+                #box_subscribe_title a span {visibility:hidden;}
+
+                #box_video {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1550px;}
+                #box_video_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -99px;}
+                #box_video_title a span {visibility:hidden;}
+
+                #box_staffroom {background: url('/img/sprite_promo_panels.png') no-repeat 0 0;}
+                #box_staffroom_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -22px;}
+                #box_staffroom_title a span {visibility:hidden;}
+
+                #box_endorsements {background: url('/img/sprite_promo_panels.png') no-repeat 0 -155px;}
+                #box_endorsements_title a {position:relative; top:132px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -77px;}
+                #box_endorsements_title a span {visibility:hidden;}
+
+                #endorsements_content {text-align:left;}
+
+                #box_faqs {background: url('/img/sprite_promo_panels.png') no-repeat 0 -310px;}
+                #box_faqs_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -33px;}
+                #box_faqs_title a span {visibility:hidden;}
+
+                #box_partners {background: url('/img/sprite_promo_panels.png') no-repeat 0 -465px;}
+                #box_partners_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -44px;}
+                #box_partners_title a span {visibility:hidden;}
+
+                #box_social {background: url('/img/sprite_promo_panels.png') no-repeat 0 -620px;}
+                #box_social_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -55px;}
+                #box_social_title a span {visibility:hidden;}
+
+                #box_pecoach {background: url('/img/sprite_promo_panels.png') no-repeat 0 -775px;}
+                #box_pecoach_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -66px;}
+                #box_pecoach_title a span {visibility:hidden;}
+
+                #box_peschool {background: url('/img/sprite_promo_panels.png') no-repeat 0 -930px;}
+                #box_peschool_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -66px;}
+                #box_peschool_title a span {visibility:hidden;}
+
+                #box_peteacher {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1085px;}
+                #box_peteacher_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -66px;}
+                #box_peteacher_title a span {visibility:hidden;}
+
+                #box_planalesson {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1705px;}
+                #box_planalesson_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -88px;}
+                #box_planalesson_title a span {visibility:hidden;}
+
+                #box_createyourown {background: url('/img/sprite_promo_panels.png') no-repeat 0 -1860px;}
+                #box_createyourown_title a {position:relative; top:128px; background: url('/img/sprite_promo_titles.png') no-repeat 0 -121px;}
+                #box_createyourown_title a span {visibility:hidden;}
+
+#createunit {text-align:center; }
+.little_help{position:relative; left:240px;top:-26px;font-style: italic;}
+ /*---- lesson overlays ---*/
+#view-content { border:0px dashed #000; width:556px; height:434px; padding-left:12px; padding-right:10px; color:#808386; margin-left:auto; margin-right:auto; overflow:auto;}
+/*#view-content { background: url('/img/bg_staffroom_overlay.png') no-repeat 0 -115px; width:556px; height:434px; padding-left:10px; padding-right:10px; font-size:12px; color:#808386; margin-left:auto; margin-right:auto; overflow:auto;}*/
+
+/* STAFFROOM RESOURCES */
+.dance_links {text-decoration:underline;}
+.dance_links:hover {color:#000;}
+
+.title_resources {font-size:16px; font-weight:bold;}
+.url {border:0px dashed #000; background: url('/img/sprite_icons_resources.png') no-repeat 0 0px; width:44px; height:49px; display:block;}
+.url span {border:0px dashed #000; min-width:200px; padding-left:50px; display:block;}
+.pdf {border:0px dashed #000; background: url('/img/sprite_icons_resources.png') no-repeat 0 -49px; width:44px; height:49px; display:block;}
+.pdf span {border:0px dashed #000; min-width:200px; padding-left:50px; display:block;}
+
+/* SUBMENU Learn More */
+.submenu_learnmore {height:25px; border-bottom: 1px dashed #d0d0d0;}
+.submenu_learnmore a {width:200px; background: url('/img/sprite_icons_gui.png') no-repeat 0 0; width:12px; height:12px; display:block;}
+.submenu_learnmore span {margin-left:22px; position:relative; top:-2px; width:100px; display:block;}
+.submenu_learnmore span:hover { margin-left:22px; position:relative; top:-2px; border-bottom:1px dotted #1aa6ab; display:block;}
+
+#left_grad {background: url('/img/bg_leftgrad.png') no-repeat; height:679px; width:79px; position:absolute; top:15px; left:-5px; z-index:100;}
+#right_grad {background: url('/img/bg_rightgrad.png') no-repeat; height:679px;width:79px; position:relative; top:15px; left:5px; float:right; z-index:100;}
+
+
+/*----MODAL DIALOGS ----------------------------------------------------------*/
+.overlay_content{
+    border:0px dashed #000;
+    position:relative;
+    top:24px;
+
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.overlay_header {
+    border:0px dashed #000;
+    color:white;
+    font-weight:bold;
+    margin-top:2px;
+    margin-bottom: 12px;
+    width:400px;
+    text-align: center;
+}
+.overlay_subheader{ font-size:13px; color:#666; text-align: center;
+                   width:400px; margin-top:22px; margin-bottom:15px;
+                   border:0px dashed #000;}
+
+.overlay_subheader a {font-size:13px; color:#0181BD;}
+.overlay_subheader a:hover {text-decoration: underline;}
+
+/* override the root element to enable scrolling */
+	#actionButtons {text-align:center; margin-top:30px; *margin-top:-250px;}
+        /* tab pane styling */
+        .panes div {
+            display:none;
+            padding:15px 10px;
+            border:0px solid #999;
+            border-top:0;
+            font-size:12px;
+            color: #000;
+        }
+        #Register_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:731px; height:512px; text-align:left;}
+        #Login_div {background: url('/img/bg_panel_signin') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
+        #Subscribe_div {background: url('/img/bg_panel_reg') no-repeat;display:none; width:731px; height:512px; text-align:left;}
+        #Trial_div {background: url('/img/bg_panel_trial');background-repeat: no-repeat; background-size: 731px 630px; display:none; width:731px; height:630px; text-align:left; top:-5px;}
+        #New_Unit_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:659px; height:493px; text-align:left;}
+        #contact_div {background: url('/img/bg_panel_reg') no-repeat; display:none; width:659px; height:493px; text-align:left;}
+
+/* right */
+a.right 	{ background-position: 0 -30px; clear:right; margin-right: 0px;}
+a.right:hover 	{ background-position:-30px -30px; }
+a.right:active 	{ background-position:-60px -30px; }
+
+
+/* left */
+a.left		{ margin-left: 0px; }
+a.left:hover  	{ background-position:-30px 0; }
+a.left:active  	{ background-position:-60px 0; }
+
+
+/* up */
+a.up:hover  	{ background-position:-30px 0; }
+a.up:active  	{ background-position:-60px 0; }
+
+/* down */
+a.down 		{ background-position: 0 -30px; }
+a.down:hover  	{ background-position:-30px -30px; }
+a.down:active  	{ background-position:-60px -30px; }
+
+
+/* disabled navigational button */
+a.disabled {visibility:hidden !important;}
+
+.myplans_scrollable {
+
+	/* required settings */
+	position:absolute;
+	overflow:hidden;
+        height:450px;
+        width:227px;
+
+	/* custom decorations */
+	border:0px dashed #000;
+}
+
+.myplans_scrollable .items { width:20000em; position:absolute; clear:both;}
+
+.items div {float:left;}
+
+/* active item */
+.myplans_scrollable .active {
+	border:2px solid #000;
+	position:relative;
+	cursor:default;
+}
+#actionButtons{border:0px dashed #000; }
+#btn_play{ width:60px; height:50px; position:relative; left:790px; top:520px;}
+#btn_play a{
+    width:60px; height:50px;
+    background: url('/img/btn_playpause.png') no-repeat;
+    background-position: 0px 0px;
+    display:block;}
+
+#btn_play a:hover{ background-position: 0px -50px;}
+#btn_play a span{visibility:hidden;}
+
+#btn_pause{ width:60px; height:50px; position:relative; left:850px; top:520px;}
+#btn_pause a{
+    position:relative; top:-50px; left:0px;
+    width:60px; height:50px;
+    background: url('/img/btn_playpause.png') no-repeat;
+    background-position: -60px 0px;
+    display:block;
+}
+#btn_pause a:hover{ background-position: -60px -50px; }
+#btn_pause a span{visibility: hidden;}
+
+
+
+/* PLAN A LESSON */
+
+#pageheader_planalesson { position:relative; top:20px; border:0px dashed #000;
+                          font-size: 13px; font-weight:bold; color:#666;
+                          width: 987px; margin-left:auto; margin-right:auto;}
+#pageheader_planalesson span {position:relative; top:10px; font-size:28px; font-weight: normal; letter-spacing: 0px;}
+#title_planalesson{background: url('/img/title_planalesson.png') no-repeat; width:295px; height:32px;}
+
+/* scrollable root element */
+#planlesson_content{
+    position:relative;
+    top:60px;
+    margin-left:auto;
+    margin-right:auto;
+    width:936px;
+    background: url('/img/bg_createaplan.png') no-repeat;
+}
+#createaplan_spacing{ border:1px dashed #000; height:100px; }
+
+#btn_staffroom { border:0px dashed #000; position:relative; top:100px; left: 300px; width:247px; height: 62px;  margin-left:auto; margin-right:auto;}
+#btn_staffroom a {
+    background: url('/img/btn_staffroom.png') no-repeat;
+    width:247px; height: 62px;
+
+    display:block;
+}
+#btn_staffroom a span{visibility: hidden;}
+
+#unit_title{
+    border: 0px;
+    font-size:18px; color:#666;
+    padding-left:12px;
+    outline: none;
+    text-align: center;
+}
+
+    #summary {float:right; border:0px dashed #000; font-size: 14px; color:#808386; font-weight:bold; position: relative; top:-30px; width:400px;}
+    #sum_title{font-weight:bold; color:#666; border-bottom:1px dotted #666;}
+    #summary span {min-width:300px; max-width:300px; font-size: 14px; font-weight: bold;}
+    #summary td input{font-weight:bold; background-image: none; height:18px; width:200px; font-size: 14px; border:none; outline:none; color:#808386; background-color: transparent;}
+    #staffroom_intro{float:left; border:0px dashed #000;}
+    #staffroom_intro_title {background: url('/img/icon_staffroom.png') no-repeat 0 0; display:block; height:60px; }
+    #staffroom_intro_title span {visibility:hidden;}
+
+    #staffroom_intro_content {font-size:18px; font-weight:normal; color:#808386; padding-right:40px; line-height: 22px; width:351px; max-width:351px;}
+
+.btn_continue {max-width:182px; float:right; border:0px dashed #000;}
+.btn_continue a {background: url('/img/btn_continue.png') no-repeat; width:182px; height:51px; display:block;}
+.btn_continue a:hover{ background: url('/img/btn_continue.png') no-repeat; width:182px; height:51px; display:block; }
+.btn_continue a span{visibility:hidden;}
+
+.btn_createplan{max-width:182px; float:right; border:0px dashed #000;}
+.btn_createplan a{ background: url('/img/btn_createplan.png') no-repeat; width:243px; height:50px; display:block;}
+.btn_createplan a:hover{ background: url('/img/btn_createplan.png') no-repeat; width:243px; height:50px; display:block; }
+.btn_createplan a span{visibility:hidden;}
+
+
+.btn_back {max-width:180px;}
+.btn_back a {background: url('/img/btn_back.png') no-repeat; width:180px; height:51px; display:block;}
+.btn_back a:hover {background: url('/img/btn_back.png') no-repeat; width:180px; height:51px; display:block;}
+.btn_back a span {visibility:hidden;}
+
+.help{width:840px; margin-left:30px; border: 1px dotted #d0d0d0;}
+.help td {padding:8px; vertical-align: middle; text-align: justify;}
+.info{background: url('/img/icon_info.png') no-repeat center center; height:53px; width:51px; max-width:51px;
+      border:0px dashed #000;}
+.info_content{border:0px dashed #000;;
+              color:#808386;}
+
+#wizard {
+    border:0px dashed #000;
+    font-size:12px;
+    height:514px;
+    margin:20px auto;
+    width:900px;
+    overflow:hidden;
+    position:relative;
+    left:2px;
+    top:20px;
+}
+#wizard input{
+    background: url('/img/planalesson_input.png') no-repeat; width:460px; height:58px; margin-left: auto; margin-right: auto; text-align: justify;}
+
+/* scrollable items */
+#wizard .items {
+    width:20000em;
+    clear:both;
+    position:absolute;
+}
+
+/* single item */
+#wizard .page { padding:0px; width:900px; float:left; }
+
+/* title */
+#wizard h2 {
+    border-bottom:1px dotted #d0d0d0;
+    font-size:22px;
+    font-weight:normal;
+    margin-top:30px;
+    margin-bottom:50px;
+    padding:20px;
+}
+
+#wizard h2 em {
+    display:block;
+    font-size:16px;
+    color:#666;
+    font-style:normal;
+    margin-top:5px;
+}
+
+/* input fields */
+#wizard ul { padding:0px !important; margin:0px !important; }
+#wizard li { list-style-type:none; list-style-image:none;
+             margin-bottom:0px;
+             font-size:15px; text-align: center; }
+
+#wizard label { font-size:16px; display:block; }
+#wizard label strong { color:#789; position:relative; top:-1px; }
+#wizard label em { font-size:11px; color:#666; font-style:normal;}
+
+#wizard .text {
+    width:100%;
+    padding:5px;
+    border:1px solid #ccc;
+    color:#456;
+    letter-spacing:1px;
+}
+
+#wizard select {
+    border:0px dashed #000;
+    width:460px; height:61px;
+    background-color: transparent; overflow: hidden;
+    background: url(/img/bg_select_input.png) no-repeat 0 0;
+     -webkit-appearance: none;
+    padding:12px;
+    font-size:18px; color:#666;
+    margin-left: auto;
+    margin-right:auto;
+    outline:none;
+}
+#wizard select:hover {
+    background: url(/img/bg_select_input_over.png) no-repeat 0 0;
+    outline:none;
+    -webkit-appearance: none;
+}
+#wizard label span {
+    color:#b8128f;
+    font-weight:bold;
+    position:relative;
+    top:4px;
+    font-size:20px;
+}
+
+#wizard .double label {
+    width:50%;
+    float:left;
+}
+
+#wizard .double .text {
+    width:93%;
+}
+
+#wizard .clearfix {
+    clear:left;
+    padding-top:10px;
+}
+
+#wizard .right {
+    float:right;
+}
+#wizard .error {
+    border:1px solid red;
+    /**background:url('/img/bg_select_input.png') no-repeat;**/
+    color:#666;
+}
+#wizard .error:hover {
+    border:1px solid red;
+    /**background:url('/img/bg_select_input.png') no-repeat;**/
+    color:#666;
+}
+.error {text-align:center; color:red;}
+
+#wizard #status {
+    margin:0px !important;
+    height:38px;
+    background:#d0d0d0 repeat-x;
+    padding-left:0px !important;
+    _background:#d0d0d0;
+}
+
+#status li {
+    list-style-type:none;
+    list-style-image:none;
+    float:left;
+    color:#fff; font-weight:bold;
+    letter-spacing: 0px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+#status li.active {background-color:#9cce5a; font-weight:bold;}
+
+#aboutus_content, #contactus_content, .learn_content{
+    width:987px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px; margin-bottom:100px;
+    font-size:13px; color:#808386;}
+.learn_content a {font-size:13px; color:#0181BD;}
+.learn_content_side {border:0px dashed #000; width:158px; min-height:500px;}
+#learn_text {text-align:justify; padding-right:30px; padding-left:30px;}
+
+#promo_content {float:left; background: url('/img/aboutus_promo_left.png'); width:158px;}
+#markt_content {float:right; background: url('/img/aboutus_promo_right.png'); width:158px;}
+#learn_content, #contactus {width:611px;}
+
+
+#aboutus_content h2{ color:#666;}
+#contactus_content p{ font-weight:bold;}
+
+.loading{
+    font:18px Gill, Helvetica, sans-serif;
+    font-weight: bold;
+    background:url('/img/loader.gif') no-repeat center center transparent;
+    text-align:center;
+    padding: 25px;
+    line-height:100px;
+    color:#666;
+}
+
+/*---- SIGN IN, REGISTER AND SUBSCRIBE ---------------------------------------*/
+
+    /*--- SIGN IN ---*/
+    #Login_title {font-size: 13px; color:#666; text-align: center; border-bottom: 1px dotted #ccc; width:340px;
+               padding-bottom:8px; margin-top:40px; margin-left:auto; margin-right:auto; }
+    #Login_footer {font-size: 12px; color:#666; text-align: left;  width:340px;
+               padding-bottom:25px; margin-top:-35px; margin-left:40px; margin-right:auto; }
+    #Login_footer a {color:#0181BD;}
+    #userName, #password, #password_clear {background: url('/img/form_input_dialogue.png') no-repeat; width:334px; height:47px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+    #userName {position:relative; top:-10px;} #password {border:0px dashed #000; position: relative; top:-22px;} #password_clear {position:relative; top:-41px;}
+
+
+    #Login_buttons {width:200px; margin-left:auto; margin-right:auto; border:0px dashed #000; position:relative; top:19px; *+ top:13px;}
+    #button_area{float:right;} #btn_cancel {float:left;}
+
+    #button_area a {background: url('/img/form_sprite_btn.png') no-repeat 0 0; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area a:hover {background: url('/img/form_sprite_btn.png') no-repeat 0 -35px; width:96px; height:35px; border:none; outline:none;}
+    #button_area span {visibility:hidden;}
+
+    #btn_cancel a {background: url('/img/form_sprite_btn.png') no-repeat 0 -70px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #btn_cancel a:hover {background: url('/img/form_sprite_btn.png') no-repeat 0 -105px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #btn_cancel span {visibility:hidden;}
+
+
+    /*--- REGISTER ---*/
+
+    #Register_content {width:731px; height: 512px;} /* does not include bg */
+    #Register_header {border:0px dashed #000; position:relative; top:25px; width:400px; margin-left:auto; margin-right:auto; font-size:16px; font-weight:bold; color:white; text-align:center;}
+    #Register_subheader { position:relative; top:25px; font-size:13px; color:#666; text-align: center; width:400px; margin-left:auto; margin-right:auto; border:0px dashed #000;}
+    #Register_subheader a {font-size:13px; color:#0181BD;}
+    #Register_subheader a:hover {text-decoration: underline;}
+    #Register_info {border-right:1px dashed #d0d0d0; height:290px; position:relative; top:45px; left:30px; float:left; width:230px; padding-left:20px; padding-right:10px; margin-right:10px; color:#808386; font-size:13px; }
+    #Register_info a {font-size:13px; color:#0181BD;}
+    #Register_form {float:right; width:375px; border:0px dashed #000;}
+    /*#reg_form_buttons {border:0px dashed #000; position:relative; top:16px;}*/
+
+    #popup_register_contents {height:400px; max-height:400px; display:block;}
+
+
+    #name_reg, #email_reg, #email_confirm_reg, #password_reg, #password_reg_clear{background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+    #role_reg{border:1px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+    #role_reg:hover{background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+
+    #button_area_reg{float:right; position:relative; top:-151px;}
+    #button_area_reg a {background: url('/img/sprite_signin.png') no-repeat 0 -140px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_reg a:hover {background: url('/img/sprite_signin.png') no-repeat 0 -175px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_reg span {visibility:hidden;}
+
+    #button_area_cancel_reg{float:right; position:relative; top:-151px;}
+    #button_area_cancel_reg a {background: url('/img/sprite_signin.png') no-repeat 0 -70px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_cancel_reg a:hover {background: url('/img/sprite_signin.png') no-repeat 0 -105px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_cancel_reg span {visibility:hidden;}
+
+        /*--- positioning ---*/
+
+        #name_reg {position:relative; top:-30px; }
+        #name_reg_msg {position:relative; top:47px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+        #email_reg {position:relative; top:-30px; }
+        #email_reg_msg {border:1px dashed #000; position:relative; top:-247px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_reg {position:relative; top:-30px; }
+        #email_confirm_reg_msg {position:relative; top:-225px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #password_reg {position:relative; top:-30px; }
+        #password_reg_msg {position:relative; top:-205px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #password_reg_clear {position:relative; top:-49px;}
+        #role_reg {position:relative; top:-49px;}
+        #role_reg_msg {position:relative; top:-181px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+
+   /*--- SUBSCRIBE ---*/
+
+    #Subscribe_content {width:731px; height: 512px;} /* does not include bg */
+    #Subscribe_header {border:0px dashed #000; position:relative; top:25px; width:400px; margin-left:auto; margin-right:auto; font-size:16px; font-weight:bold; color:white; text-align:center;}
+    #Subscribe_subheader{ position:relative; top:25px; font-size:13px; color:#666; text-align: center; width:400px; margin-left:auto; margin-right:auto; border:0px dashed #000;}
+    #Subscribe_subheader a {font-size:13px; color:#0181BD;}
+    #Subscribe_subheader a:hover {text-decoration: underline;}
+    #Subscribe_info {border-right:1px dashed #d0d0d0; height:290px; position:relative; top:45px; left:30px; float:left; width:230px; padding-left:20px; padding-right:10px; margin-right:10px; color:#808386; font-size:13px; }
+    #Subscribe_form {float:right; width:375px; border:0px dashed #000;}
+    #subscribe_form_buttons {border:0px dashed #000; position:relative; top:20px;}
+
+    #button_area_sub {float:right; position:relative; top:-113px;}
+    #button_area_sub a {background: url('/img/sprite_form_buttons.png') no-repeat 0 -350px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_sub a:hover {background: url('/img/sprite_form_buttons.png') no-repeat 0 -385px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_sub span {visibility:hidden;}
+
+    #button_area_cancel_sub{float:right; position:relative; top:-113px;}
+    #button_area_cancel_sub a {background: url('/img/sprite_signin.png') no-repeat 0 -70px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_cancel_sub a:hover {background: url('/img/sprite_signin.png') no-repeat 0 -105px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_cancel_sub span {visibility:hidden;}
+
+    /*--- positioning ---*/
+
+        #email_confirm_sub, #school_postcode_sub {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+        #name_sub_msg, #email_sub_msg, #email_confirm_msg, #school_sub_msg, #school_postcode_sub, #postcode_sub_msg {text-align:left; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+
+        #name_sub {position:relative; top:-30px; }
+        #name_sub_msg {position:relative; top:47px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+
+        #email_sub {position:relative; top:-30px; }
+        #email_sub_msg {border:1px dashed #000; position:relative; top:-247px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;
+                        *+ top:-199px;}
+
+        #email_confirm_sub {position:relative; top:-30px; }
+        #email_confirm_sub_msg {position:relative; top:-225px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+        #school_sub {position:relative; top:-30px; }
+        #school_sub_msg {position:relative; top:-205px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+        #school_postcode_sub_msg {position:relative; top:-205px; font-size:11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #school_postcode_sub {position:relative; top:-30px; *padding-top:0px; *height:28px; *+top:0px; *+padding-top:11px; *+height:28px;}
+
+        #type_sub {position:relative; top:-31px; background: url('/img/sprite_regform.png') no-repeat 0 -80px; overflow:hidden;
+                   font-size:16px; color:#666; width:334px; padding-bottom:10px; height:40px; border:0px; outline:none; -webkit-appearance: none;
+                   *padding-left:8px;}
+
+    /*--- trial ---*/
+
+    #Trial_content {width:731px; height: 550px;} /* does not include bg */
+    #Trial_header {border:0px dashed #000; position:relative; top:32px; width:400px; margin-left:auto; margin-right:auto; font-size:16px; font-weight:bold; color:white; text-align:center;}
+    #Trial_subheader {position:relative; top:42px; font-size:13px; color:#666; text-align: center; width:400px; margin-left:auto; margin-right:auto; border:0px dashed #000;}
+    #Trial_subheader a {font-size:13px; color:#0181BD;}
+    #Trial_subheader a:hover {text-decoration: underline;}
+    #Trial_info {border-right:1px dashed #d0d0d0; height:290px; position:relative; top:70px; left:30px; float:left; width:230px; padding-left:20px; padding-right:10px; margin-right:10px; color:#808386; font-size:13px; }
+    #Trial_form {float:right; width:375px; border:0px dashed #000;}
+
+
+    #name_trial, #email_trial, #email_confirm_trial, #school_trial, #postcode_trial, #telephone_trial {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+    #role_trial{border:1px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+    #role_trial:hover{background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+
+    #button_area_trial{float:right; position:relative; top:-264px;}
+    #button_area_trial a {background: url('/img/sprite_signin.png') no-repeat 0 -140px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_trial a:hover {background: url('/img/sprite_signin.png') no-repeat 0 -175px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_trial span {visibility:hidden;}
+
+    #button_area_cancel_trial{float:right; position:relative; top:-264px;}
+    #button_area_cancel_trial a {background: url('/img/sprite_signin.png') no-repeat 0 -70px; width:96px; height:35px; border:none; outline:none; display: block;}
+    #button_area_cancel_trial a:hover {background: url('/img/sprite_signin.png') no-repeat 0 -105px; width:96px; height:35px; border:none; outline:none;}
+    #button_area_cancel_trial span {visibility:hidden;}
+
+    /*--- positioning ---*/
+
+        #name_trial {position:relative; top:-20px; }
+        #name_trial_msg {position:relative; top:52px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+        #email_trial {position:relative; top:-25px; }
+        #email_trial_msg {border:1px dashed #000; position:relative; top:-343px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_trial {position:relative; top:-30px; }
+        #email_confirm_trial_msg {position:relative; top:-324px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_trial {position:relative; top:-30px; }
+        #school_trial_msg {position:relative; top:-282px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_trial{position:relative; top:-30px; }
+        #postcode_trial_msg {position:relative; top:-262px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_trial{position:relative; top:-30px; }
+        #telephone_trial_msg {position:relative; top:-305px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #role_trial {position:relative; top:-31px;}
+        #role_trial_msg {position:relative; top:-181px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+
+/*popup form styling----------------------------------------------------------
+
+    naming convention: popup_[nameofelement]_[detail]
+                   eg. popup_select_titlename
+*/
+
+#name, #school, #postcode, #password_change, #password_clear_change, #new_password_change, #confirm_password_change, #new_password_clear_change, #confirm_password_clear_change {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+#pop_name_msg, #pop_school_msg, #pop_postcode_msg, #pop_password_msg, #pop_new_password_msg, #pop_confirm_password_msg {position:relative;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent; width:350px;}
+
+    #passwordform {position:relative; top:-20px; text-align:center;}
+    #edituserform {text-align:center;}
+    #assess_form {margin-bottom:30px; text-align:center;}
+    #assess_form p {width:334px; text-align:center;}
+    #assess_sel {margin-top: 10px;}
+
+    /* form field positions*/
+    #password_clear_change {position:relative; top:10px;}
+    #password_change {position:relative; top:26px;}
+    #new_password_change {position:relative; top:16px;}
+    #confirm_password_clear_change {position:relative; top:-10px;}
+    #confirm_password_change {position:relative; top:6px;}
+
+
+#popup_edituser_role {position:relative; left:-4px; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;-webkit-appearance: none;
+                      width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#popup_edituser_role:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;-webkit-appearance: none;
+                        width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+
+/*----- JQuery Alert Boxes ---------------------------------------------------*/
+#popup_container {font-size: 13px; min-width: 300px; width: 600px; border: solid 1px #b0b0b0; color: #666; background-color:#ffffff; z-index:9999999;}
+#popup_title {
+        height:39px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 39px;
+	color: #ffffff;
+	background: url('/img/title.gif') repeat-x;
+	border-bottom: solid 1px #b0b0b0;
+	padding: 0em;
+	margin: 0em;
+}
+#popup_content {/*background: 16px 16px no-repeat url(/img/info.gif);*/ padding: 1em 1.75em; margin: 0em; width:556px;}
+#popup_content a {color:#0181BD; text-decoration:underline;}
+#popup_content a:hover {color:#ff5900; text-decoration:underline;}
+#popup_content.form {height:420px;}
+#popup_message {border-bottom: 1px dotted #d0d0d0; padding-bottom:10px;}
+#popup_message select {max-width: 334px;}
+#popup_panel {padding-top:10px;  width:200px; margin-left:auto; margin-right:auto;}
+#popup_panel_inform {padding-top:10px;  width:100px; margin-left:auto; margin-right:auto;}
+#popup_panel_alert {padding-top:10px;  width:100px; margin-left:auto; margin-right:auto;}
+.btn_left {width:96px; float:left; padding-bottom:10px;} .btn_right {width:96px; float:right; padding-bottom:10px;} .btn_center {width:96px; padding-bottom:10px;}
+
+#popup_panel #popup_ok {background: url('/img/sprite_forms.png') no-repeat 0 -210px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel #popup_ok:hover {background: url('/img/sprite_forms.png') no-repeat 0 -245px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel #popup_ok span {visibility:hidden;}
+
+#popup_panel_alert #popup_ok {background: url('/img/sprite_forms.png') no-repeat 0 -210px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel_alert #popup_ok:hover {background: url('/img/sprite_forms.png') no-repeat 0 -245px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel_alert #popup_ok span {visibility:hidden;}
+#popup_message_alert {border-bottom: 1px dotted #d0d0d0; padding-bottom:10px; color:#666; font-size: 13px; text-align: center}
+#popup_message_alert li {text-align:left;}
+
+
+#inform_panel {text-align:center; position:relative; left:50px;}
+.panel_cell {text-align: center; width:166px; float:left; margin-bottom:10px; margin-top:10px;}
+
+#panel_cell_1 a {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -64px; display:block; height:32px;}
+#panel_cell_1 a:hover {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -96px; display:block; height:32px;}
+#panel_cell_1 a span {visibility:hidden;}
+
+#panel_cell_2 a {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -128px; display:block; height:32px;}
+#panel_cell_2 a:hover {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -160px; display:block; height:32px;}
+#panel_cell_2 a span {visibility:hidden;}
+
+#panel_cell_3 a {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -192px; display:block; height:32px;}
+#panel_cell_3 a:hover {background: url('/img/sprite_displaybuttons.png') no-repeat 0 -224px; display:block; height:32px;}
+#panel_cell_3 a span {visibility:hidden;}
+
+#popup_panel_inform #inform_ok {background: url('/img/sprite_forms.png') no-repeat 0 -210px; display:block; width:96px; height:35px; outline:none; left:48px;}
+#popup_panel_inform #inform_ok:hover {background: url('/img/sprite_forms.png') no-repeat 0 -245px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel_inform #inform_ok span {visibility:hidden;}
+#popup_message_inform {border-bottom: 1px dotted #d0d0d0; padding-bottom:10px;font-style: italic; font-size: 18px; text-align: center;}
+
+#popup_panel #popup_cancel {background: url('/img/sprite_forms.png') no-repeat 0 -70px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel #popup_cancel:hover {background: url('/img/sprite_forms.png') no-repeat 0 -105px; display:block; width:96px; height:35px; outline:none;}
+#popup_panel #popup_cancel span {visibility:hidden;}
+
+.popup_select {border:0px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; font-weight:bold; color:#666; padding-left:8px;}
+#popup_select:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; font-weight:bold; color:#666; padding-left:8px;}
+#popup_prompt {width:334px;}
+
+.popup_input {border:0px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 0px;
+              -webkit-appearance: none;
+              height:38px; border:none; outline:none; font-size:16px; font-weight:bold; color:#666; padding-left:8px;
+            position:relative;left:134px;top:-22px;}
+.faq-section {
+    list-style-type: none;
+}
+.faq-answers {display:none;}
+.res-section {list-style-type: none;}
+.res-answers {}
+/* Progressbar
+----------------------------------*/
+.ui-progressbar { height:2em; text-align: left; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
+.ui-progressbar-value {background-color: #95c031;}
+/*---- IE Formatting Exceptions ------*/
+
+
+/*----- PRICES AND SERVICES --------------------------------------------------*/
+#peschool_subscription_table {}
+#peschool_subscription_table td {padding:5px; border:1px dashed #d0d0d0;}
+#peschool_subscription_table .table_header {width:200px; font-weight:bold;}
+#peschool_subscription_table .prices {text-align:center;}
+
+
+
+/*---- GET IN TOUCH ----------------------------------------------------------*/
+#name_contact, #email_contact, #details_contact, #nature_contact {font-size:16px; font-weight:normal; color:#666;}
+
+#name_contact {position:relative; top:-50px; *height:28px; *max-height:28px; *padding-top:11px; *+height:28px; *+max-height:28px; *+padding-top:11px;}
+#email_contact {position:relative; top:-55px; *+height:28px; *+max-height:28px; *+ padding-top:11px;}
+#nature_contact {position:relative; top:-95px; *+height:28px; *+max-height:28px; *+padding-top:11px;}
+#details_contact {position:relative; top:-100px; *+ padding-top:8px;}
+
+#nature_contact {position:relative; top:-95px; width:334px; height:40px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -80px;}
+#nature_contact:hover {position:relative; top:-95px; width:334px; height:40px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -120px;}
+.styled-select {display:block; overflow:hidden; background-color:transparent; border:0px; outline:none; -webkit-appearance:none; color:#666;}
+
+#name_contact_msg, #email_contact_msg {text-align:left;}
+
+#name_contact_msg {position:relative; top:24px; text-align:left;}
+#email_contact_msg {position:relative; top:-76px; text-align:left;}
+
+#name_contact, #email_contact {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px; border:none; outline:none; padding-left:8px; color:#666;}
+
+#details_contact {background-color:transparent; overflow: hidden; background: url('/img/sprite_getintouch.png') no-repeat 0 0px;
+                  -webkit-appearance: none;
+                  width:334px; max-width: 334px; min-width:334px; height:147px; min-height:147px; max-height:147px; border:none; outline:none; padding-left:8px; }
+#email_reg {position:relative; top:-15px;}
+#name_contact_msg, #email_contact_msg {z-index:99999999; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+#email_confirm_reg {position:relative; top:-30px;}
+#password_reg {position:relative; top:-45px;}
+#role_reg {position:relative; top:-49px;}
+
+#select_git {display: none;}
+
+#button_area_contact {position:relative; top:-188px; left:0px;}
+#button_area_contact a {background: url('/img/sprite_form_buttons.png') no-repeat 0 -280px; width:96px; height:35px;display:block;}
+#button_area_contact a:hover {background: url('/img/sprite_form_buttons.png') no-repeat 0 -315px; width:96px; height:35px;display:block;}
+#button_area_contact span {visibility:hidden;}
+
+
+/*---- SITEMAP ---------------------------------------------------------------*/
+.stage {width:987px; min-width:987px; max-width:987px; border:0px solid #000; margin-left:auto; margin-right:auto;}
+#sitemap_content {font-size:12px; position:relative; top:-30px;}
+
+
+/*---- TWITTER ---------------------------------------------------------------*/
+#twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:absolute; left:618px; z-index:1020;}
+/*----- Subscribe -----------------------------------------------------------*/
+
+#name_subscribe, #email_subscribe, #email_confirm_subscribe, #school_subscribe, #postcode_subscribe, #telephone_subscribe {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+#name_subscribe_msg, #email_subscribe_msg, #email_confirm_subscribe_msg, #telephone_subscribe_msg, #school_subscribe_msg, #postcode_subscribe_msg, #role_subscribe_msg {text-align:left;}
+
+#role_subscribe {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_subscribe:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+        #name_subscribe {position:relative; top:-20px;}
+        #name_subscribe_msg {position:relative; top:64px; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_subscribe {position:relative; top:-25px;}
+        #email_subscribe_msg {text-align: left; position:relative; top:-372px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_subscribe {position:relative; top:-30px;}
+        #email_confirm_subscribe_msg {text-align:left; position:relative; top:-360px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_subscribe {position:relative; top:-30px;}
+        #telephone_subscribe_msg {position:relative; top:-348px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_subscribe {position:relative; top:-30px;}
+        #school_subscribe_msg {position:relative; top:-330px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_subscribe {position:relative; top:-30px; height:29px; padding-top:10px;}
+        #postcode_subscribe_msg {position:relative; top:-314px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #role_subscribe {position:relative; top:-207px;}
+        #role_subscribe_msg {position:relative; top:-292px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+        #select_subscribe {position:relative; top:-271px;}
+        #select_subscribe:hover {position:relative; top:-271px;}
+
+        #subscribe_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
+
+        #name_payment, #email_payment, #email_confirm_payment, #school_payment, #postcode_payment, #telephone_payment, #school_address_payment_1, #school_address_payment_2, #school_address_payment_3 {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+#service_payment_msg, #name_payment_msg, #email_payment_msg, #email_confirm_payment_msg, #telephone_payment_msg, #school_payment_msg, #postcode_payment_msg, #role_payment_msg, #school_address_1_payment_msg, #school_address_2_payment_msg, #school_address_3_payment_msg {text-align:left;}
+
+#role_payment {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_payment:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+        #service_payment {position:relative; top:0;}
+        #service_payment_msg {position:relative; top:0; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #name_payment {position:relative; top:0;}
+        #name_payment_msg {position:relative; top:0; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_payment {position:relative; top:0;}
+        #email_payment_msg {text-align: left; position:relative; top:0;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_payment {position:relative; top:0;}
+        #email_confirm_payment_msg {text-align:left; position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_payment {position:relative; top:0;}
+        #telephone_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_payment {position:relative; top:0;}
+        #school_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_1 {position:relative; top:0;}
+        #school_address_1_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_2 {position:relative; top:0;}
+        #school_address_2_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_3 {position:relative; top:0;}
+        #school_address_3_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_payment {position:relative; top:0; height:29px; padding-top:10px;}
+        #postcode_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #payment_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
+#payment_btn a {border:0px dashed #000; position:relative; top:0; left:-220px;}
+#Edituser_buttons {width:280px; margin-left:auto; margin-right:auto; border:0px dashed #000; position:relative; top:72px;}
+#Password_buttons {width:280px; margin-left:auto; margin-right:auto; border:0px dashed #000; position:relative; top:11px;}
+
+#videoplayer_content a span {color:#9d9b9b; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:0px; padding-left:60px; }
+#videoplayer_content a span:hover {color:#F3010A; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:0px; padding-left:60px; }
+

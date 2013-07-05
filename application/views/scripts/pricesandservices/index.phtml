@@ -1,0 +1,64 @@
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                
+                    <td valign="top" style="padding-left:30px; padding-right:30px;">
+                        <h2>Prices and Services</h2>
+                        <h3>Subscription Costs:</h3>
+                        <h3>PEschool</h3>
+                        <table id="peschool_subscription_table">
+                            <tr>
+                                <td class="table_header">School Size</td><td class="table_header" style="width:170px;">Annual Subscription Cost</td>
+                            </tr>
+                            <tr>
+                                <td class="desc">5 classes or fewer</td>
+                                <td class="prices">&pound;100</td>
+                            </tr>
+                            <tr>
+                                <td class="desc">6 to 12 classes</td>
+                                <td class="prices">&pound;175</td>
+                            </tr>
+                            <tr>
+                                <td class="desc">More than 12 classes</td>
+                                <td class="prices">&pound;225</td>
+                            </tr>
+                        </table>
+                        <p>To subscribe to PE School <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment"> Click Here</a></p>
+                        <h3>PEteacher</h3>
+                        <p>&pound;60 + VAT</p>
+                        <p>Payment can be set up on a direct debit basis (£5 per month) or payment can be made in full up front</p>
+                        <p>To subscribe to PE Teacher <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment"> Click Here</a></p>
+                        <h3>PEcoach</h3>
+                        <p>PEcoach is a flexible subscription and costs will reflect the coach or coaching organisation requirements. Quotations are available upon request</p>
+                        <p>Email to <a href="mailto:matthew.dykes@peplanning.org.uk">matthew.dykes@peplanning.org.uk</a> or telephone 01535 644 777</p>
+                        <p><i>For PEschool and PEcoach subscriptions an invoice will be raised when all user accounts have been set up and payment is due 21 days after the invoice date</i></p>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                </tr>
+            </table>
+        </div>
