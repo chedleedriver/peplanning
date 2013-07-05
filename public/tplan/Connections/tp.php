@@ -2,7 +2,7 @@
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
 # HTTP="true"
-$hostname_tp = "localhost";
+$hostname_tp = $_SERVER['SERVER_NAME'];
 $database_tp = "peplanning";
 $username_tp = "peplanning";
 $password_tp = "ferd1nand";
