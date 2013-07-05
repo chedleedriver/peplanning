@@ -11,7 +11,7 @@ defined('APPLICATION_ENV')
 //Define application host
 defined('APPLICATION_HOST')
     || define('APPLICATION_HOST', (getenv('APPLICATION_HOST') ? getenv('APPLICATION_HOST') : $_SERVER['HTTP_HOST']));
-
+echo APPLICATION_HOST;
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     realpath(APPLICATION_PATH . '/../library'),
