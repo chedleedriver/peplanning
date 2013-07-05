@@ -459,6 +459,7 @@ function getLessonNumbers()
     $("#sel_num_lessons").empty();
     $("#sel_num_lessons").append("<option value=99>Select number</option>");
     if((topic==53)||(topic==54)||(topic==55)||(topic==56)) $("#sel_num_lessons").append("<option value=7>7</option>");
+    else if((topic==57)||(topic==58)) $("#sel_num_lessons").append("<option value=6>6</option>");
     else {
         for(var i=5;i<=12;i++){
             $("#sel_num_lessons").append("<option value="+i+">"+i+"</option>");
@@ -481,10 +482,13 @@ function checkSetPlan(topicId,level,numLessons)
 
 function createPlan(planType,userLevel)
 {
+    var static_plans = new Array(57,58);
     var sel_level=$("#sel_level").val();
     var sel_topic=$("#sel_topic").val();
     var sel_num_lessons=$("#sel_num_lessons").val(); 
     var title=$("#unit_title").val();
+    if(static_plans.indexOf(sel_topic)!=-1)
+    {
     showStatus('Plan');
     if(userLevel==0) var createTime = 8;
     else var createTime = sel_num_lessons * 8;
@@ -509,6 +513,12 @@ function createPlan(planType,userLevel)
                     
                 }
             }); 
+    }
+    else 
+        {
+            if(sel_topic==57) location.href='/resources/basketball';
+            if(sel_topic==58) location.href='/resources/volleyball';
+        }
 }
 function showStatus(whatStatus)
 {
