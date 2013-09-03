@@ -59,7 +59,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
          }
         if($assess_id == 2)
         {
-        $sql2="select assessment from tplan.objectives left join tplan.lesson_objectives on tplan.lesson_objectives.objective_id = tplan.objectives.id left join tplan.lesson on tplan.lesson.id = tplan.lesson_objectives.lesson_id where tplan.lesson.uow_id=$unit_id";
+        $sql2="select assessment from peplanning.objectives left join peplanning.lesson_objectives on peplanning.lesson_objectives.objective_id = peplanning.objectives.id left join peplanning.lesson on peplanning.lesson.id = peplanning.lesson_objectives.lesson_id where peplanning.lesson.uow_id=$unit_id";
         $result2 = mysql_query($sql2);
            if (!$result2)
               {
@@ -68,7 +68,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
         }
         if($assess_id == 3)
         {
-        $sql3="select objective,theme,lesson_num,name,level_id from tplan.objectives left join tplan.lesson_objectives on tplan.lesson_objectives.objective_id = tplan.objectives.id left join tplan.lesson on tplan.lesson.id = tplan.lesson_objectives.lesson_id left join tplan.theme on tplan.theme.id = tplan.lesson.theme_id left join tplan.unit_of_work on tplan.lesson.uow_id = tplan.unit_of_work.id left join tplan.topic on tplan.unit_of_work.topic_id = tplan.topic.id where tplan.lesson.uow_id=$unit_id order by lesson_num";
+        $sql3="select objective,theme,lesson_num,name,level_id from peplanning.objectives left join peplanning.lesson_objectives on peplanning.lesson_objectives.objective_id = peplanning.objectives.id left join peplanning.lesson on peplanning.lesson.id = peplanning.lesson_objectives.lesson_id left join peplanning.theme on peplanning.theme.id = peplanning.lesson.theme_id left join peplanning.unit_of_work on peplanning.lesson.uow_id = peplanning.unit_of_work.id left join peplanning.topic on peplanning.unit_of_work.topic_id = peplanning.topic.id where peplanning.lesson.uow_id=$unit_id order by lesson_num";
         }
         $pdfContent=$pdfContent.$doc_header;
         $pdfContent=$pdfContent."

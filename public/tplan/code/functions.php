@@ -2,8 +2,8 @@
 if(preg_match( "/MSIE/", $_SERVER['HTTP_USER_AGENT'])){
 session_cache_limiter('private');
 }
-$tp = mysql_pconnect("localhost", "tp", "enquiry") or trigger_error(mysql_error(),E_USER_ERROR);
-mysql_select_db("tplan", $tp);
+$tp = mysql_pconnect("localhost", "peplanning", "ferd1nand") or trigger_error(mysql_error(),E_USER_ERROR);
+mysql_select_db("peplanning", $tp);
 if ($_GET['topic_id']) $topic_id=$_GET['topic_id']; else $topic_id=0;
 if ($_GET['theme_id']) $theme_id=$_GET['theme_id']; else $theme_id=0;
 if ($_GET['level_id']) $level_id=$_GET['level_id']; else $level_id=0;

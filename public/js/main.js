@@ -772,11 +772,12 @@ function forgotPassword()
     jPrompt('','email address','Forgotten Password',function(r){
         if (r) {
         var get_par = "&email="+r;
-        $.get("/auth/forgot-password",get_par,function(data){
-                $.alerts._hide();
-                var response=eval(data);
-                jAlert(response.more,response.detail);
-             })
+       // $.get("/auth/forgot-password",get_par,function(data){
+       //         $.alerts._hide();
+       //         var response=eval(data);
+       //         jAlert(response.more,response.detail);
+       //      })
+       location.href=("/auth/forgot-password?email="+r);
         }
     });
 }

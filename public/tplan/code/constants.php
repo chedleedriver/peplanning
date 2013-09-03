@@ -17,9 +17,9 @@
  * correct.
  */
 define("DB_SERVER", "localhost");
-define("DB_USER", "tp");
-define("DB_PASS", "enquiry");
-define("DB_NAME", "tplan");
+define("DB_USER", "peplanning");
+define("DB_PASS", "ferd1nand");
+define("DB_NAME", "peplanning");
 
 /**
  * Database Table Constants - these constants

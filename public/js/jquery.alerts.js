@@ -220,7 +220,7 @@
 						var val = $("#popup_prompt").val();
 						$.alerts._hide();
 						if( callback ) callback( val );
-                                                if(title=='Forgotten Password') location.replace("http://" + location.host + "/");
+                                               // if(title=='Forgotten Password') location.replace("http://" + location.host + "/");
                 
 					});
 					$("#popup_cancel").click( function() {
