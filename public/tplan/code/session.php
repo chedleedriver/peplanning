@@ -857,7 +857,7 @@ function subscribe_teacher($school,$address1,$address2,$address3,$email,$telepho
       /* Success! */
       return true;
    }
-   function editOtherAccount($username,$subcurpass, $subnewpass, $subemail, $subname, $subtelephone, $subschool, $subpostcode, $subnewsletter, $subuserlevel,$subactivation){
+   function editOtherAccount($username, $subnewpass, $subemail, $subname, $subtelephone, $subschool, $subpostcode, $subnewsletter, $subuserlevel,$subactivation){
       global $database, $form;  //The database and form object
      
 
@@ -880,7 +880,7 @@ function subscribe_teacher($school,$address1,$address2,$address3,$email,$telepho
       }
 
       /* Update password since there were no errors */
-      if($subcurpass && $subnewpass){
+      if($subnewpass){
          $database->updateUserField($username,"password",md5($subnewpass));
       }
 
