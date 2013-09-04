@@ -859,44 +859,7 @@ function subscribe_teacher($school,$address1,$address2,$address3,$email,$telepho
    }
    function editOtherAccount($username,$subcurpass, $subnewpass, $subemail, $subname, $subtelephone, $subschool, $subpostcode, $subnewsletter, $subuserlevel,$subactivation){
       global $database, $form;  //The database and form object
-      /* New password entered */
-      if($subnewpass){
-         /* Current Password error checking */
-         $field = "curpass";  //Use field name for current password
-         if(!$subcurpass){
-            $form->setError($field, "* Current Password not entered");
-         }
-         else{
-            /* Check if password too short or is not alphanumeric */
-            $subcurpass = stripslashes($subcurpass);
-            if(strlen($subcurpass) < 4 ||
-               !eregi("^([0-9a-z])+$", ($subcurpass = trim($subcurpass)))){
-               $form->setError($field, "* Current Password incorrect");
-            }
-            /* Password entered is incorrect */
-            if($database->confirmUserPass($this->username,md5($subcurpass)) != 0){
-               $form->setError($field, "* Current Password incorrect");
-            }
-         }
-
-         /* New Password error checking */
-         $field = "newpass";  //Use field name for new password
-         /* Spruce up password and check length*/
-         $subpass = stripslashes($subnewpass);
-         if(strlen($subnewpass) < 4){
-            $form->setError($field, "* New Password too short");
-         }
-         /* Check if password is not alphanumeric */
-         else if(!eregi("^([0-9a-z])+$", ($subnewpass = trim($subnewpass)))){
-            $form->setError($field, "* New Password not alphanumeric");
-         }
-      }
-      /* Change password attempted */
-      else if($subcurpass){
-         /* New Password error reporting */
-         $field = "newpass";  //Use field name for new password
-         $form->setError($field, "* New Password not entered");
-      }
+     
 
       /* Email error checking */
       $field = "email";  //Use field name for email
