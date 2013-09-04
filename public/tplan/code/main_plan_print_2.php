@@ -366,7 +366,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         $activities['lesson_part']."</TD><TD WIDTH=20% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
         sp_utf2ascii(stripslashes($activities['content_name']));
         // if there is a diagram put a link to it on the title bar
-        if (file_exists("/var/www/html/public/tplan/diagrams/".$activities['activity_id'].".gif"))
+        if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
         {
             $activityContent[$act_num]=$activityContent[$act_num]."  -  <a href=\"../diagrams/".$activities['activity_id'].".gif\" target=_blank>diagram</a>";
             $diagram_titles[]=sp_utf2ascii(stripslashes($activities['content_name']));

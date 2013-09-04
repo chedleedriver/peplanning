@@ -30,7 +30,7 @@
 if (!defined('PHPEXCEL_ROOT')) {
 	define('PHPEXCEL_ROOT', dirname(__FILE__) . '/');
 //	require(PHPEXCEL_ROOT . 'PHPExcel/Autoloader.php');
-	require('/var/www/html/public/tplan/code/PHPExcel/Autoloader.php');
+	require('Autoloader.php');
 	PHPExcel_Autoloader::Register();
 	PHPExcel_Shared_ZipStreamWrapper::register();
 	// check mbstring.func_overload

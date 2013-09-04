@@ -1,4 +1,5 @@
-<? // functions file to store PHP basic functions
+<?php
+// functions file to store PHP basic functions
 // version 1
 // created on 10/9/11
 //
@@ -310,7 +311,7 @@ $sql="select name,description,time from content where content_id=$content_id";
 		$strand_list=$strand_list."</ul>";
 		}
 		//$image_file=FILE_ROOT.DIAGRAM_PATH.$content_id.".gif";
-		$image_file="/var/www/html/public/tplan/diagrams/".$content_id.".gif";
+		$image_file="/var/www/html/peplanning/public/tplan/diagrams/".$content_id.".gif";
 		if (!file_exists($image_file)) $image_file="diagrams/no-image.png";
 		else $image_file="diagrams/".$content_id.".gif";
 	echo "<table id='table_".$content_id."_".$lesson_num."_".$obj_num."' width=100% border='0' cellpadding='2' cellspacing='2' class='ui-widget ui-widget-content ui-corner-all'>".
