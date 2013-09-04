@@ -398,7 +398,7 @@ class Process
       global $session, $form;
 	  $_SESSION['current_dialog'] = '#accountDialog';
       /* Account edit attempt */
-      $retval = $session->editOtherAccount($_POST['username'],$_POST['curpass'], $_POST['newpass'], $_POST['email'], $_POST['name'], $_POST['telephone'], $_POST['school'], $_POST['postcode'], $_POST['newsletter'], $_POST['userlevel'],$_POST['activation']);
+      $retval = $session->editOtherAccount($_POST['username'], $_POST['newpass'], $_POST['email'], $_POST['name'], $_POST['telephone'], $_POST['school'], $_POST['postcode'], $_POST['newsletter'], $_POST['userlevel'],$_POST['activation']);
       /* Account edit successful */
       if($retval){
          $_SESSION['useredit'] = true;
