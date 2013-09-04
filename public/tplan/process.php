@@ -1,6 +1,6 @@
 <?
 
-include("/var/www/html/public/tplan/code/session.php");
+include("session.php");
 
 class Process
 {
