@@ -1,6 +1,6 @@
 <?php
 include('lessonfunctions_2.php');
-require_once '/var/www/html/public/tplan/code/PHPExcel.php';
+require_once 'PHPExcel.php';
 $unit_id=$_GET['unit_id'];
 $sql3="select objective,theme,lesson_num,name,level_id from peplanning.objectives left join peplanning.lesson_objectives on peplanning.lesson_objectives.objective_id = peplanning.objectives.id left join peplanning.lesson on peplanning.lesson.id = peplanning.lesson_objectives.lesson_id left join peplanning.theme on peplanning.theme.id = peplanning.lesson.theme_id left join peplanning.unit_of_work on peplanning.lesson.uow_id = peplanning.unit_of_work.id left join peplanning.topic on peplanning.unit_of_work.topic_id = peplanning.topic.id where peplanning.lesson.uow_id=$unit_id order by lesson_num";
 $result3 = mysql_query($sql3);
