@@ -55,7 +55,7 @@ select{width:120%;}
 /*----- HOMEPAGE -------------------------------------------------------------*/
 
 #videoplayer {z-index:1701;}
-#videoplayer_content {position:relative; top:125px;}
+#videoplayer_content {position:relative;}
 #register_btn {z-index: 7002;}
 
 #left_grad {z-index:1700;}
