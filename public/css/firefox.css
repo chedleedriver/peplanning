@@ -381,7 +381,7 @@ select{width:120%;}
              border:0px; outline:none; font-weight:normal; font-size:16px; color:#666;}
 
 /*---- TWITTER ---------------------------------------------------------------*/
-#contact_twitter td {padding-left:15px;}
+#contact_twitter td {padding-left:180px;}
 #twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:absolute; left:618px; z-index:1020;}
 #sitemap_content a:hover {text-decoration:underline;}
 #sitemap_content {font-size:12px; position:relative; top:-25px;}

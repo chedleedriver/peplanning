@@ -153,7 +153,7 @@ select {overflow: hidden;}
 #centerpage_shell {border:0px dashed #000; position:relative; left:35px; width:987px; height:600px;}
 
 /*#videoplayer {position:relative; top:0px; right:0px; width:305px; height:293px; background: url('/img/bg_videoplayer.png') no-repeat 0 0;}*/
-#videoplayer {z-index:1701; position:relative; top: -153px; right:0px; float:right; width:305px; height:293px; background: url('/img/bg_videoplayer.png') no-repeat 0 0;}
+#videoplayer {z-index:1701; position:relative; top: -153px; right:0px; float:right; width:305px; height:293px;}
 
 #videoplayer_title {position:relative; top:20px; left:40px; width:215px; min-width:215px; max-width:215px; height:34px; min-height:34px; max-height:34px; *top:15px;}
 
