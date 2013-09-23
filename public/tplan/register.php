@@ -1,5 +1,6 @@
 <?php
-if(@$_SERVER['HTTPS'] == false)
+header("Location: https://www.peplanning.org.uk/auth/subscribe");
+/**if(@$_SERVER['HTTPS'] == false)
   {
      $redirect= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
      header("Location: $redirect");
@@ -24,7 +25,6 @@ include ("session.php"); //this is to check they are logged in, you will need th
     <script src="https://<?php echo $_SERVER['SERVER_NAME']?>/tplan/js/pep-https.js?<?=time()?>" type="text/javascript"></script>
     <script src="https://<?php echo $_SERVER['SERVER_NAME']?>/tplan/js/jquery.tipsy.min.js?<?=time()?>" type="text/javascript"></script>
 <script type="text/javascript">
-        /* google analytics */
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-16957975-1']);
         _gaq.push(['_trackPageview']);
