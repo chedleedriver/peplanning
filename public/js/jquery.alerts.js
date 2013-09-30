@@ -213,8 +213,9 @@
 					});
 				break;
 				case 'prompt':
-					var inputDetails="<br /><input type=\"text\" size=\"30\" id=\"popup_prompt\" class=\"popup_input\" value='"+value+"' onfocus='if(this.value==\""+value+"\"){this.value=\"\";}' onblur='if(this.value == \"\"){this.value=\""+value+"\"}'/><br><span>Enter the email address you registered with PE Planning</span>";
-					$("#popup_message").append(inputDetails).after('<div id="popup_panel"><div class="btn_left"><a value="' + $.alerts.okButton + '" id="popup_ok"><span>OK</span></a></div><div class="btn_right"><a value="' + $.alerts.cancelButton + '" id="popup_cancel"><span>cancel</span></a></div></div>');
+					if(title=='Forgotten Password') {var inputDetails="<br /><input type=\"text\" size=\"30\" id=\"popup_prompt\" class=\"popup_input\" value='"+value+"' onfocus='if(this.value==\""+value+"\"){this.value=\"\";}' onblur='if(this.value == \"\"){this.value=\""+value+"\"}'/><br><span>Enter the email address you registered with PE Planning</span>";}
+					if(title=='Rename Unit') {var inputDetails="<br /><input type=\"text\" size=\"30\" id=\"popup_prompt\" class=\"popup_input\" value='"+value+"' onfocus='if(this.value==\""+value+"\"){this.value=\"\";}' onblur='if(this.value == \"\"){this.value=\""+value+"\"}'/><br>";}         
+          $("#popup_message").append(inputDetails).after('<div id="popup_panel"><div class="btn_left"><a value="' + $.alerts.okButton + '" id="popup_ok"><span>OK</span></a></div><div class="btn_right"><a value="' + $.alerts.cancelButton + '" id="popup_cancel"><span>cancel</span></a></div></div>');
 					$("#popup_prompt").width( $("#popup_message").width() );
 					$("#popup_ok").click( function() {
 						var val = $("#popup_prompt").val();

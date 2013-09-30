@@ -196,6 +196,7 @@ function doPrint(lessonNum,unitId)
 function assessUnit(varTopic,varLevel,varUnit)
 {
     showOptions("#options_items");
+    if(varLevel!=0) {
     jSelectform('<form id="assess_form"><h1>You can assess your unit in 3 ways:</h1><select class="popup_select" id="assess_sel"><option value=1>Class Assessment</option><option value=2>Individual Assessment</option><option value=3>Teacher Assessment</option><p><a href="/learn/assessment"><span class=info>Not sure which to choose?</span></a></form>', '', 'Choose Assessment Type', function(r) {
        if((r=='1')||(r=='2')||(r=='3')){
            $.alerts._hide();
@@ -222,8 +223,12 @@ function assessUnit(varTopic,varLevel,varUnit)
             $("#options").toggle();
             assessUnit(varTopic,varLevel,varUnit);}
         }
-    
+            
     });
+    }
+    else {
+       location.href="/tplan/code/teacher_assessment_2.php?unit_id=" + varUnit;
+    }
 }
 function editLesson(unitId,lessonNum,planType,myId,myLevel)
 {
@@ -264,6 +269,7 @@ function renameUnit(unitId)
                 if(response.result==1){
                 //location.replace(response.detail);
                 currentTitle.innerHTML = r;
+                location.href='/staffroom';
                 }
                 // failure
                 else if (response.result==0){
