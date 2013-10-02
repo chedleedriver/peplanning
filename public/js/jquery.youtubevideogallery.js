@@ -33,7 +33,7 @@
                     innerHeight:344,
                     innerWidth:425,
                     newWindow: '(opens in a new window)',
-                    playButton: 'play-button-red@40.png',
+                    playButton: '/img/play-button-red@40.png',
                     plugin:'self',
                     style:'',
                     title:'default',
