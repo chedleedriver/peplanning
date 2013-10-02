@@ -6,6 +6,7 @@ $jq_tools_js="/js/jquery.tools.min.js?".time();
 $jq_crypt_js="/js/jquery.jcryption.min.js?".time();
 $jq_js="/js/jquery-1.7.1.min.js?".time();
 $jq_ui_js="/js/jquery-ui-1.8.24.min.js?".time();
+$jq_youtube_ja="/js/jquery.youtubevideogallery.js?".time();
 echo $this->doctype();
 $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
 $this->headTitle()->setSeparator(' - ');
@@ -13,10 +14,11 @@ $this->headTitle('Delivering high quality teaching resources, for Primary School
 $this->headLink()->prependStylesheet($this->baseUrl().$site_css);
 $this->headScript()->appendFile($this->baseUrl().$jq_js);
 $this->headScript()->appendFile($this->baseUrl().$jq_ui_js);
-$this->headScript()->appendFile($jq_tools_js);
-$this->headScript()->appendFile($jq_crypt_js);
-$this->headScript()->appendFile($alerts_js);
-$this->headScript()->appendFile($main_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_tools_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_crypt_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_youtube_js);
+$this->headScript()->appendFile($this->baseUrl().$alerts_js);
+$this->headScript()->appendFile($this->baseUrl().$main_js);
 
         $u_agent = $_SERVER['HTTP_USER_AGENT'];
         $ub = '';
@@ -246,13 +248,13 @@ This div is a placeholder for the register and login forms that we want to prese
 
         var register = $("#Register_div").overlay({
 
-	// some mask tweaks suitable for modal dialogs
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
-	closeOnClick: false,
+  // some mask tweaks suitable for modal dialogs
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+  closeOnClick: false,
         onLoad: function () {
             $("body").css("overflow", "hidden");
         },
@@ -262,11 +264,11 @@ This div is a placeholder for the register and login forms that we want to prese
         });
 
         var signin = $("#Login_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
         closeOnClick: false,
         onLoad: function () {
             $("body").css("overflow", "hidden");
@@ -278,12 +280,12 @@ This div is a placeholder for the register and login forms that we want to prese
 
         var subscribe = $("#Subscribe_div").overlay({
 
-	// some mask tweaks suitable for modal dialogs
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
+  // some mask tweaks suitable for modal dialogs
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
         closeOnClick: false,
         onLoad: function () {
             $("body").css("overflow", "hidden");
@@ -294,19 +296,19 @@ This div is a placeholder for the register and login forms that we want to prese
         });
 
         var trial = $("#Trial_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	}
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  }
         });
 
         var lesson = $("#Lesson_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
         closeOnClick: false,
         onLoad: function () {
             $("body").css("overflow", "hidden");
@@ -317,42 +319,42 @@ This div is a placeholder for the register and login forms that we want to prese
         });
 
         var contact = $("#contact_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	}
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  }
         });
 
         showContact();
 
         $("#register_form").submit(function(e) {
 
-	// close the overlay
-	register.eq(1).overlay().close();
+  // close the overlay
+  register.eq(1).overlay().close();
 
-	// get user input
-	var input = $("input", this).val();
+  // get user input
+  var input = $("input", this).val();
 
-	// do something with the answer
-	//triggers.eq(1).html(input);
+  // do something with the answer
+  //triggers.eq(1).html(input);
 
-	// do not submit the form
-	//return e.preventDefault();
+  // do not submit the form
+  //return e.preventDefault();
     });
         $("#signin_form").submit(function(e) {
 
-	// close the overlay
+  // close the overlay
         signin.eq(1).overlay().close();
 
-	// get user input
-	var input = $("input", this).val();
+  // get user input
+  var input = $("input", this).val();
 
-	// do something with the answer
-	//triggers.eq(1).html(input);
+  // do something with the answer
+  //triggers.eq(1).html(input);
 
-	// do not submit the form
-	//return e.preventDefault();
+  // do not submit the form
+  //return e.preventDefault();
     });
 
 });

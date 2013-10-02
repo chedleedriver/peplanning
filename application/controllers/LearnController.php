@@ -368,7 +368,30 @@ class LearnController extends Zend_Controller_Action
             $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
         }
     }
-
+     public function videoAction()
+    {
+        $mysession = new Zend_Session_Namespace('mysession'); 
+        $my_id = $mysession->id;
+        $my_level = $mysession->userlevel;
+        if($my_level==0){
+            $this->view->num_right_boxes = 0;
+            $this->view->num_left_boxes = 1;
+            $this->view->right_box_title = array(1=>'freetrial',2=>'video',3=>'planalesson');
+            $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
+        }
+        elseif($my_level==1){
+            $this->view->num_right_boxes = 0;
+            $this->view->num_left_boxes = 1;
+            $this->view->right_box_title = array(1=>'subscribe',2=>'video',3=>'planalesson');
+            $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
+        }
+        else {
+            $this->view->num_right_boxes = 0;
+            $this->view->num_left_boxes = 1;
+            $this->view->right_box_title = array(1=>'staffroom',2=>'video',3=>'planalesson');
+            $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
+        }
+    }
 }
 
 
