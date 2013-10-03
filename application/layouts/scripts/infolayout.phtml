@@ -83,7 +83,6 @@ $this->headScript()->appendFile($this->baseUrl().$main_js);
     <body>
         <?php echo $this->headScript(); ?>
         <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
-        <script type="text/javascript" charset="utf-8" src="<?php echo $protocol?>widgets.twimg.com/j/2/widget.js"></script>
         <?php  include('menu.php');  ?>
         <?php echo $this->layout()->content; ?>
 
