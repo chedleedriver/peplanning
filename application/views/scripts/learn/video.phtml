@@ -39,13 +39,10 @@
                                       });
                                   </script> -->
                          <?php
-                              print "You Tube Videos</br>";
-                              $counter = 1;
+                              
                               foreach ($this->videoFeed as $videoEntry) {
-                              print_r($videoEntry);
-                              print "<.br>";
-                      //echo $counter . " - " . $videoEntry->getVideoTitle() . "\n";
-                              $counter++;
+                              echo "<iframe width='320' height='240' src='//www.youtube.com/embed/".$videoEntry->getVideoId()."?rel=0' frameborder='0' allowfullscreen></iframe>";
+                              
                               }
                          ?>
                     </td>
