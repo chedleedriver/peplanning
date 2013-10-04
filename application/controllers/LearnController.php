@@ -393,7 +393,7 @@ class LearnController extends Zend_Controller_Action
         }
         $yt = new Zend_Gdata_YouTube();
         $yt->setMajorProtocolVersion(2);
-        $this->view->videoFeed =getuserUploads('peplanning');
+        $this->view->videoFeed=$yt->getuserUploads('peplanning');
     }
 }
 
