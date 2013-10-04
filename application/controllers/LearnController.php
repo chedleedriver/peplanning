@@ -391,6 +391,9 @@ class LearnController extends Zend_Controller_Action
             $this->view->right_box_title = array(1=>'staffroom',2=>'video',3=>'planalesson');
             $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
         }
+        $yt = new Zend_Gdata_YouTube();
+        $yt->setMajorProtocolVersion(2);
+        $this->view->videoFeed =getuserUploads('peplanning');
     }
 }
 

@@ -28,7 +28,7 @@
                         </div>
                     </td>
                     <td valign="top" id="learn_text" style="margin-left:20px;">
-                         <ul class="youtube-videogallery">
+                         <!--<ul class="youtube-videogallery">
                          </ul>
                                   <script>
                                       $(document).ready(function(){
@@ -37,7 +37,14 @@
                                           apiUrl: 'http://gdata.youtube.com/feeds/api/users/peplanning/uploads?alt=json'
                                           });
                                       });
-                                  </script>                           
+                                  </script> -->
+                         <?php
+                              $counter = 1;
+                              foreach (videoFeed as $videoEntry) {
+                              echo $counter . " - " . $videoEntry->getVideoTitle() . "\n";
+                              $counter++;
+                              }
+                         ?>
                     </td>
                 </tr>
             </table>
