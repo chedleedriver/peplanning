@@ -28,20 +28,11 @@
                         </div>
                     </td>
                     <td valign="top" id="learn_text" style="margin-left:20px;">
-                         <!--<ul class="youtube-videogallery">
-                         </ul>
-                                  <script>
-                                      $(document).ready(function(){
-                                      $("ul.youtube-videogallery").youtubeVideoGallery({
-                                          apiFallbackUrl: 'http://www.youtube.com/user/peplanning/videos',
-                                          apiUrl: 'http://gdata.youtube.com/feeds/api/users/peplanning/uploads?alt=json'
-                                          });
-                                      });
-                                  </script> -->
+                         
                          <?php
                               
                               foreach ($this->videoFeed as $videoEntry) {
-                              echo "<iframe width='320' height='240' src='//www.youtube.com/embed/".$videoEntry->getVideoId()."?rel=0' frameborder='0' allowfullscreen></iframe>";
+                      echo "<div class='you_tube_content'><iframe width='320' height='240' src='//www.youtube.com/embed/".$videoEntry->getVideoId()."?rel=0' frameborder='0' allowfullscreen></iframe></div>";
                               
                               }
                          ?>

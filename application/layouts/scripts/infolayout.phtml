@@ -3,16 +3,16 @@ $site_css="/css/site.css?".time();
 $main_js="/js/main.js?".time();
 $alerts_js="/js/jquery.alerts.js?".time();
 $jq_tools_js="/js/jquery.tools.min.js?".time();
-$jq_js="/js/jquery-1.9.1.min.js?".time();
+$jq_js="/js/jquery-1.7.1.min.js?".time();
 $jq_ui_js="/js/jquery-ui-1.8.24.min.js?".time();
-$jq_youtube_js="/js/jquery.youtubevideogallery.js?".time();
 echo $this->doctype();
 $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
 $this->headTitle()->setSeparator(' - ');
 $this->headTitle('Delivering high quality teaching resources, for Primary School PE');
 $this->headLink()->prependStylesheet($this->baseUrl().$site_css);
 $this->headScript()->appendFile($this->baseUrl().$jq_js);
-$this->headScript()->appendFile($this->baseUrl().$jq_youtube_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_ui_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_tools_js);
 $this->headScript()->appendFile($this->baseUrl().$alerts_js);
 $this->headScript()->appendFile($this->baseUrl().$main_js);
 
@@ -84,10 +84,7 @@ $this->headScript()->appendFile($this->baseUrl().$main_js);
         <?php echo $this->headScript(); ?>
         <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
         <?php  include('menu.php');  ?>
-        <?php echo $this->layout()->content; ?>
-
-
-<?php if(substr($_SERVER[REQUEST_URI],1,4) != "auth"){?> 
+<div id="content"><?php echo $this->layout()->content; ?></div>
 <div id="contact_section">
     <div id="contact_content" class="stage">
         <table id="contact_form" border="0">            
@@ -210,6 +207,6 @@ $this->headScript()->appendFile($this->baseUrl().$main_js);
     </table>
 </div>
 
-         <?php }?>
+         
     </body>
 </html>
