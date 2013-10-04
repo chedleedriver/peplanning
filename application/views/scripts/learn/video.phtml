@@ -39,8 +39,9 @@
                                       });
                                   </script> -->
                          <?php
+                              print "You Tube Videos</br>";
                               $counter = 1;
-                              foreach (videoFeed as $videoEntry) {
+                              foreach ($this->videoFeed as $videoEntry) {
                               echo $counter . " - " . $videoEntry->getVideoTitle() . "\n";
                               $counter++;
                               }
