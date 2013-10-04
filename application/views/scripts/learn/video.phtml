@@ -42,7 +42,9 @@
                               print "You Tube Videos</br>";
                               $counter = 1;
                               foreach ($this->videoFeed as $videoEntry) {
-                              echo $counter . " - " . $videoEntry->getVideoTitle() . "\n";
+                              print_r($videoEntry);
+                              print "<.br>";
+                      //echo $counter . " - " . $videoEntry->getVideoTitle() . "\n";
                               $counter++;
                               }
                          ?>
