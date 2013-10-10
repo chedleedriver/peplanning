@@ -590,16 +590,15 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
         echo $strContent;
         fwrite($pdfIn,$pdfContent);
         fclose($pdfIn);
+        $htmlFile=FILE_ROOT.'/tmp/'.$file.'.html';
+        $pdfFile=FILE_ROOT.'/tmp/'.$file.'.pdf';
+        $success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O portrait -s A4 -T 2mm -B 2mm -R 2mm -L 2mm $htmlFile $pdfFile"));
+        $browsePDF=fopen($pdfFile,'r');
+        $pdf_name=time().".pdf";
+        header("Content-type:application/pdf");
+        header("Content-Disposition:inline;filename=$pdf_name");
+        readfile($pdfFile);
         // Clean up after ourselves
-        $htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
-$pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O portrait -s A4 -T 2mm -B 2mm -R 2mm -L 2mm $htmlFile $pdfFile"));
-//$browsePDF=fopen($pdfFile,'r');
-//$pdf_name=time().".pdf";
-//header("Content-type:application/pdf");
-//header("Content-Disposition:inline;filename=$pdf_name");
-//readfile($pdfFile);
-echo '/tplan/tmp/'.$file.'.pdf';
         CleanFiles(FILE_ROOT."tmp/");
         }
 ?>
