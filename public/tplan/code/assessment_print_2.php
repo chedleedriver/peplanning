@@ -200,7 +200,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                             {
                             $myLiveSummaryContent=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/tickbox.gif\" align=\"right\"/>
+                                <img src=\"/tplan/index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
                             $summaryContent=$summaryContent.$myLiveSummaryContent;
                             }
@@ -391,7 +391,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     {
                         $myLiveSummaryContent2=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/tickbox.gif\" align=\"right\"/>
+                                <img src=\"/tplan/index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
             $summaryContent=$summaryContent.$myLiveSummaryContent2;
                     }
