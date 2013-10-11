@@ -25,7 +25,7 @@
                                     <td>
                                         <div id="videoplayer_title"></div>
                                         <div id="videoplayer_content">
-                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                            <iframe width="320" height="240" src="//www.youtube.com/embed/tj1m1Mg-kS4?rel=0" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                         <div id="videoplayer_footer">
                                             <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
@@ -118,11 +118,11 @@
 </div>
 <script>
     var signin = $("#Login_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
         closeOnClick: false,
         onLoad: function () {
             $("body").css("overflow", "hidden");
