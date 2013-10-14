@@ -107,13 +107,13 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                                 $strContent_add="<table border='0' align='right'>
                                     <tr>
                                         <td align='right'>
-                                            <img src='/tplan/index_files/assessment/name.class.date.jpg'/>                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img src='../index_files/assessment/name.class.date.jpg'/>                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         </td>
                                     </tr>
                                 </table>";
                                 $strContent=$strContent.$strContent_add;
                                 }
-                                $strContent_post="<table border=0 style=\" font-size:25pt; color : #b7cc79; font-weight: bold; background:url('/tplan/index_files/assessment/classprint_header.jpg') no-repeat;\" width='1090' align='left'>
+                                $strContent_post="<table border=0 style=\" font-size:25pt; color : #b7cc79; font-weight: bold; background:url(../index_files/assessment/classprint_header.jpg') no-repeat;\" width='1090' align='left'>
                                     <tr>
                                         <td align='center' valign='middle'>
                                             <br>
@@ -151,7 +151,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                                 </table>".
                                 "</td>
                                 <td width='190' align='right'>".
-                                "<img src='/tplan/index_files/assessment/notyet3.jpg'/>".
+                                "<img src='../index_files/assessment/notyet3.jpg'/>".
                                 "</td>";
                                 $summaryContent=$summaryContent.$levelSummaryContent;
                             }
@@ -169,7 +169,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                                 </table>".
                                 "</td>
                                 <td width='150' align='right'>".
-                                "<img src='/tplan/index_files/assessment/notyet2.jpg'/>".
+                                "<img src='../index_files/assessment/notyet2.jpg'/>".
                                 "</td>";
                             $summaryContent=$summaryContent.$levelSummaryContent;
                             }
@@ -200,7 +200,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                             {
                             $myLiveSummaryContent=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/tickbox.png\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
                             $summaryContent=$summaryContent.$myLiveSummaryContent;
                             }
@@ -217,7 +217,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
 
                             if($myLevel_id<3){
                             $greenclass=
-                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/greenh94.jpg') no-repeat;page-break-inside: avoid\">".
+                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('../index_files/assessment/greenh94.jpg') no-repeat;page-break-inside: avoid\">".
                                 "<tr>
                                     <td>".
                                         "<b>Have you ticked most the 'YES I CAN' boxes?</b>".
@@ -236,7 +236,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     $redlevel=
                     "<tr>
                         <td width=1090>
-                            <table border=0 width=1090 align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/redh94.jpg') no-repeat;page-break-inside: avoid\">".
+                            <table border=0 width=1090 align='left' style=\"font-size:large;background:url('../index_files/assessment/redh94.jpg') no-repeat;page-break-inside: avoid\">".
                         "<tr>
                             <td>".
                                 "<b>Have you ticked most of the 'NOT YET' boxes?</b>".
@@ -258,7 +258,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     {
                         //GREEN CLASS LEVEL 4
                         $greenclass=
-                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/greenh94.jpg') no-repeat;page-break-inside: avoid\">".
+                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('../index_files/assessment/greenh94.jpg') no-repeat;page-break-inside: avoid\">".
                                 "<tr>
                                     <td>".
                                         "<b>If you have ticked all of the 'ALL OF THE TIME' boxes:</b>".
@@ -276,7 +276,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     else{
                     //GREEN CLASS LEVEL 3
                     $greenclass=
-                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/greenh89.jpg') no-repeat;page-break-inside: avoid\">".
+                            "<table border=0 width='1090' align='left' style=\"font-size:large;background:url('../index_files/assessment/greenh89.jpg') no-repeat;page-break-inside: avoid\">".
                                 "<tr>
                                     <td>".
                                         "<b>If you have ticked all of the 'ALL OF THE TIME' boxes:</b>".
@@ -296,7 +296,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     $amberlevel=
                     "<tr>
                         <td width='1090'>
-                            <table width='1090' align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/amberh110.jpg') no-repeat;page-break-inside: avoid\">".
+                            <table width='1090' align='left' style=\"font-size:large;background:url('../index_files/assessment/amberh110.jpg') no-repeat;page-break-inside: avoid\">".
                                 "<tr>
                                     <td>".
                                         "<b>If you have ticked some 'SOME OF THE TIME' boxes and some 'ALL OF THE TIME' boxes;</b>".
@@ -314,7 +314,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     $redlevel=
                     "<tr>
                         <td width=1090>
-                            <table border=0 width=1090 align='left' style=\"font-size:large;background:url('/tplan/index_files/assessment/redh112.jpg') no-repeat;page-break-inside: avoid\">".
+                            <table border=0 width=1090 align='left' style=\"font-size:large;background:url('../index_files/assessment/redh112.jpg') no-repeat;page-break-inside: avoid\">".
                                 "<tr>
                                     <td>".
                                         "<b>Have you ticked most of the 'NOT YET' boxes?</b>".
@@ -343,27 +343,27 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                 if($myLevel_id>2)
                 {
                     $levelSummaryContent=
-                                "<img src='/tplan/index_files/assessment/title.jpg'/>"."<br>".
-                                "<img src='/tplan/index_files/assessment/titletxt.jpg'/>".
+                                "<img src='../index_files/assessment/title.jpg'/>"."<br>".
+                                "<img src='../index_files/assessment/titletxt.jpg'/>".
                             "</td>
                             <td width='190' align='left'>".
-                                "<img src='/tplan/index_files/assessment/boxes_titles.jpg'/>".
+                                "<img src='../index_files/assessment/boxes_titles.jpg'/>".
                             "</td>
                             <td>".
-                                "<img src='/tplan/index_files/assessment/ifbox.jpg' align='right'/>";
+                                "<img src='../index_files/assessment/ifbox.jpg' align='right'/>";
             $summaryContent=$summaryContent.$levelSummaryContent;
                 }
                 else
                 {
                     $levelSummaryContent=
-                                "<img src='/tplan/index_files/assessment/title.jpg'/>".
-                                "<img src='/tplan/index_files/assessment/titletxt.jpg'/>".
+                                "<img src='../index_files/assessment/title.jpg'/>".
+                                "<img src='../index_files/assessment/titletxt.jpg'/>".
                             "</td>
                             <td width='160' align='center'>".
-                                "<img src='/tplan/index_files/assessment/notyet.jpg'/>".
+                                "<img src='../index_files/assessment/notyet.jpg'/>".
                             "</td>
                             <td>".
-                                "<img src='/tplan/index_files/assessment/ifbox.jpg' align='right'/>";
+                                "<img src='../index_files/assessment/ifbox.jpg' align='right'/>";
             $summaryContent=$summaryContent.$levelSummaryContent;
                 }
             $tablefix3=
@@ -383,7 +383,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     {
                         $myLiveSummaryContent2=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/boxes.jpg\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/boxes.jpg\" align=\"right\"/>
                             </td>";
             $summaryContent=$summaryContent.$myLiveSummaryContent2;
                     }
@@ -391,13 +391,13 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     {
                         $myLiveSummaryContent2=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/tickbox.png\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
             $summaryContent=$summaryContent.$myLiveSummaryContent2;
                     }
             $boxes2=
                             "<td>
-                                <img src=\"/tplan/index_files/assessment/write_grey.jpg\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/write_grey.jpg\" align=\"right\"/>
                             </td>".
                             "
                         </tr>";
@@ -414,7 +414,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                 $green2=
                 "<tr>
                     <td width='1090'>
-                        <table border=0 style=\"background:url('/tplan/index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width=1090 align='left'>".
+                        <table border=0 style=\"background:url('../index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width=1090 align='left'>".
                             "<tr>
                                 <td>".
                                     "<b>Have you ticked all the 'YES I CAN' boxes?</b>".
@@ -433,7 +433,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     $green2=
                         "<tr>
                             <td width='1090'>
-                                <table border=0 style=\"background:url('/tplan/index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width=1090 align='left'>".
+                                <table border=0 style=\"background:url('../index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width=1090 align='left'>".
                                     "<tr>
                                         <td>".
                                             "<b>Have you ticked all the 'YES I CAN' boxes?</b>".
@@ -453,7 +453,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
              $amber2=
              "<tr>
                 <td width=1090>
-                    <table width='1090' border=0 style=\"background:url('/tplan/index_files/assessment/amberh70.jpg') no-repeat;page-break-inside: avoid\" align='left'>".
+                    <table width='1090' border=0 style=\"background:url('../index_files/assessment/amberh70.jpg') no-repeat;page-break-inside: avoid\" align='left'>".
                         "<tr>
                             <td>".
                                 "<b>Have you ticked all the 'SOMETIMES' and 'YES I CAN' boxes?</b>".
@@ -471,7 +471,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
             $red2=
             "<tr>
                 <td width=1090>
-                    <table border='0' width='1090' style=\"background:url('/tplan/index_files/assessment/redh70.jpg') no-repeat;page-break-inside: avoid\" align='left'>".
+                    <table border='0' width='1090' style=\"background:url('../index_files/assessment/redh70.jpg') no-repeat;page-break-inside: avoid\" align='left'>".
                         "<tr>
                             <td>".
                                 "<b>Have you ticked most of the 'NOT YET' boxes?</b>".
@@ -491,7 +491,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
            $green2=
            "<tr>
                 <td width=1090>
-                    <table border=0 style=\"background:url('/tplan/index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width='1090' align='left'>".
+                    <table border=0 style=\"background:url('../index_files/assessment/greenh70.jpg') no-repeat;page-break-inside: avoid\" width='1090' align='left'>".
                         "<tr>
                             <td>".
                                 "<b>Have you ticked all the 'YES I CAN' boxes?</b>".
@@ -509,7 +509,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
            $red2=
            "<tr>
                 <td width=1090>
-                    <table border=0 style=\"background:url('/tplan/index_files/assessment/redh70.jpg') no-repeat;page-break-inside: avoid\" width='1090' align='left'>".
+                    <table border=0 style=\"background:url('../index_files/assessment/redh70.jpg') no-repeat;page-break-inside: avoid\" width='1090' align='left'>".
                         "<tr>
                             <td>".
                                 "<b>Have you ticked most of the 'NOT YET' boxes?</b>".
