@@ -1,4 +1,4 @@
-<?
+<?php
 // reset variables
 header('Content-Type: text/html; charset=ISO-8859-1');
 $assess_id = $_GET['assess_id'];
@@ -113,7 +113,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                                 </table>";
                                 $strContent=$strContent.$strContent_add;
                                 }
-                                $strContent_post="<table border=0 style=\" font-size:25pt; color : #b7cc79; font-weight: bold; background:url(../index_files/assessment/classprint_header.jpg') no-repeat;\" width='1090' align='left'>
+                                $strContent_post="<table border=0 style=\" font-size:25pt; color : #b7cc79; font-weight: bold; background:url('../index_files/assessment/classprint_header.jpg') no-repeat;\" width='1090' align='left'>
                                     <tr>
                                         <td align='center' valign='middle'>
                                             <br>
