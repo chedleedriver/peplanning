@@ -976,9 +976,9 @@ class AuthController extends Zend_Controller_Action
     {
         $send = new Zend_Mail();
         if($sendfileaswell){
-            $fileContents = file_get_contents('/var/www/html/version2/public/resource-downloads/Account Registration Form.doc');
+            $fileContents = file_get_contents('/var/www/html/peplanning/public/resource-downloads/Subscription Form.doc');
             $file = $send->createAttachment($fileContents);
-            $file->filename = "Account Registration Form.doc";}
+            $file->filename = "Subscription Form.doc";}
         $send->setBodyText($mail_body_text);
         $send->setBodyHtml($mail_body_html);
         $send->setFrom($sent_from);

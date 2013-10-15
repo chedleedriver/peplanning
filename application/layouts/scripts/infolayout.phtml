@@ -3,7 +3,6 @@ $site_css="/css/site.css?".time();
 $main_js="/js/main.js?".time();
 $alerts_js="/js/jquery.alerts.js?".time();
 $jq_tools_js="/js/jquery.tools.min.js?".time();
-$jq_crypt_js="/js/jquery.jcryption.min.js?".time();
 $jq_js="/js/jquery-1.7.1.min.js?".time();
 $jq_ui_js="/js/jquery-ui-1.8.24.min.js?".time();
 echo $this->doctype();
@@ -13,10 +12,9 @@ $this->headTitle('Delivering high quality teaching resources, for Primary School
 $this->headLink()->prependStylesheet($this->baseUrl().$site_css);
 $this->headScript()->appendFile($this->baseUrl().$jq_js);
 $this->headScript()->appendFile($this->baseUrl().$jq_ui_js);
-$this->headScript()->appendFile($jq_tools_js);
-$this->headScript()->appendFile($jq_crypt_js);
-$this->headScript()->appendFile($alerts_js);
-$this->headScript()->appendFile($main_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_tools_js);
+$this->headScript()->appendFile($this->baseUrl().$alerts_js);
+$this->headScript()->appendFile($this->baseUrl().$main_js);
 
         $u_agent = $_SERVER['HTTP_USER_AGENT'];
         $ub = '';
@@ -85,34 +83,8 @@ $this->headScript()->appendFile($main_js);
     <body>
         <?php echo $this->headScript(); ?>
         <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
-        <script type="text/javascript" charset="utf-8" src="<?php echo $protocol?>widgets.twimg.com/j/2/widget.js"></script>
         <?php  include('menu.php');  ?>
-        <?php echo $this->layout()->content; ?>
-
-<!--
-This div is a placeholder for the register and login forms that we want to present as dialogs
--->
-
-  <div id="Register_div" z-index="999999">
-      <div id="Register-content">
-          <!-- modal dialog goes here via ajax-->
-      </div>
-  </div>
-<div id="Login_div" z-index="999">
-      <div id="Login-content">
-          <!-- modal dialog goes here via ajax-->
-      </div>
-  </div> 
-<div id="Subscribe_div" z-index="999">
-      <div id="Subscribe-content">
-          <!-- modal dialog goes here via ajax-->
-      </div>
-</div><div id="Trial_div" z-index="999">
-      <div id="Trial-content">
-          <!-- modal dialog goes here via ajax-->
-      </div>
-  </div>
-<?php if(substr($_SERVER[REQUEST_URI],1,4) != "auth"){?> 
+<div id="content"><?php echo $this->layout()->content; ?></div>
 <div id="contact_section">
     <div id="contact_content" class="stage">
         <table id="contact_form" border="0">            
@@ -234,129 +206,7 @@ This div is a placeholder for the register and login forms that we want to prese
         </tr>
     </table>
 </div>
-        <script>
 
-        $(document).ready(function() {
-
-        var root = $("#scroller").scrollable({circular: false}).autoscroll({ interval: 1000, autoplay: false });
-
-        window.api = root.data("scrollable");
-
-        $("#browsable").scrollable().navigator();
-
-        var register = $("#Register_div").overlay({
-
-	// some mask tweaks suitable for modal dialogs
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
-	closeOnClick: false,
-        onLoad: function () {
-            $("body").css("overflow", "hidden");
-        },
-        onClose: function () {
-                $("body").css("overflow", "");
-        }
-        });
-
-        var signin = $("#Login_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
-        closeOnClick: false,
-        onLoad: function () {
-            $("body").css("overflow", "hidden");
-        },
-        onClose: function () {
-                $("body").css("overflow", "");
-        }
-        });
-
-        var subscribe = $("#Subscribe_div").overlay({
-
-	// some mask tweaks suitable for modal dialogs
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
-        closeOnClick: false,
-        onLoad: function () {
-            $("body").css("overflow", "hidden");
-        },
-        onClose: function () {
-                $("body").css("overflow", "");
-        }
-        });
-
-        var trial = $("#Trial_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	}
-        });
-
-        var lesson = $("#Lesson_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	},
-        closeOnClick: false,
-        onLoad: function () {
-            $("body").css("overflow", "hidden");
-        },
-        onClose: function () {
-                $("body").css("overflow", "");
-        }
-        });
-
-        var contact = $("#contact_div").overlay({
-	mask: {
-		color: '#ffffff',
-		loadSpeed: 200,
-		opacity: 0.5
-	}
-        });
-
-        showContact();
-
-        $("#register_form").submit(function(e) {
-
-	// close the overlay
-	register.eq(1).overlay().close();
-
-	// get user input
-	var input = $("input", this).val();
-
-	// do something with the answer
-	//triggers.eq(1).html(input);
-
-	// do not submit the form
-	//return e.preventDefault();
-    });
-        $("#signin_form").submit(function(e) {
-
-	// close the overlay
-        signin.eq(1).overlay().close();
-
-	// get user input
-	var input = $("input", this).val();
-
-	// do something with the answer
-	//triggers.eq(1).html(input);
-
-	// do not submit the form
-	//return e.preventDefault();
-    });
-
-});
-         </script>
-         <?php }?>
+         
     </body>
 </html>

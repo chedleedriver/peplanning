@@ -1348,4 +1348,10 @@ a.disabled {visibility:hidden !important;}
 
 #resources_img_title_dd {background: url('/img/resources_img_dinnertime_delights.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
     #resources_img_title_dd span {visibility: hidden;}
+#resources_img_title_video {background: url('/img/resources_img_title_video.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_video span {visibility: hidden;}
 
+.you_tube_content { width:340px; height:260px; padding:20px}
+
+  
+}

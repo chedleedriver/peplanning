@@ -20,7 +20,7 @@ class Mailer
     * sendWelcome - Sends a welcome message to the newly
     * registered user, also supplying the username and
     * password.
-    */
+   
    function sendWelcome($name, $user, $email, $pass, $activation){
       $pass = str_replace('£',chr(163),$pass);
       $from = "From: ".EMAIL_FROM_NAME." <".EMAIL_FROM_ADDR.">\r\n".
@@ -36,7 +36,8 @@ class Mailer
              .HOME_URL."tplan/activate-confirm.php?email_address=" . urlencode($email) . "&key=$activation\n\n";
 
       return mail($email,$subject,$body,$from);
-   }
+   } */
+
    function resendActivation($email,$activation){
        $from = "From: ".EMAIL_FROM_NAME." <".EMAIL_FROM_ADDR.">\r\n".
               "Reply-To: ".EMAIL_FROM_NAME." <".EMAIL_FROM_ADDR.">\r\n".

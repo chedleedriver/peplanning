@@ -1,4 +1,4 @@
-<?
+<?php
 // reset variables
 header('Content-Type: text/html; charset=ISO-8859-1');
 $assess_id = $_GET['assess_id'];
@@ -12,9 +12,9 @@ $pdfContent='';
 if ($assess_id==1) $orientation="portrait";
 if ($assess_id==2) $orientation="landscape";
 $file=basename(tempnam('/tmp','tmp'));
-rename('/tmp/'.$file,FILE_ROOT.'tmp/'.$file.'.pdf');
-$htmlFile=FILE_ROOT.'/tmp/'.$file.'.html';
-$pdfFile=FILE_ROOT.'/tmp/'.$file.'.pdf';
+rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf');
+$htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
+$pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
 $browsePDF='../tmp/'.$file.'.pdf';
 $pdfIn=fopen($htmlFile,'w') or die("can't open the file $htmlFile");
 $pdfOut=fopen($pdfFile,'w') or die("can't open the file $pdfFile");
@@ -95,7 +95,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     <table width=100% cellpadding=0 cellspacing=0>
                         <tr>
                             <td width=33% align='right'>
-                                <a href=\"/tplan/code/send_pdf_2.php?file=".$file."&orientation=".$orientation."\"><img src=\"../index_files/icon_pdf.jpg\" border=none alt='create PDF file' title='create PDF file'></a>
+                                <a href=\"/tplan/code/send_pdf_2.php?file=".$file."&orientation=".$orientation."\"><img src=\"/tplan/index_files/icon_pdf.jpg\" border=none alt='create PDF file' title='create PDF file'></a>
                             </td>
                         </tr>
                         <tr>
@@ -192,7 +192,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                             {
                             $myLiveSummaryContent=
                             "<td>
-                                <img src=\"../index_files/assessment/boxes.jpg\" align=\"right\"/>
+                                <img src=\"/tplan/index_files/assessment/boxes.jpg\" align=\"right\"/>
                             </td>";
                             $summaryContent=$summaryContent.$myLiveSummaryContent;
                             }
@@ -200,7 +200,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                             {
                             $myLiveSummaryContent=
                             "<td>
-                                <img src=\"../index_files/assessment/tickbox.gif\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
                             $summaryContent=$summaryContent.$myLiveSummaryContent;
                             }
@@ -391,7 +391,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http:/
                     {
                         $myLiveSummaryContent2=
                             "<td>
-                                <img src=\"../index_files/assessment/tickbox.gif\" align=\"right\"/>
+                                <img src=\"../index_files/assessment/tickbox.png\" align=\"right\"/>
                             </td>";
             $summaryContent=$summaryContent.$myLiveSummaryContent2;
                     }
