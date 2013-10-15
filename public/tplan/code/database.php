@@ -175,7 +175,8 @@ class MySQLDB
    }
    function addNewSubscribedUser( $username, $password, $email,$name, $telephone, $school, $postcode,$ulevel){
       $time = time();
-     $q = "INSERT INTO ".TBL_USERS." (name,username,password,userlevel,email,telephone,school,postcode,timestamp) VALUES ('$name','$username', '$password', $ulevel, '$email','$telephone', '$school', '$postcode', $time)";
+      $subscribed = time();
+     $q = "INSERT INTO ".TBL_USERS." (name,username,password,userlevel,email,telephone,school,postcode,timestamp, subscribed) VALUES ('$name','$username', '$password', $ulevel, '$email','$telephone', '$school', '$postcode', $time, $subscribed)";
       return mysql_query($q, $this->connection);
    }
    function addNewSchool($school,$address1,$address2,$address3,$email,$telephone,$postcode,$name,$total_cost,$classnum,$subfrom,$subto,$licence){
