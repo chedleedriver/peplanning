@@ -2,7 +2,7 @@
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
 # HTTP="true"
-$hostname_tp = "peplanning-db.my.phpcloud.com";
+$hostname_tp = "localhost";
 $database_tp = "peplanning";
 $username_tp = "peplanning";
 $password_tp = "ferd1nand";
