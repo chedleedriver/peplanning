@@ -794,12 +794,12 @@ class AuthController extends Zend_Controller_Action
     {
         try {
             // Autoload simplesamlphp classes.
-            if(!file_exists("/var/simplesamlphp/lib/_autoload.php")) {
+            if(!file_exists("/var/www/html/peplanning/library/simplesamlphp/lib/_autoload.php")) {
             throw(new Exception("simpleSAMLphp lib loader file does not exist: ".
-            "/var/simplesamlphp/lib/_autoload.php"));
+            "/var/www/html/peplanning/library/simplesamlphp/lib/_autoload.php"));
             }
  
-            include_once("/var/simplesamlphp/lib/_autoload.php");
+            include_once("/var/www/html/peplanning/library/simplesamlphp/lib/_autoload.php");
             $as = new SimpleSAML_Auth_Simple('rm');
  
             // Take the user to IdP and authenticate.
