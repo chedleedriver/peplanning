@@ -18,7 +18,8 @@ $config = array(
 
 		// The entity ID of this SP.
 		// Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
-		'entityID' => 'https://peplanning-dev.itfacilitas.co.uk/simplesaml/module.php/saml/sp/metadata.php/rm',
+		//'entityID' => 'https://peplanning-dev.itfacilitas.co.uk/simplesaml/module.php/saml/sp/metadata.php/rm',
+    'entityID' => 'https://dev.peplanning.org.uk/simplesaml/module.php/saml/sp/metadata.php/rm',
 
 		// The entity ID of the IdP this should SP should contact.
 		// Can be NULL/unset, in which case the user will be shown a list of available IdPs.
@@ -27,7 +28,8 @@ $config = array(
 		// The URL to the discovery service.
 		// Can be NULL/unset, in which case a builtin discovery service will be used.
 		'discoURL' => NULL,
-		'certificate' => 'star_itfacilitas_co_uk.crt',
+		//'certificate' => 'star_itfacilitas_co_uk.crt',
+    'certificate' => 'www_peplanning_org_uk.crt',
 	),
 
 

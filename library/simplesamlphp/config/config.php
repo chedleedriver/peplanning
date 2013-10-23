@@ -21,8 +21,9 @@ $config = array (
 	 * Please note that simpleSAMLphp will then redirect all queries to the
 	 * external url, no matter where you come from (direct access or via the
 	 * reverse proxy).
-	 */
-	'baseurlpath'           => 'https://peplanning-dev.itfacilitas.co.uk/simplesaml/',
+	 	'baseurlpath'           => 'https://peplanning-dev.itfacilitas.co.uk/simplesaml/',
+   */
+  'baseurlpath'           => 'https://dev.peplanning.org.uk/simplesaml/',
 	'certdir'               => 'cert/',
 	'loggingdir'            => 'log/',
 	'datadir'               => 'data/',
