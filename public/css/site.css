@@ -1352,6 +1352,9 @@ a.disabled {visibility:hidden !important;}
     #resources_img_title_video span {visibility: hidden;}
 
 .you_tube_content { width:340px; height:260px; padding:20px}
+#resources_img_dance {background: url('/img/resources_img_dance_res.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_title_dance {background: url('/img/resources_img_title_dance.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+#resources_img_title_dance span {visibility: hidden;}
 
   
 }
