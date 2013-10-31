@@ -1013,7 +1013,7 @@ class AuthController extends Zend_Controller_Action
                     {
                         $reset_userlevel = $users->updateUser('userlevel',1,'id',$trialist['id']);
                     }
-                elseif ($trialist['num_logins']<=1) //Have they logged in yet?
+                elseif (($trialist['num_logins']<=1)&&($send_mail==0)) //Have they logged in yet?
                     {
                         if($this->getNumPlans($trialist['id'])==0) //Have they created any plans yet?
                             {
@@ -1028,7 +1028,7 @@ class AuthController extends Zend_Controller_Action
                                     }
                             }
                     }
-                elseif (($trial_days >= 1)&&($trial_days <= 2)) //Is it the first day of their subscription
+                elseif (($trial_days >= 1)&&($trial_days <= 2)&&($send_mail==0)) //Is it the first day of their subscription
                     {
                         if($this->getNumPlans($trialist['id'])==0) //Have they done any planning?
                             {
@@ -1040,7 +1040,7 @@ class AuthController extends Zend_Controller_Action
                                 $send_mail = 1;
                             }
                     }
-                elseif (($trial_days >= 7)&&($trial_days <= 8)) //I it the first week of the subscription
+                elseif (($trial_days >= 7)&&($trial_days <= 8)&&($send_mail==0)) //I it the first week of the subscription
                     {
                         $subject = "PEplanning - how are you finding the service?";
                         $send_to = $trialist['email'];
@@ -1049,7 +1049,7 @@ class AuthController extends Zend_Controller_Action
                         $this->view->email=$trialist['email'];
                         $send_mail = 1;
                     }
-                elseif (($trial_days >= 15)&&($trial_days <= 16)) //Is it halfway through the subscription
+                elseif (($trial_days >= 15)&&($trial_days <= 16)&&($send_mail==0)) //Is it halfway through the subscription
                     {
                         $subject = "Are you getting the most out of PEplanning?";
                         $send_to = $trialist['email'];
@@ -1058,7 +1058,7 @@ class AuthController extends Zend_Controller_Action
                         $this->view->email=$trialist['email'];
                         $send_mail = 1;
                     }
-                elseif (($trial_days >= 29)&&($trial_days <= 30)) // Is it the last day of the subscription
+                elseif (($trial_days >= 29)&&($trial_days <= 30)&&($send_mail==0)) // Is it the last day of the subscription
                     {
                         $subject = "PEplanning - your free subscription is coming to an end...";
                         $send_to = $trialist['email'];
@@ -1122,386 +1122,7 @@ class AuthController extends Zend_Controller_Action
                     return $this->view->form = $feedback_form;
             }
     }
-    /** Obsolete functions
-     *public function registerAction()
-    {
-       include_once 'jCryption.php';
-       $keyLength = 1024;
-       $jCryption = new jCryption();
-       $form = new Application_Form_RegisterForm();
-       $mysession = new Zend_Session_Namespace('mysession');
-       if ($this->getRequest()->isPost()) {
-       $this->_helper->layout()->disableLayout();
-       $this->_helper->viewRenderer->setNoRender();
-       $data = AesCtr::decrypt($_POST['data'], $mysession->key, 256);
-       $isEmail=new Zend_Validate_EmailAddress();
-           $dataArray = explode("&", $data);
-           foreach ($dataArray as $dataSet) {
-               $nameAndValue = explode("=", $dataSet);
-               $values[$nameAndValue[0]] = urldecode($nameAndValue[1]);
-           }
-           if ($form->isValid($values)) {
-               $response['result']=1;
-                foreach($values as $key=>$data)
-                {
-                    $response[$key]='';
-                    
-                    if(substr($key,-8)!="_reg_msg"){
-                        if($key=="email_reg") {
-                            $email_val=$data;    
-                            if($isEmail->isValid($data)){
-                                //$response['result']=1;
-                            }
-                            else {
-                                $response['result']=2;
-                                $response[$key]="Email address invalid";
-                            }
-                        }
-                        if(($key==$data."_reg")||($data=="")){
-                        $response['result']=2;
-                        $response[$key]="You must enter ".$data;
-                        }
-                        if($key=="password_reg"){
-                            if($data==""){
-                                $response['result']=2;
-                                $response[$key]="You must enter a password";
-                            }
-                            elseif(($data=="password")||(strlen($data)<=5)){
-                                $response['result']=2;
-                                $response[$key]="Password too simple (must be greater than 5 chars)";
-                            }
-                            else {
-                                //$response['result']=1;
-                            }
-                        }
-                        if(($key=="email_confirm_reg")&&($data!=$email_val)){
-                        $response['result']=2;
-                        $response[$key]="Email addresses must match";
-                        }
-                        if(($key=="role_reg")&&($data==0)){
-                        $response['result']=2;
-                        $response[$key]="You must select a role in school";
-                        }
-                    }
-                }
-            if($response['result']!=2)
-            {
-               $register_user = new Application_Model_DbTable_Users();
-               if(!$register_user->alreadyRegistered($values['email_reg']))
-               {
-               $activation_key=md5(uniqid(rand(), true));
-               $add_user=$register_user->createRow();
-               $add_user->name=$values['name_reg'];
-               $add_user->username=$values['email_reg'];
-               $add_user->email=$values['email_reg'];
-               $add_user->password=md5($values['password_reg']);
-               $add_user->activation=$activation_key;
-               $add_user->what=$values['role_reg'];
-               $add_user->userlevel='1';
-               $add_user->timestamp=time();
-               if ($add_user->save())
-               {
-                   //$this->emailDetails($values,$activation_key);
-                   $register_body="Registration Details\n\n";
-                foreach($values as $key=>$data)
-                    {
-                    $register_body.=$key." - ".$data."<br>";
-                    }
-                    if($this->sendEmailDetails($register_body,$register_body,'register@peplanning.org.uk','matt@peplanning.org.uk','Register'))
-                        {
-                        $mail_body_text="Welcome ".$values['name_reg']."\n\n"
-                        ."You have just registered at www.peplanning.org.uk "
-                        ."with the following information:\n\n"
-                        ."Username: <b>".$values['email_reg']."</b>\n"
-                        ."Password: <b>".$values['password_reg']."</b>\n\n"
-                        ."Click the link below to activate your PEplanning account:\n\n"
-                        ."<a href='http://".$_SERVER['HTTP_HOST']."/auth/activate?email_address=" . urldecode($values['email_reg']) . "&key=$activation_key'>ACTIVATE ACCOUNT NOW</a>\n\n";
-                        $this->view->template_type='register';
-                        $this->view->name=$values['name_reg'];
-                        $this->view->password=$values['password_reg'];
-                        $this->view->username=$values['email_reg'];
-                        $this->view->activation=$activation_key;
-                        $mail_body_html = $this->view->render('auth/template.phtml');
-                        if($this->sendEmailDetails($mail_body_text,$mail_body_html,'matt@peplanning.org.uk',$values['email_reg'],'Welcome to PE Planning'))
-                   {
-                        $response['result']='1';
-                        $response['detail']="To activate your account please check your email and click the confirmation link";}
-                        else {
-                            $response['result']='0';
-                            $response['detail']="Registration failed. Unable to send email confirmation";
-                        }
-                        }
-               }
-               else
-               {
-                    $response['result']='0';
-                    $response['detail']="Registration failed. Unable to register you at this time please try later";
-               }
-               }
-               else {
-                   $response['result']=0;
-                   $response['detail']="<b>This email is already registered to use PEplanning</b><br>"
-                   ."<ul><li>To login <a href='javascript:void(0)' onclick='showOverlay(\"Login\")'>click here</a></li><br>"
-                   ."<li>To register with a different email address <a href='javascript:void(0)' onclick='showOverlay(\"Register\")'>click here</a></li></ul><br>";
-                  
-               }           
-             }
-           }
-       else 
-           {
-                //$response['result']='0';
-                //$response['detail']="you must complete all fields on this form";
-                $messages = $form->getMessages();
-                //foreach ($messages as $message) {
-                $response['result']='0';
-                $response['detail']=$this->_helper->json($messages);
-           //}
-            }
-       return $this->_helper->json($response);
-       }
-       else {
-                $this->_helper->layout()->disableLayout();
-                $registerform = new Application_Form_RegisterForm();
-                if($_GET['reason']) $this->view->reason=$_GET['reason'];
-                return $this->view->form = $registerform;
-
-       }
-    }
-   public function subscribeAction()
-    {
-       $form = new Application_Form_SubscribeForm();
-       $mysession = new Zend_Session_Namespace('mysession');
-       if ($this->getRequest()->isPost()) {
-       $this->_helper->layout()->disableLayout();
-       $this->_helper->viewRenderer->setNoRender();
-       $isEmail=new Zend_Validate_EmailAddress();
-           $dataArray = explode("&", $data);
-           foreach ($dataArray as $dataSet) {
-               $nameAndValue = explode("=", $dataSet);
-               $values[$nameAndValue[0]] = urldecode($nameAndValue[1]);
-           }
-       if ($form->isValid($values)) {
-            $response['result']=1;
-               foreach($values as $key=>$data)
-                {
-                $response[$key]='';
-                    
-                    if(substr($key,-8)!="_sub_msg"){
-                        if($key=="email_sub") {
-                            $email_val=$data;    
-                            if($isEmail->isValid($data)){
-                                $response['result']=1;
-                            }
-                            else {
-                                $response['result']=2;
-                                $response[$key]="Email address invalid";
-                            }
-                        }
-                    if($key==$data."_sub"){
-                        $response['result']=2;
-                        $response[$key]="You must enter ".$data;
-                    }
-                    } 
-                }
-            if($response['result']!=2)
-            {
-               $licence_key=md5(uniqid(rand(), true));
-               $subscribe_body="Subscription Details\n\n";
-                foreach($values as $key=>$data)
-                    {
-                    $subscribe_body.=$key." - ".$data."<br>";
-                    }
-                if($this->sendEmailDetails($subscribe_body,$subscribe_body,'subscribe@peplanning.org.uk','matt@peplanning.org.uk','Subscribe'))
-                    { 
-                        // sent the contact form to PE planing ok, create a confirmation
-                        $mail_body_text=$values['name_sub']."/n/n"
-                        ."Thank you for subscribing to PEplanning. "
-                        ."We have received your details and a representative from PEplanning will contact you shortly to process your subscription.\n\n"
-                        ."\n\n"
-                        ."With thanks\n\n"
-                        ."Matthew Dykes\n"
-                        ."matt@peplanning.org.uk";
-                        $this->view->template_type='subscribe';
-                        $this->view->name=$values['name_sub'];
-                        $mail_body_html = $this->view->render('auth/template.phtml');
-                        
-                        if($this->sendEmailDetails($mail_body_text,$mail_body_html,'donotreply@peplanning.org.uk',$values['email_sub'],'Thank you for your request'))
-                            {
-                                // all emails sent ok let them know what happens next
-                                $response['result']='1';
-                                $response['detail']="Thank you for your subscription application. A representative of PEplanning will be in touch to arrange payment";
-                            }
-                        else 
-                            {
-                                // couldn't send confirmation to the enquirer
-                                $response['result']='0';
-                                $response['detail']="We have been unable to fulfill your request at this time, please check your details and try again later";
-                            }
-                    }
-       }
-       }
-       else 
-           {
-                //$response['result']='0';
-                //$response['detail']="you must complete all fields on this form";
-                $messages = $form->getMessages();
-                //foreach ($messages as $message) {
-                $response['result']='0';
-                $response['detail']=$this->_helper->json($messages);
-           //}
-            }
-       return $this->_helper->json($response);
-       }
-       else {
-            //$this->_helper->layout()->disableLayout();
-            $form = new Application_Form_SubscribeForm();
-            if($_GET['reason']) $this->view->reason=$_GET['reason'];
-            $this->view->form = $form;
-       }
-    }
-    public function trialAction()
-    {
-        //include_once 'jCryption.php';
-        //$keyLength = 1024;
-        //$jCryption = new jCryption();
-        $form = new Application_Form_TrialForm();
-        $mysession = new Zend_Session_Namespace('mysession');
-       if ($this->getRequest()->isPost()) {
-        $this->_helper->layout()->disableLayout();
-        $this->_helper->viewRenderer->setNoRender();
-        //$data = AesCtr::decrypt($_POST['data'], $mysession->key, 256);
-        $data = $_POST['data'];
-        $isEmail=new Zend_Validate_EmailAddress();
-           $dataArray = explode("&", $data);
-           foreach ($dataArray as $dataSet) {
-               $nameAndValue = explode("=", $dataSet);
-               $values[$nameAndValue[0]] = urldecode($nameAndValue[1]);
-           }
-        if ($form->isValid($values)) {
-            $response['result']=1;
-            $enquiry_body="Enquiry Details\n\n";
-            foreach($values as $key=>$data)
-                {
-                $response[$key]='';
-                    
-                    if(substr($key,-10)!="_trial_msg"){
-                        if($key=="email_trial") {
-                            $email_val=$data;    
-                            if($isEmail->isValid($data)){
-                                $response['result']=1;
-                            }
-                            else {
-                                $response['result']=2;
-                                $response[$key]="Email address invalid";
-                            }
-                        }
-                    if($key==$data."_trial"){
-                        $response['result']=2;
-                        $response[$key]="You must enter ".$data;
-                    }
-                    if(($key=="email_confirm_trial")&&($data!=$email_val)){
-                        $response['result']=2;
-                        $response[$key]="Email addresses must match";
-                    }
-                    if(($key=="role_trial")&&($data==0)){
-                        $response['result']=2;
-                        $response[$key]="You must select a role in school";
-                    }
-                    }
-                }
-            if($response['result']!=2)
-            {
-                foreach($values as $key=>$data){
-                    $enquiry_body.=$key." - ".$data."<br>";
-                }
-                if($this->sendEmailDetails($enquiry_body, $enquiry_body,'enquiry@peplanning.org.uk' , 'matt@peplanning.org.uk', 'Trial Request'))
-                {
-                $mail_body_text=$values['name_trial']."/n/n"
-                        ."You have recently requested a trial with www.peplanning.org.uk "
-                        ."for your school: ".$values['school_trial']."\n\n"
-                        ."A representative from PE Planning will be in touch in the next few days to make the neccesary arrangements\n\n"
-                        ."May I take this opportunity to thank you for your interest in PE planning\n\n"
-                        ."\n\n"
-                        ."With thanks\n\n"
-                        ."Matthew Dykes\n"
-                        ."matt@peplanning.org.uk";
-                $this->view->template_type='trial';
-                $this->view->name=$values['name_trial'];
-                $this->view->school=$values['school_trial'];
-                $mail_body_html = $this->view->render('auth/template.phtml');
-                
-                if($this->sendEmailDetails($mail_body_text, $mail_body_html, 'donotreply@peplanning.org.uk', $values['email_trial'], 'Thank you for your request'))
-                    {
-                        $response['result']='1';
-                        $response['detail']="We have emailed you more details";
-                    }
-                    else {
-                            $response['result']='0';
-                            $response['detail']="We have been unable to fulfill your request at this time, please check your details and try again later";
-                         }
-                }
-        
-                else {
-                    $response['result']='0';
-                    $response['detail']="We have been unable to fulfill your request at this time, please check your details and try again later";
-                    }
-            }
-            else
-            {
-                //$response['result']=2;
-                //$response['detail']=$this->_helper->json($messages);
-                return $this->_helper->json($response);
-            }
-        }
-        else 
-        {
-                //$response['result']='0';
-                //$response['detail']="you must complete all fields on this form";
-                $messages = $form->getMessages();
-                //foreach ($messages as $message) {
-                $response['result']='0';
-                $response['detail']=$this->_helper->json($messages);
-        }
-            return $this->_helper->json($response);
-        }
-        else {
-            //$this->_helper->layout()->disableLayout();
-            $form = new Application_Form_TrialForm();
-            $this->view->form = $form;
-        }
-    }
-    public function setEncryptionAction()
-    {
-       $this->_helper->layout()->disableLayout();
-       $this->_helper->viewRenderer->setNoRender();
-       $mysession = new Zend_Session_Namespace('mysession');
-       require_once 'jCryption.php';
-       $keyLength = 1024;
-       $jCryption = new jCryption();
-       if(isset($_GET["generateKeypair"])) {
-           require_once("100_1024_keys.inc.php");
-            $keys = $arrKeys[mt_rand(0, 100)];
-            $mysession->e = array("int" => $keys["e"], "hex" => $jCryption->dec2string($keys["e"],16));
-            $mysession->d = array("int" => $keys["d"], "hex" => $jCryption->dec2string($keys["d"],16));
-            $mysession->n = array("int" => $keys["n"], "hex" => $jCryption->dec2string($keys["n"],16));
-            echo '{"e":"'.$mysession->e["hex"].'","n":"'.$mysession->n["hex"].'","maxdigits":"'.intval($keyLength*2/16+3).'"}';
-       }
-       elseif (isset($_GET["handshake"])) {
-	// Decrypt the clients request
-            $key = $jCryption->decrypt($_POST['key'], $mysession->d["int"], $mysession->n["int"]);
-	// Remove the RSA keys from the session
-            unset($mysession->e);
-            unset($mysession->d);
-            unset($mysession->n);
-	// Save the new AES key into the session
-            $mysession->key = $key;
-	// Echo the challenge
-	echo json_encode(array("challenge" => AesCtr::encrypt($key, $key, 256)));
-            //print_r($_POST);
-       }
-    }
-     
-     */
+    
 }
 
 

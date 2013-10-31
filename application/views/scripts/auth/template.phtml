@@ -19,12 +19,12 @@
     <body>
         <table border=0 cellSpacing=0 cellPadding=0 width="100%" style="border:0px; outline:none;">
             <tr>
-    		<td bgColor=#ffffff valign=top>
+        <td bgColor=#ffffff valign=top>
                     <table style="font-family:Arial, sans-serif; max-width:600px; margin-top:10px; margin-bottom:10px; font-size:13px; border-collapse:collapse; background-color:#ffffff; border-bottom: #d8d8d8 1px solid; border-left: #d8d8d8 1px solid; border-right: #d8d8d8 1px solid; outline:none;" align=center>
                         <tr>
                             <td><a href="http://<?php echo $_SERVER['HTTP_HOST']?>"><img border=0 alt="" src="http://www.peplanning.org.uk/img/banner_top2.png" width='600px' height='65px'></a></td>
                         </tr>
-			<tr>
+      <tr>
                             <td style="font-family:Arial, sans-serif; padding-left:20px;padding-top:20px;padding-bottom:20px; padding-right:20px; width:560px;">
                                 
                                 
@@ -46,7 +46,7 @@
                                     <p>Username: <?php echo $this->username ?></p>
                                     <p>Password: <?php echo $this->password ?></p>
                                     <p>To confirm your email address and complete the registration process please <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/activate?email_address=<?php echo urldecode($this->username)?>&key=<?php echo $this->activation ?>'><b>activate your account now</b></a></p>
-                                    <p>If you need any help getting started you can download our 'How to Use PEplanning Guide' <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/resource-downloads/Guide%20to%20using%20PEplanning%20v1.1.pdf'>here</a>.</p>
+                                      <p>If you need any help getting started you can watch our video guides to using the website <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/video'>here</a> or download our 'How to Use PEplanning Guide' <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/resource-downloads/Guide%20to%20using%20PEplanning%20v1.1.pdf'>here</a>.</p>
                                     <p>Kind Regards</p>
                                     <p>Matthew</p>
                                     <p><b>Matthew Dykes</b></p>
@@ -62,7 +62,7 @@
                                     <p><b>Matthew Dykes</b></p>
                                     <p><i>Sales & Marketing</i></p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='payment'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>Thank you for purchasing PEplanning.</p>
@@ -76,7 +76,7 @@
                                     <p><b>Matthew Dykes</b></p>
                                     <p><i>Sales & Marketing</i></p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='trial'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>You have recently requested a trial with www.peplanning.org.uk</p>
@@ -88,7 +88,7 @@
                                     <p><b>Matthew Dykes</b></p>
                                     <p><i>Sales & Marketing</i></p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_1'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p></p>
@@ -96,7 +96,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_7'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>We hope you are enjoying using PEplanning and our service is helping support the delivery of PE within your school.</p>
@@ -105,13 +105,14 @@
                                         <li>Provide assessment for learning</li>
                                         <li>Additional PE resources, including Sports Day Guides; Sports Festival resources; Long Term Planning</li>
                                         <li>You can create your own bespoke PE lessons</li>
+                                        <li>To see how these and other services on the website work watch our <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/video'>video guides</a></li>
                                     </ul>
                                     <p>For more information on these or any other aspect of our service check out our <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/faqs'>FAQ page</a> or <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/contactus'>Contact Us</a>, we are always here to help.
                                     <p>Happy Planning</p>
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_15'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>You are now half-way through your free subscription, have you had chance to have a good look around the website and found all the services we have to offer...</p>
@@ -120,6 +121,7 @@
                                         <li>Assessment for learning</li>
                                         <li>Our 'Additional Resources'</li>
                                         <li>The range of sports we provide</li>
+                                        <li>To see how these and other services on the website work watch our <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/video'>video guides</a></li>
                                     </ul>
                                     <p>If you are interested in upgrading your account to become a fully subscribed PEplanning user let us know. You can find more information about what this means <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/faqs'>here</a> or should you wish to speak to someone <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/contactus'>Contact Us</a>. 
                                     <p>If you subscribe before the end of your free subscription you will be eligible to a 10% discount - <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/faqs'>find out more</a> or <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/contactus'>Contact Us</a>, we are always here to help.
@@ -127,7 +129,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_29'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>Thank you for taking the time to use our service, your PEplanning free subscription ends in 1 day.</p>
@@ -147,7 +149,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?> 
+        <?}?> 
                                 <?if($this->template_type=='subscription_noplan'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>We noticed that you haven't started planning yet. If you require any support using or accessing your PEplanning account please let us know, we are here to help: <a href='http://www.peplanning.org.uk/contactus'>Contact Us</a></p>
@@ -157,7 +159,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_nologin'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>We noticed that you haven't logged into your PEplanning account and started planning yet. If you require any support using or accessing your PEplanning account please let us know, we are here to help: <a href='http://www.peplanning.org.uk/contactus'>Contact Us</a></p>
@@ -167,7 +169,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='subscription_toomanyplans'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>As a free subscriber we limit the number of lesson plans you can create to 10. This gives you the opportunity to see how our service works, the quality of the lesson plans you can teach with PEplanning and how PEplanning can support your schools PE provision.</p>
@@ -184,7 +186,7 @@
                                     <br>
                                     <p>The PE Planning Team</p>
                                     <br /><br />
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='passwordreset'){?>
                                     <p>Hi <? echo $this->name ?>,</p>
                                     <p>A password reset has been requested for this account at www.peplanning.org.uk
@@ -197,7 +199,7 @@
                                     <p><i>Sales & Marketing</i></p>
                                     <br /><br />
 
-				<?}?>
+        <?}?>
                                 <?if($this->template_type=='form_getintouch'){?>
                                     <p>Hi <? echo $this->name  ?>,</p>
                                     <p>Thank you for your enquiry. A member of the PEplanning team will respond to you within 48 hours.</p>
@@ -210,25 +212,25 @@
 
                                 
                             </td>
-			</tr>
-			<tr>
+      </tr>
+      <tr>
                             <td><img border=0 src="http://www.peplanning.org.uk/img/border_bottom.png" width='600px' height='11'></td>
                         </tr>
-			<tr>
+      <tr>
                             <td align='left' style="font-family:Arial, sans-serif; background-color:#f9f9f9; color:#a1a1a1; padding-left:10px;padding-top:8px;padding-bottom:10px; font-size:12px;">
                                 <b>PEplanning</b> Innovation House, 26 Devonshire Street, Keighley, West Yorkshire, BD21 2AU 
-				<br />
-				<br />Web. <a href="http://www.peplanning.org.uk">www.peplanning.org.uk</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-				<br />Tel. +44 (0) 1535 644777 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-				<br />Email. <a href="mailto:matt@peplanning.org.uk">matt@peplanning.org.uk</a>
+        <br />
+        <br />Web. <a href="http://www.peplanning.org.uk">www.peplanning.org.uk</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br />Tel. +44 (0) 1535 644777 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br />Email. <a href="mailto:matt@peplanning.org.uk">matt@peplanning.org.uk</a>
                             </td>
-			</tr>
+      </tr>
                     </table>
                     <table id='privacy' border=0 cellSpacing=0 cellPadding=0 width='600px' align='center' style="max-width:600px; width:600px; font-size:11px;">
                         <tr>
                             <td>
                                 <p style="text-align: left; LINE-HEIGHT: 14px; MARGIN: 16px 16px 32px; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px">
-		  	        <p color=#a1a1a1>Your privacy is important to us. Please review PEplanning's online privacy policy by <a href="http://www.peplanning.org.uk/tplan/termsandconditions.php"><span color=#a1a1a1>clicking here</span></a>.<br>
+                <p color=#a1a1a1>Your privacy is important to us. Please review PEplanning's online privacy policy by <a href="http://www.peplanning.org.uk/tplan/termsandconditions.php"><span color=#a1a1a1>clicking here</span></a>.<br>
                             <br>
                             <span color=#a1a1a1>&copy; 2012 PEplanning. All rights reserved. Registered office: PEplanning, Innovation House, Devonshire Street, Keighley, BD21 2AU. Company registered in England & Wales no. 7297171.</span></p>
                             </td>
@@ -237,6 +239,6 @@
                 </table>
                 </td>
             </tr>
-		</table>
-	</body>
+    </table>
+  </body>
 </html>
