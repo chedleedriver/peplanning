@@ -305,7 +305,7 @@ class LearnController extends Zend_Controller_Action
             $this->view->num_right_boxes = 3;
             $this->view->num_left_boxes = 3;
             $this->view->right_box_title = array(1=>'subscribe',2=>'planalesson',3=>'userguide');
-            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+            $this->view->left_box_title = array(1=>'video',2=>'social',3=>'faqs');
         }
         elseif($my_level==4){
             $this->view->num_right_boxes = 3;
