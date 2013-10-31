@@ -316,8 +316,8 @@ class LearnController extends Zend_Controller_Action
         else {
             $this->view->num_right_boxes = 2;
             $this->view->num_left_boxes = 3;
-            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide',3=>'video');
-            $this->view->left_box_title = array(1=>'social',2=>'faqs',3=>'social');
+            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide');
+            $this->view->left_box_title = array(1=>'social',2=>'faqs',3=>'video');
         }
     }
     public function restrictionsAction()
