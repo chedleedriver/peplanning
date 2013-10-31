@@ -672,6 +672,10 @@ function boxAction(action)
         case 'userguide':
             location.href=('/resource-downloads/Guide%20to%20using%20PEplanning%20v1.1.pdf');
             break;
+        case 'video':
+            location.href=('/learn/video');
+            break;
+        
     }
 }
 function editUser(userId)
