@@ -21,21 +21,21 @@ class ContactusController extends Zend_Controller_Action
         $my_id = $mysession->id;
         $my_level = $mysession->userlevel;
         if($my_level==0){
-            $this->view->num_right_boxes = 1;
+            $this->view->num_right_boxes = 2;
             $this->view->num_left_boxes = 1;
-            $this->view->right_box_title = array(1=>'faqs',2=>'register',3=>'planalesson');
+            $this->view->right_box_title = array(1=>'faqs',2=>'video',3=>'planalesson');
             $this->view->left_box_title = array(1=>'freetrial',2=>'faqs',3=>'social');
         }
         elseif($my_level==1){
-            $this->view->num_right_boxes = 1;
+            $this->view->num_right_boxes = 2;
             $this->view->num_left_boxes = 1;
-            $this->view->right_box_title = array(1=>'subscribe');
+            $this->view->right_box_title = array(1=>'subscribe',2=>'video');
             $this->view->left_box_title = array(1=>'faqs');
         }
         else {
-            $this->view->num_right_boxes = 0;
+            $this->view->num_right_boxes = 1;
             $this->view->num_left_boxes = 1;
-            $this->view->right_box_title = array(1=>'social');
+            $this->view->right_box_title = array(1=>'video');
             $this->view->left_box_title = array(1=>'faqs');
         }
     }

@@ -197,21 +197,21 @@ class LearnController extends Zend_Controller_Action
         $my_level = $mysession->userlevel;
         if($my_level==0){
             $this->view->num_right_boxes = 3;
-            $this->view->num_left_boxes = 2;
+            $this->view->num_left_boxes = 3;
             $this->view->right_box_title = array(1=>'freetrial',2=>'planalesson',3=>'userguide');
-            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'video');
         }
         elseif($my_level==1){
             $this->view->num_right_boxes = 3;
-            $this->view->num_left_boxes = 2;
+            $this->view->num_left_boxes = 3;
             $this->view->right_box_title = array(1=>'subscribe',2=>'planalesson',3=>'userguide');
-            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'video');
         }
         else {
             $this->view->num_right_boxes = 3;
-            $this->view->num_left_boxes = 2;
+            $this->view->num_left_boxes = 3;
             $this->view->right_box_title = array(1=>'staffroom',2=>'planalesson',3=>'userguide');
-            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'video');
         }
     }
 
@@ -298,7 +298,7 @@ class LearnController extends Zend_Controller_Action
         if($my_level==0){
             $this->view->num_right_boxes = 3;
             $this->view->num_left_boxes = 3;
-            $this->view->right_box_title = array(1=>'freetrial',2=>'planalesson',3=>'userguide');
+            $this->view->right_box_title = array(1=>'video',2=>'planalesson',3=>'userguide');
             $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
         }
         elseif($my_level==1){
@@ -308,15 +308,15 @@ class LearnController extends Zend_Controller_Action
             $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
         }
         elseif($my_level==4){
-            $this->view->num_right_boxes = 2;
+            $this->view->num_right_boxes = 3;
             $this->view->num_left_boxes = 2;
-            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide',3=>'userguide');
+            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide',3=>'video');
             $this->view->left_box_title = array(1=>'social',2=>'faqs',3=>'social');
         }
         else {
             $this->view->num_right_boxes = 2;
-            $this->view->num_left_boxes = 2;
-            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide',3=>'planalesson');
+            $this->view->num_left_boxes = 3;
+            $this->view->right_box_title = array(1=>'planalesson',2=>'userguide',3=>'video');
             $this->view->left_box_title = array(1=>'social',2=>'faqs',3=>'social');
         }
     }
@@ -391,9 +391,9 @@ class LearnController extends Zend_Controller_Action
             $this->view->right_box_title = array(1=>'staffroom',2=>'video',3=>'planalesson');
             $this->view->left_box_title = array(1=>'endorsements',2=>'faqs',3=>'social');
         }
-        $yt = new Zend_Gdata_YouTube();
-        $yt->setMajorProtocolVersion(2);
-        $this->view->videoFeed=$yt->getuserUploads('peplanning');
+        //$yt = new Zend_Gdata_YouTube();
+        //$yt->setMajorProtocolVersion(2);
+        //$this->view->videoFeed=$yt->getuserUploads('peplanning');
     }
 }
 
