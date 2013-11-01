@@ -5,7 +5,7 @@ class ContactusController extends Zend_Controller_Action
 
     public function init()
     {
-            $this->_helper->layout()->setLayout('infolayout');
+            $this->_helper->layout()->setLayout('layout');
             $mysession = new Zend_Session_Namespace('mysession');        
             $active_users = new Application_Model_DbTable_ActiveUsers;
             $active_guests = new Application_Model_DbTable_ActiveGuests;
