@@ -150,7 +150,7 @@ include("view_active.php");
 <? echo $form->error("deluser"); ?>
 <form action="adminprocess.php" method="POST">
 Username:<br>
-<input type="text" name="deluser" maxlength="30" value="<? echo $form->value("deluser"); ?>">
+<input type="text" name="deluser" maxlength="128" value="<? echo $form->value("deluser"); ?>">
 <input type="hidden" name="subdeluser" value="1">
 <input type="submit" value="Delete User">
 </form>
