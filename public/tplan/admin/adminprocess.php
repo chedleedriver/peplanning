@@ -176,7 +176,7 @@ class AdminProcess
       else{
          /* Make sure username is in database */
          $subuser = stripslashes($subuser);
-         if(strlen($subuser) < 3 || strlen($subuser) > 30 ||
+         if(strlen($subuser) < 3 || strlen($subuser) > 128 ||
             (!$ban && !$database->usernameTaken($subuser))){
             $form->setError($field, "* Username does not exist<br>");
          }
