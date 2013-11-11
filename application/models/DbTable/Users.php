@@ -87,8 +87,8 @@ class Application_Model_DbTable_Users extends Zend_Db_Table_Abstract
     public function checkUnifyUser($username)
     {
         $select = $this->select();
-        $select->from($this->_name,'username')
-               ->where('username=?',$username);
+        $select->from($this->_name,'userid')
+               ->where('userid=?',$username);
         if($this->fetchRow($select)) return 1;
         else return 0;
     }
@@ -96,7 +96,7 @@ class Application_Model_DbTable_Users extends Zend_Db_Table_Abstract
     {
         $select = $this->select();
         $select->from($this->_name,'password')
-               ->where('username=?',$username);
+               ->where('userid=?',$username);
         return $this->fetchRow($select);
     }
     
@@ -117,6 +117,7 @@ class Application_Model_DbTable_Users extends Zend_Db_Table_Abstract
         $add_user->password=$password;
         $add_user->what='Unify';
         $add_user->userlevel='5';
+        $add_user->userid=$username;
         $add_user->school=$school;
         $add_user->timestamp=time();
         $add_user->subscribed=time();
