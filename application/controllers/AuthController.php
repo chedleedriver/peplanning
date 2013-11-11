@@ -877,6 +877,10 @@ class AuthController extends Zend_Controller_Action
         }
         
      }
+    public function usercheckAction()
+    {
+         return $this->view;
+    }
     public function checkAuth($values)
     {
         $users  = new Application_Model_DbTable_Users();
