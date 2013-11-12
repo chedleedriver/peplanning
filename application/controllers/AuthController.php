@@ -883,8 +883,6 @@ class AuthController extends Zend_Controller_Action
     public function usercheckAction()
     {
        $form = new Application_Form_UsercheckForm();
-       $mysession = new Zend_Session_Namespace('mysession');
-       $my_id = $mysession->id;
        if ($this->getRequest()->isPost()) {
            $this->_helper->layout()->disableLayout();
            $this->_helper->viewRenderer->setNoRender();
@@ -938,7 +936,6 @@ class AuthController extends Zend_Controller_Action
             return $this->_helper->json($response);
        }
        else {
-        $this->view->prevResult=($_GET['prev'] ? $_GET['prev'] : '' );
         $check_user_form = new Application_Form_UsercheckForm();
         return $this->view->form = $check_user_form;
        }
