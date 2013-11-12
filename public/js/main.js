@@ -6,7 +6,7 @@ function closeIt(what)
     if (pathArr[0]) loc = pathArr[0];
     if((loc=='/createaplan')||(loc=='/auth/login')) location.replace("http://" + location.host + "/");
     if((loc=='/auth/edituser')||(loc=='/auth/password')) location.replace("http://" + location.host + "/staffroom");
-    if(loc=='/auth/usercheck') location.replace("http://" + location.host + "/auth/unify?join=0");
+    if(loc=='/auth/usercheck') location.replace("http://" + location.host + "/auth/unify?link=no");
 }
 function passwordFocus(from)
 {
@@ -558,6 +558,7 @@ function doProcess(proc)
             else if(response.detail=="Please complete all the fields on the login form") location.href = "https://" + location.host + "/auth/login?fail=2";
             else if(response.detail=="registered") location.href = "http://" + location.host + "/staffroom?reason=" + response.detail;
             else if(response.detail=="no change") location.href = "http://" + location.host + "/staffroom?reason=nochange";
+            else if(proc=='usercheck') location.href = "http://" + location.host + "/auth/unify?link=no";
             else jAlert (response.detail)
             
         } 
@@ -611,6 +612,9 @@ function successFunction(proc,response)
             break;
         case 'payment':
             location.href = "http://" + location.host + "/staffroom?reason=payment";
+            break;
+        case 'usercheck':
+            location.href = "http://" + location.host + "/auth/unify";
             break;
         case 'Logout':
             location.href=  "http://" + location.host + "/";

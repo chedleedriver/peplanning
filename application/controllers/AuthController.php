@@ -833,7 +833,8 @@ class AuthController extends Zend_Controller_Action
             $users  = new Application_Model_DbTable_Users();
             // Check if the user is on the database, if not create them
             if (!$users->checkUnifyUser($username)) {
-              if(!$this->usercheck()){
+              if($_GET['link]'!='no') $this->usercheck();
+              else {
                 $users->createUnifyUser($username,$name,$school,$email,$password);
                 $new_user=1;
               }
@@ -934,7 +935,7 @@ class AuthController extends Zend_Controller_Action
                $response['detail']='You have not completed all the required fields';
                $response['more']='';
            }
-           return $this->$response['result'];
+            return $this->_helper->json($response);
        }
        else {
         $this->view->prevResult=($_GET['prev'] ? $_GET['prev'] : '' );
