@@ -883,16 +883,19 @@ class AuthController extends Zend_Controller_Action
     public function usercheckAction()
     {
        $form = new Application_Form_UsercheckForm();
-       if ($this->getRequest()->isPost()) {
+       if ($this->getRequest()->isPost()) 
+       {
            $this->_helper->layout()->disableLayout();
            $this->_helper->viewRenderer->setNoRender();
            $data = $_POST['data'];
            $dataArray = explode("&", $data);
-           foreach ($dataArray as $dataSet) {
+           foreach ($dataArray as $dataSet) 
+           {
                $nameAndValue = explode("=", $dataSet);
                $values[$nameAndValue[0]] = $nameAndValue[1];
            }
-           if ($form->isValid($values)) {
+           if ($form->isValid($values)) 
+           {
                $users  = new Application_Model_DbTable_Users();
                if($this->check_user($values['username']))
                { 
@@ -928,14 +931,16 @@ class AuthController extends Zend_Controller_Action
                    $response['more']=$values['username']; 
                }
            }
-           else {
+           else 
+           {
                $response['result']=0;
                $response['detail']='You have not completed all the required fields';
                $response['more']='';
            }
-            return $this->_helper->json($response);
+           return $this->_helper->json($response);
        }
-       else {
+       else 
+       {
         $check_user_form = new Application_Form_UsercheckForm();
         return $this->view->form = $check_user_form;
        }
