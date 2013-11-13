@@ -909,7 +909,7 @@ class AuthController extends Zend_Controller_Action
                  $stored_password=$user_info->password;
                  if($current_password==$stored_password)
                  {
-                  if($users->updateUser('userid',$values['username'],'username',$values['username']))
+                  if($users->updateUser('userid',$values['userid'],'username',$values['username']))
                     {
                         $response['result']=1;
                         $response['detail']='Accounts linked successfully';
