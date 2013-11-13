@@ -7,7 +7,7 @@ class Application_Form_UsercheckForm extends Zend_Form
     {
        $this->setName('Usercheckform');
        $this->setMethod('post');
-      
+       $user_id = $this->getAttrib('userid');
        $userName =  $this->createElement('text', 'userName',array('label' => ''  ));
        $userName->addFilters(array('StringTrim'))
            ->addValidator('StringLength', false,array(3,50))
@@ -36,10 +36,8 @@ class Application_Form_UsercheckForm extends Zend_Form
                ));   
        $user_id = $this->createElement('hidden','userid',array('label' => '' ));
        $user_id -> setValue($this->userid)
-                ->setOrder(4)
-                ->setOptions(array(
-                'style'=>'display:none'
-                ));
+                -> setOrder(4);
+                
        $submit =  $this->createElement('submit','save',array('label' => ''));
        $submit->setRequired(false)
            ->setIgnore(true);
