@@ -35,7 +35,7 @@ class Application_Form_UsercheckForm extends Zend_Form
                'onfocus'=>'passwordFocus("login");'
                ));   
        $user_id = $this->createElement('hidden','userid',array('label' => '' ));
-       $user_id -> setValue($this->userid)
+       $user_id -> setValue($user_id)
                 -> setOrder(4);
                 
        $submit =  $this->createElement('submit','save',array('label' => ''));
