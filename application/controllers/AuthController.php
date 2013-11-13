@@ -882,7 +882,7 @@ class AuthController extends Zend_Controller_Action
      }
     public function usercheckAction()
     {
-       $form = new Application_Form_UsercheckForm();
+       /*$form = new Application_Form_UsercheckForm();
        if ($this->getRequest()->isPost()) 
        {
            $this->_helper->layout()->disableLayout();
@@ -940,10 +940,10 @@ class AuthController extends Zend_Controller_Action
            return $this->_helper->json($response);
        }
        else 
-       {
+       {*/
         $check_user_form = new Application_Form_UsercheckForm();
         return $this->view->form = $check_user_form;
-       }
+       //}
     }
     public function checkAuth($values)
     {
