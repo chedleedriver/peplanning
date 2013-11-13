@@ -84,6 +84,14 @@ class Application_Model_DbTable_Users extends Zend_Db_Table_Abstract
         if($this->fetchRow($select)) return 1;
         else return 0;
     }
+    public function checkForLink($username)
+    {
+        $select = $this->select();
+        $select->from($this->_name,'username')
+               ->where('username=?',$username);
+        if($this->fetchRow($select)) return 1;
+        else return 0;
+    }
     public function checkUnifyUser($username)
     {
         $select = $this->select();
