@@ -947,7 +947,7 @@ class AuthController extends Zend_Controller_Action
        else 
        {
         $check_user_form = new Application_Form_UsercheckForm();
-        $this->view->userid = $this->userid;
+        $this->view->userid = $this->_getParam('userid');
         return $this->view->form = $check_user_form;
        }
     }
