@@ -919,14 +919,14 @@ class AuthController extends Zend_Controller_Action
                     {
                          $response['result']=0;
                          $response['detail']='Unable to link accounts';
-                         $response['more']=$current_password." - ".$stored_password; 
+                         $response['more']=''; 
                     }
                  }
                  else 
                  {
                    $response['result']=0;
                    $response['detail']='Incorrect pasword entered';
-                   $response['more']=$my_id;
+                   $response['more']=$current_password." - ".$stored_password;
                  }
                }
                else
