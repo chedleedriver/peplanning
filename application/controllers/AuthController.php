@@ -836,7 +836,7 @@ class AuthController extends Zend_Controller_Action
             {
               if($_GET['link']!='no')
                 {
-                  $this->usercheckAction();
+                  $this->_helper->redirector('usercheckAction');
                 }
               else 
                 {
