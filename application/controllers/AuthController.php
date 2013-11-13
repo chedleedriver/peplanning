@@ -940,10 +940,11 @@ class AuthController extends Zend_Controller_Action
            return $this->_helper->json($response);
        }
        else 
-       {*/
+       {
         $check_user_form = new Application_Form_UsercheckForm();
         return $this->view->form = $check_user_form;
-       //}
+       }*/
+       return $this->view;
     }
     public function checkAuth($values)
     {
