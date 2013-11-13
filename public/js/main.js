@@ -558,7 +558,7 @@ function doProcess(proc)
             else if(response.detail=="Please complete all the fields on the login form") location.href = "https://" + location.host + "/auth/login?fail=2";
             else if(response.detail=="registered") location.href = "http://" + location.host + "/staffroom?reason=" + response.detail;
             else if(response.detail=="no change") location.href = "http://" + location.host + "/staffroom?reason=nochange";
-            else if(proc=='usercheck') location.href = "http://" + location.host + "/auth/unify?link=no&reason=" + response.detail;
+            else if(proc=='usercheck') location.href = "http://" + location.host + "/auth/usercheck?reason=" + response.detail;
             else jAlert (response.detail)
             
         } 
