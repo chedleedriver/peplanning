@@ -5,7 +5,7 @@ class Application_Form_UsercheckForm extends Zend_Form
 
     public function init()
     {
-       $this->setName('Usercheckform');
+       $this->setName('usercheckform');
        $this->setMethod('post');
        $userid = $this->getAttrib('userid');
        $userName =  $this->createElement('text', 'userName',array('label' => ''  ));
