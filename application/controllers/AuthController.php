@@ -944,7 +944,7 @@ class AuthController extends Zend_Controller_Action
         $check_user_form = new Application_Form_UsercheckForm();
         return $this->view->form = $check_user_form;
        }*/
-       return $this->view;
+       echo "no view";
     }
     public function checkAuth($values)
     {
