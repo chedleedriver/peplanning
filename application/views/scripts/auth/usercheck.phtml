@@ -101,7 +101,7 @@
     <div id="Password_content" class="overlay_content">
         <div id="Password_header" class="overlay_header"><span>Already Registered for PE Planning?</span></div>
         <div id="Password_subheader" class="overlay_subheader"><span>Fill in your details to link your accounts</span></div>
-        <div id="Password_title" class="overlay_title"><span><?php echo $this->userid; ?></span></div>
+        <div id="Password_title" class="overlay_title"><span></span></div>
         <div id="Password_form"><?php echo $this->form; ?></div>
         <div id="Password_buttons">
             <div id="button_change"><a href="javascript:void(0)" onclick="javascript:doProcess('usercheck');"><span>OK</span></a></div>
@@ -127,7 +127,7 @@
         $("#unify_div").overlay().load();
     $("#password").keyup(function(event){
     if(event.keyCode == 13){
-        doProcess('Login');
+        doProcess('usercheck');
     }
     });
 </script>
