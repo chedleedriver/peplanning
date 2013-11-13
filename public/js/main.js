@@ -553,7 +553,7 @@ function doProcess(proc)
                 
         // failure
         else if (response.result==0){
-            if ((proc!='Logout')&&(proc!='payment')&&(proc!='Subscribe')) $(divId).overlay().close();
+            if ((proc!='Logout')&&(proc!='payment')&&(proc!='Subscribe')&&(proc!='usercheck')) $(divId).overlay().close();
             if(response.detail=="Invalid username or password try again") location.href = "https://" + location.host + "/auth/login?fail=1";
             else if(response.detail=="Please complete all the fields on the login form") location.href = "https://" + location.host + "/auth/login?fail=2";
             else if(response.detail=="registered") location.href = "http://" + location.host + "/staffroom?reason=" + response.detail;
