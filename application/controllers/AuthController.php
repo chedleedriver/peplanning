@@ -832,12 +832,17 @@ class AuthController extends Zend_Controller_Action
             $password=$this->generateRandID();
             $users  = new Application_Model_DbTable_Users();
             // Check if the user is on the database, if not create them
-            if (!$users->checkUnifyUser($username)) {
-              //if($_GET['link]'!='no') $this->usercheck();
-              //else {
+            if (!$users->checkUnifyUser($username)) 
+            {
+              if($_GET['link']!='no')
+                {
+                  $this->usercheck();
+                }
+              else 
+                {
                 $users->createUnifyUser($username,$name,$school,$email,$password);
                 $new_user=1;
-              //}
+                }
             }
             //log them in
             $auth = Zend_Auth::getInstance();
@@ -879,7 +884,73 @@ class AuthController extends Zend_Controller_Action
         return $this->view;
         }
         
-     }
+    }
+    public function usercheckAction()
+    {
+       $form = new Application_Form_UsercheckForm();
+       if ($this->getRequest()->isPost()) 
+       {
+           $this->_helper->layout()->disableLayout();
+           $this->_helper->viewRenderer->setNoRender();
+           $data = $_POST['data'];
+           $dataArray = explode("&", $data);
+           foreach ($dataArray as $dataSet) 
+           {
+               $nameAndValue = explode("=", $dataSet);
+               $values[$nameAndValue[0]] = $nameAndValue[1];
+           }
+           if ($form->isValid($values)) 
+           {
+               $users  = new Application_Model_DbTable_Users();
+               if($this->check_user($values['username']))
+               { 
+                 $current_password=md5($values['password']);
+                 $user_info=$users->getPassword($values['username'],'username');
+                 $stored_password=$user_info->password;
+                 if($current_password==$stored_password)
+                 {
+                  if($users->updateUser('userid',$values['username'],'username',$values['username']))
+                    {
+                        $response['result']=1;
+                        $response['detail']='Accounts linked successfully';
+                        $response['more']='';
+                    }
+                    else
+                    {
+                         $response['result']=0;
+                         $response['detail']='Unable to link accounts';
+                         $response['more']=''; 
+                    }
+                 }
+                 else 
+                 {
+                   $response['result']=0;
+                   $response['detail']='Incorrect pasword entered';
+                   $response['more']=$my_id;
+                 }
+               }
+               else
+               {
+                  $response['result']=0;
+                   $response['detail']='Username not found';
+                   $response['more']=$values['username']; 
+               }
+           }
+           else 
+           {
+               $response['result']=0;
+               $response['detail']='You have not completed all the required fields';
+               $response['more']='';
+           }
+           return $this->_helper->json($response);
+       }
+       else 
+       {
+        $check_user_form = new Application_Form_UsercheckForm();
+        return $this->view->form = $check_user_form;
+       }
+    }
+
     public function checkAuth($values)
     {
         $users  = new Application_Model_DbTable_Users();
