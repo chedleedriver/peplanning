@@ -902,7 +902,7 @@ class AuthController extends Zend_Controller_Action
            if ($form->isValid($values)) 
            {
                $users  = new Application_Model_DbTable_Users();
-               if($this->check_user($values['username']))
+               if($this->checkUser($values['username']))
                { 
                  $current_password=md5($values['password']);
                  $user_info=$users->getPassword($values['username'],'username');
