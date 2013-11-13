@@ -905,7 +905,7 @@ class AuthController extends Zend_Controller_Action
                if($users->checkForLink($values['userName']))
                { 
                  $current_password=md5($values['password']);
-                 $user_info=$users->getPassword($values['userName'],'userName');
+                 $user_info=$users->getPassword($values['userName'],'username');
                  $stored_password=$user_info->password;
                  if($current_password==$stored_password)
                  {
