@@ -547,7 +547,7 @@ ul {list-style: square; }
         #Register_div {background: url('/img/bg_panel_reg.png') no-repeat; display:none; width:731px; height:512px; text-align:left;}
         #Login_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
         #password_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
-        #unify_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
+        #usercheck_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
         #edituser_div {background: url('/img/bg_panel_signin.png') no-repeat; display:none; width:459px; height:425px; text-align:left; z-index:999;}
         #feedback_div {background: url('/img/bg_panel_reg.png') no-repeat;display:none; width:731px; height:512px; text-align:left;}
         #Subscribe_div {background: url('/img/bg_panel_reg.png') no-repeat;display:none; width:731px; height:512px; text-align:left;}
