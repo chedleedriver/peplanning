@@ -910,7 +910,7 @@ class AuthController extends Zend_Controller_Action
                    $stored_password = $user['password'];}
                  if($current_password==$stored_password)
                  {
-                  if($users->updateUser('userid',$values['userid'],'username',urlencode($values['userName'])))
+                  if($users->updateUser('userid',$values['userid'],'username',$values['userName']))
                     {
                         $response['result']=1;
                         $response['detail']='Accounts linked successfully';
@@ -947,7 +947,7 @@ class AuthController extends Zend_Controller_Action
        }
        else 
        {
-        $check_user_form = new Application_Form_UsercheckForm(array('userid' => $this->_getParam('userid')));
+        $check_user_form = new Application_Form_UsercheckForm(array('userid' => urldecode($this->_getParam('userid'))));
         return $this->view->form = $check_user_form;
        }
     }
