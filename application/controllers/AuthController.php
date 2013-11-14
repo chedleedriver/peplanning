@@ -847,7 +847,7 @@ class AuthController extends Zend_Controller_Action
             //log them in
             $auth = Zend_Auth::getInstance();
             $authAdapter = new Zend_Auth_Adapter_DbTable($users->getAdapter());
-            $authAdapter->setIdentityColumn('username');
+            $authAdapter->setIdentityColumn('userid');
             $user_info = $users->getUnifyPassword($username);
             $unify_password=$user_info->password;
             $authAdapter->setTableName('users');
