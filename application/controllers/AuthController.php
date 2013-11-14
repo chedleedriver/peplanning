@@ -906,7 +906,8 @@ class AuthController extends Zend_Controller_Action
                { 
                  $current_password=md5($values['password']);
                  $user_info=$users->getPassword($values['userName'],'username')->toArray();
-                 $stored_password=$user_info->password;
+                   foreach($user_info as $user){
+                   $stored_password = $user['password'];}
                  if($current_password==$stored_password)
                  {
                   if($users->updateUser('userid',$values['userid'],'username',$values['userName']))
