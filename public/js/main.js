@@ -6,7 +6,7 @@ function closeIt(what)
     if (pathArr[0]) loc = pathArr[0];
     if((loc=='/createaplan')||(loc=='/auth/login')) location.replace("http://" + location.host + "/");
     if((loc=='/auth/edituser')||(loc=='/auth/password')) location.replace("http://" + location.host + "/staffroom");
-    if(loc=='/auth/usercheck') location.replace("http://" + location.host + "/auth/unify?link=no");
+    if(what=='usercheck') location.replace("http://" + location.host + "/auth/unify?link=no");
 }
 function passwordFocus(from)
 {
@@ -591,7 +591,6 @@ function doProcess(proc)
 }
 function successFunction(proc,response)
 {
-    alert(response.detail);
     var divId = "#" + proc + "_div"; 
     if ((proc!='Logout')&&(proc!='payment')&&(proc!='Subscribe')) $(divId).overlay().close(); 
     switch(proc) {
