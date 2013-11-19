@@ -617,7 +617,7 @@ function successFunction(proc,response)
             location.href = "http://" + location.host + "/auth/unify";
             break;
         case 'Logout':
-            if(response.unify) location.href='https://sts.platform.rmunify.com/issue/wsfed?wa=wsignout1.0';
+            if(response.unify) location.href='https://dev.peplanning.org.uk/simplesaml/module.php/saml/sp/saml2-logout.php/rm';
             else location.href=  "http://" + location.host + "/";
             break;
         
