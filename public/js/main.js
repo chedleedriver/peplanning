@@ -591,6 +591,7 @@ function doProcess(proc)
 }
 function successFunction(proc,response)
 {
+    alert(response.unify);
     var divId = "#" + proc + "_div"; 
     if ((proc!='Logout')&&(proc!='payment')&&(proc!='Subscribe')) $(divId).overlay().close(); 
     switch(proc) {
