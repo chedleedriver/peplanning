@@ -617,7 +617,8 @@ function successFunction(proc,response)
             location.href = "http://" + location.host + "/auth/unify";
             break;
         case 'Logout':
-            location.href=  "http://" + location.host + "/";
+            if(response.unify) location.href='https://sts.platform.rmunify.com/issue/wsfed?wa=wsignout1.0';
+            else location.href=  "http://" + location.host + "/";
             break;
         
     }
