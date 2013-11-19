@@ -114,6 +114,7 @@ class AuthController extends Zend_Controller_Action
     {
        $mysession = new Zend_Session_Namespace('mysession');
        $id=$mysession->id;
+       $username=$mysession->username;
        $users  = new Application_Model_DbTable_Users();
        if ($users->checkUnifyUser($username)) $response['unify']=1; else $response['unify']=0;
        $this->_helper->layout()->disableLayout();
