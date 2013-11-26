@@ -877,7 +877,7 @@ a.disabled {visibility:hidden !important;}
     #Login_body {background: url('/img/login_background_faded.png') no-repeat; height:766px; margin-left:auto; margin-right:auto; text-align:left; z-index:999;}
         
 
-    #Login_buttons {width:200px; margin-left:auto; margin-right:auto; border:0px dashed #000; position:relative; top:28px; *+ top:13px;}
+    #Login_buttons {width:200px; margin-left:auto; margin-right:auto; border:0px dashed #000; position:relative; top:0px; *+ top:13px;}
     
     #button_area{float:right;} #btn_cancel {float:left;}
     
