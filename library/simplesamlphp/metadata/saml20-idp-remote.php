@@ -11,7 +11,7 @@
  * Guest IdP. allows users to sign up and register. Great for testing!
  */
 $metadata['http://sts.platform.rmunify.com/sts'] = array(
-	'name' 		       => 'RM Unify Service',
+	'name' 		       => 'RM Unify Testing Service',
 	'description'          => 'Test set up for SSO to RM Unifiy Service',
 	'SingleSignOnService'  => 'https://sts.platform.rmunify.com/issue/saml/?binding=redirect',
   'SingleLogoutService'  => 'https://sts.platform.rmunify.com/issue/samlSLO/?binding=redirect',
