@@ -57,7 +57,8 @@ if ($message instanceof SAML2_LogoutResponse) {
 	$state = SimpleSAML_Auth_State::loadState($relayState, 'saml:slosent');
 	$state['saml:sp:LogoutStatus'] = $message->getStatus();
 	SimpleSAML_Auth_Source::completeLogout($state);
-
+  /* do the PE planning logout */
+  require('/auth/unifylogout');
 } elseif ($message instanceof SAML2_LogoutRequest) {
 
 	SimpleSAML_Logger::debug('module/saml2/sp/logout: Request from ' . $idpEntityId);
