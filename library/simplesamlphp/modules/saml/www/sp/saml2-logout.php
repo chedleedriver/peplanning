@@ -6,7 +6,7 @@
  * This endpoint handles both logout requests and logout responses.
  */
 /* do the PE planning logout */
-require('unifylogout.php');
+require('/../library/unifylogout.php');
 if (!array_key_exists('PATH_INFO', $_SERVER)) {
 	throw new SimpleSAML_Error_BadRequest('Missing authentication source id in logout URL');
 }
