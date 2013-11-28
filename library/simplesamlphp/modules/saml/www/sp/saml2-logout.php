@@ -5,7 +5,8 @@
  *
  * This endpoint handles both logout requests and logout responses.
  */
-
+/* do the PE planning logout */
+require('/auth/unifylogout');
 if (!array_key_exists('PATH_INFO', $_SERVER)) {
 	throw new SimpleSAML_Error_BadRequest('Missing authentication source id in logout URL');
 }
@@ -57,8 +58,7 @@ if ($message instanceof SAML2_LogoutResponse) {
 	$state = SimpleSAML_Auth_State::loadState($relayState, 'saml:slosent');
 	$state['saml:sp:LogoutStatus'] = $message->getStatus();
 	SimpleSAML_Auth_Source::completeLogout($state);
-  /* do the PE planning logout */
-  require('/auth/unifylogout');
+ 
 } elseif ($message instanceof SAML2_LogoutRequest) {
 
 	SimpleSAML_Logger::debug('module/saml2/sp/logout: Request from ' . $idpEntityId);
