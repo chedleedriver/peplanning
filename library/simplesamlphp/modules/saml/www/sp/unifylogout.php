@@ -35,13 +35,15 @@ $application = new Zend_Application(
        $username=$mysession->username;
        Zend_Auth::getInstance()->clearIdentity();
        Zend_Session::destroy();
-       /* to get this bit to work I need to use the db adapter thing
+       $adapter = new Zend\Db\Adapter\Adapter(array(
+       'driver' => 'Mysqli',
+       'database' => 'peplanning',
+       'username' => 'peplanning',
+       'password' => 'ferd1nand'
+        ));
        if(!Zend_Auth::getInstance()->hasIdentity())
        {    
-            $active_users = new Application_Model_DbTable_ActiveUsers;
-            $active_row = $active_users->fetchRow("id = $id");
-            if ($active_row) $deactive = $active_row->delete();
+            $checkactive = $adapter->query("select * from active_users where id=$id");
+            if($checkactive->execute()) $deleteactive = $adapter->execute($adapter->query("delete from active_users where id = $id"));
        }
-       */
-
 ?>
