@@ -35,15 +35,11 @@ $application = new Zend_Application(
        $username=$mysession->username;
        Zend_Auth::getInstance()->clearIdentity();
        Zend_Session::destroy();
-       $adapter = new Zend\Db\Adapter\Adapter(array(
-       'driver' => 'Mysqli',
-       'database' => 'peplanning',
-       'username' => 'peplanning',
-       'password' => 'ferd1nand'
-        ));
+       $tp = mysql_pconnect("localhost", "peplanning", "ferd1nand") or trigger_error(mysql_error(),E_USER_ERROR);
+       mysql_select_db("peplanning", $tp);
        if(!Zend_Auth::getInstance()->hasIdentity())
        {    
-            $checkactive = $adapter->query("select * from active_users where id=$id");
-            if($checkactive->execute()) $deleteactive = $adapter->execute($adapter->query("delete from active_users where id = $id"));
+            $checkactive = mysql_query("select * from active_users where id=$id");
+            if($checkactive) $deleteactive = mysql_query("delete from active_users where id = $id");
        }
 ?>
