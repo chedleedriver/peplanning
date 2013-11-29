@@ -33,11 +33,10 @@ $application = new Zend_Application(
  $mysession = new Zend_Session_Namespace('mysession');
        $id=$mysession->id;
        $username=$mysession->username;
-       $this->_helper->layout()->disableLayout();
-       $this->_helper->viewRenderer->setNoRender();
        Zend_Auth::getInstance()->clearIdentity();
        Zend_Session::destroy();
-       /*if(!Zend_Auth::getInstance()->hasIdentity())
+       /* to get this bit to work I need to use the db adapter thing
+       if(!Zend_Auth::getInstance()->hasIdentity())
        {    
             $active_users = new Application_Model_DbTable_ActiveUsers;
             $active_row = $active_users->fetchRow("id = $id");
