@@ -109,7 +109,7 @@ else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/lesson_template.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:16cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
+            <TD width=33%><img src=\"../images/lesson_template.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:14cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
             <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
@@ -126,7 +126,7 @@ $_SESSION[$lesson_num]['school'].
         "</TR>
     </TABLE>
 <BR><BR><BR>
-  <div style='left:30px;'>
+  <div style='padding-left:20px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
             	<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
