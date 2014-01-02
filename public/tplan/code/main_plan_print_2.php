@@ -103,13 +103,13 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     }
 //    print_r(mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]));
 }
-if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
-elseif (isset($print_all)=='y') $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
-else $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+elseif (isset($print_all)=='y') $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
+else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/filler.jpg\" border=none></TD>
+            <TD width=33%><img src=\"../images/lesson_template.jpg\" border=none style='top: 0; height: 100%; left: 0; width: 100%; z-index:-1; postion:absolute;'></TD>
             <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
