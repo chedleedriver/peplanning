@@ -103,23 +103,23 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     }
 //    print_r(mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]));
 }
-if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
-elseif (isset($print_all)=='y') $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
-else $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+elseif (isset($print_all)=='y') $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
+else $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/logo_peplanning.png\" border=none></TD>
-            <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+            <TD width=33%></TD>
+            <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
-            <TD WIDTH=12% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+            <TD WIDTH=12% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal; color:white;'>".
 $_SESSION[$lesson_num]['name'].
            "</TD>
-            <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+            <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			School :
 		</TD>
-            <TD WIDTH=12% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+            <TD WIDTH=12% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal; color:white;'>".
 $_SESSION[$lesson_num]['school'].
            "</TD>".
             //<TD width=33% align='right'><a href=\"send_pdf.php?file=".$file."&orientation=landscape\"><img src=\"../index_files/icon_printer.jpg\" border=none alt='create PDF file' title='create PDF file'></a><a href=\"/tplan/Lessons.php?unit_id=".$uow_id."&plan_type=".$plan_type."\"><img src=\"../index_files/icon_edit.jpg\" border=none alt='edit plan' title='edit plan'></a><a href=\"/tplan/main.php\"><img src=\"../index_files/icon_home.jpg\" border=none alt='return to start page' title='return to start page'></a></TD>
