@@ -103,9 +103,9 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     }
 //    print_r(mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]));
 }
-if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
-elseif (isset($print_all)=='y') $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
-else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+if((isset($print_all)=='y')&&($lesson_num==1)) $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
+elseif (isset($print_all)=='y') $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0 STYLE=\"page-break-before: always\">";
+else $table_def="<TABLE background='/images/lesson_template.jpg' WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
