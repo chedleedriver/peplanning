@@ -126,6 +126,7 @@ $_SESSION[$lesson_num]['school'].
         "</TR>
     </TABLE>
 <BR><BR><BR>
+  <div style='left:30px;>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
             	<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
@@ -320,7 +321,7 @@ $summaryContent=$summaryContent."
         </TR>";
 $summaryContent=$summaryContent."
     </TABLE>
-<BR>";
+<BR></div>";
 $strContent=$strContent.$summaryContent;
 // Activity Content
 // for next loop for the actvities
