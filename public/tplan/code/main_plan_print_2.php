@@ -109,7 +109,8 @@ else $table_def="<TABLE background='/tplan/images/lesson_template.jpg' WIDTH=100
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%></TD>
+            <TD width=33%>><img src=\"../images/filler.jpg\" border=none
+></TD>
             <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
