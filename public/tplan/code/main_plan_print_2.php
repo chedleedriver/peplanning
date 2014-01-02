@@ -125,7 +125,7 @@ $_SESSION[$lesson_num]['school'].
             //<TD width=33% align='right'><a href=\"send_pdf.php?file=".$file."&orientation=landscape\"><img src=\"../index_files/icon_printer.jpg\" border=none alt='create PDF file' title='create PDF file'></a><a href=\"/tplan/Lessons.php?unit_id=".$uow_id."&plan_type=".$plan_type."\"><img src=\"../index_files/icon_edit.jpg\" border=none alt='edit plan' title='edit plan'></a><a href=\"/tplan/main.php\"><img src=\"../index_files/icon_home.jpg\" border=none alt='return to start page' title='return to start page'></a></TD>
         "</TR>
     </TABLE>
-<BR>
+<BR><BR><BR>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
             	<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
