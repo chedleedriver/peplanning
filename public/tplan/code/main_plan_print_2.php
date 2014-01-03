@@ -363,7 +363,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     if ($activities['lesson_part']!="Plenary")
     {
         // it isn't so we create an activity string for this activity
-        $activityContent[$act_num]="<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=15% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
+        $activityContent[$act_num]="<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
         $activities['lesson_part']."</TD><TD WIDTH=20% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
         sp_utf2ascii(stripslashes($activities['content_name']));
         // if there is a diagram put a link to it on the title bar
@@ -384,7 +384,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                     if ($strands['strand']) $strand_str[$act_num]=$strand_str[$act_num]." ".$strands['strand'];
                 }
         }
-        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
         $content_string[$act_num]."</TD><TD WIDTH=34% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
         //check if there are some teaching points
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
