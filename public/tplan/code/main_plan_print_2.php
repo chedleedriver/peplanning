@@ -109,7 +109,7 @@ else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/lesson_template.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:21cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
+            <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:21cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
             <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
@@ -612,7 +612,7 @@ fclose($pdfIn);
 // Clean up after ourselves
 $htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-html page_footer.html $htmlFile $pdfFile"));
+$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-html plan_footer.html $htmlFile $pdfFile"));
 $browsePDF=fopen($pdfFile,'r');
 $pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
