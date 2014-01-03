@@ -1,4 +1,6 @@
-<html><head><script>
+<html>
+ <head>
+<script>
 function subst() {
   var vars={};
   var x=document.location.search.substring(1).split('&');
@@ -9,14 +11,20 @@ function subst() {
     for (var j=0; j<y.length; ++j) y[j].textContent = vars[x[i]];
   }
 }
-</script></head><body style="border:0; margin: 0;" onload="subst()">
-<table width='100%'>
-  <tr>
-    <td width=33%><img src="../images/lesson_footer.jpg" border=none style='top: 0; left: 0; z-index:-1; position:absolute;'></td>
-    <td width=33% class="section"></td>
-    <td width=33% align=center valign=middle style="color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight:bold;">
-      Page <span class="page"></span> of <span class="topage"></span>
-    </td>
-  </tr>
-</table>
-</body></html>
+</script> </head>
+ <body onload="subst()" style="border:0; margin: 0;">
+  <table width="100%">
+   <tbody>
+    <tr>
+     <td width="33%">
+      <img border="none" src="../images/lesson_footer.jpg" style="top: 0; left: 0; z-index:-1; position:absolute;" /></td>
+     <td class="section" width="33%" style="color:black; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight:bold;">
+      &nbsp;</td>
+     <td align="center" style="color:black; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight:bold;" valign="middle" width="33%">
+      Page of</td>
+    </tr>
+   </tbody>
+  </table>
+  <br />
+ </body>
+</html>
