@@ -295,7 +295,7 @@ $equipment."
 	</TR>
     </TABLE>
 <BR>
-    <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
+    <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-after: always\">
 	<TR>
 		<TD WIDTH=14% HEIGHT=71 style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Teacher	Notes
@@ -612,7 +612,7 @@ fclose($pdfIn);
 // Clean up after ourselves
 $htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-center [page] --footer-font-size 8 $htmlFile $pdfFile"));
+$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-html page_footer.html $htmlFile $pdfFile"));
 $browsePDF=fopen($pdfFile,'r');
 $pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
