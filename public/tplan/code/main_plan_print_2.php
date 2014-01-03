@@ -109,7 +109,7 @@ else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:21cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
+            <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:7.7cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
             <TD WIDTH=5% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
