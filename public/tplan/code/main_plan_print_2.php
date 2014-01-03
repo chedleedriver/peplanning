@@ -405,7 +405,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         $activityContent[$act_num]=$activityContent[$act_num]."</TD></TR>";
         if (mysql_num_rows($_SESSION[$lesson_num]['progressions'][$act_num])!=0)
         {
-            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Progression</TD><TD WIDTH=45% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
+            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Progression</TD><TD WIDTH=45% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
                 //                while ($progressions=mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]))
                 for ($j=0;$j<$num_progs;$j++)
                 {
@@ -467,7 +467,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
             $j=0;
             while ($analysess=mysql_fetch_array($_SESSION[$lesson_num]['analysess'][$act_num]))
                 {
-                    $analyses_str[$act_num]="</TD></TR><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Analysis</TD><TD COLSPAN=4 WIDTH=85% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
+                    $analyses_str[$act_num]="</TD></TR><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Analysis</TD><TD COLSPAN=4 WIDTH=85% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>".
                     sp_utf2ascii(stripslashes($analysess['analysis_title']))."</TD></TR>";
                     if (checkBase64Encoded($analysess['analysis']))
                         {$analyses_line_arr[$act_num]=unserialize(base64_decode($analysess['analysis']));	}
