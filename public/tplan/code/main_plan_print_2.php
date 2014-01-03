@@ -129,25 +129,25 @@ $_SESSION[$lesson_num]['school'].
   <div style='padding-left:30px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
-            	<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+            	<TD WIDTH=10% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Topic
 		</TD>
 		<TD WIDTH=10% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['mysubject'].
                 "</TD>
-                <TD WIDTH=5% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Level
 		</TD>
 		<TD WIDTH=2% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['level'].
                 "</TD>
-		<TD WIDTH=5% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Theme
 		</TD>
 		<TD WIDTH=20% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['theme'].
 		"</TD>
-                <TD WIDTH=5% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Title
 		</TD>
 		<TD WIDTH=48% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
@@ -156,7 +156,7 @@ $_SESSION[$lesson_num]['title'].
 		
 	</TR>
 	<TR>
-	<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+	<TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Learning Objectives
 	</TD>
 	<TD WIDTH=86% COLSPAN=7 VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -175,13 +175,13 @@ $summaryContent=$summaryContent.$objectives_string.
 	<TR>
 		
 		
-		<TD WIDTH=13% VALIGN=TOP style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Teaching Assistant
 		</TD>
 		<TD WIDTH=20% VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
  list($ta,$sen)=mysql_fetch_array($_SESSION[$lesson_num]['assistance']); if ($ta) $summaryContent=$summaryContent.$ta; else $summaryContent=$summaryContent."none selected";
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=13% VALIGN=TOP style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Special	Education Needs
 		</TD>
 		<TD WIDTH=20% VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -192,7 +192,7 @@ $summaryContent=$summaryContent."</TD>
 <BR>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0>
 	<TR VALIGN=TOP>
-		<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Literacy Keywords
 		</TD>
 		<TD WIDTH=23% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -210,7 +210,7 @@ $summaryContent=$summaryContent."</TD>
         else $keywords_string=$keywords_string."none selected";
         $summaryContent=$summaryContent.$keywords_string;
 $summaryContent=$summaryContent."</TD>
-		<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Citizenship
 		</TD>
 		<TD WIDTH=23% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -228,7 +228,7 @@ $summaryContent=$summaryContent."</TD>
         else $citizenships_string=$citizenships_string."none selected";
         $summaryContent=$summaryContent.$citizenships_string;
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Numeracy
 		</TD>
 		<TD WIDTH=23% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -249,7 +249,7 @@ $summaryContent=$summaryContent."</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		
-		<TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Risk Assessment
 		</TD>
 		<TD WIDTH=23% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -266,7 +266,7 @@ $summaryContent=$summaryContent."</TD>
 	
             $summaryContent=$summaryContent.$risk_assessments_string;
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			ICT
 		</TD>
                 <TD WIDTH=23% VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
@@ -286,7 +286,7 @@ else $icts_string="none selected";
 $summaryContent=$summaryContent.$icts_string;
 
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Equipment
 		</TD>
 		<TD WIDTH=23% VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
@@ -297,7 +297,7 @@ $equipment."
 <BR>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-after: always\">
 	<TR>
-		<TD WIDTH=14% HEIGHT=71 style='background:#d2e0a9;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=14% HEIGHT=71 style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Teacher	Notes
 		</TD>
 		<TD COLSPAN=3 WIDTH=86% VALIGN=TOP style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>";
