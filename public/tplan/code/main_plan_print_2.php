@@ -295,7 +295,7 @@ $equipment."
 	</TR>
     </TABLE>
 <BR>
-    <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-after: always\">
+    <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
 	<TR>
 		<TD WIDTH=14% HEIGHT=71 style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
 			Teacher	Notes
