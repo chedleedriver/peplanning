@@ -956,7 +956,7 @@ class AuthController extends Zend_Controller_Action
                {
                   $response['result']=0;
                    $response['detail']='Username not found';
-                   $response['more']=$values['username']; 
+                   $response['more']=urldecode($values['userid']); 
                }
            }
            else 
