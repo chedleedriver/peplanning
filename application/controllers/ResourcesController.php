@@ -344,6 +344,31 @@ class ResourcesController extends Zend_Controller_Action
         }
     }
     
+    public function handballAction()
+    {
+        $mysession = new Zend_Session_Namespace('mysession');
+        $my_id = $mysession->id;
+        $my_level = $mysession->userlevel;
+        if($my_level==0){
+            $this->view->num_right_boxes = 3;
+            $this->view->num_left_boxes = 0;
+            $this->view->right_box_title = array(1=>'freetrial',2=>'planalesson',3=>'createyourown');
+            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+        }
+        elseif($my_level==1){
+            $this->view->num_right_boxes = 3;
+            $this->view->num_left_boxes = 0;
+            $this->view->right_box_title = array(1=>'subscribe',2=>'planalesson',3=>'createyourown');
+            $this->view->left_box_title = array(1=>'peschool',2=>'social',3=>'faqs');
+        }
+        else {
+            $this->view->num_right_boxes = 3;
+            $this->view->num_left_boxes = 0;
+            $this->view->right_box_title = array(1=>'planalesson',2=>'social',3=>'createyourown');
+            $this->view->left_box_title = array(1=>'social',2=>'faqs',3=>'social');
+        }
+    }
+    
     public function danceResourcesAction()
     {
         $mysession = new Zend_Session_Namespace('mysession');
