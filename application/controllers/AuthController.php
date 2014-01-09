@@ -924,15 +924,15 @@ class AuthController extends Zend_Controller_Action
            if ($form->isValid($values)) 
            {
                $users  = new Application_Model_DbTable_Users();
-               if($users->checkForLink($values['userName']))
+               if($users->checkForLink(urldecode($values['userName'])))
                { 
                  $current_password=md5($values['password']);
-                 $user_info=$users->getPassword($values['userName'],'username')->toArray();
+                 $user_info=$users->getPassword(urldecode($values['userName']),'username')->toArray();
                    foreach($user_info as $user){
                    $stored_password = $user['password'];}
                  if($current_password==$stored_password)
                  {
-                  if($users->updateUser('userid',urldecode($values['userid']),'username',$values['userName']))
+                  if($users->updateUser('userid',urldecode($values['userid']),'username',urldecode($values['userName'])))
                     {
                         $response['result']=1;
                         $response['detail']='Accounts linked successfully';
