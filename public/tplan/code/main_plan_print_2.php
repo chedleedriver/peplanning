@@ -118,16 +118,16 @@ $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
             <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:7.7cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
-            <TD WIDTH=5% style='font-size: 10px; font-weight:bold; color:white;'>
+            <TD WIDTH=5% style='font-size: 12px; font-weight:bold; color:white;'>
 			Name :
 		</TD>
-            <TD WIDTH=12% style='font-size: 10px; color:white;'>".
+            <TD WIDTH=12% style='font-size: 12px; color:white;'>".
 $_SESSION[$lesson_num]['name'].
            "</TD>
-            <TD WIDTH=5% style='font-size: 10px; font-weight:bold; color:white;'>
+            <TD WIDTH=5% style='font-size: 12px; font-weight:bold; color:white;'>
 			School :
 		</TD>
-            <TD WIDTH=12% style='font-size: 10px; color:white;'>".
+            <TD WIDTH=12% style='font-size: 12px; color:white;'>".
 $_SESSION[$lesson_num]['school'].
            "</TD>".
             //<TD width=33% align='right'><a href=\"send_pdf.php?file=".$file."&orientation=landscape\"><img src=\"../index_files/icon_printer.jpg\" border=none alt='create PDF file' title='create PDF file'></a><a href=\"/tplan/Lessons.php?unit_id=".$uow_id."&plan_type=".$plan_type."\"><img src=\"../index_files/icon_edit.jpg\" border=none alt='edit plan' title='edit plan'></a><a href=\"/tplan/main.php\"><img src=\"../index_files/icon_home.jpg\" border=none alt='return to start page' title='return to start page'></a></TD>
@@ -143,19 +143,19 @@ $_SESSION[$lesson_num]['school'].
 		<TD WIDTH=10%>".
 $_SESSION[$lesson_num]['mysubject'].
                 "</TD>
-                <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Level
 		</TD>
 		<TD WIDTH=2%>".
 $_SESSION[$lesson_num]['level'].
                 "</TD>
-		<TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Theme
 		</TD>
 		<TD WIDTH=20%>".
 $_SESSION[$lesson_num]['theme'].
 		"</TD>
-                <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Title
 		</TD>
 		<TD WIDTH=48%>".
@@ -164,10 +164,10 @@ $_SESSION[$lesson_num]['title'].
 		
 	</TR>
 	<TR>
-	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Learning Objectives
 	</TD>
-	<TD WIDTH=86% COLSPAN=7 VALIGN=TOP>";
+	<TD WIDTH=86% COLSPAN=7 VALIGN=TOP style='font-size: 10px;'>";
         $objectives_string="<ol style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
         while (list ($objective_id,$objective)=mysql_fetch_array($_SESSION[$lesson_num]['objectives']))
 		{
