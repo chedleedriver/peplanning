@@ -110,16 +110,16 @@ $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
             <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:7.7cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
-            <TD WIDTH=5% style='font-family:\"Calibri (Body)\";font-size: 10px;font-weight:bold; color:white;'>
+            <TD WIDTH=5% style='font-family:Calibri;font-size: 10px;font-weight:bold; color:white;'>
 			Name :
 		</TD>
-            <TD WIDTH=12% style='font-family:\"Calibri (Body)\";font-size: 10px;font-weight:normal; color:white;'>".
+            <TD WIDTH=12% style='font-family:Calibri;font-size: 10px;font-weight:normal; color:white;'>".
 $_SESSION[$lesson_num]['name'].
            "</TD>
-            <TD WIDTH=5% style='font-family:\"Calibri (Body)\";font-size: 10px;font-weight:bold; color:white;'>
+            <TD WIDTH=5% style='font-family:Calibri;font-size: 10px;font-weight:bold; color:white;'>
 			School :
 		</TD>
-            <TD WIDTH=12% style='font-family:\"Calibri (Body)\";font-size: 10px;font-weight:normal; color:white;'>".
+            <TD WIDTH=12% style='font-family:Calibri;font-size: 10px;font-weight:normal; color:white;'>".
 $_SESSION[$lesson_num]['school'].
            "</TD>".
             //<TD width=33% align='right'><a href=\"send_pdf.php?file=".$file."&orientation=landscape\"><img src=\"../index_files/icon_printer.jpg\" border=none alt='create PDF file' title='create PDF file'></a><a href=\"/tplan/Lessons.php?unit_id=".$uow_id."&plan_type=".$plan_type."\"><img src=\"../index_files/icon_edit.jpg\" border=none alt='edit plan' title='edit plan'></a><a href=\"/tplan/main.php\"><img src=\"../index_files/icon_home.jpg\" border=none alt='return to start page' title='return to start page'></a></TD>
@@ -129,28 +129,28 @@ $_SESSION[$lesson_num]['school'].
   <div style='padding-left:30px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
-            	<TD WIDTH=10% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+            	<TD WIDTH=10% style='background:#85b52d; color:white; font-family: Calibri;font-size: 10px;font-weight:bold;'>
 			Topic
 		</TD>
-		<TD WIDTH=10% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+		<TD WIDTH=10% style='font-family:Calibri;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['mysubject'].
                 "</TD>
-                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Calibri;font-size: 10px;font-weight:bold;'>
 			Level
 		</TD>
-		<TD WIDTH=2% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+		<TD WIDTH=2% style='font-family: Calibri;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['level'].
                 "</TD>
-		<TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+		<TD WIDTH=5% style='background:#85b52d; color:white;font-family: Calibri;font-size: 10px;font-weight:bold;'>
 			Theme
 		</TD>
-		<TD WIDTH=20% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+		<TD WIDTH=20% style='font-family: Calibri;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['theme'].
 		"</TD>
-                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>
+                <TD WIDTH=5% style='background:#85b52d; color:white;font-family: Calibri;font-size: 10px;font-weight:bold;'>
 			Title
 		</TD>
-		<TD WIDTH=48% style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:normal;'>".
+		<TD WIDTH=48% style='font-family: Calibri;font-size: 10px;font-weight:normal;'>".
 $_SESSION[$lesson_num]['title'].
                 "</TD>
 		
