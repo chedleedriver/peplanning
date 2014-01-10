@@ -124,7 +124,7 @@ class Application_Model_DbTable_Users extends Zend_Db_Table_Abstract
         $add_user->email=$email;
         $add_user->password=$password;
         $add_user->what='Unify';
-        $add_user->userlevel='5';
+        $add_user->userlevel='4';
         $add_user->userid=$username;
         $add_user->school=$school;
         $add_user->timestamp=time();

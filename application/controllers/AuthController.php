@@ -942,14 +942,14 @@ class AuthController extends Zend_Controller_Action
                     {
                          $response['result']=0;
                          $response['detail']='Unable to link accounts';
-                         $response['more']=''; 
+                         $response['more']=urldecode($values['userid']); 
                     }
                  }
                  else 
                  {
                    $response['result']=0;
                    $response['detail']='Incorrect pasword entered';
-                   $response['more']=$current_password." - ".$stored_password;
+                   $response['more']=urldecode($values['userid']);
                  }
                }
                else
@@ -963,7 +963,7 @@ class AuthController extends Zend_Controller_Action
            {
                $response['result']=0;
                $response['detail']='You have not completed all the required fields';
-               $response['more']='';
+               $response['more']=urldecode($values['userid']);
            }
            return $this->_helper->json($response);
        }
