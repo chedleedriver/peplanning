@@ -137,28 +137,28 @@ $_SESSION[$lesson_num]['school'].
   <div style='padding-left:30px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
-            	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+            	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Topic
 		</TD>
-		<TD WIDTH=10%>".
+		<TD WIDTH=10% style='font-size:10px;'>".
 $_SESSION[$lesson_num]['mysubject'].
                 "</TD>
                 <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Level
 		</TD>
-		<TD WIDTH=2%>".
+		<TD WIDTH=2% style='font-size:10px;'>".
 $_SESSION[$lesson_num]['level'].
                 "</TD>
 		<TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Theme
 		</TD>
-		<TD WIDTH=20%>".
+		<TD WIDTH=20% style='font-size:10px;'>".
 $_SESSION[$lesson_num]['theme'].
 		"</TD>
                 <TD WIDTH=5% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
 			Title
 		</TD>
-		<TD WIDTH=48%>".
+		<TD WIDTH=48% style='font-size:10px;'>".
 $_SESSION[$lesson_num]['title'].
                 "</TD>
 		
@@ -183,16 +183,16 @@ $summaryContent=$summaryContent.$objectives_string.
 	<TR>
 		
 		
-		<TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Teaching Assistant
 		</TD>
-		<TD WIDTH=20% VALIGN=TOP>";
+		<TD WIDTH=20% VALIGN=TOP style='font-size:10px;'>";
  list($ta,$sen)=mysql_fetch_array($_SESSION[$lesson_num]['assistance']); if ($ta) $summaryContent=$summaryContent.$ta; else $summaryContent=$summaryContent."none selected";
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=13% VALIGN=TOP style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Special	Education Needs
 		</TD>
-		<TD WIDTH=20% VALIGN=TOP>";
+		<TD WIDTH=20% VALIGN=TOP style='font-size:10px;'>";
 if ($sen) $summaryContent=$summaryContent.$sen; else $summaryContent=$summaryContent."none selected";
 $summaryContent=$summaryContent."</TD>
 	</TR>
@@ -200,10 +200,10 @@ $summaryContent=$summaryContent."</TD>
 <BR>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0>
 	<TR VALIGN=TOP>
-		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Literacy Keywords
 		</TD>
-		<TD WIDTH=23%>";
+		<TD WIDTH=23% style='font-size:10px;'>";
  if ($_SESSION[$lesson_num]['keywords']!='')
     {
 		$item_num=1;
@@ -218,10 +218,10 @@ $summaryContent=$summaryContent."</TD>
         else $keywords_string=$keywords_string."none selected";
         $summaryContent=$summaryContent.$keywords_string;
 $summaryContent=$summaryContent."</TD>
-		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Citizenship
 		</TD>
-		<TD WIDTH=23%>";
+		<TD WIDTH=23% style='font-size:10px;'>";
  if ($_SESSION[$lesson_num]['citizenships']!='')
     {
 		$item_num=1;
@@ -236,10 +236,10 @@ $summaryContent=$summaryContent."</TD>
         else $citizenships_string=$citizenships_string."none selected";
         $summaryContent=$summaryContent.$citizenships_string;
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Numeracy
 		</TD>
-		<TD WIDTH=23%>";
+		<TD WIDTH=23% style='font-size:10px;'>";
  if ($_SESSION[$lesson_num]['numeracys']!='')
     {
 		$item_num=1;
@@ -257,10 +257,10 @@ $summaryContent=$summaryContent."</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		
-		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Risk Assessment
 		</TD>
-		<TD WIDTH=23%>";
+		<TD WIDTH=23% style='font-size:10px;'>";
  if ($_SESSION[$lesson_num]['risk_assessments']!='')
     {
 		$risk_assessments_string="<ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
@@ -274,10 +274,10 @@ $summaryContent=$summaryContent."</TD>
 	
             $summaryContent=$summaryContent.$risk_assessments_string;
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			ICT
 		</TD>
-                <TD WIDTH=23% VALIGN=TOP>";
+                <TD WIDTH=23% VALIGN=TOP style='font-size:10px;'>";
  if ($_SESSION[$lesson_num]['icts']!='')
     {
 		$item_num=1;
@@ -294,10 +294,10 @@ else $icts_string="none selected";
 $summaryContent=$summaryContent.$icts_string;
 
 $summaryContent=$summaryContent."</TD>
-                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>
+                <TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Equipment
 		</TD>
-		<TD WIDTH=23% VALIGN=TOP>".
+		<TD WIDTH=23% VALIGN=TOP style='font-size:10px;'>".
 $equipment."
 		</TD>
 	</TR>
@@ -305,10 +305,10 @@ $equipment."
 <BR>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-after: always\">
 	<TR>
-		<TD WIDTH=14% HEIGHT=71 style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=14% HEIGHT=71 style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 			Teacher	Notes
 		</TD>
-		<TD COLSPAN=3 WIDTH=86% VALIGN=TOP>";
+		<TD COLSPAN=3 WIDTH=86% VALIGN=TOP style='font-size:10px;'>";
 $teacher_notes_arr=$_SESSION[$lesson_num]['teacher_notes_arr'];
 $teacher_notes_string="<ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
 for ($tn=0 ; $tn < count($teacher_notes_arr) ; $tn++)
