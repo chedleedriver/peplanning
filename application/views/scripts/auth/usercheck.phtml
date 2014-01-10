@@ -100,7 +100,12 @@
 <!-- user input dialog -->
     <div id="Password_content" class="overlay_content">
         <div id="Password_header" class="overlay_header"><span>Already Registered for PE Planning?</span></div>
-        <div id="Password_subheader" class="overlay_subheader"><span>Link your PE Planning account to RM Unify user</span></div>
+        <div id="Password_subheader" class="overlay_subheader">
+          <?php 
+                if($this->reason) echo "<span class='error'>".$this->reason."</span>";
+                else echo "<span>Link your PE Planning account to RM Unify user</span>";
+          ?>
+      </div>
       <div id="Password_title" class="overlay_subheader"><span style='color:green;text-align:left;'>You are seeing this because you are attempting to use this service from RM Unify for the first time.<br> If you are already registered to use PE Planning fill in your details to link your accounts.<br><b>Click 'Cancel' to skip this step.</b></span></div>
         <div id="Password_form"><?php echo $this->form; ?></div>
         <div id="Password_buttons">

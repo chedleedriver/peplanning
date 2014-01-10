@@ -970,6 +970,7 @@ class AuthController extends Zend_Controller_Action
        else 
        {
         $check_user_form = new Application_Form_UsercheckForm(array('userid' => urldecode($this->_getParam('userid'))));
+         if($_GET['reason']) $this->view->reason=$_GET['reason'];
         return $this->view->form = $check_user_form;
        }
     }
