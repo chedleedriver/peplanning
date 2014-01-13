@@ -134,7 +134,7 @@ $_SESSION[$lesson_num]['school'].
         "</TR>
     </TABLE>
 <BR><BR><BR>
-  <div style='padding-left:20px;'>
+  <div style='padding-left:20px; padding-right:10px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
             	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
@@ -392,7 +392,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                     if ($strands['strand']) $strand_str[$act_num]=$strand_str[$act_num]." ".$strands['strand'];
                 }
         }
-        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60%>".
+        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60% style='font-size:10px;'>".
         $content_string[$act_num]."</TD><TD WIDTH=34% style='font-size:10px;'>";
         //check if there are some teaching points
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
@@ -413,7 +413,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         $activityContent[$act_num]=$activityContent[$act_num]."</TD></TR>";
         if (mysql_num_rows($_SESSION[$lesson_num]['progressions'][$act_num])!=0)
         {
-            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Progression</TD><TD WIDTH=45% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
+            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Progression</TD><TD WIDTH=45% style='background:#85b52d; color:white; font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
                 //                while ($progressions=mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]))
                 for ($j=0;$j<$num_progs;$j++)
                 {
