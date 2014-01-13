@@ -626,7 +626,7 @@ fclose($pdfIn);
 // Clean up after ourselves
 $htmlFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/../tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 5mm -R 2mm -L 2mm --footer-html plan_footer.html $htmlFile $pdfFile"));
+$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 20mm -R 2mm -L 2mm --footer-html plan_footer.html --footer-right --footer-font-size 14 $htmlFile $pdfFile"));
 $browsePDF=fopen($pdfFile,'r');
 $pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
