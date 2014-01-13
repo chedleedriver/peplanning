@@ -392,8 +392,9 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                     if ($strands['strand']) $strand_str[$act_num]=$strand_str[$act_num]." ".$strands['strand'];
                 }
         }
-        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD ROWSPAN=3 COLSPAN=4 WIDTH=60% style='font-size:10px;'>".
-        $content_string[$act_num]."</TD><TD WIDTH=34% style='font-size:10px;'>";
+        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD ROWSPAN=3";
+        if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))  $activityContent[$act_num]=$activityContent[$act_num]."COLSPAN=4 ";
+        $activityContent[$act_num]=$activityContent[$act_num]."WIDTH=60% style='font-size:10px;'>".$content_string[$act_num]."</TD><TD WIDTH=34% style='font-size:10px;'>";
         //check if there are some teaching points
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
         {
