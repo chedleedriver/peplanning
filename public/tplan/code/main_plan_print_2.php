@@ -405,6 +405,10 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                 }
             $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."</ul>"; // close the list
         }
+         if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
+            {
+            $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."<img src='../diagrams/".$activities['activity_id'].".gif' width='350' height='200'>";
+            }
         // build the content for this activity adding the rows and celss for the table
         $activityContent[$act_num]=$activityContent[$act_num].$teaching_points_str[$act_num]."</TD>";
         //check if there are some strands
