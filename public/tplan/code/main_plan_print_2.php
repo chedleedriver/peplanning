@@ -518,7 +518,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     else {
         $activityContent[$act_num]="<TR><TD><TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=30% COLSPAN=1 style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
         $activities['lesson_part']."</TD><TD WIDTH=70% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR></TR>";
-        $activityContent[$act_num]=$activityContent[$act_num]."<TR VALIGN=TOP><TD WIDTH=30%>".
+        $activityContent[$act_num]=$activityContent[$act_num]."<TR VALIGN=TOP><TD WIDTH=30% style='font-size:10px;'>".
         $activities['content_name']."</TD><TD WIDTH=70% style='font-size:10px;'>";
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
         {
