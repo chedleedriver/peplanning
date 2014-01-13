@@ -134,7 +134,7 @@ $_SESSION[$lesson_num]['school'].
         "</TR>
     </TABLE>
 <BR><BR><BR>
-  <div style='padding-left:30px;'>
+  <div style='padding-left:20px;'>
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=0 CELLSPACING=0>
             <TR>
             	<TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size: 10px;'>
@@ -371,8 +371,8 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
     if ($activities['lesson_part']!="Plenary")
     {
         // it isn't so we create an activity string for this activity
-        $activityContent[$act_num]="<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold;'>".
-        $activities['lesson_part']."</TD><TD WIDTH=20% style='background:#85b52d; color:white; font-weight:bold;'>".
+        $activityContent[$act_num]="<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
+        $activities['lesson_part']."</TD><TD WIDTH=20% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
         sp_utf2ascii(stripslashes($activities['content_name']));
         // if there is a diagram put a link to it on the title bar
         if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
@@ -382,7 +382,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
             $diagram_images[]="../diagrams/".$activities['activity_id'].".gif";
         }
 	// build the content for this activity adding the rows and celss for the table
-        $activityContent[$act_num]=$activityContent[$act_num]."</TD><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold;'>";
+        $activityContent[$act_num]=$activityContent[$act_num]."</TD><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>";
         if ($_SESSION[$lesson_num]['strands'][$act_num])
         {
             // there are so create a list for them
@@ -392,13 +392,13 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                     if ($strands['strand']) $strand_str[$act_num]=$strand_str[$act_num]." ".$strands['strand'];
                 }
         }
-        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60%>".
-        $content_string[$act_num]."</TD><TD WIDTH=34%>";
+        $activityContent[$act_num]=$activityContent[$act_num].$strand_str[$act_num]."</TD><TD WIDTH=10% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Duration : ".$time."</TD><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR><TR VALIGN=TOP><TD COLSPAN=4 WIDTH=60%>".
+        $content_string[$act_num]."</TD><TD WIDTH=34% style='font-size:10px;'>";
         //check if there are some teaching points
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
         {
             // there are so create the list for them
-            $teaching_points_str[$act_num]="<ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+            $teaching_points_str[$act_num]="<ul style='margin-left: -20px;#display:inline;#margin-left: 0px;'>";
                 while ($teaching_points=mysql_fetch_array($_SESSION[$lesson_num]['teaching_points'][$act_num]))
                 {
                     if ($teaching_points['point']) $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."<li>".sp_utf2ascii(stripslashes($teaching_points['point']))."</li>";
@@ -413,11 +413,11 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         $activityContent[$act_num]=$activityContent[$act_num]."</TD></TR>";
         if (mysql_num_rows($_SESSION[$lesson_num]['progressions'][$act_num])!=0)
         {
-            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white; font-weight:bold;'>Progression</TD><TD WIDTH=45% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
+            $progression_str[$act_num]="<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Progression</TD><TD WIDTH=45% style='background:#85b52d; color:white; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;'>Teaching Points</TD></TR>";
                 //                while ($progressions=mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]))
                 for ($j=0;$j<$num_progs;$j++)
                 {
-                    $progression_str[$act_num]=$progression_str[$act_num]."<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55%><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+                    $progression_str[$act_num]=$progression_str[$act_num]."<TR VALIGN=TOP><TD COLSPAN=4 WIDTH=55% style='font-size:10px;'><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
                     $progressions=mysql_fetch_array($_SESSION[$lesson_num]['progressions'][$act_num]);
                     if (checkBase64Encoded($progressions['progression']))
                         {$progression_line_arr[$act_num]=unserialize(base64_decode($progressions['progression']));	}
@@ -430,7 +430,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                      $progression_str[$act_num]=$progression_str[$act_num]."</ul></TD>";
                      if ($_SESSION[$lesson_num]['prog_points'][$act_num][$j])
                         {
-                           $progression_str[$act_num]=$progression_str[$act_num]."<TD WIDTH=45%><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+                           $progression_str[$act_num]=$progression_str[$act_num]."<TD WIDTH=45% style='font-size:10px;'><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
                            while ($prog_points=mysql_fetch_array($_SESSION[$lesson_num]['prog_points'][$act_num][$j]))
                                 {
                                    if ($prog_points['point'])
@@ -450,7 +450,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         if (mysql_num_rows($_SESSION[$lesson_num]['hard_differentiations'][$act_num])!=0)
         {
                 // go through the differentiaions
-                $hard_differentiation_str[$act_num]="<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5 style='background:#85b52d; color:white;font-weight:bold;'>To make activity harder</TD></TR><TR VALIGN=TOP><TD COLSPAN=5 WIDTH=100%><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+                $hard_differentiation_str[$act_num]="<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5 style='background:#85b52d; color:white;font-weight:bold; font-size:10px;'>To make activity harder</TD></TR><TR VALIGN=TOP><TD COLSPAN=5 WIDTH=100% style='font-size:10px;'><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
                 while ($hard_differentiations=mysql_fetch_array($_SESSION[$lesson_num]['hard_differentiations'][$act_num]))
                     {
                         $hard_differentiation_str[$act_num]=$hard_differentiation_str[$act_num]."<li>".$hard_differentiations['differentiation']."</li>";
@@ -461,7 +461,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         if (mysql_num_rows($_SESSION[$lesson_num]['easy_differentiations'][$act_num])!=0)
         {
                 // go through the differentiaions
-                $easy_differentiation_str[$act_num]="<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5 style='background:#85b52d; color:white; font-weight:bold;'>To make activity easier</TD></TR><TR VALIGN=TOP><TD COLSPAN=5 WIDTH=100%><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+                $easy_differentiation_str[$act_num]="<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5 style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>To make activity easier</TD></TR><TR VALIGN=TOP><TD COLSPAN=5 WIDTH=100% style='font-size:10px;'><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
                 while ($easy_differentiations=mysql_fetch_array($_SESSION[$lesson_num]['easy_differentiations'][$act_num]))
                     {
                         $easy_differentiation_str[$act_num]=$easy_differentiation_str[$act_num]."<li>".$easy_differentiations['differentiation']."</li>";
@@ -475,7 +475,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
             $j=0;
             while ($analysess=mysql_fetch_array($_SESSION[$lesson_num]['analysess'][$act_num]))
                 {
-                    $analyses_str[$act_num]="</TD></TR><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold;'>Analysis</TD><TD COLSPAN=4 WIDTH=85% style='background:#85b52d; color:white; font-weight:bold;'>".
+                    $analyses_str[$act_num]="</TD></TR><TR VALIGN=TOP><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Analysis</TD><TD COLSPAN=4 WIDTH=85% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
                     sp_utf2ascii(stripslashes($analysess['analysis_title']))."</TD></TR>";
                     if (checkBase64Encoded($analysess['analysis']))
                         {$analyses_line_arr[$act_num]=unserialize(base64_decode($analysess['analysis']));	}
@@ -484,7 +484,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
                     //{
                     //    $anal_points[]=$anal_point;
                     //}
-                    $analyses_str[$act_num]=$analyses_str[$act_num]."<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
+                    $analyses_str[$act_num]=$analyses_str[$act_num]."<TR VALIGN=TOP><TD WIDTH=100% COLSPAN=5 style='font-size:10px;'><ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
                     for ($i = 0 ; $i <= count($analyses_line_arr[$act_num]) ; $i++)
                         {
                             if ($analyses_line_arr[$act_num][$i])
@@ -516,10 +516,10 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
 // this is the end of the plenary if-else
     }
     else {
-        $activityContent[$act_num]="<TR><TD><TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=30% COLSPAN=1 style='background:#85b52d; color:white; font-weight:bold;'>".
-        $activities['lesson_part']."</TD><TD WIDTH=70% style='background:#85b52d; color:white; font-weight:bold;'>Teaching Points</TD></TR></TR>";
+        $activityContent[$act_num]="<TR><TD><TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-inside: avoid\"><TR VALIGN=TOP><TD WIDTH=30% COLSPAN=1 style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
+        $activities['lesson_part']."</TD><TD WIDTH=70% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Teaching Points</TD></TR></TR>";
         $activityContent[$act_num]=$activityContent[$act_num]."<TR VALIGN=TOP><TD WIDTH=30%>".
-        $activities['content_name']."</TD><TD WIDTH=70%>";
+        $activities['content_name']."</TD><TD WIDTH=70% style='font-size:10px;'>";
         if ($_SESSION[$lesson_num]['teaching_points'][$act_num])
         {
             $teaching_points_str[$act_num]="<ul style='margin-left: -20px;#display:inline;#margin-left: 0px'>";
@@ -539,12 +539,12 @@ $strContent=$strContent.$actContent;
 $strContent=$strContent."
     <TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0>
 	<TR VALIGN=TOP>
-		<TD WIDTH=100% style='background:#85b52d; color:white; font-weight:bold;'>
+		<TD WIDTH=100% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>
 		Evaluation
                 </TD>
         </TR>
         <TR VALIGN=TOP>
-		<TD WIDTH=100%>";
+		<TD WIDTH=100% style='font-size:10px;'>";
 $evaluation_arr=$_SESSION[$lesson_num]['evaluation_arr'];
 $evaluation_string="  ".sp_utf2ascii(stripslashes($evaluation_arr[0]))."<br>";
 for ($e=1 ; $e < count($evaluation_arr) ; $e++)
@@ -562,13 +562,13 @@ if($diagram_titles){
 
     $strContent=$strContent."<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-before: always\">
 	<TR>
-		<TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+		<TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			 .$diagram_titles[0].
 		"</TD>
-                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			.$diagram_titles[1].
 		"</TD>
-                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			.$diagram_titles[2].
 		"</TD>
        </TR>
@@ -584,13 +584,13 @@ if($diagram_titles){
 		$strContent=$strContent."</TD>
         </TR>
 	<TR>
-		<TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+		<TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			 .$diagram_titles[3].
 		"</TD>
-                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			.$diagram_titles[4].
 		"</TD>
-                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold;'>"
+                <TD WIDTH=33%% HEIGHT=5% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>"
 			.$diagram_titles[5].
 		"</TD>
        </TR>
