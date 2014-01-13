@@ -375,12 +375,12 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         $activities['lesson_part']."</TD><TD WIDTH=20% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>".
         sp_utf2ascii(stripslashes($activities['content_name']));
         // if there is a diagram put a link to it on the title bar
-        if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
+        /**if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
         {
             $activityContent[$act_num]=$activityContent[$act_num]."  -  <a href=\"../diagrams/".$activities['activity_id'].".gif\" target=_blank>diagram</a>";
             $diagram_titles[]=sp_utf2ascii(stripslashes($activities['content_name']));
             $diagram_images[]="../diagrams/".$activities['activity_id'].".gif";
-        }
+        }**/
 	// build the content for this activity adding the rows and celss for the table
         $activityContent[$act_num]=$activityContent[$act_num]."</TD><TD WIDTH=15% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>";
         if ($_SESSION[$lesson_num]['strands'][$act_num])
@@ -562,7 +562,7 @@ $strContent=$strContent."</TD>
         </TR>
     </TABLE>
 <BR>";
-if($diagram_titles){
+/**if($diagram_titles){
 
     $strContent=$strContent."<TABLE WIDTH=100% BORDER=1 BORDERCOLOR=\"#b7cc79\" CELLPADDING=2 CELLSPACING=0 STYLE=\"page-break-before: always\">
 	<TR>
@@ -610,7 +610,7 @@ if($diagram_titles){
 		$strContent=$strContent."</TD>
         </TR>
     </TABLE>";
-}
+}**/
 $lesson_num++;
 }
 $strContent=$strContent."</body>
