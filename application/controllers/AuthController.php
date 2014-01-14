@@ -852,13 +852,14 @@ class AuthController extends Zend_Controller_Action
             $school = $attributes['http://schemas.rm.com/identity/claims/organisationCode'][0];
             $email = $attributes['urn:oid:1.3.6.1.4.1.5923.1.1.1.9'][0];
             $password=$this->generateRandID();
+            $coded_username = base64_encode($username);
             $users  = new Application_Model_DbTable_Users();
             // Check if the user is on the database, if not create them
             if (!$users->checkUnifyUser($username)) 
             {
               if($_GET['link']!='no')
                 {
-                  $this->_helper->redirector('usercheck','auth',null,array('userid'=>"$username"));
+                  $this->_helper->redirector('usercheck','auth',null,array('userid'=>"$coded_username"));
                 }
               else 
                 {
@@ -969,7 +970,7 @@ class AuthController extends Zend_Controller_Action
        }
        else 
        {
-        $check_user_form = new Application_Form_UsercheckForm(array('userid' => urldecode($this->_getParam('userid'))));
+        $check_user_form = new Application_Form_UsercheckForm(array('userid' => urldecode(base64_decode($this->_getParam('userid')))));
          if($_GET['reason']) $this->view->reason=$_GET['reason'];
         return $this->view->form = $check_user_form;
        }
