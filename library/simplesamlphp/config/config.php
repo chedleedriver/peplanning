@@ -23,7 +23,7 @@ $config = array (
 	 * reverse proxy).
 	 	'baseurlpath'           => 'https://peplanning-dev.itfacilitas.co.uk/simplesaml/',
    */
-  'baseurlpath'           => 'https://www.peplanning.org.uk/simplesaml/',
+  'baseurlpath'           => 'https://dev.peplanning.org.uk/simplesaml/',
 	'certdir'               => 'cert/',
 	'loggingdir'            => 'log/',
 	'datadir'               => 'data/',
