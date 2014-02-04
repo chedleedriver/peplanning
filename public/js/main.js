@@ -625,12 +625,12 @@ function successFunction(proc,response)
 }
 function boxAction(action)
 {
-    $.ajax({
+    /**$.ajax({
         url:"/auth/get-User-Level"
         }) 
         .done(function(msg){
             var userLevel=msg;
-            });
+            });*/
         switch(action) {
         case 'register':
             location.href=('/auth/subscribe');
