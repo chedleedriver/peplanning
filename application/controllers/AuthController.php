@@ -439,7 +439,7 @@ class AuthController extends Zend_Controller_Action
     }
     public function saveUser($values,$activation_key)
     {
-        if($values){
+        if(($values['name_subscribe'])&&($values['email_subscribe'])&&($values['password_subscribe'])&&($values['role_subscribe'])){
         $register_user = new Application_Model_DbTable_Users();
         $add_user=$register_user->createRow();
         $add_user->name=$values['name_subscribe'];
