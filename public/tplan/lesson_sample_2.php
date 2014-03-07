@@ -75,9 +75,7 @@ function ClearlessonSessionVars($lesson_num)
     $equipment='';
     $old_difficulty='';
 }
-echo "Hi";
-$file=basename(tempnam('/tmp','tmp'));
-echo $file;
+/**$file=basename(tempnam('/tmp','tmp'));
 rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf');
 $htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
@@ -85,7 +83,7 @@ $browsePDF='../tmp/'.$file.'.pdf';
 echo $htmlFile;
 $pdfIn=fopen($htmlFile,'w') or die("can't open the file $htmlFile");
 $pdfOut=fopen($pdfFile,'w') or die("can't open the file $pdfFile");
-fclose($pdfOut);
+fclose($pdfOut);*/
 $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
 <html>
     <head>
@@ -635,22 +633,21 @@ $strContent=$strContent."</TD>
 }*/
 $lesson_num++;
 }
-$strContent=$strContent."</body>
-</html>
-";// Send it to the screen
-fwrite($pdfIn,$strContent);
-fclose($pdfIn);
-//echo $strContent;
+$strContent=$strContent."</body></html>";
+// Send it to the screen
+//fwrite($pdfIn,$strContent);
+//fclose($pdfIn);
+echo $strContent;
 //echo("<script type='text/javascript'>window.open('/tplan/code/send_pdf_2.php?file=$file&orientation=landscape')</script>");
-$htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
-$pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
+//$htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
+//$pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
 //$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 10mm -R 2mm -L 2mm --footer-html plan_footer.html $htmlFile $pdfFile"));
-$browsePDF=fopen($pdfFile,'r');
-$pdf_name=time().".pdf";
+//$browsePDF=fopen($pdfFile,'r');
+//$pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
 header("Content-Disposition:attachment;filename=$pdf_name");
 readfile($pdfFile);CleanFiles(FILE_ROOT."tmp/");
 echo '<meta http-equiv="refresh" content="0;url=/staffroom" />';**/
-/echo("<script type='text/javascript'>window.open('/tplan/tmp/".$file.".html')</script>");
+//echo("<script type='text/javascript'>window.open('/tplan/tmp/".$file.".html')</script>");
 
 ?>
