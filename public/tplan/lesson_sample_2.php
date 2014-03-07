@@ -648,5 +648,6 @@ $pdf_name=time().".pdf";
 header("Content-Disposition:attachment;filename=$pdf_name");
 readfile($pdfFile);CleanFiles(FILE_ROOT."tmp/");
 echo '<meta http-equiv="refresh" content="0;url=/staffroom" />';**/
-echo '/tplan/tmp/'.$file.'.pdf';
+/echo("<script type='text/javascript'>window.open('/tplan/tmp/".$file.".pdf')</script>");
+
 ?>
