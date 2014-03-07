@@ -139,7 +139,7 @@ else $table_def="<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0>";
 $summaryContent=$table_def;
 $summaryContent=$summaryContent."
     <TR>
-            <TD width=33%><img src=\"../images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:7.7cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
+            <TD width=33%><img src=\"images/lesson_header.jpg\" border=none style='background-repeat:repeat-y; top: 0; height:7.7cm; left: 0; width:29.7cm; z-index:-1; position:absolute;'></TD>
             <TD WIDTH=5% style='font-size: 12px; font-weight:bold; color:white;'>
 			Name :
 		</TD>
@@ -426,7 +426,7 @@ for ($act_num=1;$act_num<=$num_acts[$lesson_num];$act_num++)
         }
          if (file_exists("/var/www/html/peplanning/public/tplan/diagrams/".$activities['activity_id'].".gif"))
             {
-            $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."</TD><TR><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Diagram</TD></TR><TR><TD><img src='../diagrams/".$activities['activity_id'].".gif' width='350' height='200'></TD></TR>";
+            $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."</TD><TR><TD WIDTH=40% style='background:#85b52d; color:white; font-weight:bold; font-size:10px;'>Diagram</TD></TR><TR><TD><img src='diagrams/".$activities['activity_id'].".gif' width='350' height='200'></TD></TR>";
             }
          else $teaching_points_str[$act_num]=$teaching_points_str[$act_num]."</TD>";
         // build the content for this activity adding the rows and celss for the table
