@@ -76,6 +76,7 @@ function ClearlessonSessionVars($lesson_num)
     $old_difficulty='';
 }
 $file=basename(tempnam('/tmp','tmp'));
+echo $file;
 rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf');
 $htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
