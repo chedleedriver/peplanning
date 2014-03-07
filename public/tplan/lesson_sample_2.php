@@ -75,6 +75,7 @@ function ClearlessonSessionVars($lesson_num)
     $equipment='';
     $old_difficulty='';
 }
+echo "Hi";
 $file=basename(tempnam('/tmp','tmp'));
 echo $file;
 rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf');
