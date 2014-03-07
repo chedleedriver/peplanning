@@ -641,13 +641,13 @@ fclose($pdfIn);
 //echo("<script type='text/javascript'>window.open('/tplan/code/send_pdf_2.php?file=$file&orientation=landscape')</script>");
 $htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
-$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 10mm -R 2mm -L 2mm --footer-html plan_footer.html $htmlFile $pdfFile"));
+//$success=passthru(escapeshellcmd("/usr/local/bin/wkhtmltopdf -l -O landscape -s A4 -T 2mm -B 10mm -R 2mm -L 2mm --footer-html plan_footer.html $htmlFile $pdfFile"));
 $browsePDF=fopen($pdfFile,'r');
 $pdf_name=time().".pdf";
 /**header("Content-type:application/pdf");
 header("Content-Disposition:attachment;filename=$pdf_name");
 readfile($pdfFile);CleanFiles(FILE_ROOT."tmp/");
 echo '<meta http-equiv="refresh" content="0;url=/staffroom" />';**/
-/echo("<script type='text/javascript'>window.open('/tplan/tmp/".$file.".pdf')</script>");
+/echo("<script type='text/javascript'>window.open('/tplan/tmp/".$file.".html')</script>");
 
 ?>
