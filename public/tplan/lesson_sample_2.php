@@ -76,9 +76,9 @@ function ClearlessonSessionVars($lesson_num)
     $old_difficulty='';
 }
 $file=basename(tempnam('/tmp','tmp'));
-rename('/tmp/'.$file,FILE_ROOT.'/tmp/'.$file.'.pdf');
-$htmlFile=FILE_ROOT.'/tmp/'.$file.'.html';
-$pdfFile=FILE_ROOT.'/tmp/'.$file.'.pdf';
+rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf');
+$htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
+$pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
 $browsePDF='../tmp/'.$file.'.pdf';
 $pdfIn=fopen($htmlFile,'w') or die("can't open the file $htmlFile");
 $pdfOut=fopen($pdfFile,'w') or die("can't open the file $pdfFile");
