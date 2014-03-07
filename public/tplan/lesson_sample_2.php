@@ -102,7 +102,7 @@ $doc_header="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
                     }
         </style>
     </head>
-    <body style='width:29cm'>";
+    <body style='width:29cm;font-family: calibri;'>";
 $strContent=$strContent.$doc_header;
 
 // get some data
