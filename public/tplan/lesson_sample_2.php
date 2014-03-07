@@ -80,6 +80,7 @@ rename('/tmp/'.$file,realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf');
 $htmlFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.html';
 $pdfFile=realpath(dirname(__FILE__)).'/tmp/'.$file.'.pdf';
 $browsePDF='../tmp/'.$file.'.pdf';
+echo $htmlFile;
 $pdfIn=fopen($htmlFile,'w') or die("can't open the file $htmlFile");
 $pdfOut=fopen($pdfFile,'w') or die("can't open the file $pdfFile");
 fclose($pdfOut);
