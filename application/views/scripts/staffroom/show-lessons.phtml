@@ -63,7 +63,20 @@
                             <a href='javascript:void(0)' onclick='javascript:editLesson(<?php echo $this->unit_id.",".$i.",\"newPlan\",0,".$this->unit_level?>)' style='font-size:11px; font-weight:normal; color:#666; padding-right:10px; float:right;' >edit</a></p>
                             </div>
                             <?php }
-                        } ?>
+                        } 
+                       <?php if(sizeof($this->resources)>0)
+
+         echo "<span class='title_resources'>Resources</span>";
+        foreach($this->resources as $resource)
+        {
+            //echo $this->escape($resource->id)."</br>";
+            //echo $this->escape($resource->content_id)."</br>";
+        if($this->escape($resource->type)!='url') $location=substr($this->escape($resource->location),14);
+        else $location=$this->escape($resource->location);
+        
+        ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><span><?echo $this->escape($resource->description); ?></span></a></p><?
+             //echo $this->escape($resource->name)."</br>";
+        }?>
                     </div>
 <script>
 $(".lesson_listing:even").css("background-color", "#ffffff");
