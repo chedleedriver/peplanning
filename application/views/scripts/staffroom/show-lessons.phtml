@@ -73,7 +73,7 @@
         if($this->escape($resource->type)!='url') $location=substr($this->escape($resource->location),14);
         else $location=$this->escape($resource->location);
         
-        ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><?echo $this->escape($resource->description); ?></a></p><?
+                       ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><span class='resource-list'><?echo $this->escape($resource->description); ?></span></a></p><?
              //echo $this->escape($resource->name)."</br>";
         }?>
                        

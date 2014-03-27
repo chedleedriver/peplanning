@@ -1366,3 +1366,5 @@ a.disabled {visibility:hidden !important;}
 #resources_img_handball {background: url('/img/resources_img_handball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
 #resources_img_title_handball {background: url('/img/resources_img_title_handball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
 
+.resource-list {color: #808386; }
+
