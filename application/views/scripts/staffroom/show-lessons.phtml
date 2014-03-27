@@ -1,4 +1,4 @@
-<?php print_r($this->lesson_arr); ?>
+<?php print_r($this->lessons_arr); ?>
                     <div id="menu_options">
                         <div id="options_items_btn" onclick='showOptions("#options_items")'></div>
                         <div id="options_items">
@@ -64,7 +64,19 @@
                             </div>
                             <?php }
                         } ?>
-                     
+                       <?php if(sizeof($this->resources)>0)
+
+         echo "<span class='title_resources'>Resources</span>";
+        foreach($this->resources as $resource)
+        {
+            //echo $this->escape($resource->id)."</br>";
+            //echo $this->escape($resource->content_id)."</br>";
+        if($this->escape($resource->type)!='url') $location=substr($this->escape($resource->location),14);
+        else $location=$this->escape($resource->location);
+        
+        ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><span><?echo $this->escape($resource->description); ?></span></a></p><?
+             //echo $this->escape($resource->name)."</br>";
+        }?>
                        
                     </div>
 <script>
