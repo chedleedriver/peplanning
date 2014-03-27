@@ -93,10 +93,9 @@ class StaffroomController extends Zend_Controller_Action
         $lessons = new Application_Model_DbTable_Lesson();
         $unit_lessons=$lessons->getUnitLessons($id,$my_id,$my_level);
         $lesson_array=$unit_lessons->toArray();
-        //$resources = new Application_Model_DbTable_ContentResources();
-        //$lesson_resources=$resources->getLessonResources($lesson_resource_id);
-        $this->view->lesson_resource_id=$lesson_array[0]['id'];
-        //$this->view->resources = $lesson_resources;
+        $resources = new Application_Model_DbTable_ContentResources();
+        $lesson_resources=$resources->getLessonResources($lesson_array[0]['id']);
+        $this->view->resources = $lesson_resources;
         $this->view->unit_id = $id;
         $this->view->unit_description = $desc;
         $this->view->unit_level = $unit_level;
