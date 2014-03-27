@@ -157,7 +157,7 @@ ul {list-style: square; }
 /*#videoplayer {position:relative; top:0px; right:0px; width:305px; height:293px; background: url('/img/bg_videoplayer.png') no-repeat 0 0;}*/
 #videoplayer {z-index:1701; position:relative; top: -153px; right:0px; float:right; width:280px; height:297px; no-repeat 0 0;}
 /* cganged the background*/
-#videoplayer_title {position:relative; top:20px; left:40px; width:215px; min-width:215px; max-width:215px; height:34px; min-height:34px; max-height:34px; *top:15px;}
+#videoplayer_title {position:relative; top:5px; left:40px; width:300px; min-width:215px; max-width:300px; height:34px; min-height:34px; max-height:34px; font-size:11px; font-family: tahoma;*top:15px;}
 
 #videoplayer_content {line-height:21px; border:0px dashed #000; position:relative; top:12px; left:22px; max-width:320px; min-height:150px; font-size: 12px; color:#666; *top:48px; *+top:10px;}
 /*#videoplayer_content a {background: url('/img/btn_startplanning') no-repeat 0 0px; width:116px; height: 16px; display:block;}
@@ -1365,4 +1365,7 @@ a.disabled {visibility:hidden !important;}
 /*--------------ADDITIONAL RESOURCES----------------------------------------------------*/
 #resources_img_handball {background: url('/img/resources_img_handball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
 #resources_img_title_handball {background: url('/img/resources_img_title_handball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+
+.resource-list {color: #808386; visibility:visible; }
+.resource-list-title {font-size:16px; padding:10px; color: #808386; font-weight:bold;}
 
