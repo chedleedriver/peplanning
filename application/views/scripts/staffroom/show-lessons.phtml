@@ -65,7 +65,7 @@
                         } ?>
                        <?php if(sizeof($this->resources)>0)
 
-         echo "<span class='resource-list-title'>Resources</span>";
+         echo "<text class='resource-list-title'>Resources</text>";
         foreach($this->resources as $resource)
         {
             //echo $this->escape($resource->id)."</br>";
@@ -73,7 +73,7 @@
         if($this->escape($resource->type)!='url') $location=substr($this->escape($resource->location),14);
         else $location=$this->escape($resource->location);
         
-                       ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><span class='resource-list'><?echo $this->escape($resource->description); ?></span></a></p><?
+                       ?><p><a class="<?echo $this->escape($resource->type)?>" href="<?echo $location?>"><text class='resource-list'><?echo $this->escape($resource->description); ?></text></a></p><?
              //echo $this->escape($resource->name)."</br>";
         }?>
                        
