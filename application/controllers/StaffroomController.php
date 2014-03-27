@@ -103,7 +103,7 @@ class StaffroomController extends Zend_Controller_Action
         $this->view->unit_level = $unit_level;
         $this->view->unit_topic = $unit_topic;
         $this->view->unit_numlessons = $unit_numlessons;
-        $this->view->lessons_arr = $lessons_array;
+        $this->view->lessons_arr = $lesson_array;
         return $this->view->lessons = $unit_lessons;
                 
     }
