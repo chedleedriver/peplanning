@@ -84,17 +84,25 @@
                 <td id="left_section" valign="top">
                     <div class="mask">
                     <div id="myplans_header"><span>select a plan</span></div>
-                    <div class="vertical">
+                    <div id="lesson-list" class="vertical">
                         <div id="myplans_scroll" class="items mask">
                             <? $x=5; //separates scroll pages eg. 5 units per scroll page
                                $y=0; //counts units
                                $z=0; //counts units that are not in groups of 5
                                $examples=array(6977,6976,6975);
                                foreach($this->units as $unit){
-                                    if($y==0){
+                                        if($this->curr_unit_id==$unit['id']){
+                                        $scroll_num=($y-$z)/5;
                                         $init_title = $unit['description']; $init_lessons = $unit['id'];
                                         $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
-                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);} $y++; //sets workspace to most recent plan
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        }
+                                        elseif($y==0){
+                                        $scroll_num=($y-$z)/5;
+                                        $init_title = $unit['description']; $init_lessons = $unit['id'];
+                                        $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        } $y++; //sets workspace to most recent plan
                                         if(($x == 0)||($x==5)){?><div><?}
                                                 
                                             if(in_array($unit['id'], $examples)) echo "<div id='myplans_item_".$unit['id']."' class='item mask' style=\"background: url('/img/item_example.png')\">";
@@ -610,9 +618,10 @@
 <?php }?>
 
 <script>
-$(function() {
+$(document).ready(function() {
     // initialize scrollable with mousewheel support
-    $(".vertical").scrollable({ vertical: true, mousewheel: false });
+    $("#lesson-list").scrollable({ vertical: true, mousewheel: false });
+     $("#lesson-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
 });
-getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons?>);
+getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons.",".$scroll_num?>);
 </script>

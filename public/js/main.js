@@ -79,7 +79,7 @@ function pauseComp(ms)
 /*----- STAFFROOM ------------------------------------------------------------*/
 
 
-function getJQLessons(getWhat,getDesc,getLevel,getTopic,getNumLessons)
+function getJQLessons(getWhat,getDesc,getLevel,getTopic,getNumLessons,getScrollNum)
 {
     $.ajax({
         url:"/staffroom/show-Lessons",
@@ -91,6 +91,7 @@ function getJQLessons(getWhat,getDesc,getLevel,getTopic,getNumLessons)
         });
     $(".item").css("color", "#808386");
     $("#myplans_item_"+getWhat).css("color", "#77AF0C");
+   
 }
 function processLessons(data)
 {

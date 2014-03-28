@@ -34,6 +34,7 @@ class StaffroomController extends Zend_Controller_Action
             $id = $mysession->id;
             $my_level = $mysession->userlevel;
             $my_name = $mysession->username;
+            if($mysession->curr_unit_id) $this->view->curr_unit_id = $mysession->curr_unit_id;
             $my_units = $units->fetchAll($units->select()->where('teacher_id = ?', $id)->order(array('id DESC')));
             $this->view->unit_count = sizeof($my_units);
             if ($my_level==4)//free subscription users can only plan 10 lessons. they may delete them though
@@ -77,7 +78,8 @@ class StaffroomController extends Zend_Controller_Action
         //print_r($this->_request->getParam);
         $_GET['unit_id'] = (isset($_GET['unit_id']) ? $_GET['unit_id'] : $this->_request->getParam('unit_id'));
         if($_GET['unit_id']!='not_set') {
-        $id = $_GET['unit_id'];}
+        $id = $_GET['unit_id'];
+        $mysession->curr_unit_id = $_GET['unit_id'];}
         $_GET['unit_description'] = (isset($_GET['unit_description']) ? $_GET['unit_description'] : $this->_request->getParam('unit_description'));
         if($_GET['unit_description']!='not_set') {
         $desc = $_GET['unit_description'];}
