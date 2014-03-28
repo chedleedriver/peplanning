@@ -621,6 +621,7 @@
 $(document).ready(function() {
     // initialize scrollable with mousewheel support
     $("#lesson-list").scrollable({ vertical: true, mousewheel: false });
+     $("#lesson-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
 });
 getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons.",".$scroll_num?>);
 </script>
