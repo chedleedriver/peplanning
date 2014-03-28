@@ -84,7 +84,7 @@
                 <td id="left_section" valign="top">
                     <div class="mask">
                     <div id="myplans_header"><span>select a plan</span></div>
-                    <div class="vertical">
+                    <div id="lesson-list">
                         <div id="myplans_scroll" class="items mask">
                             <? $x=5; //separates scroll pages eg. 5 units per scroll page
                                $y=0; //counts units
@@ -618,7 +618,7 @@
 <script>
 $(function() {
     // initialize scrollable with mousewheel support
-    $(".vertical").scrollable({ vertical: true, mousewheel: false });
+    $("#lesson-list").scrollable({ vertical: true, mousewheel: false });
 });
 getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons?>);
 </script>
