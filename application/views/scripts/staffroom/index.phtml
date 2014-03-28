@@ -92,6 +92,7 @@
                                $examples=array(6977,6976,6975);
                                foreach($this->units as $unit){
                                         if($this->curr_unit_id==$unit['id']){
+                                        $scroll_num=$y;
                                         $init_title = $unit['description']; $init_lessons = $unit['id'];
                                         $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
                                         $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
@@ -620,8 +621,5 @@ $(function() {
     // initialize scrollable with mousewheel support
     $("#lesson-list").scrollable({ vertical: true, mousewheel: false });
 });
-getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons?>);
- var lesson_list = $("#lesson-list").data("scrollable");
-    var curr_lesson = lesson_list.getIndex();
-    lesson_list.seekTo(curr_lesson);
-          </script>
+getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons.",".$scroll_num?>);
+</script>
