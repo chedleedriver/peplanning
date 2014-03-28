@@ -92,13 +92,13 @@
                                $examples=array(6977,6976,6975);
                                foreach($this->units as $unit){
                                         if($this->curr_unit_id==$unit['id']){
-                                        $scroll_num=$y;
+                                        $scroll_num=($y-$z)/5;
                                         $init_title = $unit['description']; $init_lessons = $unit['id'];
                                         $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
                                         $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
                                         }
                                         elseif($y==0){
-                                        $scroll_num=$y;
+                                        $scroll_num=($y-$z)/5;
                                         $init_title = $unit['description']; $init_lessons = $unit['id'];
                                         $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
                                         $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
