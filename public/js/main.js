@@ -91,6 +91,7 @@ function getJQLessons(getWhat,getDesc,getLevel,getTopic,getNumLessons,getScrollN
         });
     $(".item").css("color", "#808386");
     $("#myplans_item_"+getWhat).css("color", "#77AF0C");
+    alert(getScrollNum);
     $("#lesson-list").data("scrollable").seekTo(getScrollNum);
 }
 function processLessons(data)
