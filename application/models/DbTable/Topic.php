@@ -36,7 +36,7 @@ class Application_Model_DbTable_Topic extends Zend_Db_Table_Abstract
          $select = $this->select();
          $select->from('topic','*')
                 ->where('id=?',$topic_id);
-         return $this-fetchRow($select);
+         return $this->fetchRow($select);
      }
 
 }
