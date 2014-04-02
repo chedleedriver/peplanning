@@ -44,8 +44,17 @@ class CreateaplanController extends Zend_Controller_Action
         $mysession = new Zend_Session_Namespace('mysession'); 
         $teacher_id = $mysession->id;
         $user_level = $mysession->userlevel;
+        $topics=new Application_Model_DbTable_Topic();
+        $topic_details = $topics->getTopicStatus($_POST['sel_topic']);
+        $topic_details_arr = $topic_details->toArray();
         $plan_type=$_POST['plan_type'];
-        if(!isset($mysession->create_limit)){
+        if($topic_details_arr['status']=="P")
+        {
+           $response['result']=1;
+           $response['detail']='pdf';
+           $response['more']=strtolower($topic_details_arr['name']);
+        }
+        elseif(!isset($mysession->create_limit)){
             if($plan_type=='setplan'){
                 $set_plan_lessons = new Application_Model_DbTable_SetPlanLessons();
                 $level=$_POST['sel_level'];

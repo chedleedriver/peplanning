@@ -434,6 +434,7 @@ function getLessonNumbers()
     $("#sel_num_lessons").empty();
     $("#sel_num_lessons").append("<option value=99>Select number</option>");
     if((topic==53)||(topic==54)||(topic==55)||(topic==56)) $("#sel_num_lessons").append("<option value=7>7</option>");
+    else if((topic==57)||(topic==58)||(topic==59)||(topic==60)) $("#sel_num_lessons").append("<option value=6>6</option>");
     else {
         for(var i=5;i<=12;i++){
             $("#sel_num_lessons").append("<option value="+i+">"+i+"</option>");
@@ -475,7 +476,8 @@ function createPlan(planType,userLevel)
                 var response=eval(msg);
                 // success
                 if(response.result==1){
-                location.replace('/staffroom');
+                  if(response.detail=='pdf') location.replace('/resources/'+response.more);
+                  else location.replace('/staffroom');
                 }
                 // failure
                 else if (response.result==0){
