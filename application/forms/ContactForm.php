@@ -104,6 +104,11 @@ class Application_Form_ContactForm extends Zend_Form
                    $details                   
                    //$submit,
                    ));
+       echo recaptcha_get_html("6LdQmPESAAAAAGut3CzRGz62cEZ1T4yysnWCftml");
+       $recaptcha_msg =  $this->createElement('text', 'recaptcha_msg',array('class' => 'error'  ))
+               ->setAttrib('readonly', 'readonly')
+               ->setAttrib('style', 'display: none');
+       $this->addElement($recaptcha_msg);
     }
 
 }

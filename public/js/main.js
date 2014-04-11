@@ -844,6 +844,8 @@ function doContact()
     var email_confirm_contact=$("#email_confirm_contact").val();
     var details_contact=$("#details_contact").val();
     var nature_contact=$("#nature_contact").val();
+    var recaptcha_challenge_field=$("#recaptcha_challenge_field").val();
+    var recaptcha_response_field=$("#recaptcha_response_field").val();
     $("#name_contact_msg").val('');
     $("#email_contact_msg").val('');
     $("#email_confirm_contact_msg").val('');
@@ -853,7 +855,7 @@ function doContact()
     $.ajax({
         type:"POST",
         url:"/auth/contact",
-        data:{name_contact:name_contact,email_contact:email_contact,email_confirm_contact:email_confirm_contact,details_contact:details_contact,nature_contact:nature_contact},
+        data:{name_contact:name_contact,email_contact:email_contact,email_confirm_contact:email_confirm_contact,details_contact:details_contact,nature_contact:nature_contact,recaptcha_challenge_field:recaptcha_challenge_field,recaptcha_response_field:recaptcha_response_field},
         dataType:"json"})
         .done(function(msg){
             processContact(msg);
@@ -869,6 +871,9 @@ function processContact(data)
         $("#nature_contact").val('How can we help you?');
         jAlert(response.detail);
         }
+    else if(response.result==2){
+        $("#recaptcha_msg").val(response.detail)
+    }
     else {
         for(var key in response){ 
             var fieldName = '#' + key + '_msg';

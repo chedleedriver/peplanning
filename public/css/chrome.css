@@ -226,7 +226,7 @@
 
 #select_git {visibility: hidden;}
 
-#button_area_contact {position:absolute; top:440px;}
+#button_area_contact {position:absolute; top:397px; left:346px;}
 
 
 /*---- TWITTER ---------------------------------------------------------------*/
@@ -265,11 +265,11 @@
         
         #subscribe_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
 
-        #name_payment, #email_payment, #email_confirm_payment, #school_payment, #postcode_payment, #telephone_payment, #school_address_payment_1, #school_address_payment_2, #school_address_payment_3 {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+        #classnum_payment, #name_payment, #email_payment, #email_confirm_payment, #school_payment, #postcode_payment, #telephone_payment, #school_address_payment_1, #school_address_payment_2, #school_address_payment_3 {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
            border:none; outline:none; padding-left:8px;
            font-size:16px; color:#666;}
 
-#service_payment_msg, #name_payment_msg, #email_payment_msg, #email_confirm_payment_msg, #telephone_payment_msg, #school_payment_msg, #postcode_payment_msg, #role_payment_msg, #school_address_1_payment_msg, #school_address_2_payment_msg, #school_address_3_payment_msg {text-align:left;}
+#classnum_payment_msg, #service_payment_msg, #name_payment_msg, #email_payment_msg, #email_confirm_payment_msg, #telephone_payment_msg, #school_payment_msg, #postcode_payment_msg, #role_payment_msg, #school_address_1_payment_msg, #school_address_2_payment_msg, #school_address_3_payment_msg {text-align:left;}
 
 #role_payment {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
               -webkit-appearance: none;
@@ -298,6 +298,8 @@
         #school_address_3_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
         #postcode_payment {position:relative; top:0; height:29px; padding-top:10px;}
         #postcode_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #classnum_payment {position:relative; top:0; height:29px; padding-top:10px;}
+        #classnum_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
         #payment_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
 #payment_btn a {border:0px dashed #000; position:relative; top:0; left:-220px;}
 #Feedback_form textarea {background-color:transparent; background: url('/img/sprite_feedbackform.png') no-repeat 0 0; overflow: hidden; 

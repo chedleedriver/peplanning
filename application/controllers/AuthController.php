@@ -512,6 +512,8 @@ class AuthController extends Zend_Controller_Action
     
     public function contactAction()
     {
+      include_once("/var/www/html/peplanning/library/recaptchalib.php");
+      $privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";
       $form = new Application_Form_ContactForm();
       if ($this->getRequest()->isPost()) 
         {
@@ -525,7 +527,13 @@ class AuthController extends Zend_Controller_Action
                     {
                     $contact_body.=$key." - ".$data."<br>";
                     }
-                if($this->sendEmailDetails($contact_body,$contact_body,'contact@peplanning.org.uk','matt@peplanning.org.uk','contact',$sendfileaswell=0))
+                $resp = recaptcha_check_answer ($privatekey,
+                                $_SERVER["REMOTE_ADDR"],
+                                $values["recaptcha_challenge_field"],
+                                $values["recaptcha_response_field"]);
+                if($resp->is_valid)
+                {
+                  if($this->sendEmailDetails($contact_body,$contact_body,'contact@peplanning.org.uk','matt@peplanning.org.uk','contact',$sendfileaswell=0))
                     { 
                         // sent the contact form to PE planing ok, create a confirmation
                     $this->view->template_type='form_getintouch';
@@ -552,12 +560,18 @@ class AuthController extends Zend_Controller_Action
                                 $response['detail']="We have been unable to fulfill your request at this time, please check your details and try again later";
                             }
                     }
-                else 
+                  else 
                     {
                         // couldn't send the contact form to PE planning
                         $response['result']='0';
                         $response['detail']="We have been unable to fulfill your request at this time, please check your details and try again later";
                     }
+                }
+                else
+                {
+                     $response['result']='0';
+                     $response['detail']="Invalid Captcha Entry";
+                }
             }
         else 
             {
@@ -573,6 +587,7 @@ class AuthController extends Zend_Controller_Action
             {
                 // if the form hasn't been submitted display the form
                 $this->_helper->layout()->disableLayout();
+                $this->view->publickey = "6LdQmPESAAAAAGut3CzRGz62cEZ1T4yysnWCftml";
                 return $this->view->form = $form;
             }
     }

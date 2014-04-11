@@ -207,7 +207,7 @@ select {overflow: hidden;}
 #contact_form {font-size:12px;color:#666; line-height:18px;width:60%; float:left; border-right:0px dashed #d0d0d0; height:400px;}
 #contact_form td, #contact_twitter td {text-align:justify; padding-right:15px; padding-top:5px;padding-bottom:5px; vertical-align:top;}
 #contact_twitter td {padding-left:15px;}
-#contact_twitter {width:40%; float:right; border-left:1px dashed #d0d0d0;}
+#contact_twitter {width:40%; float:right;}
 #form_title {text-align:left; width:161px; height:19px; background: url('/img/title_getintouch.png') no-repeat;}
 #twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:relative; left:22px; z-index:1020;}
 #tweetbox {position:relative; top:-20px;}
@@ -1327,7 +1327,7 @@ a.disabled {visibility:hidden !important;}
 
 #select_git {display: none;}
 
-#button_area_contact {position:relative; top:-188px; left:0px;}
+#button_area_contact {position:absolute; top:387px; left:346px;}
 #button_area_contact a {background: url('/img/sprite_form_buttons.png') no-repeat 0 -280px; width:96px; height:35px;display:block;}
 #button_area_contact a:hover {background: url('/img/sprite_form_buttons.png') no-repeat 0 -315px; width:96px; height:35px;display:block;}
 #button_area_contact span {visibility:hidden;}
@@ -1416,3 +1416,9 @@ a.disabled {visibility:hidden !important;}
 #videoplayer_content a span {color:#9d9b9b; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:0px; padding-left:60px; }
 #videoplayer_content a span:hover {color:#F3010A; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:0px; padding-left:60px; }
 
+#footer_ruleoff  {top:50px;}
+#sitemap{top:50px;}
+
+#company_details{ top:7px;}
+#contact_twitter {width:470px;}
+#contact_form{width:470px;}

@@ -210,7 +210,7 @@ ul {list-style: square; }
 
 /*---- SITEMAP ---------------------------------------------------------------*/
 /* ----- SP Edit ------- added padding for FF----------*/
-#sitemap {height:200px; background-color: #f9f9f9; border-bottom:1px dashed #d0d0d0; padding: 20px;}
+#sitemap {height:200px; background-color: #f9f9f9; border-bottom:1px dashed #d0d0d0; padding: 20px; position: relative; top: 35px;}
 .sitemap_section {width:25%; min-width:25%;max-width:25%; font-size:15px; color:#666; font-weight:bold; position:relative; top:-5px;}
 
 #contact_section {height:550px; border-top:0px dashed #d0d0d0; margin-top:55px;}
@@ -219,7 +219,8 @@ ul {list-style: square; }
 #contact_form {font-size:12px;color:#666; line-height:18px; float:left; border-right:0px dashed #d0d0d0; height:400px;}
 #contact_form td, #contact_twitter td {text-align:justify; padding-right:15px; padding-top:5px;padding-bottom:5px; vertical-align:top;}
 #contact_twitter td {padding-left:15px;}
-#contact_twitter {width:40%; border-left:1px dashed #d0d0d0;}
+/*----- changed this line to make it change---------*/
+#contact_twitter {width:40%; }
 #form_title {text-align:left; width:161px; height:19px; background: url('/img/title_getintouch.png') no-repeat;}
 #twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:relative; left:22px; z-index:1020;}
 #tweetbox {position:relative; top:-20px;}
@@ -269,6 +270,7 @@ ul {list-style: square; }
     color:#333;
     height:90px;
     background-color: #f5f5f5;
+    position: relative;
 }
 #footer a{
     color:#666666;
@@ -282,7 +284,7 @@ ul {list-style: square; }
     border-collapse: collapse;
 }
 #footer_text a {border-bottom: 1px solid #666666;}
-#footer_ruleoff{height:7px;background:url('/img/bg_footer.gif') repeat-x;}
+#footer_ruleoff{height:7px;background:url('/img/bg_footer.gif') repeat-x; position: relative; top:34px;}
 #footer_ruleoff a {border-bottom:1px solid #666666;}
 #itf_logo{width:152px; height:37px; vertical-align: top; position:relative; top:8px;}
 #itf_logo a {width:152px; height:37px; background:url('/img/logo_itf.png') no-repeat; display: block;}
@@ -1368,4 +1370,7 @@ a.disabled {visibility:hidden !important;}
 
 .resource-list {color: #808386; visibility:visible; }
 .resource-list-title {font-size:16px; padding:10px; color: #808386; font-weight:bold;}
+
+/*-----------------CAPTCHA--------------------------------------------------------------*/
+#recaptcha_widget_div { height: 40px;position:absolute; top:450px; }
 
