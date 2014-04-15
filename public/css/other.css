@@ -1,4 +1,4 @@
-/*---- CSS FOR SAFARI -------------------------------*/
+/* PEplanning CSS file for all other  */
 
 select{width:120%;}
 
@@ -385,17 +385,14 @@ select{width:120%;}
              border:0px; outline:none; font-weight:normal; font-size:16px; color:#666;}
 
 /*---- TWITTER ---------------------------------------------------------------*/
-#contact_twitter td {padding-left:90px;width:50%;}
-#twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:absolute; left:514px; z-index:1020;}
+#contact_twitter td {padding-left:180px;}
+#twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:absolute; left:618px; z-index:1020;}
 #sitemap_content a:hover {text-decoration:underline;}
-#sitemap_content {font-size:12px; position:relative; float:left; top:-25px;}
+#sitemap_content {font-size:12px; position:relative; top:-25px;}
 #videoplayer_content a span { color:#9d9b9b; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:107px; padding-left:50px; }
 #videoplayer_content a span:hover { color:#F3010A; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:107px; padding-left:50px; }
 #footer_ruleoff  {top:50px;}
 #sitemap{top:50px;}
 #button_area_contact {top:-202px; left:346px;}
+#company_details{ top:7px;}
 
-#company_details{ top:7px;}
-#contact_form{
-   width: 300px;
-}

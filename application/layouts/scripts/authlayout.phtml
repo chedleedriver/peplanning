@@ -60,34 +60,31 @@ $this->headScript()->appendFile($this->baseUrl().$main_js);
         elseif(preg_match('/iPhone/',$u_agent))
         {
             $ub = "Apple iPhone";
-            $this->headLink()->prependStylesheet($this->baseUrl().'/css/safari_mobile.css');
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari_mobile.css');
         }
         elseif(preg_match('/iPad/',$u_agent))
         {
             $ub = "Apple iPad";
-            $this->headLink()->prependStylesheet($this->baseUrl().'/css/safari_mobile.css');
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari_mobile.css');
         }
         elseif(preg_match('/Safari/i',$u_agent))
         {
             $ub = "Apple Safari";
-            $this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
-        }
-        elseif(preg_match('/Flock/i',$u_agent))
-         {
-            $ub = "Flock";
-            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari.css');
         }
         elseif(preg_match('/Opera/i',$u_agent))
         {
             $ub = "Opera";
-            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/opera.css');
         }
-        elseif(preg_match('/Netscape/i',$u_agent))
-        {
-            $ub = "Netscape";
-            //$this->headLink()->prependStylesheet($this->baseUrl().'/css/safari.css');
+        elseif ( strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'webkit') !== false ) {
+          $ub = "Webkit";
+          $this->headLink()->appendStylesheet($this->baseUrl().'/css/webkit.css');
         }
-        //echo $ub;?>
+        else {
+          $ub = "Other";
+          $this->headLink()->appendStylesheet($this->baseUrl().'/css/other.css');
+        }    ?>
 <html>
     <head>
         <!-- meta tag for safari mobile -->
