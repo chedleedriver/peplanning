@@ -512,7 +512,7 @@ class AuthController extends Zend_Controller_Action
     
     public function contactAction()
     {
-      include_once("/var/www/html/peplanning/library/recaptchalib.php");
+      include("/var/www/html/peplanning/library/recaptchalib.php");
       $privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";
       $form = new Application_Form_ContactForm();
       if ($this->getRequest()->isPost()) 
