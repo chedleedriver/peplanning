@@ -428,9 +428,9 @@ function processTopics(data,planType)
     $(topicSelect).append("</optgroup>");
     //activateContinue(1);
 }
-function getLessonNumbers()
+function getLessonNumbers(topic_id)
 {
-    var topic=document.getElementById('sel_topic').value;
+    var topic=document.getElementById(topic_id).value;
     $("#sel_num_lessons").empty();
     $("#sel_num_lessons").append("<option value=99>Select number</option>");
     if((topic==53)||(topic==54)||(topic==55)||(topic==56)) $("#sel_num_lessons").append("<option value=7>7</option>");
@@ -918,5 +918,5 @@ function updateSelect(get,post){
     //alert(get+ ', ' + post);
     if(get == 'sel_level'){getTopics('setplan');}
     if(get == 'own_sel_level'){getTopics('unsetplan');}
-    if((get == 'sel_topic') || (get == 'own_sel_topic')){getLessonNumbers();}
+    if((get == 'sel_topic') || (get == 'own_sel_topic')){getLessonNumbers(get);}
 }
