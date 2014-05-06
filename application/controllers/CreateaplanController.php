@@ -44,8 +44,11 @@ class CreateaplanController extends Zend_Controller_Action
         $mysession = new Zend_Session_Namespace('mysession'); 
         $teacher_id = $mysession->id;
         $user_level = $mysession->userlevel;
+        $plan_type=$_POST['plan_type'];
+        if($plan_type=='unsetplan')$topic_selected=$_POST['own_sel_topic'];
+        else $topic_selected=$_POST['sel_topic'];
         $topics=new Application_Model_DbTable_Topic();
-        $topic_details = $topics->getTopicStatus($_POST['sel_topic']);
+        $topic_details = $topics->getTopicStatus($topic_selected);
         $topic_details_arr = $topic_details->toArray();
         $plan_type=$_POST['plan_type'];
         if($topic_details_arr['status']=="P")
@@ -54,8 +57,10 @@ class CreateaplanController extends Zend_Controller_Action
            $response['detail']='pdf';
            $response['more']=strtolower($topic_details_arr['name']);
         }
-        elseif(!isset($mysession->create_limit)){
-            if($plan_type=='setplan'){
+        elseif(!isset($mysession->create_limit))
+        {
+            if($plan_type=='setplan')
+            {
                 $set_plan_lessons = new Application_Model_DbTable_SetPlanLessons();
                 $level=$_POST['sel_level'];
                 $topic_id=$_POST['sel_topic'];
@@ -91,19 +96,18 @@ class CreateaplanController extends Zend_Controller_Action
                 }
                 }
                 else {
-            $response['result']=0;
-            $response['detail']='tryagain';
-            $response['more']='Sorry, but there are no set plans available for your selections<br>This is usually because you chose too few lessons<br>please try again';
-            
-        }
-                
+                       $response['result']=0;
+                       $response['detail']='tryagain';
+                       $response['more']='Sorry, but there are no set plans available for your selections<br>This is usually because you chose too few lessons<br>please try again';
+                      }
             }
             elseif(($plan_type=='unsetplan')&&($user_level>=1)){
                 $level=$_POST['own_sel_level'];
                 $topic_id=$_POST['own_sel_topic'];
                 $num_lessons=$_POST['own_sel_num_lessons'];
                 $title=$_POST['own_title'];
-                if(($level!=99)&&($topic_id!=0)&&($num_lessons!=0)&&($title!='Give your Unit a Title')){
+                if(($level!=99)&&($topic_id!=0)&&($num_lessons!=0)&&($title!='Give your Unit a Title'))
+                {
                 $create_plan = new Application_Model_DbTable_UnitOfWork();
                 $unit_id=$create_plan->CreateUnit($teacher_id,$topic_id,'topic',$level,$title,$num_lessons,$plan_type);
                         if($unit_id!=0){
