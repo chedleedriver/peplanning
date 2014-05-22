@@ -33,6 +33,10 @@
                             <?php if ($this->level==0){?>
                                 <a href='javascript:void(0)'><b><?php echo $this->username?></b></a>, you are visiting</span>
                             <?php } 
+                                elseif ($this->level==1) {?>
+                                <!--<a href='javascript:void(0)' onclick="javascript:editUser(<? echo $this->id?>)"><b><? echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+2592000)-time())/86400)?> days.</span>-->
+                                <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/edituser'><b><? echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+2592000)-time())/86400)?> days.</span>
+                            <?php } 
                                 elseif ($this->level==4) {?>
                                 <!--<a href='javascript:void(0)' onclick="javascript:editUser(<? echo $this->id?>)"><b><? echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+2592000)-time())/86400)?> days.</span>-->
                                 <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/edituser'><b><? echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+2592000)-time())/86400)?> days.</span>
