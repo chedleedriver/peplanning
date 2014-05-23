@@ -29,18 +29,18 @@ $this->headScript()->appendFile($this->baseUrl().$main_js);
             $ub = "Internet Explorer 7.0";
             $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie7.css');
         }
-        if(preg_match('/MSIE 8.0/',$u_agent))
+        elseif(preg_match('/MSIE 8.0/',$u_agent))
         {
             $ub = "Internet Explorer 8.0";
             $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie8.css');
         }
-        if(preg_match('/MSIE 9.0/',$u_agent))
+        elseif(preg_match('/MSIE 9.0/',$u_agent))
         {
             $ub = "Internet Explorer 9.0";
             $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie9.css');
             //echo $ub;
         }
-        if(preg_match('/MSIE 10.0/',$u_agent))
+        elseif(preg_match('/MSIE 10.0/',$u_agent))
         {
             $ub = "Internet Explorer 10.0";
             $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie10.css');
