@@ -72,6 +72,7 @@ class CreateaplanController extends Zend_Controller_Action
                 $create_plan = new Application_Model_DbTable_StoredProcedures();
                 if($user_level==0) {
                     if ($create_plan->CreateGuestPlan($teacher_id,$topic_id,'topic',$level,$title,$num_lessons,$plan_type)){
+                    if(isset($mysession->curr_unit_id)) unset($mysession->curr_unit_id);
                     $response['result']=1;
                     $response['detail']='setplan';
                     if($user_level==0)$mysession->create_limit = 1;
@@ -84,6 +85,7 @@ class CreateaplanController extends Zend_Controller_Action
                 }
                 else {
                     if ($create_plan->CreatePlan($teacher_id,$topic_id,'topic',$level,$title,$num_lessons,$plan_type)){
+                    if(isset($mysession->curr_unit_id)) unset($mysession->curr_unit_id);
                     $response['result']=1;
                     $response['detail']='setplan';
                     $response['more']=$set_plan_exists;
