@@ -111,6 +111,7 @@ class CreateaplanController extends Zend_Controller_Action
                 $create_plan = new Application_Model_DbTable_UnitOfWork();
                 $unit_id=$create_plan->CreateUnit($teacher_id,$topic_id,'topic',$level,$title,$num_lessons,$plan_type);
                         if($unit_id!=0){
+                            $mysession->curr_unit_id = $_GET['unit_id'];
                             $create_lesson = new Application_Model_DbTable_Lesson();
                             for($i=1;$i<=$num_lessons;$i++){
                                 $lesson_id = $create_lesson->createLesson($unit_id,$i);
