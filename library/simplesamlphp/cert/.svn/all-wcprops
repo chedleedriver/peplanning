@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert
+END
+DigiCertCA.crt
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/DigiCertCA.crt
+END
+TrustedRoot.crt
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/TrustedRoot.crt
+END
+server.pem
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/server.pem
+END
+DigiCertCA2.crt
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/DigiCertCA2.crt
+END
+www_peplanning_org_uk.crt
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/www_peplanning_org_uk.crt
+END
+server.crt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/cert/server.crt
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth
+END
+Simple.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/Simple.php
+END
+BWC.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/BWC.php
+END
+ProcessingChain.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/ProcessingChain.php
+END
+LDAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/LDAP.php
+END
+Source.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/Source.php
+END
+State.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/State.php
+END
+ProcessingFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/ProcessingFilter.php
+END
+Default.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/Default.php
+END
+TimeLimitedToken.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Auth/TimeLimitedToken.php
+END

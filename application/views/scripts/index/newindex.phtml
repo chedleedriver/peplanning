@@ -1,0 +1,468 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }
+include("recaptchalib.php");
+$privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";?>
+<script type='text/javascript'>//<![CDATA[ 
+var RecaptchaOptions = {
+    theme : 'clean'
+ };
+$(window).load(function(){
+
+$(function() {
+    // Stick the #nav to the top of the window
+    var nav = $('#nav');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.scroll(function() {
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0,
+                left: nav.offset().left,
+                width: nav.width()
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
+});
+
+});//]]> 
+</script>
+<!-- fixed items -->
+        <div id="navWrap">
+            <div id='nav' class='header'>
+                <span><a href='#about'>ABOUT</a></span>
+                <span><a href='#how'>HOW IT WORKS</a></span>
+                <span><a href='#connect'>CONNECT</a></span>
+                <span><a href='#price'>PRICING</a></span>
+                <span><a href='/auth/signup?process=1' style='color:#fb5502;'>TRIAL</a></span>
+                <span><a href='#somesay'>RECOMMENDATION</a></span>
+                <span><a href='/auth/schoolsignup'>BUY</a></span>
+                <span><a href='#faq'>FAQ</a></span>
+                <span><a href='#contact'>CONTACT</a></span>
+                <span><a href='/blog'>blog</a></span>
+                  
+            </div>
+        </div>
+        <div class='logo'>
+            <a href='/'><img border=none src="/img/signup_logo.png"></a>
+            </div>  
+
+		<div class='login'>
+        	<div class="signup-wrap">
+                <a href="/auth/signup?process=0"><img border=none src="/img/icons/User-Login-48.png"/></a>
+                <p class="signup-description"><a href="/auth/signup?process=0">Login</a></p>
+            </div>
+            <div class="buy-wrap">
+                <a href="/auth/schoolsignup"><img border=none src="/img/icons/Add-To-Cart-48.png" /></a>
+                <p class="buy-description"><a href="/auth/schoolsignup">Buy</a></p>
+            </div>
+        </div>
+		<div class='content'>
+        	<div id="section-1">
+            	<!-- this is where the main picture will go -->
+            </div>
+            <div id="section-2" onclick='javascript:location.href="/createaplan"'>
+            	<!-- second image the blue one-->
+            </div>
+           <div id='about'>
+           </div>
+           <div class='about'>
+              <h1>ABOUT</h1>
+              <hr />
+              <h2>Customisable Online Primary PE Lesson Planner</h2>
+              <h3>We are passionate about:</h3>
+              <table width=100%>
+           		<tr>
+            		<td width=20%>
+                    <img border=none  src="/img/aboutleft.png" />
+                    </td>
+                    <td width=60%>
+              		<ul>
+                  		<li>Pupils having a range of fun sport activities</li>
+                  		<li>Raising the standard of PE in primary schools</li>
+                  		<li>Making teachers lives easier and less stressful</li>
+                  		<li style="list-style-image:url(/img/icons/smiling35.png);">AND most importantly pupils and teachers loving PE!</li>
+              		</ul>
+         			</td>
+                    <td width=20%>
+                    <img border=none  src="/img/aboutright.png" />
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div id='how'>
+           </div>
+            <div class='how'>
+            	<h1>HOW IT WORKS</h1>
+                <hr />
+                <table  cellpadding="10px">
+                	<tr>
+                    	<td width=10%>
+                        	<img border=none  src="/img/icons/online edit circle.png" />
+                        </td>
+                        <td width=40% valign='top'>
+                        	<p>Enter a few registration details and you and your colleagues will have individual accounts.</p>
+                        </td>
+                        <td width=10%>
+                        	<img border=none  src="/img/icons/basketball edit circle.png" />
+                        </td>
+                        <td width=40% valign='top'>
+                        	<p>You can edit plans anytime, change activities, add progressions, include differentiation.</p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                    	<td width=10%>
+                        	<img border=none  src="/img/icons/group edit circle.png" />
+                        </td>
+                        <td width=40% valign='top'>
+                        	<p>Using your account, you can enter the ‘staffroom’ pre-loaded with lesson plans.</p>
+                        </td>
+                        <td width=10%>
+                        	<img border=none  src="/img/icons/podium edit circle.png" />
+                        </td>
+                        <td width=40% valign='top'>
+                        	<p>Click ‘Additional Resources’ for Long Term Plans, Sports Day and Festival Plans, Playtime Activities, and additional lesson plans.</p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                    	<td width=10%>
+                        	<img border=none  src="/img/icons/edit edit circle.png" />
+                        </td>
+                        <td width=40 valign='top'%>
+                        	<p>Print the pre-loaded plans or enter specific class information to create bespoke plans.</p>
+                        </td>
+                        <td width=10%>
+                        	<img border=none  src="/img/icons/contact edit circle.png" />
+                        </td>
+                        <td width=40% valign='top'>
+                        	<p>Sometimes things just don’t work. We are always available via phone, email or on any of our social media accounts.</p>
+                        </td>
+
+                    </tr>
+                 </table>   
+            </div>
+            <div id='simple'>
+            </div>
+            <div class="simple">
+            	<h1>Simple, Quick and Fun</h1>
+                <p>3 words all teachers love to hear. This is what we kept in mind when producing our online customisable lesson plans. So you can access them at school, at home or even on the move.</p>
+                <a href='/auth/schoolsignup'><img border=none  src='/img/icons/sign up icon resize.png' /></a>
+                <a href='/auth/signup#signup'><img border=none  src='/img/icons/free trial icon resize.png' /></a>
+            </div> 
+            <div id='connect'>
+            </div>
+            <div class='connect'>
+            <img border=none  src="/img/ConnectOrange&Grey.png" alt="" usemap="#Connect" />
+			<map name="Connect" id="Connect">
+    			<area alt="twitter" title="twitter" href="https://twitter.com/PEplanning" shape="rect" coords="117,191,240,333" target="_new" />
+    			<area alt="facebook" title="facebook" href="https://www.facebook.com/PEplanning"shape="rect" coords="298,190,436,339" target="_new" />
+    			<area alt="tumblr" title="tumblr" href="http://peplanning.tumblr.com/" shape="rect" coords="526,189,666,342" target="_new" />
+    			<area alt="pinterest" title="pinterest" href="http://www.pinterest.com/peplanning/" shape="rect" coords="750,194,885,335" target="_new" />
+    			<area alt="youtube" title="youtube" href="https://www.youtube.com/user/peplanning" shape="rect" coords="934,197,1081,327" target="_new" />
+    		</map>
+            </div>
+            <div id='free'>
+            </div>
+            <div class='free'>
+            	<h1>FREE TRIAL</h1>
+                <hr />
+            	<p>We understand you may want to try out the product before subscribing in full. We offer a two week
+trial to give teachers an opportunity to try out our service free of charge.</p>
+                <p>Get in touch with any questions - we are a friendly bunch.</p>
+                <a href='/auth/signup?process=1'><img border=none  src='/img/icons/free trial icon charcoal resize.png' /></a>
+            </div>
+            <div id='price'>
+            </div>
+            <div class='price'>
+            	<h1>PRICE PLANS</h1>
+                <hr />
+                <img border=none  src="/img/pricing-table.png" usemap='#pricingMap'/>
+                <map name="pricingMap" id="pricingMap">
+                    <area alt="trial" title="trial" href="/auth/signup#signup" shape="rect" coords="61,24,260,397" />
+                    <area alt="peschool" title="peschool" href="/auth/schoolsignup" shape="rect" coords="281,25,922,398" />
+                    <area alt="peteacher" title="peteacher" href="/auth/schoolsignup" shape="rect" coords="942,25,1143,394" />
+                </map>
+            </div>
+            <div id='upcoming'>
+            </div>
+             <div class='upcoming'>
+            	
+            </div>
+            <div id='somesay'>
+            </div>
+            <div class='somesay''>
+            	<div class="somesayings">
+                	<div>
+                    	<img border=none  src='/img/somesay1.png' />
+                    </div>
+                    <div>
+                    	<img border=none  src='/img/somesay2.png' />
+                    </div>
+                    <div>
+                    	<img border=none  src='/img/somesay3.png' />
+                    </div>
+ 				</div>
+				
+			</div>
+            <div class="navi"></div>
+            <!--<a class="next browse right"></a>-->
+            <div id='agree'>
+            </div>
+            <div class='agree'>
+            	<h1>And 2500+ Users Agree!!</h1>
+                <a href='/auth/schoolsignup'><img border=none  src='/img/icons/sign up icon blue resize.png' /></a>
+                <a href='/auth/signup#signup'><img border=none  src='/img/icons/free trial icon blue resize.png' /></a>
+            </div>
+            
+            <!--<div class='blog' id='blog'>
+            
+            </div>-->
+            <div id='faq'>
+            </div>
+            <div class='faq'>
+            	<img border=none  src='/img/faq.png' />
+                <img border=none  src='/img/faq icons.png' usemap="#faqMap" />
+                <map name="faqMap" id="faqMap">
+                    <area alt="Products" title="Products" href="#faq_products" shape="rect" coords="186,82,322,261" />
+                    <area alt="Planning" title="Planning" href="#faq_planning" shape="rect" coords="377,84,592,269" />
+                    <area alt="Subscribe" title="Subscribe" href="#faq_subscribe" shape="rect" coords="634,85,800,256" />
+                    <area alt="Technical" title="Technical" href="#faq_technical" shape="rect" coords="868,86,1014,254" />
+                </map>
+                <div>
+                  <table id="faq_content" cellpadding="20px;">
+                  		<tr id="faq_products">
+                       		<td colspan=2></td>
+                            </tr>
+                      <tr>
+                          <td valign="top" width='40%'>
+                              <h1>Product</h1>
+                          </td>
+                          <td valign="top" width='60%'>
+                                  <ul>
+                                      <li id="product_q1" onclick="faqOpen('product',1)">What is PEschool?</li>
+                                      <div id="product_a1" class="faq-answers"><p>The subscription option for schools wishing to subscribe to PEplanning. More information about PEschool can be found <a href="/learn/peschool">here</a></p></div>
+                                      <li id="product_q2" onclick="faqOpen('product',2)">What is PEcoach?</li>
+                                      <div id="product_a2" class="faq-answers"><p>The subscription option for coaches and coaching companies wishing to subscribe to PEplanning. More information about PEcoach can be found <a href="/learn/pecoach">here</a></p></div>
+                                      <li id="product_q3" onclick="faqOpen('product',3)">What is PEteacher?</li>
+                                      <div id="product_a3" class="faq-answers"><p>The subscription option for the individual wishing to subscribe to PEplanning. More information about PEteacher can be found <a href="/learn/peteacher">here</a> </p></div>
+                                      <li id="product_q4" onclick="faqOpen('product',4)">How often is the resource updated?</li>
+                                      <div id="product_a4" class="faq-answers"><p>The PEplanning team are constantly working on adding new content and updating the content already within the service. All new content and updates are available to subscribed users at no extra cost</p></div>
+                                      <li id="product_q5" onclick="faqOpen('product',5)">How is it linked to the national curriculum?</li>
+                                      <div id="product_a5" class="faq-answers"><p>All our units of work are derived from current QCDA schemes of work. We carefully select learning objectives from here and make them specific to the sports we have available in PEplanning.</p></div>
+                                      
+                                  </ul>
+                           </td>
+                       </tr>
+                       <tr id="faq_planning">
+                       		<td colspan=2></td>
+                            </tr>
+                       <tr>    
+                           <td valign="top" width='40%'>
+                              <h1>Lesson Planning</h1>
+                           </td>
+                           <td valign="top" width='60%'>
+                                  <ul>
+                                      <li id="planning_q1" onclick="faqOpen('planning',1)">How do I create a lesson plan?</li>
+                                      <div id="planning_a1" class="faq-answers"><p>Creating lesson plans is very straight forward with PEplanning. Simply complete the 5 steps on the 'Plan a Lesson' page. To plan a lesson yourself click <a href="/createaplan">here</a></p><p>With PEplanning it is also possible to create your own lesson plans using our personal lesson planning tool. You can create lessons this way from the staffroom, to create your own lessons click <a href="/staffroom">here</a><i> This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">subscribed</a> users of PEplanning</i></p></div>
+                                      <li id="planning_q2" onclick="faqOpen('planning',2)">How do I create my own lesson plans?</li>
+                                      <div id="planning_a2" class="faq-answers"><p>PEplanning allows you to create your own personalised lesson plans using our personal lesson planning tool. Our unique service allows you to create your own personalised lesson plans. To have a go at creating your own lesson plans click <a href="/createaplan">here</a>. <i>This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Subscribe');">subscribed</a> users of PEplanning</i></p></div>
+                                      <li id="planning_q3" onclick="faqOpen('planning',3)">How do I edit my lesson plans?</li>
+                                      <div id="planning_a3" class="faq-answers"><p>You can edit the lesson plans you create so they meet your exact requirements. Once you have created your lesson plans they are saved in the Staffroom, from there you can access the editing area. Simply select the unit of work you wish to edit from 'My Plans' and click on 'edit' next to the plan you wish to edit.  To have a go at editing your plans click <a href="/staffroom">here</a><i> This option is only available to <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">registered</a> users of PEplanning</i></p></div>
+                                      <li id="planning_q4" onclick="faqOpen('planning',4)">How do I print my lesson plans?</li>
+                                      <div id="planning_a4" class="faq-answers"><p>You can print individual lesson plans you create by clicking on the printer icon in the lesson listing in the Staffroom, or from the lesson editing tool. There is a facility to print a whole unit under the options menu in the Staffroom. If you have problems with the print function you may find the answer <a href="#faq_technical">here</a></p></div>
+                                      <li id="planning_q5" onclick="faqOpen('planning',5)">How do I load assessment?</li>
+                                      <div id="planning_a5" class="faq-answers"><p>PEplanning also provides a comprehensive assessment service that compliments all the lesson plans you create. Our assessment includes:</p>
+                                          <ul>
+                                              <li>Teacher Assessment – national curriculum based assessment for each child</li>
+                                              <li>Individual Assessment – pupil worksheets for pupils to assess their own development</li>
+                                              <li>Class Assessment – 'I Can' statements that can be used as displays for pupils</li>
+                                          </ul>
+                                          <p>You can access your assessments from the <a href="/staffroom">Staffroom</a> </p>
+                                      </div>
+                                      
+                                  </ul>
+                           </td>
+                       </tr>
+                       <tr>
+                       <tr id="faq_subscribe">
+                       		<td colspan=2></td>
+                            </tr>
+                           <td valign="top" width='40%'>  
+                              <h1>Subscription</h1>
+                           </td>
+                           <td valign="top" width='60%'>
+                                  <ul>
+                                      <li id="subscribe_q1" onclick="faqOpen('subscribe',1)">What is the 'Free Subscription'?</li>
+                                      <div id="subscribe_a1" class="faq-answers"><p>We understand the importance of testing a new service before you purchase it. Our free 14 day subscription allows you to do just this. It gives you the opportunity to trial and explore our service for yourself for 14 days. There is no obligation to purchase our product after this. To create your free subscription account <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/signup?process=1">click here</a></p>
+                                      </div>
+                                      <li id="subscribe_q2" onclick="faqOpen('subscribe',2)">Who is the Free Subscription for?</li>
+                                      <div id="subscribe_a2" class="faq-answers"><p style="text-align:left;">Everyone! If you work in primary schools and teach PE our 14 day free subscription gives you the opportunity to see how our service can support you. To create your free subscription account <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/signup?process=1">click here</a></p>
+                                      <p>If you work in a primary school please pass on the trial information to your PE coordinator so they too can see how our service can support everyone in your school</p></div>
+                                      <li id="subscribe_q3" onclick="faqOpen('subscribe',3)">What happens when your free subscription ends?</li>
+                                      <div id="subscribe_a3" class="faq-answers"><p>We will contact you to let you know your trial has come to an end and provide you with the necessary information should you wish to upgrade to a full subscription.</p>
+                                      <p>If you feel PEplanning is not for you at this time we will simply downgrade your account so you have restricted access to the site. You can then come back to your account at any time and subscribe to our service in the future if you wish.</p></div>
+                                      <li id="subscribe_q4" onclick="faqOpen('subscribe',4)">How do I purchase PEplanning?</li>
+                                      <div id="subscribe_a4" class="faq-answers"><p>You can subscribe in full to any of our products <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/schoolsignup">here</a></p>
+                                      </ul>
+                              
+                          </td>
+                       </tr>
+                       <tr id="faq_technical">
+                       		<td colspan=2></td>
+                            </tr>
+                       <tr>
+                          <td valign="top" width='40%'> 
+                             <h1>Technical</h1>
+                          </td>
+                          <td valign="top" width='60%'>
+                                  <ul>
+                                      <li id="technical_q1" onclick="faqOpen('technical',1)">Why can't I see the login box?</li>
+                                      <div id="technical_a1" class="faq-answers"><p>If you are using Internet Explorer you are probably going into 'Quirks Mode'. Use <a href='/learn/ie8quirksmode'>this guide</a> to see if this problem is affecting you</p></div>
+                                      <li id="technical_q2" onclick="faqOpen('technical',2)">Why doesn't my lesson print out?</li>
+                                      <div id="technical_a2" class="faq-answers"><p>The print facility relies on the use of Pop-ups. Some people may have Pop-ups disabled in their browser settings. To check your settings and enable Pop-ups see the relevent instructions below</p>
+                                                                               <p><b>Internet Explorer</b>  
+                                                                               <ul><li>From the menu select <u>Tools</u> (in IE9 this is the cog in the top right hand corner)</li>
+                                                                                   <li>Select <u>Internet Options</u> from the menu</li> 
+                                                                                   <li>Select the <u>Privacy</u> tab.</li>
+                                                                                   <li>If there is a tick next to <u>'Turn on Pop-up Blocker'</u> you can either remove this or</li>
+                                                                                   <li>Click on <u>Settings</u></li>
+                                                                                   <li>Type '*.peplanning.org.uk' (without the quotes) in the box and click <u>Add</u></li>
+                                                                                   <li>Close all the windows and retry the print option</li>
+                                                                               </ul>
+                                                                               </p>
+                                                                               <p><b>Mozilla Firefox</b>
+                                                                               <ul><li>You need to find the <u>Options</u> or <u>Preferences</u> menu option. (The location and name varies from one version to another)</li>
+                                                                                   <li>Select the <u>Content</u> tab.</li>
+                                                                                   <li>If there is a tick next to <u>'Block Pop-up Windows'</u> you can either remove this or</li>
+                                                                                   <li>Click on <u>Exceptions</u></li>
+                                                                                   <li>Type 'www.peplanning.org.uk' (without the quotes) in the box and click <u>Allow</u></li>
+                                                                                   <li>Close all the windows and retry the print option</li>
+                                                                               </ul>
+                                                                               </p>
+                                                                               <p><b>Google Chrome</b>
+                                                                               <ul><li>Click on the <u>Spanner Icon</u> (in the top right hand corner)</li>
+                                                                                   <li>Select <u>Settings</u> from the menu</li> 
+                                                                                   <li>Select the <u>Show Advanced Settings</u> from the link at the bottom of the page.</li>
+                                                                                   <li>Click on <u>Content Settings</u></li>
+                                                                                   <li>If option to <u>'Do not allow any site to show pop-ups'</u> is selected, you can either change this to 'Allow...'  or</li>
+                                                                                   <li>Click on <u>Manage Exceptions</u></li>
+                                                                                   <li>Type 'www.peplanning.org.uk' (without the quotes) in the box and hit enter</li>
+                                                                                   <li>Close all the windows and retry the print option</li>
+                                                                               </ul>
+                                                                               </p></div>
+                                      
+                                  </ul> 
+                              
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+            </div>
+            <div id='question'>
+            </div>
+            <div class='question'>
+            </div>
+            <div id='contact'>
+            </div>
+            <div class='contact'>
+            	<h1>CONTACT</h1>
+                <div id='contact-box'>
+                	<div id='details-box'>
+                    	<h1>INFORMATION</h1>
+                        <p>PE Planning have 2 offices in the UK.</p>
+                        <p>For contact details at each office see below</p>
+                        <div id='details_address'>
+                        	<p>PE Planning Administration and Finance</p>
+                        	<p>Innovation House</p>
+                            <p>Devonshire Street</p>
+                            <p>Keighley</p>
+                            <p>BD21 2AU</p>
+                            <p>t: +44 (0) 333 900 2332</p>
+                            <p>e: <a href='mailto:admin@peplanning.org.uk'>admin@peplanning.org.uk</a></p>
+                            <br />
+                            <p>PE Planning Sales and Marketing</p>
+                            <p>6 Hewitt St</p>
+                            <p>Manchester</p>
+                            <p>M15 4GB</p>
+                            <p>t: +44 (0) 333 900 2332</p>
+                            <p>e: <a href='mailto:admin@peplanning.org.uk'>sales@peplanning.org.uk</a></p>
+                         </div>
+                        <h2>GET SOCIAL</h2>
+                        <hr />
+                        <img border=none  src="/img/icons/contact-social.png" usemap='#socialMap'/>
+                        <map name="socialMap" id="socialMap">
+                            <area alt="twitter" title="twitter" href="https://twitter.com/PEplanning" shape="rect" coords="57,20,87,55" target="new" />
+                            <area alt="pinterest" title="pinterest" href="http://www.pinterest.com/peplanning/" shape="rect" coords="128,22,156,57" target="new" />
+                            <area alt="tumblr" title="tumblr" href="http://peplanning.tumblr.com/" shape="rect" coords="189,22,219,57" target="new" />
+                            <area alt="youtube" title="youtube" href="https://www.youtube.com/user/peplanning" shape="rect" coords="252,21,290,59" target="new" />
+                            <area alt="facebook" title="facebook" href="https://www.facebook.com/PEplanning" shape="rect" coords="320,22,359,60" target="new" />
+                        </map>
+                    </div>
+                    <div id='contact-form-box'>
+                    	<h2>GET IN TOUCH</h2>
+                        <hr />
+                        <form id='contact-form' name='contact-form' method="post" action='/index/send-message'>
+                        <label>Name</label>
+                        <input id='contact-name' name='contact-name' type="text" size=64 />
+                        <label>Email</label>
+                        <input id='contact-email' name='contact-email' type="text" size=128 />
+                        <label>Message</label>
+                        <textarea col=8 rows="8" name='contact-message' id='contact-message'></textarea>
+                        <?php echo recaptcha_get_html("6LdQmPESAAAAAGut3CzRGz62cEZ1T4yysnWCftml");?>
+                        <input type='submit' id='send' name='send' value="Send Message" />
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    		
+<script>
+$('#product_a1').show();
+$('#product_q1').css('background-image', 'url(/img/icons/up.png)');
+function faqOpen(section,num)
+{
+    qLi = '#' + section + '_q' + num;
+	aDiv = '#' + section + '_a' + num;
+	$('.faq-answers').hide();
+	$(aDiv).show();
+	$(qLi).css('background-image', 'url(/img/icons/up.png)');
+	//$(qLi).attr("onclick","faqClose('"+section+"',"+num+")");
+	
+}
+function faqClose(section,num)
+{
+	qLi = '#' + section + '_q' + num;
+	aDiv = '#' + section + '_a' + num;
+	$(aDiv).hide();
+	$(qLi).css('background-image', '');
+	//$(qLi).attr("onclick","faqOpen('"+section+"',"+num+")");
+}
+$(function() {
+  // initialize scrollable
+  $(".somesay").scrollable({circular: true}).autoscroll({ autoplay: true, interval:25000 }).navigator();
+});
+</script>

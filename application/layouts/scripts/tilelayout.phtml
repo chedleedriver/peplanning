@@ -1,0 +1,39 @@
+<?php 
+if ($_SERVER['SERVER_PORT'] == '443') {
+  header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+  }
+$css="/css/tiles.css?".time();
+$script1="/js/tile-scripts.js?".time();
+$script2="/js/jquery-1.8.2.min.js?".time();
+$script3="/js/modernizr-1.5.min.js?".time();
+$main_js="/js/main.js?".time();
+$jq_js="/js/jquery-1.8.2.min.js?".time();
+
+echo $this->doctype();
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Editing Your Plan');
+$this->headLink()->prependStylesheet($this->baseUrl().$css);
+$this->headScript()->appendFile($this->baseUrl().$script3);
+$this->headScript()->appendFile($this->baseUrl().$main_js);
+$this->inlineScript()->appendFile($this->baseUrl().$script2);
+$this->inlineScript()->appendFile($this->baseUrl().$script1);
+?>
+<html>
+    <head>
+        <!-- meta tag for safari mobile -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=1200" />
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headMeta(); ?>        
+    </head>
+    <header>
+    </header>
+    <body>
+        <?php echo $this->headScript(); ?>
+        <?php if (substr($_SERVER[REQUEST_URI],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
+        <div id="content"><?php echo $this->layout()->content; ?></div>
+        <?php echo $this->inlineScript(); ?>
+    </body>
+</html>   

@@ -1,0 +1,216 @@
+<?php 
+if ($_SERVER['SERVER_PORT'] == '443') {
+  header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+  }
+$site_css="/css/site.css?".time();
+$ui_css="/css/jquery-ui.min.css?".time();
+$main_js="/js/main.js?".time();
+$alerts_js="/js/jquery.alerts.js?".time();
+$jq_tools_js="/js/jquery.tools.min.js?".time();
+$jq_crypt_js="/js/jquery.jcryption.min.js?".time();
+$jq_js="/js/jquery-1.8.2.min.js?".time();
+$jq_ui_js="/js/jquery-ui.min.js?".time();
+echo $this->doctype();
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Delivering high quality teaching resources, for Primary School PE');
+$this->headLink()->prependStylesheet($this->baseUrl().$site_css);
+$this->headLink()->prependStylesheet($this->baseUrl().$ui_css);
+$this->headScript()->appendFile($this->baseUrl().$jq_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_ui_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_tools_js);
+$this->headScript()->appendFile($this->baseUrl().$jq_crypt_js);
+$this->headScript()->appendFile($this->baseUrl().$alerts_js);
+$this->headScript()->appendFile($this->baseUrl().$main_js);
+
+
+        $u_agent = $_SERVER['HTTP_USER_AGENT'];
+        $ub = '';
+        if(preg_match('/MSIE 7.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 7.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie7.css');
+        }
+        elseif(preg_match('/MSIE 8.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 8.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie8.css');
+        }
+        elseif(preg_match('/MSIE 9.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 9.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie9.css');
+            //echo $ub;
+        }
+        elseif(preg_match('/MSIE 10.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 10.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie10.css');
+            //echo $ub;
+        }
+		elseif(preg_match('/MSIE 11.0/',$u_agent))
+        {
+            $ub = "Internet Explorer 11.0";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/ie11.css');
+            //echo $ub;
+        }
+        elseif(preg_match('/Firefox/i',$u_agent))
+        {
+            $ub = "Mozilla Firefox";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/firefox.css');
+        }
+        elseif(preg_match('/Chrome/',$u_agent))
+        {
+            $ub = "Google Chrome";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/chrome.css');
+            $myvar = 'safecss';
+        }
+        elseif(preg_match('/iPhone/',$u_agent))
+        {
+            $ub = "Apple iPhone";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari_mobile.css');
+        }
+        elseif(preg_match('/iPad/',$u_agent))
+        {
+            $ub = "Apple iPad";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari_mobile.css');
+        }
+        elseif(preg_match('/Safari/i',$u_agent))
+        {
+            $ub = "Apple Safari";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/safari.css');
+        }
+        elseif(preg_match('/Opera/i',$u_agent))
+        {
+            $ub = "Opera";
+            $this->headLink()->appendStylesheet($this->baseUrl().'/css/opera.css');
+        }
+        elseif ( strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'webkit') !== false ) {
+          $ub = "Webkit";
+          $this->headLink()->appendStylesheet($this->baseUrl().'/css/webkit.css');
+        }
+        else {
+          $ub = "Other";
+          $this->headLink()->appendStylesheet($this->baseUrl().'/css/other.css');
+        }    
+?>
+<html>
+    <head>
+        <!-- meta tag for safari mobile -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta name="viewport" content="width=1200" />
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headMeta(); ?>        
+    </head>
+    <body>
+        <?php echo $this->headScript(); ?>
+        <?php if (substr($_SERVER['REQUEST_URI'],1,4) == "auth") $protocol = "https://"; else $protocol = "http://";?>
+        <script type="text/javascript" charset="utf-8" src="<?php echo $protocol?>widgets.twimg.com/j/2/widget.js"></script>
+        <?php include('menu.php');  ?>
+
+  
+<div id="content">
+
+		<?php echo $this->layout()->content; ?>
+
+</div>
+<!-- Only show this section if on the home page and perhaps a couple of others-->
+<?php if ((substr($_SERVER['REQUEST_URI'],1,4) != "auth")&&(substr($_SERVER['REQUEST_URI'],1,5) != "admin")) {?>
+<div id="contact_section">
+    <div id="contact_content" class="stage">        
+        <table id="contact_form">
+            <tr>          
+                <td><?php echo $this->action('contact','auth')?></td>
+            </tr>
+        </table>
+        <table id="contact_twitter" border="0">
+            <tr>
+                <td/><!--<img src="/img/news.png" border="0">-->
+            </tr>
+            <tr>
+                <td> 
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php //echo $this->action('news','auth')?>
+                </td>
+            </tr>    
+                 
+        </table>
+    </div>
+</div>
+<?php }?>
+<div id="footer_ruleoff">
+    <div id="footer_ruleoff_content" class="stage">
+        <!--<a href="#">Terms of Use</a>-->
+    </div>
+</div>
+<div id="sitemap">
+<div id="sitemap_content">
+<div id="sitemap_container4">
+	<div id="sitemap_container3">
+		<div id="sitemap_container2">
+			<div id="sitemap_container1">
+				<div id="sitemap_col1">
+					<!-- Column one start -->
+					<h3>National Curriculum</h3>
+                    <p><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/239040/PRIMARY_national_curriculum_-_Physical_education.pdf">2014 National Curriculum</a></p>
+                    <p><a href="http://www.education.gov.uk/" target="_blank">Department for Education (DfE)</a></p>
+                    <!-- Column one end -->
+				</div>
+				<div id="sitemap_col2">
+					<!-- Column two start -->
+					
+					<!-- Column two end -->
+				</div>
+				<div id="sitemap_col3">
+					<!-- Column three start -->
+					<h3>Assistance</h3>
+                    <p><a href="/pricesandservices">Prices and Services</a></p>
+                    <p><a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">Purchase PEplanning</a></p>
+                    <p><a href="/contactus">Contact Us</a></p>
+                    <p><a href="/learn/faqs">FAQs</a></p>
+                    <p><a href="/learn/video">Video Tutorials</a></p>
+					<!-- Column three end -->
+				</div>
+				<div id="sitemap_col4">
+					<!-- Column four start -->
+					<h3><a href="/learn/partners/" title="Visit our Partners page">Partners</a></h3>
+                    <p><a href="http://www.5-a-day.tv/" target="_blank">5-a-day-tv</a></p>
+                    <p><a href="http://www.sportsuk.org.uk/" target="_blank">Sports UK</a></p>
+                    <p><a href="http://www.itfacilitas.co.uk" target="_blank">IT Facilitas</a></p>
+                    <p><a href="http://www.ictinspires.co.uk" target="_blank">ICT Inspires</a></p>
+					<!-- Column four end -->
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>
+</div>
+</div>
+<div id="footer">
+	<div id="footer_content">
+      <p>Copyright &copy; 2012 PE Planning. All rights reserved.&nbsp;&nbsp;<a href="http://www.peplanning.org.uk/tplan/termsandconditions.pdf">Terms of Use</a></p>
+      <p><a href="/">Home</a> &nbsp;|&nbsp; <a href="/aboutus">About Us</a> &nbsp;|&nbsp; <a onClick="javascript:showOverlay('Register');">Register</a> &nbsp;|&nbsp; <a href="/createaplan">Plan a Lesson</a> &nbsp;|&nbsp; <a href="/staffroom">Staffroom</a>&nbsp;|&nbsp; <a href="/contactus">Contact</a></p>
+      <p><b>PE Planning</b> &nbsp;Innovation House, Devonshire Street, Keighley, BD21 2AU &nbsp; Tel. +44 (0) 1535 644777 &nbsp; &nbsp;Email. <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk</a><div id="itf_logo"><a href="http://www.itfacilitas.co.uk"><span>itfacilitas</span></a></div></p>
+      </div>
+</div>
+        <script>
+
+        $(document).ready(function() {
+
+        var root = $("#scroller").scrollable({circular: false}).autoscroll({ interval: 1000, autoplay: false });
+
+        window.api = root.data("scrollable");
+
+        $("#browsable").scrollable().navigator();
+            
+        
+    
+});
+         </script>
+
+    </body>
+</html>

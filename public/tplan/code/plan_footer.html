@@ -1,0 +1,35 @@
+<html>
+ <head>
+<script>
+function subst() {
+  var vars={};
+  var x=document.location.search.substring(1).split('&');
+  for (var i in x) {var z=x[i].split('=',2);vars[z[0]] = unescape(z[1]);}
+  var x=['frompage','topage','page','webpage','section','subsection','subsubsection'];
+  for (var i in x) {
+    var y = document.getElementsByClassName(x[i]);
+    for (var j=0; j<y.length; ++j) y[j].textContent = vars[x[i]];
+  }
+}
+</script> </head>
+ <body onLoad="subst()" style="border:0; margin: 0;">
+  <table  style="width: 175%; text-align:right; font-size:24px;">
+   <tbody>
+    <tr>
+     <td class="section" style="text-align:right">&nbsp;
+      
+     </td>
+     <td style="text-align:right">
+      Page <span class="page"></span> of <span class="topage"></span>
+     </td>
+    </tr>
+    <tr>
+     <td colspan="2">
+      <img border="none" src="../../img/lesson_footer.jpg" style="top: 0; left: 0; z-index:-1; position:absolute;" />
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <br />
+ </body>
+</html>

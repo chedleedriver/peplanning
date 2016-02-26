@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Queue.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885800000000" remote="130602885800000000" Dst="2" />
+<file name="BlobInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885740000000" remote="130602885740000000" Dst="2" />
+<file name="Blob.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885710000000" remote="130602885710000000" Dst="2" />
+<file name="QueueMessage.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885830000000" remote="130602885830000000" Dst="2" />
+<file name="LeaseInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885770000000" remote="130602885770000000" Dst="2" />
+<file name="BatchStorageAbstract.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885660000000" remote="130602885660000000" Dst="2" />
+<file name="TableEntity.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885890000000" remote="130602885890000000" Dst="2" />
+<file name="Batch.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885640000000" remote="130602885640000000" Dst="2" />
+<file name="StorageEntityAbstract.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885860000000" remote="130602885860000000" Dst="2" />
+<file name="TableEntityQuery.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885900000000" remote="130602885900000000" Dst="2" />
+<file name="SignedIdentifier.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885840000000" remote="130602885840000000" Dst="2" />
+<file name="QueueInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885810000000" remote="130602885810000000" Dst="2" />
+<file name="DynamicTableEntity.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885760000000" remote="130602885760000000" Dst="2" />
+<file name="Table.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885870000000" remote="130602885870000000" Dst="2" />
+<file name="TableInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885920000000" remote="130602885920000000" Dst="2" />
+<file name="PageRegionInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885790000000" remote="130602885790000000" Dst="2" />
+<file name="BlobContainer.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885730000000" remote="130602885730000000" Dst="2" />
+</dwsync>

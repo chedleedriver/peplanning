@@ -1,0 +1,90 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <h2>PEplanning is used by over 100 schools... </h2>
+                                                <div class="my-rulez">
+                                                    <div>
+                                                        <p>"Teachers who have always been reluctant and under confident teaching PE have found the plans give them the guidance they need to teach well. Many report much more focused lessons in which the children are learning new skills and having fun. Hence the teachers are enjoying teaching PE more than they have before."</p>
+                                                        <p><i>James Terrett (The Redstart Primary School)</i></p>
+                                                    </div>
+                                                    <div class="endbg">
+                                                        <p>"I'm really impressed with the website. It provides a brilliant and innovative resource for any adult teaching PE, whatever their level of expertise. It allows teachers to produce tailor made high quality PE planning with a wide range of fun sports activities that really work in practice with the children. It is quick and easy to use and can save hours of planning time. The expert advice and specialist knowledge within the lesson plans ensure that teachers can plan for differentiation and progression. I would highly recommend the website as a planning tool for PE."</p>
+                                                        <p><i>Trish Gavins, Headteacher (Whetley Primary School)</i></p>
+                                                    </div>
+                                                    <div>
+                                                        <p>“Up until last year the school was using a huge range of different programmes for PE, mostly relying on teacher's knowledge for delivering lessons. This led to differing quality PE lessons being delivered across the school, with no clear progression. The planning was often old and mixed quality. Since using PE planning the whole school PE curriculum has been reviewed and revitalised and the change has been amazing. PE planning has provided a whole range of topics that can be planned as blocks with all the hard work done. The planning topics range from foundation to level 4 and enable the teachers to have plans at their finger tips which are clearly laid out for the time span they need, with all the information necessary to deliver exciting, differentiated lessons and include clear progression and assessment. Feedback from across all Key stages has been incredibly positive. I would highly recommend the site to any school and it is excellent value for money.”</p>
+                                                        <p><i>Richard Lloyd, PE Coordinator (Wessex Primary School)</i></p>
+                                                    </div>
+                                                    <div class="endbg">
+                                                        <p>"PE Planning has made a massive difference to me and my class.  I can now give my class high quality PE lessons with very little subject knowledge, I found the set plan option suited me better at first but now I create my own unique lessons using the custom option, I had no idea I could teach my class what a ‘fling throw’ is!! This resource has enabled me to teach PE with confidence."</p>
+                                                        <p><i>Laura Cawood, Teacher (Princeville Primary School)</i></p>
+                                                    </div>
+                                                    <div>
+                                                        <p>"Having worked in Primary school PE for the past seven years, I am always on the lookout for teaching resources that provide fresh and stimulating activities. PE Planning enables me to access a range of sports with so many activities for each. The way they have linked their activities to the National Curriculum is very reassuring, it is the best resource I have found by far. "</p>
+                                                        <p><i>Ben Foster, PE Development Officer</i></p>
+                                                    </div>
+                                                    <div class="endbg">
+                                                        <p>"I am a PE Coach currently working in a primary school teaching from Reception pupils through to Year 6. The PE Planning website is very useful as it provides a huge range of activity options in different sports. It allows me to differentiate between plans through picking and choosing which activities I want to do, as well enabling me to ensure I am reaching the appropriate National Curriculum level for each particular class."</p>
+                                                        <p><i>Jessica Baker, PE Coach  (Thornbury Primary School)</i></p>
+                                                    </div>
+                                                    <div>
+                                                        <p>"PE planning gives me confidence to teach sports which I know very little about, the endless amount of activities means I can keep PE fresh and engaging."</p>
+                                                        <p><i>Jenna Mudd (Victoria Primary School)</i></p>
+                                                    </div>
+                                                    
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                </tr>
+            </table>
+        </div>

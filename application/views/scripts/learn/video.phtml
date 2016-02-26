@@ -1,0 +1,96 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div class="learn_content" style="margin-bottom:200px;">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                      <table>
+                        <tr>
+                          <td colspan=2>
+                             <div id="resources_img_title_video"><span>Demonstration Videos</span></div>    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan=2>
+                            <p>Our video guides show you the various resources we have to offer and how to access them</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/tj1m1Mg-kS4?rel=0' frameborder='0' allowfullscreen></iframe></div>   
+                          </td>
+                          <td valign="top">
+                            <p>1 – How to plan a lesson: See how quick and easy planning your PE can be with PEplanning</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/lLY_KcqFvSo?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                          </td>
+                          <td valign="top">
+                            <p>2 – Staffroom: See how to access all the services PEplanning has to offer</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/RUoNFQRvNYU?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                          </td>
+                          <td valign="top">
+                            <p>3 – How to edit: All plans you create with PEplanning can be edited to meet your needs. See how easy this is here</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/m7GAI2a2TTw?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                          </td>
+                          <td valign="top">
+                            <p>4 – How to create your own: With PEplanning you can create own PE lesson plans. See how here</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/s9ASbEOoBOw?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                          </td>
+                          <td valign="top">
+                            <p>5 – Assessment: See the range of assessment options available for each unit of work you create</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class='you_tube_content'><iframe width='320' height='240' src='http://www.youtube.com/embed/Tm9ZauaW_B0?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                          </td>
+                          <td valign="top">
+                            <p>6 – Additional Resources: We have a range of resources to support you in delivering your school sport programme. See them all here</p>
+                          </td>
+                        </tr>
+                      </table>
+                      
+                      
+                    </td>
+                </tr>
+            </table>
+        </div>

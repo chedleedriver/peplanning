@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="UpdateConferenceTemplateParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881070000000" remote="130602881070000000" Dst="2" />
+<file name="GetConferenceTemplateParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880830000000" remote="130602880830000000" Dst="2" />
+<file name="GetConferenceStatusResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880770000000" remote="130602880770000000" Dst="2" />
+<file name="CreateConferenceResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880670000000" remote="130602880670000000" Dst="2" />
+<file name="GetRunningConferenceResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880930000000" remote="130602880930000000" Dst="2" />
+<file name="AddConferenceTemplateParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880600000000" remote="130602880600000000" Dst="2" />
+<file name="UpdateConferenceResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881050000000" remote="130602881050000000" Dst="2" />
+<file name="CreateConferenceTemplateResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880710000000" remote="130602880710000000" Dst="2" />
+<file name="GetConferenceListResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880750000000" remote="130602880750000000" Dst="2" />
+<file name="GetConferenceListResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880740000000" remote="130602880740000000" Dst="2" />
+<file name="GetParticipantStatusResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880910000000" remote="130602880910000000" Dst="2" />
+<file name="RemoveParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881040000000" remote="130602881040000000" Dst="2" />
+<file name="NewParticipantResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880970000000" remote="130602880970000000" Dst="2" />
+<file name="CreateConferenceResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880690000000" remote="130602880690000000" Dst="2" />
+<file name="CCSResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880630000000" remote="130602880630000000" Dst="2" />
+<file name="GetConferenceTemplateResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880880000000" remote="130602880880000000" Dst="2" />
+<file name="RemoveConferenceTemplateResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881020000000" remote="130602881020000000" Dst="2" />
+<file name="RemoveConferenceResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880990000000" remote="130602880990000000" Dst="2" />
+<file name="RemoveConferenceTemplateParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881010000000" remote="130602881010000000" Dst="2" />
+<file name="CommitConferenceResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880640000000" remote="130602880640000000" Dst="2" />
+<file name="GetConferenceTemplateParticipantResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880850000000" remote="130602880850000000" Dst="2" />
+<file name="ConferenceCallAbstract.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880660000000" remote="130602880660000000" Dst="2" />
+<file name="GetConferenceStatusResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880790000000" remote="130602880790000000" Dst="2" />
+<file name="GetParticipantStatusResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880900000000" remote="130602880900000000" Dst="2" />
+<file name="GetConferenceTemplateResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880860000000" remote="130602880860000000" Dst="2" />
+<file name="UpdateParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881100000000" remote="130602881100000000" Dst="2" />
+<file name="NewParticipantResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880960000000" remote="130602880960000000" Dst="2" />
+<file name="GetConferenceTemplateListResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880800000000" remote="130602880800000000" Dst="2" />
+<file name="GetRunningConferenceResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880940000000" remote="130602880940000000" Dst="2" />
+<file name="GetConferenceTemplateListResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880820000000" remote="130602880820000000" Dst="2" />
+<file name="CreateConferenceTemplateResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880720000000" remote="130602880720000000" Dst="2" />
+<file name="UpdateConferenceTemplateResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602881090000000" remote="130602881090000000" Dst="2" />
+<file name="AddConferenceTemplateParticipantResponseType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602880610000000" remote="130602880610000000" Dst="2" />
+</dwsync>

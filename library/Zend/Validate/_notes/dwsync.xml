@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Iban.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892340000000" remote="130602892340000000" Dst="2" />
+<file name="Identical.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892350000000" remote="130602892350000000" Dst="2" />
+<file name="NotEmpty.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892460000000" remote="130602892460000000" Dst="2" />
+<file name="Ccnum.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891810000000" remote="130602891810000000" Dst="2" />
+<file name="EmailAddress.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891930000000" remote="130602891930000000" Dst="2" />
+<file name="Float.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892210000000" remote="130602892210000000" Dst="2" />
+<file name="Alnum.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891350000000" remote="130602891350000000" Dst="2" />
+<file name="GreaterThan.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892220000000" remote="130602892220000000" Dst="2" />
+<file name="Alpha.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891360000000" remote="130602891360000000" Dst="2" />
+<file name="Regex.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892520000000" remote="130602892520000000" Dst="2" />
+<file name="InArray.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892360000000" remote="130602892360000000" Dst="2" />
+<file name="Interface.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892380000000" remote="130602892380000000" Dst="2" />
+<file name="Int.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892370000000" remote="130602892370000000" Dst="2" />
+<file name="PostCode.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892480000000" remote="130602892480000000" Dst="2" />
+<file name="Exception.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891940000000" remote="130602891940000000" Dst="2" />
+<file name="Date.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891850000000" remote="130602891850000000" Dst="2" />
+<file name="Barcode.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891770000000" remote="130602891770000000" Dst="2" />
+<file name="StringLength.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892600000000" remote="130602892600000000" Dst="2" />
+<file name="Between.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891780000000" remote="130602891780000000" Dst="2" />
+<file name="Abstract.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891340000000" remote="130602891340000000" Dst="2" />
+<file name="LessThan.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892450000000" remote="130602892450000000" Dst="2" />
+<file name="Hex.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892240000000" remote="130602892240000000" Dst="2" />
+<file name="Digits.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891920000000" remote="130602891920000000" Dst="2" />
+<file name="Ip.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892400000000" remote="130602892400000000" Dst="2" />
+<file name="Callback.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891800000000" remote="130602891800000000" Dst="2" />
+<file name="Isbn.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892410000000" remote="130602892410000000" Dst="2" />
+<file name="CreditCard.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891840000000" remote="130602891840000000" Dst="2" />
+<file name="Hostname.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892320000000" remote="130602892320000000" Dst="2" />
+</dwsync>

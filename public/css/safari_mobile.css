@@ -1,0 +1,398 @@
+/*---- CSS FOR MOBILE SAFARI -------------------------------*/
+
+select{width:120%;}
+
+#videoplayer_title{top:0px;}
+#videoplayer_content{top:30px;}
+#videoplayer_footer{top:45px;}
+#nature_contact{padding-left:5px; padding-top:10px;}
+#nature_contact:hover{padding-left:5px; padding-top:10px;}
+#mylessons_title { padding-top:17px;}
+    #wizard select{padding-left:10px; padding-top:17px;}
+    #wizard select:hover{padding-left:10px; padding-top:17px;}
+    #button_area_reg{top:-147px;}
+    #button_area_cancel_reg{top:-147px;}
+    #button_area_sub{top:-109px;}
+    #button_area_cancel_sub{top:-109px;}
+    #button_area_trial{float:right; position:relative; top:-264px;}
+    #button_area_cancel_trial{float:right; position:relative; top:-264px;}
+    #type_sub{padding-left:5px; padding-top:10px;}
+    #type_sub:hover{padding-left:5px; padding-top:10px;}
+    #role_reg{padding-left:5px; padding-top:10px;}
+    #role_reg:hover{padding-left:5px; padding-top:10px;}
+    #role_trial{padding-left:5px; padding-top:10px;}
+    #role_trial:hover{padding-left:5px; padding-top:10px;}
+    #sel_level{padding-left:5px; padding-top:10px;}
+    #sel_level:hover{padding-left:5px; padding-top:10px;}
+    #sel_topic{padding-left:5px; padding-top:10px;}
+    #sel_topic:hover{padding-left:5px; padding-top:10px;}
+    #sel_num_lessons{padding-left:5px; padding-top:10px;}
+    #sel_num_lessons:hover{padding-left:5px; padding-top:10px;}
+    #assess_sel{padding-left:5px; padding-top:10px;}
+    #assess_sel:hover{padding-left:5px; padding-top:10px;}
+    #what{padding-left:5px; padding-top:10px;}
+    #what:hover{padding-left:5px; padding-top:10px;}
+
+
+
+/*---- General PopUp related content -----------------------------------------*/
+.popup_input {border:0px dashed #000; background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 0px;
+              -webkit-appearance: none;
+              height:38px; border:none; outline:none; font-size:16px; font-weight:bold; color:#666; padding-left:8px;
+            position:relative;left:111px; top:-15px;}
+
+/*SELECT BOX WORKAROUND*/
+.select_overlay {width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -80px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; z-index:100;}
+.select_overlay:hover {width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -120px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; z-index:100;}
+.styled-select {z-index:101; position:relative; top:0px; overflow:hidden; background-color:transparent; border:0px; outline:none; -moz-opacity:0; filter:alpha(opacity:0); opacity:0;-webkit-appearance:none; -moz-appearance:none; color:#666;}
+.form_select_overlay {width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -80px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; z-index:100;}
+.form_select_overlay:hover {width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -120px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; z-index:100;}
+
+/*----- HOMEPAGE -------------------------------------------------------------*/
+
+#videoplayer {z-index:1701;}
+#videoplayer_content {position:relative;}
+#register_btn {z-index: 7002;}
+
+#left_grad {z-index:1700;}
+#right_grad {z-index:1700;}
+
+/*----- POPUP REGISTER -------------------------------------------------------*/
+#name_reg_msg, #email_reg_msg, #email_confirm_reg_msg, #password_reg_msg, #role_reg_msg {text-align:left;}
+
+#select_reg {position:absolute; top:350px; left:314px; }
+#select_reg:hover {position:absolute; top:350px; left:314px;}
+
+#reg_form_buttons {position:relative; top:-40px;}
+
+/*---- POPUP SUBSCRIBE BOX ---------------------------------------------------
+#Subscribe {position:absolute; top:85px;}
+
+#name_sub, #email_sub, #email_confirm_sub, #school_sub, #postcode_sub {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:36px;
+           border:none; outline:none; padding-left:8px; padding-top:3px;
+           font-size:16px; color:#666;}
+
+#name_sub {position:relative; top:-30px;}
+#name_sub_msg {position:relative; top:45px;}
+
+#email_sub {position:relative; top:-30px;}
+#email_sub_msg {border:0px dashed #000; position:relative; top:-228px;}
+
+#school_sub {position:relative; top:-30px;}
+#school_sub_msg {position:relative; top:-208px;}
+
+#postcode_sub {position:relative; top:-30px;}
+#postcode_sub_msg {position:relative; top:-186px;}
+
+#sub_type {position:relative; top:-31px; background: url('/img/sprite_regform.png') no-repeat 0 -80px; overflow:hidden; font-size:16px; color:#666; width:334px;
+           padding-bottom:10px; padding-left:5px; height:40px; border:0px; outline:none; -webkit-appearance: none;}
+
+#select_sub {position:absolute; top:280px; left:40px; }
+#select_sub:hover {position:absolute; top:280px; left:40px;}
+
+#sub_form_buttons {position:relative; top:187px;}
+*/
+
+/*----- FREE TRIAL -----------------------------------------------------------*/
+
+#tryitfree_btn a {border:0px dashed #000; position:relative; top:0px; left:-258px;}
+#name_trial, #email_trial, #email_confirm_trial, #school_trial, #postcode_trial, #telephone_trial {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+#name_trial_msg, #email_trial_msg, #email_confirm_trial_msg, #telephone_trial_msg, #school_trial_msg, #postcode_trial_msg, #role_trial_msg {text-align:left;}
+
+#role_trial {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_trial:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+        #name_trial {position:relative; top:-20px;}
+        #name_trial_msg {position:relative; top:64px; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_trial {position:relative; top:-25px;}
+        #email_trial_msg {text-align: left; position:relative; top:-372px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_trial {position:relative; top:-30px;}
+        #email_confirm_trial_msg {text-align:left; position:relative; top:-360px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_trial {position:relative; top:-30px;}
+        #telephone_trial_msg {position:relative; top:-348px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_trial {position:relative; top:-30px;}
+        #school_trial_msg {position:relative; top:-330px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_trial {position:relative; top:-30px; height:29px; padding-top:10px;}
+        #postcode_trial_msg {position:relative; top:-314px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #role_trial {position:relative; top:-31px;}
+        #role_trial_msg {position:relative; top:-292px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+        #select_trial {position:relative; top:-380px;}
+        #select_trial:hover {position:relative; top:-380px;}
+
+        #trial_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
+/*----- Subscribe -----------------------------------------------------------*/
+
+#name_subscribe, #email_subscribe, #email_confirm_subscribe, #school_subscribe, #postcode_subscribe, #telephone_subscribe {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+#name_subscribe_msg, #email_subscribe_msg, #email_confirm_subscribe_msg, #telephone_subscribe_msg, #school_subscribe_msg, #postcode_subscribe_msg, #role_subscribe_msg, #password_subscribe_msg {text-align:left;}
+
+/*#role_subscribe {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_subscribe:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+*/
+#role_subscribe {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_subscribe:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+        #name_subscribe {position:relative; top:0px;}
+        #name_subscribe_msg {position:relative; top:0px; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_subscribe {position:relative; top:0px;}
+        #email_subscribe_msg {text-align: left; position:relative; top:0px;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_subscribe {position:relative; top:0px;}
+        #email_confirm_subscribe_msg {text-align:left; position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_subscribe {position:relative; top:0px;}
+        #telephone_subscribe_msg {position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_subscribe {position:relative; top:0px;}
+        #school_subscribe_msg {position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_subscribe {position:relative; top:0px; height:29px; padding-top:10px;}
+        #postcode_subscribe_msg {position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #role_subscribe {position:relative; top:316px; padding-top:10px;left:5px;}
+        #role_subscribe_msg {position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+
+        #select_subscribe {position:relative; top:0px;}
+        #select_subscribe:hover {position:relative; top:0px;}
+
+        #subscribe_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
+
+        #classnum_payment, #name_payment, #email_payment, #email_confirm_payment, #school_payment, #postcode_payment, #telephone_payment, #school_address_payment_1, #school_address_payment_2, #school_address_payment_3 {background: url('/img/sprite_regform.png') no-repeat; width:334px; height:38px;
+           border:none; outline:none; padding-left:8px;
+           font-size:16px; color:#666;}
+
+#classnum_payment_msg, #service_payment_msg, #name_payment_msg, #email_payment_msg, #email_confirm_payment_msg, #telephone_payment_msg, #school_payment_msg, #postcode_payment_msg, #role_payment_msg, #school_address_1_payment_msg, #school_address_2_payment_msg, #school_address_3_payment_msg {text-align:left;}
+
+#role_payment {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+#role_payment:hover {background-color:transparent; overflow: hidden; background: url('/img/sprite_regform.png') no-repeat 0 -120px;
+              -webkit-appearance: none;
+              width:334px; height:40px; border:none; outline:none; font-size:16px; color:#666; padding-left:8px;}
+
+        #service_payment {position:relative; top:0;}
+        #service_payment_msg {position:relative; top:0; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #name_payment {position:relative; top:0;}
+        #name_payment_msg {position:relative; top:0; font-size: 11px; font-weight:normal; color:#ec1d1d; border:none; outline:none; background-color:transparent; width:350px;}
+        #email_payment {position:relative; top:0;}
+        #email_payment_msg {text-align: left; position:relative; top:0;font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #email_confirm_payment {position:relative; top:0;}
+        #email_confirm_payment_msg {text-align:left; position:relative; top:0px; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #telephone_payment {position:relative; top:0;}
+        #telephone_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_payment {position:relative; top:0;}
+        #school_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_1 {position:relative; top:0;}
+        #school_address_1_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_2 {position:relative; top:0;}
+        #school_address_2_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #school_address_payment_3 {position:relative; top:0;}
+        #school_address_3_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #postcode_payment {position:relative; top:0; height:29px; padding-top:10px;}
+        #postcode_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #classnum_payment {position:relative; top:0; height:29px; padding-top:10px;}
+        #classnum_payment_msg {position:relative; top:0; font-size: 11px; font-weight: normal; color:#ec1d1d; border:none; outline:none; background-color: transparent;width:350px;}
+        #payment_form_buttons {border:0px dashed #000; position:relative; top:7px; left:0px;}
+#payment_btn a {border:0px dashed #000; position:relative; top:0; left:-220px;}
+
+
+        /*----- CREATE YOUR OWN PLAN (level5) ----------------------------------------*/
+#createunit {text-align:center; border:0px dashed #000;}
+#createunit dd {-moz-margin-start:0px;}
+
+#intro-label,#own_sel_level-label, #own_sel_topic-label, #own_sel_num_lessons-label, #plan_type-label,
+#ownplan_level_overlay-label, #ownplan_sel_level_overlay-label, #ownplan_topic_overlay-label, #ownplan_numlessons_overlay-label {display:none;}
+
+#ownplan_level_overlay, #ownplan_topic_overlay, #ownplan_numlessons_overlay {
+    font-size:16px; font-weight:normal; color:#666; background: url('/img/sprite_regform.png') no-repeat 0 -80px;
+    width:334px; height:34px; padding-top:5px; padding-left:8px; border:none; outline:none;}
+
+#ownplan_level_overlay {border:0px dashed #000; position:absolute; top:130px; left:133px;} /*position:absolute; top:140px; left:50px;*/
+#ownplan_topic_overlay {border:0px dashed #000; position:absolute; top:182px; left:133px;}
+#ownplan_numlessons_overlay {border:0px dashed #000; position:absolute; top:235px; left:133px;}
+
+#own_sel_level, #own_sel_topic, #own_sel_num_lessons {background: url('/img/sprite_regform.png') no-repeat 0 -80px; width:334px; height:40px;
+                                                      border:none; outline:none; padding-left:5px; padding-top:5px; font-size:16px; color:#666; -moz-appearance:none; margin-bottom:13px;}
+#own_sel_level:hover, #own_sel_topic, #own_sel_num_lessons {cursor:pointer;}
+
+/*#own_sel_level {margin-top:15px;}*/
+
+
+/*----- CREATE A PLAN --------------------------------------------------------*/
+
+#wizard .error {
+    border:1px solid red;
+    /**background:url('/img/bg_select_input.png') no-repeat;**/
+    color:#666;
+}
+#wizard .error:hover {
+    border:1px solid red;
+    /**background:url('/img/bg_select_input.png') no-repeat;**/
+    color:#666;
+}
+.error{text-align: center;color: red;}
+
+
+#select_level_overlay {position:relative; top:50px; left:220px; background: url('/img/bg_select_input.png') no-repeat 0 0 !important; width:460px; height:61px; z-index:100; 
+                       border:0px; outline:none; padding-left:10px; font-weight:normal; font-size:18px; color:#666;}
+#sel_level {position:relative; top:-34px; height:61px; z-index:101; padding-left:5px; padding-top:10px;}
+
+#select_activity_overlay {position:relative; top:50px; left:220px; background: url('/img/bg_select_input.png') no-repeat 0 0 !important; width:460px; height:61px; z-index:100;
+                       border:0px; outline:none; padding-left:10px; font-weight:normal; font-size:18px; color:#666;}
+#sel_topic {position:relative; top:-34px; height:61px; z-index:101; padding-left:5px; padding-top:10px;}
+
+#select_lessons_overlay {position:relative; top:50px; left:220px; background: url('/img/bg_select_input.png') no-repeat 0 0 !important; width:460px; height:61px; z-index:100;
+                       border:0px; outline:none; padding-left:10px; font-weight:normal; font-size:18px; color:#666;}
+#sel_num_lessons {position:relative; top:-34px; height:61px; z-index:101; padding-left:5px; padding-top:10px;}
+
+
+#step1_help {position:relative; top:-50px;}
+#step2_help {position:relative; top:-50px;}
+#step3_help {position:relative; top:-50px;}
+
+/* slide - STEP 4 */
+#unit_title {position:relative; top:40px;}
+/* slide - STEP 5 */
+#staffroom_intro_content span {position:relative; left:40px;}
+#staffroom_intro_title {position:relative; left:30px; top:-10px;}
+
+#summary td {padding:5px;}
+
+/*--- end step edit ---*/
+
+
+/*cont / back buttons*/
+    #step1_cont{border:0px dashed #000; position:relative; top: 95px; left:720px;}
+    #step2_back{border:0px dashed #000; position:relative; top: 95px; left:-1px;}
+    #step2_cont{border:0px dashed #000; position:relative; top: 95px; left:540px;}
+    #step3_back{border:0px dashed #000; position:relative; top: 119px; left:-1px;}
+    #step3_cont{border:0px dashed #000; position:relative; top: 119px; left:540px;}
+    #step4_back{border:0px dashed #000; position:relative; top: 181px; left:-1px;}
+    #step4_cont{border:0px dashed #000; position:relative; top: 181px; left:540px;}
+
+    #step5_buttons {width:100%; position:relative;top:70px;}
+    #step5_back{border:0px dashed #000; float:left; position:relative; top:0px; left:-2px;}
+    #step5_cont{border:0px dashed #000; float:right; position:relative; top:0px; left:-50px;}
+
+
+/*----- ADDITIONAL RESOURCES -------------------------------------------------*/
+#resources_table {}
+
+.resources_mydisplay {display:block; height:115px; max-height:115px; border:0px dashed #000; vertical-align: middle; margin-bottom:38px;}
+.resources_img_display {display:block; height:115px; max-height:115px; border:0px dashed #000; vertical-align: middle; margin-bottom:38px;}
+
+#resources {font-family: Arial, Verdana, Helvetica, sans-serif; font-size:13px; color:#666; line-height:18px; margin-left:auto; margin-right:auto; width:987px;}
+#resources_left_section {width:200px;}
+#resources_title {}
+#resources_img_title span {visibility:hidden;}
+#resources_img_title {background: url('/img/resources_img_title.png') no-repeat 0 0; display:block; width:366px; height:28px; margin-top:20px; margin-bottom: 13px;}
+
+#resources_subtitle {margin-bottom: 28px; text-align:justify; color:#808386;}
+
+#resources_img_longterm {background: url('/img/resources_img_longterm.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_sportsday {background: url('/img/resources_img_festivals.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_festivals {background: url('/img/resources_img_sportsday.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_rugby {background: url('/img/resources_img_rugby.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_volleyball {background: url('/img/resources_img_volleyball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_netball {background: url('/img/resources_img_netball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_golf {background: url('/img/resources_img_golf.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_basketball {background: url('/img/resources_img_basketball.png') no-repeat 0 0; display:block; width:185px; height:115px;margin-top:0;}
+#resources_img_title_basketball {background: url('/img/resources_img_title_basketball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+#resources_img_title_volleyball {background: url('/img/resources_img_title_volleyball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+#resources_img_title_netball {background: url('/img/resources_img_title_netball.png') no-repeat 0 0; display:block; width:445px; height:50px;margin-top:30px;}
+#resources_img_title_add_lesson_plans {background: url('/img/resources_img_title_add_lesson_plans.png') no-repeat 0 0; display:block; width:555px; height:50px;margin-top:30px;}
+#resources_img_gym_rc {background: url('/img/resources_img_gym_rc.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_gym_rc_index {background: url('/img/resources_img_gym_rc_index.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+#resources_img_longterm span, #resources_img_sportsday span, #resources_img_festivals span, #resources_img_gym_rc span, #resources_img_gym_rc_index span {visibility:hidden;}
+
+.resources_midsection_subtitle {font-weight:bold; text-align:left; display:block;}
+.resources_midsection_desc {font-weight:normal; text-align:justify; display:block;}
+.resources_midsection_desc a {text-decoration:underline; color:#1aa6ab;}
+.resources_midsection_desc a:hover {text-decoration:underline; color: #ee803a;}
+
+#badge_staffroom {float:right; position:relative; top:-12px;}
+#badge_staffroom a {background:url('/img/icon_staffroom.png') no-repeat 0 0; display:block; height:67px; width:186px;}
+#badge_staffroom a span {visibility:hidden;}
+
+    /*---- Long Term Guidance ----*/
+    #resources_img_title_longterm {background: url('/img/resources_img_title_longterm.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_longterm span {visibility: hidden;}
+
+    /*---- Sports Day Guidance ----*/
+    #resources_img_title_sportsday {background: url('/img/resources_img_title_sportsday.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_sportsday span {visibility: hidden;}
+
+    #resources_img_sportsdayoutline {background: url('/img/resources_img_sportsdayoutline.png') no-repeat 0 0; height:115px; display:block; margin-top:20px;}
+    #resources_img_sportsdayoutline span {visibility: hidden;}
+    #resources_img_sportsday_eventcards {background: url('/img/resources_img_sportsday_eventcards.png') no-repeat 0 0; height:115px; display:block; margin-top:20px;}
+    #resources_img_sportsday_eventcards span {visibility: hidden;}
+
+    /*---- Sports Festival Plans ----*/
+    #resources_img_title_festival {background: url('/img/resources_img_title_festivals.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+
+    #resources_img_festivals_athletics {background: url('/img/resources_img_festivals_athletics.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_gym {background: url('/img/resources_img_festivals_gym.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_ttennis {background: url('/img/resources_img_festivals_ttennis.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_rounders {background: url('/img/resources_img_festivals_rounders.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_saf {background: url('/img/resources_img_festivals_saf.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+    #resources_img_festivals_netball {background: url('/img/resources_img_festivals_netball.png') no-repeat 0 0; display:block; width:185px; height:115px;}
+
+    #resources_img_title_festival span, #resources_img_festivals_athletics span, #resources_img_festivals_gym span, #resources_img_festivals_ttennis span,
+    #resources_img_festivals_rounders span, #resources_img_festivals_saf span, #resources_img_festivals_netball span, #resources_img_basketball span, #resources_img_title_basketball span,
+    #resources_img_title_add_lesson_plans span, #resources_img_golf span,  #resources_img_volleyball span,  #resources_img_rugby span {visibility: hidden;}
+
+    .resources_backlink {height:25px; border-bottom: 1px dotted #d0d0d0; margin-top:15px; color:#1aa6ab;}
+    .resources_backlink a {width:200px; background: url('/img/sprite_icons_gui.png') no-repeat 0 0; width:12px; height:12px; display:block; color:#1aa6ab;}
+    .resources_backlink span {margin-left:22px; position:relative; top:-2px; width:200px; display:block;}
+    .resources_backlink span:hover { margin-left:22px; position:relative; top:-2px; text-decoration:underline; color:#1aa6ab; display:block;}
+
+    .resources_backto_staffroom {height:25px; border-bottom: 1px dotted #d0d0d0; margin-top:15px; color:#1aa6ab; text-align:left;}
+    .resources_backto_staffroom a {background: url('/img/sprite_icons_gui.png') no-repeat 0 0; width:12px; height:12px; display:block; color:#1aa6ab;}
+    .resources_backto_staffroom span {margin-left:22px; position:relative; top:-2px; width:200px; display:block;}
+    .resources_backto_staffroom span:hover {margin-left:22px; position:relative; top:-2px; text-decoration:underline; color: #1aa6ab; display:block;}
+
+    #resources_right_section {float:right; border:0px dashed #000; position:relative; top:-80px;}
+    /*----------Gym Resource Cards-------------------------------------------------*/
+    #resources_img_title_gym_rc {background: url('/img/resources_img_title_gym_rc.png') no-repeat 0 0; height:35px; display:block; margin-top:20px;}
+    #resources_img_title_gym_rc span {visibility: hidden;}
+
+/*---- GET IN TOUCH ----------------------------------------------------------*/
+#name_contact, #email_contact, #details_contact, #nature_contact {font-size:16px; font-weight:normal; color:#666;}
+
+#nature_contact {position:relative; top:-95px; width:334px; height:40px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -80px;}
+#nature_contact:hover {position:relative; top:-95px; width:334px; height:40px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -120px;}
+
+#select_git {position:absolute; top:110px; left:40px; width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -80px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666;}
+#select_git:hover {position:absolute; top:110px; left:40px; width:334px; height:38px; padding-left:6px; background: url('/img/sprite_regform.png') no-repeat 0px -120px;
+             border:0px; outline:none; font-weight:normal; font-size:16px; color:#666;}
+
+/*---- TWITTER ---------------------------------------------------------------*/
+#contact_twitter td {padding-left:90px;width:50%;}
+#twitter_title {text-align:right; width:337px; height:23px; background: url('/img/title_twitter.png') no-repeat; position:absolute; left:514px; z-index:1020;}
+#videoplayer_content a span { color:#9d9b9b; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:107px; padding-left:50px; }
+#videoplayer_content a span:hover { color:#F3010A; font-size:21px; font-weight:normal; padding-bottom:0px; padding-top:107px; padding-left:50px; }
+#button_area_contact {top:-202px; left:346px;}
+
+#company_details{ top:7px;}
+#contact_form{
+   width: 300px;
+}
+

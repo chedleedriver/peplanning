@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/www/crt
+END
+sts.crt
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/www/crt/sts.crt
+END
+idp.crt
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/www/crt/idp.crt
+END
+CA.crt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/www/crt/CA.crt
+END

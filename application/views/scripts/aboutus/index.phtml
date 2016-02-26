@@ -1,0 +1,93 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div>
+                                                    <h2>Hello, we are PEplanning...</h2>
+                                                    <div class="my-rule">
+                                                        <p>We are here to help Primary Schools with Physical education. We understand the need to plan specific lessons for your pupils and the time this takes. Our understanding of physical education within the National Curriculum inspired the creation of our unique lesson planning service;</p>
+                                                        <ul>
+                                                            <li>A range of sports linked to the National Curriculum</li>
+                                                            <li>Our unique lesson planner</li>
+                                                            <li>Assessment for learning</li>
+                                                            <li>Long-term plans, Sports Day and Festival resources</li>
+                                                            <li>Our promise to constantly update the service we provide</li>
+                                                        </ul>
+
+                                                        <p>PEplanning is a partnership between PE specialists, <b>Sports UK</b>, and software development company, <b>IT Facilitas</b>. This unique blend of expertise has enabled us to build our online service as you see it today.</p>
+                                                        <p>Since we began in 2009, we have continually developed our service which is now used by over 100 primary schools throughout the UK and overseas. Our team constantly explores ways to improve the service we provide, adding new sports and updating activities are a part of everyday life in the PEplanning office as well as keeping fully up-to-date with the National Curriculum.</p>
+                                                        <div align="right"><a href="/pricesandservices" class="aboutus-links">Look at our prices and services...</a></div>
+
+                                                    </div>
+                                                    <h2>What makes us unique?</h2>
+                                                    <div class="my-rule">
+                                                        <p>With our unique lesson planner you control the content of your PE lessons. You can plan with confidence adding relevant progression and differentiation to create rewarding and enjoyable PE lessons for everyone.</p>
+                                                        <p>As well as supporting you with the creation of your PE lessons we have a range of services to support your school sport programmes from Sports Day Guidance to Long Term planning. We are constantly updating and adding further resources as part of our service.</p>
+                                                     
+                                                        <p></p>
+                                                        <a href="/createaplan" class="aboutus-link">Why not try planning a lesson?</a>
+                                                    </div>
+                                                    <h2>Aims and goals</h2>
+                                                    <div class="my-rule">
+                                                        <p>Our aim is to create a constantly evolving PE service for all primary schools. We are currently working to establish partnerships with large IT providers and local education authorities to enable us to reach all schools, giving everyone the opportunity to use PEplanning.</p>
+                                                        <!--<a href="/learn/slide1" class="aboutus-link">Read more about PEplanning</a>-->
+                                                    </div>
+                                                                                        
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+                

@@ -1,0 +1,59 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div id="resources">        
+        <table class="stage">
+            <tr>
+                <td colspan="3">
+                    <div class="resources_backlink"><a href="/resources"><span>back to Additional Resources</span></a></div>
+                    <div id="resources_title">
+                        <div id="resources_img_title_longterm"><span>Long Term Planning Guidance</span></div>
+                        <div id="resources_subtitle"><span>Our PE curriculum has been recently revised to meet the requirements of the new National Curriculum.  Our PE Lessons are active and engaging and inspire all pupils to succeed and excel in competitive sport and other physically-demanding activities.</span></div>
+						<div id="resources_subtitle"><span>We have adopted the recommended objectives of the National Curriculum and our aim for the end of each key stage is for pupils to know, apply and understand the matters, skills and processes specified in the following Long Term Plans…</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="resources_left_section" valign="top">
+                    <a id="resources_img_longterm" class="resources_img_display"><span>Long Term Planning Guidance KS1</span></a>
+                    <a id="resources_img_longterm" class="resources_img_display"><span>Long Term Planning Guidance KS2</span></a>
+                </td>
+                <td id="left_section_spacing"></td>
+                <td id="middle_section" valign="top">
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Long Term Planning Guidance KS1</span></p>
+                        <span class="resources_midsection_desc"><p></p><a onclick="downloadFile('LongTermPlanKS1.pdf',<?php echo $this->level?>)">Download resource (.pdf)</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Long Term Planning Guidance KS2<p></p></span></p>
+                        <span class="resources_midsection_desc"><p></p><a onclick="downloadFile('LongTermPlanKS2.pdf',<?php echo $this->level?>)">Download resource (.pdf)</a></span>
+                    </div>                            
+                </td>
+                <td id="resources_right_section" valign="top" class="vindent_right" rowspan="3">
+                    <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                    </div><p></p>
+               </td>
+            </tr>
+            
+        </table>
+    </div>
+    <div id="status_bar" style="display:none;"></div>

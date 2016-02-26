@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="oasis-sstc-saml-schema-assertion-1.1.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538143207" remote="130887962600000000" />
+<file name="oasis-sstc-saml-schema-protocol-1.1.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538293328" remote="130887962600000000" />
+<file name="saml-schema-assertion-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538343364" remote="130887962600000000" />
+<file name="saml-schema-authn-context-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538403389" remote="130887962600000000" />
+<file name="saml-schema-authn-context-auth-telephony-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538453425" remote="130887962600000000" />
+<file name="saml-schema-authn-context-ip-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538513462" remote="130887962600000000" />
+<file name="saml-schema-authn-context-ippword-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538563514" remote="130887962600000000" />
+<file name="saml-schema-authn-context-kerberos-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538623539" remote="130887962600000000" />
+<file name="saml-schema-authn-context-mobileonefactor-reg-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538683580" remote="130887962610000000" />
+<file name="saml-schema-authn-context-mobileonefactor-unreg-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538733612" remote="130887962610000000" />
+<file name="saml-schema-authn-context-mobiletwofactor-reg-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538783648" remote="130887962610000000" />
+<file name="saml-schema-authn-context-mobiletwofactor-unreg-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538833708" remote="130887962610000000" />
+<file name="saml-schema-authn-context-nomad-telephony-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538873740" remote="130887962610000000" />
+<file name="saml-schema-authn-context-personal-telephony-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538923739" remote="130887962610000000" />
+<file name="saml-schema-authn-context-pgp-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490538973804" remote="130887962610000000" />
+<file name="saml-schema-authn-context-ppt-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539033841" remote="130887962610000000" />
+<file name="saml-schema-authn-context-pword-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539093857" remote="130887962610000000" />
+<file name="saml-schema-authn-context-session-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539153931" remote="130887962610000000" />
+<file name="saml-schema-authn-context-smartcard-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539203963" remote="130887962620000000" />
+<file name="saml-schema-authn-context-smartcardpki-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539264004" remote="130887962620000000" />
+<file name="saml-schema-authn-context-softwarepki-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539334021" remote="130887962620000000" />
+<file name="saml-schema-authn-context-spki-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539384053" remote="130887962620000000" />
+<file name="saml-schema-authn-context-srp-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539424113" remote="130887962620000000" />
+<file name="saml-schema-authn-context-sslcert-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539474116" remote="130887962620000000" />
+<file name="saml-schema-authn-context-telephony-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539524173" remote="130887962620000000" />
+<file name="saml-schema-authn-context-timesync-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539584189" remote="130887962620000000" />
+<file name="saml-schema-authn-context-types-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539634225" remote="130887962620000000" />
+<file name="saml-schema-authn-context-x509-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539674253" remote="130887962620000000" />
+<file name="saml-schema-authn-context-xmldsig-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539724285" remote="130887962630000000" />
+<file name="saml-schema-dce-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539774317" remote="130887962630000000" />
+<file name="saml-schema-ecp-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539814381" remote="130887962630000000" />
+<file name="saml-schema-metadata-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539864413" remote="130887962630000000" />
+<file name="saml-schema-protocol-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539924425" remote="130887962630000000" />
+<file name="saml-schema-x500-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490539984491" remote="130887962630000000" />
+<file name="saml-schema-xacml-2.0.xsd" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463490540034527" remote="130887962630000000" />
+</dwsync>

@@ -1,0 +1,132 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+
+<!-- fixed items -->
+
+    <table id="page_position">
+        <tr>
+            <td>
+                <table id="centerpage_shell" align="center">
+                    <tr>
+                        <td>
+                            <!--<table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title">
+                                          
+                                        </div>
+                                        <div id="videoplayer_content">
+                                            <iframe width="320" height="240" src="//www.youtube.com/embed/tj1m1Mg-kS4?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                          <p id="videoplayer_text">See more <a href="/learn/video">Videos on how to use PEPlanning</a></p>
+                                        </div> 
+                                     </td>
+                                </tr>                                
+                            </table>
+                            <table id="register_btn">
+                                <tr>
+                                <td>
+                                        <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe"><span>register button</span></a>
+                                    </td>
+                                </tr>
+                            </table>-->
+                                                        
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- end of fixed items -->
+
+<div id="main_feature">
+        <!-- slides -->        
+        <div class="scrollable" id="scroller">
+            <div id="left_grad"></div>
+            <div class="items">                
+                <div id="slide1">
+                    <a id="link_poster_homepage" href="/createaplan" style="color:#1aa6ab;"><span>5 step planning processin</span></a>
+                    <div id="slide1_content" onclick="location='/learn/newnc'">
+                        <div id="slide1_learnmore" class="learnmore"><a href="/aboutus"><span>learn more</span></a></div>
+                        
+                        <!-- For IE7 only -->
+                        <div id="get_started" class="ie7">
+                            <table id="register_btn">
+                                <tr>
+                                    <td>
+                                <td>
+                                        <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe"><span>register button</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title"></div>
+                                        <div id="videoplayer_content">
+                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                            <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
+                                        </div>
+                                    </td>
+                                </tr>                                
+                            </table></div>
+                        <!-- end IE7 only -->
+                    </div>
+                </div>
+                
+            </div>
+            <div id="right_grad"></div>
+        </div>        
+        <br clear="all" />            
+        <div id="feature_arrows">
+            <div id="arrow_left" class="prev browse left"><span>left</span></div>
+            <div id="arrow_right" class="next browse right"><span>right</span></div>
+        </div>
+</div>
+<?php
+if(!isset($_COOKIE['site-pref']))
+ {
+ ?>     
+<script>
+$(document).ready(function() {
+	function showAnnouncement()
+	  {
+		$(function() {
+		  $( "#announcement" ).dialog({
+			width: 840,
+			height: 580,
+			modal: true,
+			show: { effect: "highlight", color: "#ffffff" },
+			closeText: "ask me later",
+			position: { my: "center", at: "center", of: window }
+		   });
+		});
+		$("#announcement").removeClass('hidden');
+	  }
+	  window.setTimeout(showAnnouncement, 3000);
+});
+</script>
+<div id="announcement" class="hidden">
+  <div class="inner">
+    <img border=none src="/img/newsite.png" alt="Web site announcement" usemap="#Map" />
+      <map name="Map" id="Map">
+          <area alt="Try the new site" title="New Site" href="/auth/site-pref?site=new" shape="rect" coords="288,367,496,414" />
+          <area alt="Stick with the Old One" title="Old Site" href="/auth/site-pref?site=old" shape="rect" coords="349,436,440,454" />
+      </map>
+  </div>
+</div>
+<?php }?>    

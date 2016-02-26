@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="IsCompressed.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892090000000" remote="130602892090000000" Dst="2" />
+<file name="Count.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891970000000" remote="130602891970000000" Dst="2" />
+<file name="Extension.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892030000000" remote="130602892030000000" Dst="2" />
+<file name="Hash.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892060000000" remote="130602892060000000" Dst="2" />
+<file name="FilesSize.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892050000000" remote="130602892050000000" Dst="2" />
+<file name="Exists.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892020000000" remote="130602892020000000" Dst="2" />
+<file name="MimeType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892130000000" remote="130602892130000000" Dst="2" />
+<file name="ExcludeMimeType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892010000000" remote="130602892010000000" Dst="2" />
+<file name="IsImage.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892100000000" remote="130602892100000000" Dst="2" />
+<file name="NotExists.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892140000000" remote="130602892140000000" Dst="2" />
+<file name="Size.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892170000000" remote="130602892170000000" Dst="2" />
+<file name="ExcludeExtension.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891990000000" remote="130602891990000000" Dst="2" />
+<file name="Upload.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892180000000" remote="130602892180000000" Dst="2" />
+<file name="ImageSize.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892070000000" remote="130602892070000000" Dst="2" />
+<file name="Md5.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892110000000" remote="130602892110000000" Dst="2" />
+<file name="WordCount.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892190000000" remote="130602892190000000" Dst="2" />
+<file name="Sha1.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602892150000000" remote="130602892150000000" Dst="2" />
+<file name="Crc32.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602891980000000" remote="130602891980000000" Dst="2" />
+</dwsync>

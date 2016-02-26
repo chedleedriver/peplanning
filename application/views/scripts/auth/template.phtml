@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <title>Email</title>
+        <style><!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #ffffff;
+            font-family:Arial, sans-serif;
+            color:#666;
+            border:0px;
+            outline:none;
+            margin:0px;
+            }
+        --></style>
+    </head>
+    <body>
+        <table border=0 cellSpacing=0 cellPadding=0 width="100%" style="border:0px; outline:none;">
+            <tr>
+        <td bgColor=#ffffff valign=top>
+                    <table style="font-family:Arial, sans-serif; max-width:600px; margin-top:10px; margin-bottom:10px; font-size:13px; border-collapse:collapse; background-color:#ffffff; border-bottom: #d8d8d8 1px solid; border-left: #d8d8d8 1px solid; border-right: #d8d8d8 1px solid; outline:none;" align=center>
+                        <tr>
+                            <td><a href="http://<?php echo $_SERVER['HTTP_HOST']?>"><img border=0 alt="" src="http://www.peplanning.org.uk/img/banner_top2.png" width='600px' height='65px'></a></td>
+                        </tr>
+      <tr>
+                            <td style="font-family:Arial, sans-serif; padding-left:20px;padding-top:20px;padding-bottom:20px; padding-right:20px; width:560px;">
+                                
+                                
+                                
+                                <?php if($this->template_type=='reactivate'){?>
+
+                                    <p>Hi <?php echo $this->name ?>,</p>
+                                    <p>You have just requested a reactivation of your account at www.peplanning.org.uk </p>
+                                    <p>Click the link below to reactivate your PEplanning account<br> <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/activate?email_address=<?php echo urldecode($this->username)?>&key=<?php echo $this->activation ?>'><b>activate your account now</b></a></p>                                    
+                                    <p>Kind Regards</p>
+                                    <p>Matthew</p>
+                                    <p><b>Matthew Dykes</b></p>
+                                    <p><i>Sales & Marketing</i></p>
+                                    <br /><br />
+                                    <?php }?>
+                                <?php if($this->template_type=='subscribe'){?>
+                                    <p>Hi <?php echo $this->name ?>,</p>
+                                    <p>Thank you for taking the time to subscribe to PEplanning. You have registered on the website with the following details:</p>
+                                    <p>Username: <?php echo $this->username ?></p>
+                                    <p>Password: <?php echo $this->password ?></p>
+                                    <p>Website <a href='http://<?php echo $_SERVER['HTTP_HOST']?>'>www.peplanning.org.uk</a></p>
+                              <p><b><u>Trial Support</u></b></p>
+                                    <p>We are here to help. If you require assistance at any time during your free subscription please don't hesitate to get in touch:</p>
+                                    <p>E:<a href='mailto:info@peplanning.org.uk'>info@peplanning.org.uk</a></p>
+                              <p>T:0333 900 2332</p>
+                                    <p>PEplanning offers a range of services to support primary school physical education.....</p>
+                                    <ul>
+                                    <li><b>Lesson planning</b>, including creating your own lesson plans</li>
+                                    <li><b>Assessment</b> for learning to track and record pupils progress</li>
+                                    <li><b>Additional resources</b> to support school sport programmes</li>
+                                    </ul>
+                                    <p>To see these services and the full range of resources we have to offer please take a look at our series of <a href='http://<?php echo $_SERVER['HTTP_HOST']?>/learn/video'>video demonstrations</a> showing how the website works.</p>
+                                    <br />
+                                    <p>Thank you once again for taking the time to trial PEplanning.</p>
+                                    <br />
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The Planning Team</b></p>
+                                    <br /><br />
+                                    <?php }?>
+                                
+                                <?php if($this->template_type=='payment_peteacher'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for purchasing PEplanning.</p>
+                                    <p>We have received your details and a representative from PEplanning will contact you shortly to process your subscription.</p>
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The Planning Team</b></p>
+                                    <br /><br />
+        <?php }?><?php if($this->template_type=='payment_peschool'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for purchasing PEplanning.</p>
+                                    <p>In order to set up PEplanning accounts for all your teachers please complete the attached 'Account Registration Form' and return it to <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk</a></p>
+                                    <p>Once we receive the completed form we will create and activate all your accounts so your school can start using PEplanning.</p>
+                                    <p>In the meantime if you have any questions please contact us:</p>
+                                    <p>T:  01535 644777<br><a href="mailto:info@peplanning.org.uk">E: info@peplanning.org.uk</a></p>
+                                    <p>We look forward to supporting you with your PE provision.</p>
+                                    <p>Kind Regards</p>
+                                    <p>Matthew</p>
+                                    <p><b>Matthew Dykes</b></p>
+                                    <p><i>Sales & Marketing</i></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='trial'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>You have recently requested a trial with www.peplanning.org.uk</p>
+                                    <p>for your school: <?php echo $this->school  ?></p>
+                                    <p>A representative from PE Planning will be in touch in the next few days to make the neccesary arrangements</p>
+                                    <p>May I take this opportunity to thank you for your interest in PE planning</p>
+                                    <p>Kind Regards</p>
+                                    <p>Matthew</p>
+                                    <p><b>Matthew Dykes</b></p>
+                                    <p><i>Sales & Marketing</i></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='subscription_1'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p></p>
+                                    <p>Happy Planning</p>
+                                    <br>
+                                    <p><strong>The PE Planning Team</strong></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='subscription_7'){
+									?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>At PEplanning we pride ourselves on providing teacher with the tools to deliver exciting and engaging, National Curriculum linked PE lessons. All our resources have been updated to reflect the new curriculum that came into effect in September..</p>
+                                    <p>With PEplanning you can be confident you are using the most up to date resources available. Being an on-line service we are constantly updating and adding resources to the website to reflect the latest developments in the national curriculum and best practise guidelines. All updates to the website are completed with no disruption to our service and are available at no extra cost.</p>
+                                    <p>As always if you have any questions our service, including the curriculum update, please don't hesitate to get in touch.</p>
+<div style='float:right; width:200px; height: 80px; border:thin; border-color:#999';border-style: solid;>
+                                    <p>See what teachers have to say about PEplanning and the impact it has had in their school - <a href='http://www.peplanning.org.uk/learn/endorsements'>read more</a></p>
+                                    </div>
+                                    <p>Kindest Regards</p>
+                                    <br>
+                                    <p><b>The PE Planning Team</b></p>
+                                    <br />
+                                    <br />
+        						
+									<?php }?>
+                                <?php if($this->template_type=='subscription_15'){
+									if($this->role == 4) {
+									?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                              <p>I hope you are enjoying using our service and finding the resources beneficial in your school.</p>
+                              <p>As the schools PE Coordinator I wanted to introduce myself and let you know I am available to answer any questions you might have about our service. Please feel free to contact me at anytime:</p>
+                                    <p>E:<a href='mailto:info@peplanning.org.uk'>info@peplanning.org.uk</a></p>
+                                    <p>T:0333 900 2332</p>
+                              <p>With the Sport Premium funding now established and the new National Curriculum in effect, PEplanning can help ensure you are meeting the 'funding accountability criteria' set by Ofsted. A PEschool subscription gives every teacher access to the full range of resources on the website, ensuring all lessons are focussed on the new curriculum and giving every pupil the opportunity to experience high quality physical education.</p>
+                                    <p>With the new national curriculum now in effect are your PE resources up to date? Being an on-line service we have been able to update all our resources and provide schools with a smooth transition to the new curriculum. Being on-line also allows us to continually add new resources to the website to further enhance the service we provide. Whenever we launch new resources they are made available to our subscribed users as no extra cost.</p>
+                              <p>With school subscriptions starting from &#163;100 + VAT, PEplanning provides exceptional value for money. To find out more about subscription options and prices visit our<a href='http://www.peplanning.org.uk/pricesandservices'> Prices and Services</a> page.</p>
+                              <p><i>(*Order before your free subscription ends and you will be eligible for a 10% discount)</i></p>
+                              <p>If you would like to subscribe to PEplanning or discuss any aspect of our service please don't hesitate to get in touch.</p>
+                                    <br>
+                                    <p>Kindest Regards</p>
+                                    <br>
+                                    <p><strong>Richard Logan</strong></p>
+                                    <br />
+                              <p style="text-align: left; LINE-HEIGHT: 14px; MARGIN: 16px 16px 32px; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px"><i>*Order must be placed before your free 30 day subscription ends</i></p>
+                                    <br />
+        						<?php }
+								else {?>
+                                	<p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>I hope you are finding our range of resources useful and your pupils are enjoying their PE lessons.</p>
+                              <p>Is your schools PE coordinator interested to learn more about our service or would they like a 30 day free trial for themselves? If so please ask them to contact me directly:</p>
+                                    <p>E:<a href='mailto:info@peplanning.org.uk'>info@peplanning.org.uk</a></p>
+                                    <p>T:0333 900 2332</p>
+                                    <p><b>Interested in subscribing?</b></p>
+                              <p>Did you know you are eligible for a 10% discount? Subscribe your school to our service before the end of your 30 day free trial and you'll receive a 10% discount on the subscription price.</p>
+                              <p>Please let me know if you have any questions about our service or would like any further information on subscription options.</p>
+                                    <p>Kindest regards</p>
+                                    <br />
+                                    <p><b>Richard Logan</b></p>
+                                    <br /><br />
+        						<?php }
+								}?>
+                                <?php if($this->template_type=='subscription_20'){?>
+                              <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>I hope you are finding the planning and resources we have to offer helpful. Often teachers find it is useful to speak to us during their trial. We can answer any questions you may have about the service and let you know about resources and functions you may not yet of experienced on the website.</p>
+<p>Please feel free to contact me at anytime on:</p>
+                              <p>T: 0333 900 2332</p>
+                                    <p>Alternatively let me know a good time to contact you (PPA time, after school) and I'll happily give you a call.</p>
+<p>Have you had chance to take a good look around the website? We've more to offer than our '5 steplesson plans'...</p>
+                                    <ul>
+                                      <li><strong>Our unique lesson planner allow you to create your own plans </strong></li>
+                                      <li><strong>Assessment for learning allows you to track and record pupil progress </strong></li>
+                                      <li><strong>Our 'Additional Resources' support extra-curricular sport provision </strong></li>
+                                    </ul>
+                              <p>Make sure you've taken a moment to watch our <a href='http://www.peplanning.org.uk/learn/video'>video guides</a> that show the full range of resources PEplanning has to offer.</p>
+<p>I look forward to speaking to you soon.</p>
+                                    <p>Kindest regards</p>
+                                    <p><strong>Richard Logan</strong></p>
+<br /><br />
+        <?php }?> 
+                                <?php if($this->template_type=='subscription_27'){?>
+                              <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for taking the time to use our service, I hope you have been enjoying the benefits that PEplanning has to offer during your 30 day free subscription. Your trial period ends in 3 days.</p>
+                                    <p>What happens at the end of my trial?</p>
+                                    <ul>
+                                      <li>Your access to the lessons you have planned and resources on the website will be restricted</li>
+                                      <li> If you would like to continue to use PEplanning we offer a range of subscription options to suit your circumstances - <a href='http://www.peplanning.org.uk/pricesandservices'>Subscription Options and Prices</a>. Order before the end of your trial and you will receive a 10% discount on your subscription price</li>
+                                    </ul>
+                                    <p>If you would like to discuss subscription options or our service in general please don't hesitate to contact me on the details below.</p>
+<p><strong>If you don't wish to subscribe at this time, I would be grateful if you took a few moments to complete our questionnaire and let us know what you think about PEplanning - <a href='http://www.peplanning.org.uk/auth/feedback'>click here</a></strong></p>
+<p><strong>Thank you for trialling PEplanning, we look forward to working with you in the future.</strong></p>
+                                    <p>Kindest regards</p>
+                                    <p><strong>Richard Logan</strong></p>
+<br /><br />
+        <?php }?>
+		<?php if($this->template_type=='subscription_posttrial'){?>
+                              <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for taking the time to trial PEplanning. I was interested to see how you found the experience and would be grateful to receive any feedback you have.</p>
+<p>Did you see the full range of resources we have to offer?</p>
+                                    <ul>
+                                      <li><strong>Lesson planning</strong> - national curriculum linked planning created in moments</li>
+                                      <li><strong> Assessment</strong> - tools to track and record pupil progress</li>
+                                      <li><strong>Bespoke lesson planning</strong> - create lessons to meet your pupils needs </li>
+                                      <li><strong>Additional resources</strong> - support in delivering engaging school sport programmes</li>
+                              </ul>
+                                      <p>If not our series of video demonstrations show the full range of resources we have to offer - video demonstrations</p>
+                              <p>If you would like a little more time to show your colleagues the range of resources we have on offer, let me know and I can arrange this for you.</p>
+<p>Please don't hesitate to contact me on the details below with questions you may have about our service or to discuss <a href='http://www.peplanning.org.uk/pricesandservices'>Subscription Options</a>.</p>
+<p>Kindest regards</p>
+                                    <p><strong>Richard Logan</strong></p>
+                                    <p><br />
+                                      <br />
+                                      <?php }?>
+                                      <?php if($this->template_type=='subscription_noplan'){?>
+                                    </p>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>We noticed that you haven't started planning yet. If you require any support using or accessing your PEplanning account please let us know, we are here to help: <a href='http://www.peplanning.org.uk/contactus'>Contact Us</a></p>
+                                    <p>You subscribed with this username : <?php echo $this->email  ?></p>
+                                    <p>If you need to reset your password please follow this <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/forgot-password?email=<?php echo urldecode($this->email)?>'>link</a>
+                                    <p>Happy Planning</p>
+                                    <br>
+                                    <p><strong>The PE Planning Team</strong></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='subscription_nologin'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>We noticed that you haven't logged into your PEplanning account and started planning yet. If you require any support using or accessing your PEplanning account please let us know, we are here to help: <a href='http://www.peplanning.org.uk/contactus'>Contact Us</a></p>
+                                    <p>You subscribed with this username : <?php echo $this->email  ?></p>
+                                    <p>If you need to reactivate this account or reset your password please follow this <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/reactivate?email_address=<?php echo urldecode($this->email)?>'>link</a>
+                                    <p>Happy Planning</p>
+                                    <br>
+                                    <p><strong>The PE Planning Team</strong></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='subscription_toomanyplans'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>As a free subscriber we limit the number of lesson plans you can create to 10. This gives you the opportunity to see how our service works, the quality of the lesson plans you can teach with PEplanning and how PEplanning can support your schools PE provision.</p>
+                                    <p>You have now created the maximum number of 10 plans and are therefore unable to create anymore.</p>
+                                    <p>What can I do now?</p>
+                                    <ul>
+                                        <li>You can continue to access the lesson plans you have already created and teach these. But you will be unable to create any more units of work</li>
+                                        <li>To continue to use our service you need to become one of our paid subscribers. To find out more about this or subscribe - <a href='http://www.peplanning.org.uk/learn/faqs'>click here</a></li>
+                                    </ul>
+                                    <p>If you wish to discuss your circumstances or any aspect of our service please contact us at:</p>
+                                    <p>T:  01535 644777</p>
+                                    <p>E: <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk</a></p>
+                                    <p>Kindest Regards.</p>
+                                    <br>
+                                    <p><strong>The PE Planning Team</strong></p>
+                                    <br /><br />
+        <?php }?>
+                                <?php if($this->template_type=='passwordreset'){?>
+                                    <p>Hi <?php echo $this->name ?>,</p>
+                                    <p>A password reset has been requested for this account at www.peplanning.org.uk
+                                    <p>Your new password is <?php echo $this->user_password ?></p>
+                                    <p>Please log into the site using your new password. Once logged into the site you can change your password by updating your personal settings by clicking on your name.</p>
+                                    <p>If you did not make such a request please ignore this email.</p>
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The PE Planning Team</b></p>
+                                    <br /><br />
+
+        <?php }?>
+                                <?php if($this->template_type=='form_getintouch'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for your enquiry. A member of the PEplanning team will respond to you within 48 hours.</p>
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The PE Planning Team</b></p>
+                                    <br /><br />
+                                <?php }?>
+                                <?php if($this->template_type=='form_sendmessage'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for your enquiry. A member of the PEplanning team will respond to you within 48 hours.</p>
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The PE Planning Team</b></p>
+                                    <br /><br />
+                                <?php }?>
+                                 <?php if($this->template_type=='subscribed_peteacher'){?>
+                                    <p>Hi <?php echo $this->name  ?>,</p>
+                                    <p>Thank you for your enquiry. A member of the PEplanning team will respond to you within 48 hours.</p>
+                                    <p>Kind Regards</p>
+                                    <br>
+                                    <p><b>The PE Planning Team</b></p>
+                                    <br /><br />
+                                <?php }?>
+
+                                
+          </td>
+      </tr>
+      <tr>
+                            <td><img border=0 src="http://www.peplanning.org.uk/img/border_bottom.png" width='600px' height='11'></td>
+                        </tr>
+      <tr>
+                            <td align='left' style="font-family:Arial, sans-serif; background-color:#f9f9f9; color:#a1a1a1; padding-left:10px;padding-top:8px;padding-bottom:10px; font-size:12px;">
+                                <b>PEplanning</b> Innovation House, 26 Devonshire Street, Keighley, West Yorkshire, BD21 2AU 
+        <br />
+        <br />Web. <a href="http://www.peplanning.org.uk">www.peplanning.org.uk</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br />Tel. +44 (0) 333 900 2332 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br />Email. <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk</a>
+                            </td>
+      </tr>
+                    </table>
+                    <table id='privacy' border=0 cellSpacing=0 cellPadding=0 width='600px' align='center' style="max-width:600px; width:600px; font-size:11px;">
+                        <tr>
+                            <td>
+                                <p style="text-align: left; LINE-HEIGHT: 12px; MARGIN: 16px 16px 32px; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px">
+                <p color=#a1a1a1>Your privacy is important to us. Please review PEplanning's online privacy policy by <a href="http://www.peplanning.org.uk/tplan/termsandconditions.php"><span color=#a1a1a1>clicking here</span></a>.                
+                <p color=#a1a1a1" >If you no longer wish to receive emails from PE Planning then please use this link to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/auth/unsubscribe?email=<?php echo urldecode($this->email)?>"><span color=#a1a1a1>unsubscribe</span></a>.<br>
+                  <br>
+                  <span color=#a1a1a1>&copy; 2012 PEplanning. All rights reserved. Registered office: PEplanning, Innovation House, Devonshire Street, Keighley, BD21 2AU. Company registered in England & Wales no. 7297171.</span>                
+                            </td>
+                        </tr>
+
+                </table>
+                </td>
+            </tr>
+    </table>
+  </body>
+</html>

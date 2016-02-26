@@ -1,0 +1,72 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } 
+?>
+<div class="mask">
+	<div id="user-list" class="">
+    	<div id="myplans_scroll" class="items mask">
+                        
+                            <?php $x=20; //separates scroll pages eg. 5 units per scroll page
+                               $y=0; //counts units
+                               $z=0; //counts units that are not in groups of 5
+                               foreach($this->user_list as $user){
+                                        /**if($this->curr_unit_id==$unit['id']){
+                                        $scroll_num=($y-$z)/5;
+                                        $init_title = $unit['description']; $init_lessons = $unit['id'];
+                                        $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        }
+                                        elseif($y==0){
+                                        $scroll_num=($y-$z)/5;
+                                        $init_title = $unit['description']; $init_lessons = $unit['id'];
+                                        $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        } $y++; //sets workspace to most recent plan
+                                        if(($x == 0)||($x==5)){?><div><?php }
+                                                
+                                            if(in_array($unit['id'], $examples)) echo "<div id='myplans_item_".$unit['id']."' class='item mask' style=\"background: url('/img/item_example.png')\">";
+                                            else echo "<div id='myplans_item_".$unit['id']."' class='item mask'>";
+                                            echo "<div id='myplans_item_item'><span class='item_title' onclick='javascript:getJQLessons(".$unit['id'].",\"".  htmlspecialchars($unit['description'],ENT_QUOTES)."\",".$unit['level_id'].",".$unit['topic_id'].",".$unit['num_lessons'].")'>".htmlspecialchars($unit['description'],ENT_QUOTES)."</span><br />";
+                                            echo "<span class='date'>".date('j M Y', strtotime($unit['date_created']))."</span><br /></div></div>";
+
+                                            $x--;
+                                            if($x==0){ $x=5; $z=0; ?></div><?php }else{$z++;};**/
+										$scroll_num=($y-$z)/20;
+										if(($x == 0)||($x==20)){?><div><?php }
+                                                
+                                            echo "<div id='myplans_item_".$unit['id']."' class='item mask'>";
+                                            echo "<div id='user_item'><span class='item_title'>".$user['name']."</span><br>";
+                                            echo "<span class='date'>".date("F dS, Y H:i",$user['timestamp'])."</span><br /></div></div>";
+
+                                            $x--;
+                                            if($x==0){ $x=20; $z=0; ?></div><?php }else{$z++;};
+											
+                                  }?>    
+                                                               
+		</div>
+	</div>
+                   
+                    <?php if($z!=0){?></div><?php }?>
+                    <div id="sprite_bg_myplans_scroll">
+                        <div id="viewmore_up"><a class="prev"><span>VIEW MORE</span></a></div>
+                        <div id="viewback_down"><a class="next"><span>BACK</span></a></div>
+                    </div>
+                    </div>
+<script>
+$(document).ready(function() {
+    // initialize scrollable with mousewheel support
+    $("#user-list").scrollable({  });
+     $("#user-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
+});
+</script>
+</div>

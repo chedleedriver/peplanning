@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/core/hooks
+END
+hook_frontpage.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/core/hooks/hook_frontpage.php
+END
+hook_sanitycheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/core/hooks/hook_sanitycheck.php
+END

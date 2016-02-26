@@ -1,0 +1,41 @@
+<?php 
+include_once("recaptchalib.php");
+$privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";
+$confirm=$this->confirm;
+if($_GET['process']) $tab_selected=$_GET['process']; else $tab_selected=0;
+if($this->process) $tab_selected=$this->process;?>
+<script>
+var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+<div id='signup-box' class='centred'>
+	<div id='signup-logo'>
+    </div>
+    <div id='signup-div'>
+    	<a href='/'><img border=none src="/img/signup_logo.png"></a>
+    	<div id='signup-form-container'>
+        <ul class='signup-tabs'>
+        	<li><a class='signon-color' href='#signon'>Login</a></li>
+            <li><a class='signup-color' href='#signup'>Sign Up</a></li>
+        </ul>
+        <div class='signup-panes'>
+        	<div class='signon-guidance'>
+            <p class='signon-color'>We are changing the way you sign on to PE Planning.</p>
+            <p class='signon-color'>You are currently using the old username method and you need to change this to use your email address<p>
+            <p class='signon-color'>You will have 60 days to change your username, after which you will no longer be able to sign in<p>
+            <p class='signon-color'>To change your username go to <a href="/auth/changecredentials?process=1" target="new">this page</a></p>
+          	</div>
+            <div class='signup-guidance'>
+            <p class='signup-color'>To sign up for PE Planning simply go to the <a href="/auth/signup#signup" target="new">Sign Up</a> page and follow the intructions there</p>
+            <p class='signup-color'>Signing up for a PE Planning is easy and takes less than a minute<p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+var signUpTabs = $("ul.signup-tabs").tabs("div.signup-panes > div",
+					{initialIndex:<?php echo $tab_selected;?>
+					});
+</script>

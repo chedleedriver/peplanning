@@ -1,0 +1,70 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }
+$_GET['a'] = (isset($_GET['a']) ? $_GET['a'] : 0);
+?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                            <h3>Internet Explorer 8 and Quirks Mode</h3>
+											<p>On occasion, when using Internet Explorer version 8 (IE8) the browser will enter, what is known as, 'Quirks Mode'. There are a number of reasons this can happen, all of which are beyond our control. </p>
+											<p>If you find that when trying to login you get a screen that looks like this:</p>
+                                            <img src="/img/quirk1.png" border="0" />
+                                            <p>One way to get round this to restart your browser and try again. If this doesn't work then you can try the following</p>
+											<p>Click on the 'Tools' menu on the top right corner of the screen and select 'Developer Tools' (If you don't have this option then contact your IT support person)</p>
+                                            <p>You should see a screen like this:</p>
+                                             <img src="/img/quirks2.png" border="0" />
+                                             <p>Note in the red elipse where it says: Document Mode: Quirks. You need to change this to 'Internet Explorer 8 Document Standards Mode'</p>
+                                            <img src="/img/quirks3.png" border="0" />
+                                            <p> Once you do this the page will reload and should look like this:</p>
+                                            <img src="/img/quirks4.png" border="0" />
+                                            <p>You just need to close the developer tools window by clicking on the cross on the right and you can log in</p>
+                                            <p>As always if you would like any further information about this or any other aspect of the service please don't hesitate to <a href="/contactus">contact us</a> </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php 
+
+if($_GET['a']) echo "<script type='text/javascript'>myToggle('#".$_GET['a']."')</script>";
+
+?>

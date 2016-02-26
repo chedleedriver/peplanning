@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process
+END
+ExpectedAuthnContextClassRef.php
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/ExpectedAuthnContextClassRef.php
+END
+PersistentNameID2TargetedID.php
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/PersistentNameID2TargetedID.php
+END
+PersistentNameID.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/PersistentNameID.php
+END
+SQLPersistentNameID.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/SQLPersistentNameID.php
+END
+AttributeNameID.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/AttributeNameID.php
+END
+NameIDAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/NameIDAttribute.php
+END
+TransientNameID.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/TransientNameID.php
+END
+AuthnContextClassRef.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/saml/lib/Auth/Process/AuthnContextClassRef.php
+END

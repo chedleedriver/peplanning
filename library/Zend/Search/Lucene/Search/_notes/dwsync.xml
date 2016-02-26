@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Query.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877260000000" remote="130602877260000000" Dst="2" />
+<file name="QueryParser.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877410000000" remote="130602877410000000" Dst="2" />
+<file name="QueryParserContext.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877420000000" remote="130602877420000000" Dst="2" />
+<file name="QueryEntry.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877360000000" remote="130602877360000000" Dst="2" />
+<file name="QueryHit.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877380000000" remote="130602877380000000" Dst="2" />
+<file name="Similarity.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877510000000" remote="130602877510000000" Dst="2" />
+<file name="Weight.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877620000000" remote="130602877620000000" Dst="2" />
+<file name="QueryToken.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877460000000" remote="130602877460000000" Dst="2" />
+<file name="QueryLexer.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877390000000" remote="130602877390000000" Dst="2" />
+<file name="BooleanExpressionRecognizer.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602876980000000" remote="130602876980000000" Dst="2" />
+<file name="QueryParserException.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602877440000000" remote="130602877440000000" Dst="2" />
+</dwsync>

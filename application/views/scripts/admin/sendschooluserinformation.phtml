@@ -1,0 +1,129 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } 
+?>
+<div class="mask">
+<table class="user-stage">
+			<!--<tr>
+            	<td colspan="3" align="center">
+                	<h2>Enter Search Term: <input type="text" width="128" id="user_search" name="user_search" /> <a href="javascript:void(0)" onclick="adminSearchUser();">GO</a></h2>
+                </td>
+                </tr>-->
+            <tr>
+                <td  valign="top">	
+                </td>
+                <td width="1300px" valign="top">	
+                <p> Below is a list of users for this school. To send an email to them all check this box <input type="checkbox" id="all_school" name="all_school" value=<?php echo $this->where?>> or select individual teachers and then press <input type="button" value="Send" onClick="sendSchoolUserInformation()"></p>                
+<?php 
+// Headings for the table
+/**
+								if (($_GET['direction']=="asc")||(!$_GET['direction'])) $opposite_direction = "desc"; else $opposite_direction = "asc";
+								echo "<div id='user-list_item_".$unit['id']."' class='user-list-item mask'>";
+                                echo "<div id='user_item'>";
+								if($_GET['sort_by']!="id")
+									echo "<a href='/admin/listusers?sort_by=id'><span style='width:55px' class='user-list_item_title'>User ID</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=id&direction=".$opposite_direction."'><span style='width:55px' class='user-list_item_title'><strong>User ID</strong></span></a>";
+								if($_GET['sort_by']!="username")
+                                	echo "<a href='/admin/listusers?sort_by=username'><span style='width:250px' class='user-list_item_title'>Username</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=username&direction=".$opposite_direction."'><span style='width:250px' class='user-list_item_title'><strong>Username</strong></span></a>";
+								if($_GET['sort_by']!="name")
+                                	echo "<a href='/admin/listusers?sort_by=name'><span style='width:150px' class='user-list_item_title'>Name</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=name&direction=".$opposite_direction."'><span style='width:150px' class='user-list_item_title'><strong>Name</strong></span></a>";
+								if($_GET['sort_by']!="email")
+                                	echo "<a href='/admin/listusers?sort_by=email'><span style='width:250px' class='user-list_item_title'>Email</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=email&direction=".$opposite_direction."'><span style='width:250px' class='user-list_item_title'><strong>Email</strong></span></a>";
+								if($_GET['sort_by']!="school")
+                                	echo "<a href='/admin/listusers?sort_by=school'><span style='width:200px' class='user-list_item_title'>School</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=school&direction=".$opposite_direction."'><span style='width:200px' class='user-list_item_title'><strong>School</strong></span></a>";
+								if($_GET['sort_by']!="subscribed")
+                                echo "<a href='/admin/listusers?sort_by=subscribed'><span style='width:75px' class='user-list_item_title'>Date Joined</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=subscribed&direction=".$opposite_direction."'><span style='width:75px' class='user-list_item_title'><strong>Date Joined</strong></span></a>";
+								if($_GET['sort_by']!="num_logins")
+									echo "<a href='/admin/listusers?sort_by=num_logins'><span style='width:50px' class='user-list_item_title'>Logins</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=num_logins&direction=".$opposite_direction."'><span style='width:50px' class='user-list_item_title'><strong>Logins</strong></span></a>";
+								if($_GET['sort_by']!="timestamp")
+                                	echo "<a href='/admin/listusers?sort_by=timestamp'><span style='width:100px' class='user-list_item_title'>Last Login</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=timestamp&direction=".$opposite_direction."'><span style='width:100px' class='user-list_item_title'><strong>Last Login</strong></span></a>";
+								if($_GET['sort_by']!="what")
+									echo "<a href='/admin/listusers?sort_by=what'><span style='width:50px' class='user-list_item_title'>Role</span></a>";
+								else
+									echo "<a href='/admin/listusers?sort_by=what&direction=".$opposite_direction."'><span style='width:50px' class='user-list_item_title'><strong>Role</strong></span></a>";
+								echo "<br /></div></div>";
+**/
+?>	
+						
+                  <div id="user-list" class="user-vertical">
+                      <div id="user-list_scroll" class="items mask">
+                        
+                            <?php 
+							
+							   $x=10; //separates scroll pages eg. 5 units per scroll page
+                               $y=0; //counts units
+                               $z=0; //counts units that are not in groups of 5
+                               foreach($this->user_list as $user){
+                                        
+										$scroll_num=($y-$z)/10;
+										if(($x == 0)||($x==10)){?><div><?php }
+                                                
+                                            echo "<div id='user-list_item_".$unit['id']."' class='user-list-item mask'>";
+                                            echo "<div id='user_item'><input type='checkbox' id='send_users[]' name='send_users[]' value=".($user['id'] ? $user['id'] : 'no id').">";
+											echo "<a href=/admin/edituser?user_id=".$user['id'].">";
+											echo "<span style='width:55px' class='user-list_item'>".($user['id'] ? $user['id'] : 'no id')."</span>";
+                                            echo "<span style='width:230px' class='user-list_item'>".($user['username'] ? $user['username'] : 'no username')."</span>";
+                                            echo "<span style='width:150px' class='user-list_item'>".($user['name'] ? $user['name'] : 'no name')."</span>";
+                                            echo "<span style='width:250px' class='user-list_item'>".($user['email'] ? $user['email'] : 'no email')."</span>";
+                                            echo "<span style='width:200px' class='user-list_item'>".($user['school'] ? $user['school'] : 'no school')."</span>";
+                                            echo "<span style='width:75px' class='user-list_item'>".($user['subscribed'] ? date("d-m-y",$user['subscribed']) : 'no date')."</span>";
+											echo "<span style='width:50px' class='user-list_item'>".($user['num_logins'] ? $user['num_logins'] : '0')."</span>";
+                                            echo "<span style='width:100px' class='user-list_item'>".($user['timestamp'] ? date("j-n-y H:i",$user['timestamp']) : 'not logged in')."</span>";
+											echo "<span style='width:50px' class='user-list_item'>".($user['what'] ? $user['what'] : 'no role')."</span>";
+											echo "</a><br /></div></div>";
+
+                                            $x--;
+                                            if($x==0){ $x=10; $z=0; ?></div><?php }else{$z++;};
+											
+                                  }?>    
+                                                               
+		</div>
+	</div>
+                   
+                    <?php if($z!=0){?></div><?php }?>
+                    <div id="sprite_bg_users_scroll">
+                        <div id="viewmore_up"><a class="prev"><span>VIEW MORE</span></a></div>
+                        <div id="viewback_down"><a class="next"><span>BACK</span></a></div>
+                    </div>
+                    </div>
+                    </td>
+                <td valign="top" class="vindent_right">		
+                </td>
+                </tr>
+                <tr>
+                <td colspan="3" ><p><a href="/admin"> Return to Admin Home</a></p></td>
+                </tr>
+                </table>
+<script>
+$(document).ready(function() {
+    // initialize scrollable with mousewheel support
+    $("#user-list").scrollable({ vertical:true });
+     $("#user-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
+});
+</script>
+</div>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/LICENSE.txt
+END
+Zend_InfoCard_Xml_Security_Transform_EnvelopedSignature.php
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Xml_Security_Transform_EnvelopedSignature.php
+END
+Zend_InfoCard_Xml_Security.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Xml_Security.php
+END
+Zend_InfoCard_Claims.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Claims.php
+END
+Zend_InfoCard_Xml_Security_Transform_XmlExcC14N.php
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Xml_Security_Transform_XmlExcC14N.php
+END
+InfoCard.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/InfoCard.php
+END
+Zend_InfoCard_Xml_Security_Transform.php
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Xml_Security_Transform.php
+END
+Zend_InfoCard_Xml_Assertion_Saml.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/InfoCard/lib/RP/Zend_InfoCard_Xml_Assertion_Saml.php
+END

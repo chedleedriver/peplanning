@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Logger
+END
+LoggingHandlerErrorLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Logger/LoggingHandlerErrorLog.php
+END
+LoggingHandlerFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Logger/LoggingHandlerFile.php
+END
+LoggingHandlerSyslog.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Logger/LoggingHandlerSyslog.php
+END

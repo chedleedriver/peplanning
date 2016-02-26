@@ -1,0 +1,80 @@
+10
+
+dir
+512
+https://github.com:443/chedleedriver/peplanning.git/branches/Live/library/simplesamlphp/modules/saml
+https://github.com:443/chedleedriver/peplanning.git
+
+
+
+2014-06-04T09:20:56.000000Z
+474
+steve.priest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c34e1f8a-686e-5902-ee50-ce57b7db7bff
+
+hooks
+dir
+
+www
+dir
+
+lib
+dir
+
+docs
+dir
+
+default-enable
+file
+
+
+
+
+2014-06-04T09:50:47.301645Z
+bba7d339eb6e98e572e45f1e755639b0
+2014-06-04T09:20:56.000000Z
+474
+steve.priest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+146
+
+dictionaries
+dir
+
+templates
+dir
+

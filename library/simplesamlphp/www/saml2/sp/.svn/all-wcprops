@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp
+END
+SingleLogoutService.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/SingleLogoutService.php
+END
+idpdisco.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/idpdisco.php
+END
+metadata.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/metadata.php
+END
+initSLO.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/initSLO.php
+END
+AssertionConsumerService.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/AssertionConsumerService.php
+END
+initSSO.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/www/saml2/sp/initSSO.php
+END

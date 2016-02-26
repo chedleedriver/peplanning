@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates
+END
+consent.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates/consent.php
+END
+registry.saved.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates/registry.saved.php
+END
+registry.edit.tpl.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates/registry.edit.tpl.php
+END
+authorized.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates/authorized.php
+END
+registry.list.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/modules/oauth/templates/registry.list.php
+END

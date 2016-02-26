@@ -1,0 +1,122 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } 
+?>
+<div class="mask">
+<table class="school-stage">
+			<tr>
+            	<td colspan="3" align="center">
+                	<h2>Enter Search Term: <input type="text" width="128" id="school_search" name="school_search" /> <a href="javascript:void(0)" onclick="adminSearchSchool();">GO</a></h2>
+                </td>
+               <tr>
+            <tr>
+                <td  valign="top">	
+                </td>
+                <td width="1300px" valign="top">	
+<?php 
+// Headings for the table
+								if (($_GET['direction']=="asc")||(!$_GET['direction'])) $opposite_direction = "desc"; else $opposite_direction = "asc";
+								echo "<div id='school-list_item_".$unit['id']."' class='school-list-item mask'>";
+                                echo "<div id='school_item'>";
+								if($_GET['sort_by']!="id")
+									echo "<a href='/admin/listschools?sort_by=id'><span style='width:55px' class='school-list_item_title'>School ID</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=id&direction=".$opposite_direction."'><span style='width:55px' class='school-list_item_title'><strong>School ID</strong></span></a>";
+								if($_GET['sort_by']!="school")
+                                	echo "<a href='/admin/listschools?sort_by=school'><span style='width:250px' class='school-list_item_title'>Name</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=name&direction=".$opposite_direction."'><span style='width:250px' class='school-list_item_title'><strong>Name</strong></span></a>";
+								if($_GET['sort_by']!="postcode")
+									echo "<a href='/admin/listschools?sort_by=postcode'><span style='width:150px' class='school-list_item_title'>Postcode</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=postcode&direction=".$opposite_direction."'><span style='width:150px' class='school-list_item_title'><strong>Postcode</strong></span></a>";
+								if($_GET['sort_by']!="email")
+                                    echo "<a href='/admin/listschools?sort_by=email'><span style='width:250px' class='school-list_item_title'>Email</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=email&direction=".$opposite_direction."'><span style='width:250px' class='school-list_item_title'><strong>Email</strong></span></a>";
+								if($_GET['sort_by']!="contact")
+                                	echo "<a href='/admin/listschools?sort_by=contact'><span style='width:200px' class='school-list_item_title'>Contact</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=contact&direction=".$opposite_direction."'><span style='width:200px' class='school-list_item_title'><strong>Contact</strong></span></a>";
+								if($_GET['sort_by']!="subfrom")
+                                	echo "<a href='/admin/listschools?sort_by=subfrom'><span style='width:75px' class='school-list_item_title'>Date Joined</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=subfrom&direction=".$opposite_direction."'><span style='width:75px' class='school-list_item_title'><strong>Date Joined</strong></span></a>";
+								if($_GET['sort_by']!="classnum")
+									echo "<a href='/admin/listschools?sort_by=classnum'><span style='width:50px' class='school-list_item_title'>Classes</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=classnum&direction=".$opposite_direction."'><span style='width:50px' class='school-list_item_title'><strong>Classes</strong></span></a>";
+								if($_GET['sort_by']!="subto")
+                                	echo "<a href='/admin/listschools?sort_by=subto'><span style='width:100px' class='school-list_item_title'>Renewal</span></a>";
+								else
+									echo "<a href='/admin/listschools?sort_by=subto&direction=".$opposite_direction."'><span style='width:100px' class='school-list_item_title'><strong>Renewal</strong></span></a>";
+								echo "<span style='width:50px' class='school-list_item_title'>Approved</span>";
+								echo "<br /></div></div>";
+?>	
+				
+                  <div id="school-list" class="school-vertical">
+                      <div id="school-list_scroll" class="items mask">
+                        
+                            <?php 
+							
+							   $x=20; //separates scroll pages eg. 5 units per scroll page
+                               $y=0; //counts units
+                               $z=0; //counts units that are not in groups of 5
+                               foreach($this->school_list as $school){
+                                        
+										$scroll_num=($y-$z)/20;
+										if(($x == 0)||($x==20)){?><div><?php }
+                                                
+                                            echo "<div id='school-list_item_".$unit['id']."' class='school-list-item mask'>";
+                                            echo "<div id='school_item'><a href=/admin/editschool?school_id=".$school['id'].">";
+											echo "<span style='width:55px' class='school-list_item'>".($school['id'] ? $school['id'] : 'no id')."</span>";
+                                            echo "<span style='width:250px' class='school-list_item'>".($school['school'] ? $school['school'] : 'no schoolname')."</span>";
+                                            echo "<span style='width:150px' class='school-list_item'>".($school['postcode'] ? $school['postcode'] : 'no postcode')."</span>";
+                                            echo "<span style='width:250px' class='school-list_item'>".($school['email'] ? $school['email'] : 'no email')."</span>";
+                                            echo "<span style='width:200px' class='school-list_item'>".($school['contact'] ? $school['contact'] : 'no contact')."</span>";
+                                            echo "<span style='width:75px' class='school-list_item'>".($school['subfrom'] ? date("j-n-y",$school['subfrom']) : 'no date')."</span>";
+											echo "<span style='width:50px' class='school-list_item'>".($school['classnum'] ? $school['classnum'] : '0')."</span>";
+                                            echo "<span style='width:100px' class='school-list_item'>".($school['subto'] ? date("j-n-y",$school['subto']) : 'no date')."</span>";
+											echo "<span style='width:50px' class='school-list_item'>".($school['approved'] ? $school['approved'] : 'no approval')."</span>";
+											echo "</a><br /></div></div>";
+
+                                            $x--;
+                                            if($x==0){ $x=20; $z=0; ?></div><?php }else{$z++;};
+											
+                                  }?>    
+                                                               
+		</div>
+	</div>
+                   
+                    <?php if($z!=0){?></div><?php }?>
+                    <div id="sprite_bg_schools_scroll">
+                        <div id="viewmore_up"><a class="prev"><span>VIEW MORE</span></a></div>
+                        <div id="viewback_down"><a class="next"><span>BACK</span></a></div>
+                    </div>
+                    </div>
+                    </td>
+                <td valign="top" class="vindent_right">		
+                </td>
+                </tr>
+                <tr>
+                <td colspan="3" ><p><a href="/admin"> Return to Admin Home</a></p></td>
+                </tr>
+                </table>
+<script>
+$(document).ready(function() {
+    // initialize scrollable with mousewheel support
+    $("#school-list").scrollable({ vertical:true });
+     $("#school-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
+});
+</script>
+</div>

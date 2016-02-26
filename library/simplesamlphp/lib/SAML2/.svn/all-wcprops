@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2
+END
+AttributeQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/AttributeQuery.php
+END
+HTTPArtifact.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/HTTPArtifact.php
+END
+ArtifactResolve.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/ArtifactResolve.php
+END
+Response.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Response.php
+END
+Utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Utils.php
+END
+HTTPRedirect.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/HTTPRedirect.php
+END
+SOAPClient.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/SOAPClient.php
+END
+SOAP.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/SOAP.php
+END
+StatusResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/StatusResponse.php
+END
+Assertion.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Assertion.php
+END
+Binding.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Binding.php
+END
+ArtifactResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/ArtifactResponse.php
+END
+LogoutRequest.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/LogoutRequest.php
+END
+SignedElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/SignedElement.php
+END
+SignedElementHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/SignedElementHelper.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Message.php
+END
+HTTPPost.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/HTTPPost.php
+END
+EncryptedAssertion.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/EncryptedAssertion.php
+END
+SubjectQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/SubjectQuery.php
+END
+Const.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Const.php
+END
+Request.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/Request.php
+END
+LogoutResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/LogoutResponse.php
+END
+AuthnRequest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/AuthnRequest.php
+END

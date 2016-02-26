@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ArtifactResolve.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894106532" remote="130887960070000000" />
+<file name="ArtifactResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894206596" remote="130887960070000000" />
+<file name="Assertion.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894266609" remote="130887960070000000" />
+<file name="AttributeQuery.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894316641" remote="130887960080000000" />
+<file name="AuthnRequest.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894366706" remote="130887960080000000" />
+<file name="Binding.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894406704" remote="130887960080000000" />
+<file name="Const.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894446731" remote="130887960080000000" />
+<file name="EncryptedAssertion.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894496796" remote="130887960080000000" />
+<file name="HTTPArtifact.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894536815" remote="130887960080000000" />
+<file name="HTTPPost.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894576847" remote="130887960080000000" />
+<file name="HTTPRedirect.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894616845" remote="130887960080000000" />
+<file name="LogoutRequest.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894666898" remote="130887960080000000" />
+<file name="LogoutResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894706937" remote="130887960080000000" />
+<file name="Message.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894756941" remote="130887960090000000" />
+<file name="Request.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894806977" remote="130887960090000000" />
+<file name="Response.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894857009" remote="130887960090000000" />
+<file name="SignedElement.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489895027156" remote="130887960090000000" />
+<file name="SignedElementHelper.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489895077163" remote="130887960090000000" />
+<file name="SOAP.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894907049" remote="130887960090000000" />
+<file name="SOAPClient.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489894967090" remote="130887960090000000" />
+<file name="StatusResponse.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489895137233" remote="130887960090000000" />
+<file name="SubjectQuery.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489895197249" remote="130887960090000000" />
+<file name="Utils.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489895247277" remote="130887960090000000" />
+</dwsync>

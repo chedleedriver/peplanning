@@ -1,0 +1,63 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+
+<div id="resources">
+        <table class="stage">
+            <tr>
+                <td colspan="3">
+                    <div class="resources_backlink"><a href="/resources"><span>back to Additional Resources</span></a></div>
+                    <div id="resources_title">
+                        <div id="resources_img_title_sportsday"><span>Sports Day Guidance</span></div>
+                        <div id="resources_subtitle"><span>Our sports day resource is a guide to delivering a whole school sports day.</span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="resources_left_section" valign="top">
+                    <a id="resources_img_sportsdayoutline" class="resources_img_display"><span>Long Term Plan Guidance</span></a>
+                    <a id="resources_img_sportsday_eventcards" class="resources_img_display"><span>Long Term Plan Guidance</span></a>
+                    <a id="resources_img_longterm" class="resources_img_display"><span>Long Term Plan Guidance</span></a>
+                </td>
+                <td id="left_section_spacing"></td>
+                <td id="middle_section" valign="top">
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">PEplanning Sports Day Outline</span></p>
+                        <span class="resources_midsection_desc"><p>A complete guide to planning, organising and delivering your sports day. This guide explains how to use the Event Resource Card and Scorecards resources.</p><a href="javascript:void(0)" onclick="downloadFile('PEPSportsDayOutline.pdf',<?php echo $this->level?>)">Download resource (.pdf)</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Event Resource Cards</span></p>
+                        <span class="resources_midsection_desc"><p>The details of how to organise and deliver each of the events that make up sports day.</p><a href="javascript:void(0)" onclick="downloadFile('EventResourceCards.pdf',<?php echo $this->level?>)">Download resource (.pdf)</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Scorecards</span></p>
+                        <span class="resources_midsection_desc"><p>Templates to record all the results from sports day.</p><a href="javascript:void(0)" onclick="downloadFile('Scorecards.pdf',<?php echo $this->level?>)">Download resource (.pdf)</a></span>
+                    </div>
+                </td>
+                <td id="resources_right_section" valign="top" class="vindent_right">
+                    <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                    </div>
+               </td>
+            </tr>
+        </table>
+    </div>
+    <div id="status_bar" style="display:none;"></div>

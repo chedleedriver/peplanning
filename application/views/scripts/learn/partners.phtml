@@ -1,0 +1,102 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="partners_content">
+                                        <tr>
+                                            <td valign="top" colspan="2">
+                                                <h2>Partners</h2>
+                                                <p>PE Planning are very proud to work with some of the very best organisations involved in technology, education and sport</p>
+                                            </td>
+                                        <tr>
+                                            <td align="middle" valign="center">
+                                            <p><a href="http://www.planbee.com" target="_blank"><img src="/img/PlanBee.gif" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.planbee.com" target="_blank">PlanBee</a>
+                                            </td>
+                                            <td align="middle" valign="center">
+                                            <p> <a href="http://www.r-e-m.co.uk/rem/" target="_blank"><img src="/img/remlogo2010.png" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.r-e-m.co.uk/rem/" target="_blank">R-E-M</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="middle" valign="center">
+                                                <p><a href="http://www.viglen.co.uk/viglen/Sector/Schools/schools.aspx?GUID=18510739729" target="_blank"><img src="/img/viglen.png" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.viglen.co.uk/viglen/Sector/Schools/schools.aspx?GUID=18510739729" target="_blank">Viglen</a>      
+                                            </td>
+                                            <td align="middle" valign="center">
+                                            <p> <a href="http://www.5-a-day.tv" target="_blank"><img src="/img/5-a-dayTV_logo.jpg" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.5-a-day.tv" target="_blank">5-a-Day</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="middle" valign="center">
+                                            <p><a href="http://www.sportsuk.org.uk" target="_blank"><img src="/img/sportsuk.png" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.sportsuk.org.uk" target="_blank">Sports UK</a>
+                                            </td>
+                                            <td align="middle" valign="center">
+                                            <p><a href="http://www.itfacilitas.co.uk" target="_blank"><img src="/img/itf.png" border="0"/></a></p>
+                                            <a class="quotes-links" href="http://www.itfacilitas.co.uk" target="_blank">IT Facilitas</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="middle" valign="center">
+                                            <p><a href="http://www.ictinspires.co.uk/" target="_blank"><img src="/img/ict_inspires.jpg" border="0"/></a></p>
+                                                <a class="quotes-links" href="http://www.ictinspires.co.uk/" target="_blank">ICT Inspires</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div style="margin-top:70px;"><p>If you would like to become a partner of PEplanning <a href="/contactus">Contact us here</a></p></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+

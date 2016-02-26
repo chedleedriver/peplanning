@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="StringTrim.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870990000000" remote="130602870990000000" Dst="2" />
+<file name="StringToLower.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870990000000" remote="130602870990000000" Dst="2" />
+<file name="RealPath.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870990000000" remote="130602870990000000" Dst="2" />
+<file name="Input.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870970000000" remote="130602870970000000" Dst="2" />
+<file name="Alnum.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870860000000" remote="130602870860000000" Dst="2" />
+<file name="Alpha.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870860000000" remote="130602870860000000" Dst="2" />
+<file name="Boolean.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870870000000" remote="130602870870000000" Dst="2" />
+<file name="Interface.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870980000000" remote="130602870980000000" Dst="2" />
+<file name="BaseName.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870870000000" remote="130602870870000000" Dst="2" />
+<file name="Null.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870980000000" remote="130602870980000000" Dst="2" />
+<file name="StripTags.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602871000000000" remote="130602871000000000" Dst="2" />
+<file name="Int.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870970000000" remote="130602870970000000" Dst="2" />
+<file name="Exception.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870940000000" remote="130602870940000000" Dst="2" />
+<file name="LocalizedToNormalized.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870980000000" remote="130602870980000000" Dst="2" />
+<file name="Decrypt.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870910000000" remote="130602870910000000" Dst="2" />
+<file name="StripNewlines.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602871000000000" remote="130602871000000000" Dst="2" />
+<file name="Inflector.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870970000000" remote="130602870970000000" Dst="2" />
+<file name="Dir.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870910000000" remote="130602870910000000" Dst="2" />
+<file name="PregReplace.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870990000000" remote="130602870990000000" Dst="2" />
+<file name="NormalizedToLocalized.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870980000000" remote="130602870980000000" Dst="2" />
+<file name="Encrypt.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870940000000" remote="130602870940000000" Dst="2" />
+<file name="Compress.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870900000000" remote="130602870900000000" Dst="2" />
+<file name="Digits.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870910000000" remote="130602870910000000" Dst="2" />
+<file name="Callback.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870870000000" remote="130602870870000000" Dst="2" />
+<file name="StringToUpper.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870990000000" remote="130602870990000000" Dst="2" />
+<file name="HtmlEntities.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870970000000" remote="130602870970000000" Dst="2" />
+<file name="Decompress.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870910000000" remote="130602870910000000" Dst="2" />
+</dwsync>

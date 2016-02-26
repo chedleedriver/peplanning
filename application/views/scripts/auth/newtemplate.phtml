@@ -1,0 +1,69 @@
+                                <?php 
+								//Templates for emails in response to subscription/trial requests
+								
+								if($this->template_type=='signup')
+								{
+									// The email sent when someone signs up for a trial
+									include ('signup_email.php');
+								}
+								if($this->template_type=='signup-info')
+								{
+									// The email sent when someone signs up for a trial
+									include ('signup_email_info.php');
+								}
+								if($this->template_type=='schoolsignup-ack')
+								{
+									//The email sent when a school signs up to acknowledge receipt
+									include ('school_signup_email.php');
+								}
+								if($this->template_type=='schoolsignup-app')
+								{
+									//The email sent when a school sign up is approved/authorised
+								}
+								if($this->template_type=='schoolsignup-user')
+								{
+									//The email sent when a school sign up is approved/authorised
+									include ('sendschooluserinformation_email.php');
+								}
+								if($this->template_type=='schoolsignup-inv')
+								{
+									//The email sent when a school sign up is invoiced
+								}	
+								if($this->template_type=='credentials-change')
+								{
+									//The email sent when a user changes credentials
+									include ('changecredentials_email.php');
+								}
+								// Templates for batch emails during Trials
+								
+								if($this->template_type=='batch_1')
+								{
+									//Email sent in the middle of the trial to other school people
+									include ('trial_1_email.php');
+								}
+								if($this->template_type=='batch_4')
+								{
+									//Email sent in the middle of the trial to PE coordinators
+									include ('trial_4_email.php');
+								}
+								if($this->template_type=='batch_7')
+								{
+									//Email sent in the middle of the trial to other school people
+									include ('trial_7_email.php');
+								}
+								if($this->template_type=='batch_11')
+								{
+									//Email sent at the end of the trial to PE coordinators
+									include ('trial_11_email.php');
+								}
+								if($this->template_type=='batch_14')
+								{
+									//Email sent at the end of the trial to other school people
+									include ('trial_14_email.php');
+								}
+								if($this->template_type=='batch_21')
+								{
+									//Email sent at the end of the trial to other school people
+									include ('trial_21_email.php');
+								}
+								?>

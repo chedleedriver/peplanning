@@ -1,0 +1,149 @@
+<?php 
+include_once("recaptchalib.php");
+$privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";
+$confirm=$this->confirm;
+if($_GET['process']) $tab_selected=$_GET['process']; else $tab_selected=0;
+if($this->process) $tab_selected=$this->process;?>
+<script>
+var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+<div id='signup-box' class='centred'>
+	<div id='signup-logo'>
+    </div>
+    <div id='signup-div'>
+    	<a href='/'><img border=none src="/img/signup_logo.png"></a>
+    	<div id='signup-form-container'>
+        <ul class='signup-tabs'>
+        	<li><a class='signon-color' href='#signon'>Login</a></li>
+            <li><a class='signup-color' href='#signup'>Sign Up</a></li>
+        </ul>
+        <div class='signup-panes'>
+        	<div>
+          		<form id='signup-form' name='signup-form' method="post" action='/auth/signup'>
+          		<input id='signup_email' name='signup_email' type="text" size=128
+                 <?php if(($this->values['signup_email'])&&($this->values['signup_email']!='email address')) echo "value='".$this->values['signup_email']."'"; 
+				 	   else echo "value='email address' onblur='if(this.value==\"\")this.value=\"email address\";$(\"#signon_email_hint\").html(\"\")' onfocus='if(this.value==\"email address\")this.value=\"\";$(\"#signon_email_hint\").html(\"Enter your username (email address)\")'";?>
+                      />
+                <label class='signup' id='signon_email_hint'>
+                <?php if($this->response['result']==10) echo $this->response['detail']?>
+                </label>
+          		<input id='signup_password' name='signup_password' type='password' size=128 onblur='passwordBlur("signup");$("#signon_password_hint").html("")' 
+				<?php if(($this->values['signup_password'])&&($this->values['signup_password']!='password')) 
+							{ echo "value='".$this->values['signup_password']."' style=\'display: inline;\'";}  
+					  else 
+					  		{ echo "value='' style='display: none;'";}?>
+                      />
+                <input id="signup_password_clear" name='signup_password_clear' type="text" onfocus='passwordFocus("signup");$("#signon_password_hint").html("Enter your chosen password")' 
+                <?php if(($this->values['signup_password'])&&($this->values['signup_password']!='password'))
+							{ echo "style='display: none;'";}
+					  else 
+					  		{ echo "value='password' style='display: inline;'";}
+					  //if($this->response['result']==2) echo ' class=\'form-error\''?>
+                      />
+                <label class='signup' id='signon_password_hint'>
+                <?php if($this->response['result']==11) echo $this->response['detail']?>
+                </label>
+                <input type='submit' id='signup' name='signup' class='signon'
+                <?php if($this->response['result']!=1) echo "value='Try Again'";
+					  else echo "value='Login'";?>
+                />
+                </form>
+                <a class='signup-text signon-color' href="/auth/password-reset">Forgotten your password?</a>
+                <a class='signup-text signon-color' href="/auth/signup?process=1">Need a PE Planning account?</a> 
+            <?php if($this->response['result']==12) {?>
+             <div class='signon-information'>
+        		<p class='signon-color'>You are signing in with a <span class="signon-bold">username</span> not your <span class="signon-bold">email</span> click <a href="/auth/signupinfo" target="new">here</a> to find out more about how you should sign in or click 'Try Again' to sign in</p>	
+        	</div>
+            <?php }?>
+            <?php if($this->response['result']==13) {?>
+             <div class='signon-information'>
+        		<p class='signon-color'>Your PE Planning Trial Account has <span class="signon-bold">expired</span> click <a href="/auth/schoolsignup" target="new">here</a> to sign up your school to a full PE Planning subscription</p>	
+        	</div>
+            <?php }?>
+            <?php if($this->response['result']==14) {?>
+             <div class='signon-information'>
+        		<p class='signon-color'>Your PE Planning Trial Account only allows <span class="signon-bold">10 plans</span> click <a href="/auth/schoolsignup" target="new">here</a> to sign up your school to a full PE Planning subscription</p>	
+        	</div>
+            <?php }?>
+            </div>
+            
+            <?php if($confirm=='y'){?>
+            <div>
+            	<form id='signup-form' name='signup-form' method="post" action='/auth/signup'>
+          		<input id='signup_school' name='signup_school' type="text" size=128
+                 <?php if(($this->values['signup_school'])&&($this->values['signup_school']!='school')) echo "value='".$this->values['signup_school']."'"; 
+				 	   else echo "value='school' onblur='if(this.value==\"\")this.value=\"school\";$(\"#signup_school_hint\").html(\"\")'  onfocus='if(this.value==\"school\")this.value=\"\";$(\"#signup_school_hint\").html(\"Enter the name of your school\")'";?>
+                      />
+                <label class='signup' id='signup_school_hint'>
+                <?php if($this->response['result']==20) echo $this->response['detail']?>
+                </label>
+                <label id='role-label'>
+                <select id='signup_role' name='signup_role'>
+                	<option value=0 <?php if($this->values['signup_role']==0) echo 'selected'?>>role</option>
+                    <option value=1 <?php if($this->values['signup_role']==1) echo 'selected'?>>head teacher</option>
+                    <option value=2 <?php if($this->values['signup_role']==2) echo 'selected'?>>teacher</option>
+                    <option value=3 <?php if($this->values['signup_role']==3) echo 'selected'?>>teaching assistant</option>
+                    <option value=4 <?php if($this->values['signup_role']==4) echo 'selected'?>>pe coordinator</option>
+                </select>
+          		</label>
+                <?php echo recaptcha_get_html("6LdQmPESAAAAAGut3CzRGz62cEZ1T4yysnWCftml",NULL,true);?>
+                <label class='signup'>
+                <?php if($this->response['result']==21) echo $this->response['detail']?>
+                </label>
+                <input type='submit' id='signup' name='signup' class='signup' value='Finish'/>
+                </form>
+                <a class='signup-text signup-color' href="/auth/contact">Unsure about anything? Get in touch</a>
+                <div class='signup-information'>
+        			<p class='signup-color'>Nearly there... let us know your <span class="signup-bold">school</span> and your <span class="signup-bold">role</span> in the school please</p>
+        		</div>
+            </div>
+          	<?php } else {?>
+            <div>
+            	<form id='signup-form' name='signup-form' method="post" action='/auth/signup'>
+          		<input id='signup_email' name='signup_email' type="text" size=128
+                 <?php if(($this->values['signup_email'])&&($this->values['signup_email']!='email address')) echo "value='".$this->values['signup_email']."'"; 
+				 	   else echo "value='email address' onblur='if(this.value==\"\")this.value=\"email address\";$(\"#signup_email_hint\").html(\"\")' onfocus='if(this.value==\"email address\")this.value=\"\";$(\"#signup_email_hint\").html(\"Enter your email address\")'";?>
+                      />
+                <label class='signup' id='signup_email_hint'>
+                <?php if($this->response['result']==21) echo $this->response['detail']?>
+                </label>
+          		<input id='signup_1_password' name='signup_1_password' type='password' size=128 onblur='passwordBlur("signup_1");$("#signup_password_hint").html("")' 
+				<?php if(($this->values['signup_1_password'])&&($this->values['signup_1_password']!='password'))
+							{ echo "value='".$this->values['signup_1_password']."' style=\'display: inline;\'";}  
+					  else 
+					  		{ echo "value='' style='display: none;'";}?>
+                      />
+                <input id="signup_1_password_clear" name='signup_1_password_clear' type="text" onfocus='passwordFocus("signup_1");$("#signup_password_hint").html("Enter your chosen password")' 
+                <?php if(($this->values['signup_1_password'])&&($this->values['signup_1_password']!='password'))
+							{ echo "style='display: none;'";}
+					  else 
+					  		{ echo "value='password' style='display: inline;'";}
+					  //if($this->response['result']==2) echo ' class=\'form-error\''?>
+                      />
+                <label class='signup' id='signup_password_hint'>
+                <?php //if($this->response['result']==21) echo $this->response['detail']?>
+                </label>
+          		<input id='signup_name' name='signup_name' type="text" size=128
+                 <?php if(($this->values['signup_name'])&&($this->values['signup_name']!='name')) echo "value='".$this->values['signup_name']."'."; 
+				 	   else echo "value='name' onblur='if(this.value==\"\")this.value=\"name\";$(\"#signup_name_hint\").html(\"\")' onfocus='if(this.value==\"name\")this.value=\"\";$(\"#signup_name_hint\").html(\"Enter your full name\")'";?>
+                      />
+                <label class='signup' id='signup_name_hint'>
+                <?php if($this->response['result']==20) echo $this->response['detail']?>
+                </label>
+                <input type='submit' id='signup' name='signup' class='signup' value='Sign Up'/>
+                </form>
+                <a class='signup-text signup-color' href="/index/index#contact">Unsure about anything? Get in touch</a>
+                <div class='signup-information'>
+        		<p class='signup-color'>It's completely <span class="signup-bold">free</span> for 14 days and takes less than <span class="signup-bold">a minute</span> to set up</p>	
+        		</div>
+            </div>
+            <?php }?>
+    	</div>
+        
+    </div>
+</div>
+<script>
+var signUpTabs = $("ul.signup-tabs").tabs("div.signup-panes > div",{initialIndex:<?php echo $tab_selected;?>});
+</script>

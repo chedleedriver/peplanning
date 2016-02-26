@@ -1,0 +1,14 @@
+<script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+ <table id="contact_form">
+    <tr><td id="form_title"/></tr>
+    <tr>
+        <td>If there is something you want to know more about, and can’t find it on our website, please contact us by filling your details below and we’ll be in touch shortly.  You can also contact us through the following methods.</td>
+    </tr>
+    <tr><td><?php echo $this->form; ?></td></tr>
+  <tr><td><?php echo $this->captcha;?></td></tr>
+  <tr><td><div id="button_area_contact"><a href="javascript:void(0)" onclick="javascript:doContact();"><span>Contact</span></a></div></td></tr>
+</table>

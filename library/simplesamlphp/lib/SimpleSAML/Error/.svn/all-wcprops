@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error
+END
+Error.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/Error.php
+END
+UserNotFound.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/UserNotFound.php
+END
+NotFound.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/NotFound.php
+END
+MetadataNotFound.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/MetadataNotFound.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/Exception.php
+END
+BadRequest.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/BadRequest.php
+END
+NoPassive.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/NoPassive.php
+END
+Assertion.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/Assertion.php
+END
+NoState.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/NoState.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/User.php
+END
+UserAborted.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/UserAborted.php
+END
+ProxyCountExceeded.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/ProxyCountExceeded.php
+END
+InvalidCredential.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/InvalidCredential.php
+END
+AuthSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/AuthSource.php
+END
+BadUserInnput.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/BadUserInnput.php
+END
+UnserializableException.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SimpleSAML/Error/UnserializableException.php
+END

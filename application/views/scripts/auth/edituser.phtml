@@ -1,0 +1,134 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } 
+?>
+
+<!-- fixed items -->
+    <table id="page_position">
+        <tr>
+            <td>
+                <table id="centerpage_shell" align="center">
+                    <tr>
+                        <td>
+                            <table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title"></div>
+                                        <div id="videoplayer_content">
+                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                            <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
+                                        </div>
+                                    </td>
+                                </tr>                                
+                            </table>
+                            <table id="register_btn">
+                                <tr>
+                                    <td>
+                                        <a href="/auth/subscribe"><span>register button</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                                                        
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- end of fixed items -->
+
+<div id="main_feature">
+        <!-- slides -->        
+        <div class="scrollable" id="scroller">
+            <div id="left_grad"></div>
+            <div class="items">                
+                <div id="slide1">
+                    <a id="link_poster_homepage" href="/createaplan"><span>5 step planning processing</span></a>
+                    <div id="slide1_content">
+                        <div id="slide1_learnmore" class="learnmore"><a href="/aboutus"><span>learn more</span></a></div>
+                        
+                        <!-- For IE7 only -->
+                        <div id="get_started" class="ie7">
+                            <table id="register_btn">
+                                <tr>
+                                    <td>
+                                        <a href="javascript:void(0)" onclick="javascript:boxAction('freetrial');"><span>free trial button</span></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="videoplayer">
+                                <tr>
+                                    <td>
+                                        <div id="videoplayer_title"></div>
+                                        <div id="videoplayer_content">
+                                            <p id="videoplayer_learnmore"><a href="/resources/dinnertime-delighters"><span>See More</span></a></p>
+                                        </div>
+                                        <div id="videoplayer_footer">
+                                            <p id="videoplayer_text">Already have a PEplanning Account? <a href="javascript:void(0);" onclick="javascript:showOverlay('Login');">Sign in!</a></p>
+                                        </div>
+                                    </td>
+                                </tr>                                
+                            </table>                            
+                        </div>
+                        <!-- end IE7 only -->
+                    </div>
+                </div>
+                
+            </div>
+            <div id="right_grad"></div>
+        </div>        
+        <br clear="all" />            
+        <div id="feature_arrows">
+            <div id="arrow_left" class="prev browse left"><span>left</span></div>
+            <div id="arrow_right" class="next browse right"><span>right</span></div>
+        </div>
+</div>    
+
+<div id="edituser_div">
+<!-- user input dialog -->
+    <div id="Edituser_content" class="overlay_content">
+        <div id="Edituser_header" class="overlay_header"><span>Edit Your Details</span></div>
+        <div id="Edituser_subheader" class="overlay_subheader"><span><a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/password">change password?</a></span></div>
+        <div id="Edituser_form"><?php echo $this->form; ?></div>
+        <div id="Edituser_buttons">
+            <div id="button_change"><a href="javascript:void(0)" onclick="javascript:doProcess('edituser');"><span>OK</span></a></div>
+            <div id="btn_cancel"><a href="javascript:void(0)" onclick="javascript:closeIt('edituser_div');"><span>Cancel</span></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#edituser_div").overlay({
+	mask: {
+		color: '#ffffff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#edituser_div").overlay().load();
+    $("#postcode").keyup(function(event){
+    if(event.keyCode == 13){
+        doProcess('Login');
+    }
+    });
+</script>
+
+

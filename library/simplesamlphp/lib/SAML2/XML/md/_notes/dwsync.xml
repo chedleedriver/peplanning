@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AdditionalMetadataLocation.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489881678030" remote="130887960110000000" />
+<file name="AffiliationDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489881788111" remote="130887960110000000" />
+<file name="AttributeAuthorityDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489881848148" remote="130887960110000000" />
+<file name="AttributeConsumingService.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489881908218" remote="130887960110000000" />
+<file name="AuthnAuthorityDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489881958246" remote="130887960110000000" />
+<file name="ContactPerson.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882018270" remote="130887960110000000" />
+<file name="EndpointType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882068315" remote="130887960110000000" />
+<file name="EntitiesDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882118347" remote="130887960110000000" />
+<file name="EntityDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882168383" remote="130887960120000000" />
+<file name="Extensions.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882218411" remote="130887960120000000" />
+<file name="IDPSSODescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882258446" remote="130887960120000000" />
+<file name="IndexedEndpointType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882308458" remote="130887960120000000" />
+<file name="KeyDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882358494" remote="130887960120000000" />
+<file name="Organization.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882418547" remote="130887960120000000" />
+<file name="PDPDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882468575" remote="130887960120000000" />
+<file name="RequestedAttribute.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882538641" remote="130887960120000000" />
+<file name="RoleDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882598658" remote="130887960120000000" />
+<file name="SPSSODescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882648694" remote="130887960120000000" />
+<file name="SSODescriptorType.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882708763" remote="130887960120000000" />
+<file name="UnknownRoleDescriptor.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130463489882758800" remote="130887960130000000" />
+</dwsync>

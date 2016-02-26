@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml
+END
+NameID.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml/NameID.php
+END
+AttributeValue.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml/AttributeValue.php
+END
+SubjectConfirmationData.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml/SubjectConfirmationData.php
+END
+Attribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml/Attribute.php
+END
+SubjectConfirmation.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/SAML2/XML/saml/SubjectConfirmation.php
+END

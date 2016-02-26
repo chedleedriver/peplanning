@@ -1,0 +1,82 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="pecoach_more">
+                                    <table id="pecoach_more_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <h2>PEcoach - The specialist option</h2>
+                                                <h2>What is PE Coach?</h2>
+                                                    <p>PEcoach is designed for coaches who work in primary schools. With PEcoach you get a flexible approach to meet your requirements. Whether an individual coach or an established sports coaching company we can provide high quality lesson plans that are tried, tested and work in primary school settings.</p>
+                                                    <h2>What you get - the benefits</h2>
+                                                        <ul>
+                                                            <li>As many personal PEplanning accounts as you require</li>
+                                                            <li>Access to all our PE topics at all National Curriculum levels</li>
+                                                            <li>Assessment for Learning</li>
+                                                            <li>Access to our personal lesson planning service where you can create plans to suit your exact requirements</li>
+                                                        </ul>
+                                                    <!--<h2>Sign me up</h2>-->
+                                                        <p>To see how easy planning your PE is with PEcoach have a go for yourself <a href="/createaplan">here </a></p>
+                                                        <p>If you would like any further information about our PEcoach service, please feel free to contact us:</p>
+                                                        <p>Email to <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk</a> or telephone  01535 644777/p>
+                                                        <p>Or take a look at our <a href="/learn/faqs">Frequently Asked Questions</a>
+                                                    <h2>Why choose PE Coach?</h2>
+                                                        <ul>
+                                                            <li>To help maintain standards across your team</li>
+                                                            <li>As a time saving resource that ensures quality is not compromised</li>
+                                                        </ul>
+                                                    <p><a href="/createaplan">Try it yourself</a> or <a href="javascript:void(0)" onclick="javascript:showOverlay('Register');">Try it for free</a></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+

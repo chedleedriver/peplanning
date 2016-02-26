@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates
+END
+attributequery.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/attributequery.php
+END
+error.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/error.php
+END
+logout.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/logout.php
+END
+selectidp-links.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/selectidp-links.php
+END
+metadata.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/metadata.php
+END
+login-ldapmulti.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/login-ldapmulti.php
+END
+status.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/status.php
+END
+errorreport.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/errorreport.php
+END
+metadata-converter.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/metadata-converter.php
+END
+post.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/post.php
+END
+selectidp-dropdown.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/selectidp-dropdown.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/templates/login.php
+END

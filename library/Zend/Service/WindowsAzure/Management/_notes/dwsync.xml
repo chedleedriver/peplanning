@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="OperatingSystemFamilyInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885420000000" remote="130602885420000000" Dst="2" />
+<file name="AffinityGroupInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885320000000" remote="130602885320000000" Dst="2" />
+<file name="OperatingSystemInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885430000000" remote="130602885430000000" Dst="2" />
+<file name="CertificateInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885330000000" remote="130602885330000000" Dst="2" />
+<file name="StorageServiceInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885480000000" remote="130602885480000000" Dst="2" />
+<file name="HostedServiceInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885390000000" remote="130602885390000000" Dst="2" />
+<file name="Client.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885350000000" remote="130602885350000000" Dst="2" />
+<file name="Exception.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885380000000" remote="130602885380000000" Dst="2" />
+<file name="DeploymentInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885360000000" remote="130602885360000000" Dst="2" />
+<file name="SubscriptionOperationInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885490000000" remote="130602885490000000" Dst="2" />
+<file name="LocationInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885410000000" remote="130602885410000000" Dst="2" />
+<file name="OperationStatusInstance.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885450000000" remote="130602885450000000" Dst="2" />
+<file name="ServiceEntityAbstract.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602885460000000" remote="130602885460000000" Dst="2" />
+</dwsync>

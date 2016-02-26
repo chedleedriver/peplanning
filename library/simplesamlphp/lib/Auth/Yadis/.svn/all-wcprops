@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis
+END
+Yadis.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/Yadis.php
+END
+Manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/Manager.php
+END
+Misc.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/Misc.php
+END
+XRIRes.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/XRIRes.php
+END
+ParanoidHTTPFetcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/ParanoidHTTPFetcher.php
+END
+ParseHTML.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/ParseHTML.php
+END
+HTTPFetcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/HTTPFetcher.php
+END
+XML.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/XML.php
+END
+XRDS.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/XRDS.php
+END
+XRI.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/XRI.php
+END
+PlainHTTPFetcher.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/chedleedriver/peplanning.git/!svn/ver/474/branches/Live/library/simplesamlphp/lib/Auth/Yadis/PlainHTTPFetcher.php
+END

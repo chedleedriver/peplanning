@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ListenerAggregate.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870110000000" remote="130602870110000000" Dst="2" />
+<file name="Filter.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870100000000" remote="130602870100000000" Dst="2" />
+<file name="SharedEventCollectionAware.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870110000000" remote="130602870110000000" Dst="2" />
+<file name="EventDescription.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870060000000" remote="130602870060000000" Dst="2" />
+<file name="Event.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870060000000" remote="130602870060000000" Dst="2" />
+<file name="EventManagerAware.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870070000000" remote="130602870070000000" Dst="2" />
+<file name="Exception.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870080000000" remote="130602870080000000" Dst="2" />
+<file name="StaticEventManager.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870120000000" remote="130602870120000000" Dst="2" />
+<file name="GlobalEventManager.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870100000000" remote="130602870100000000" Dst="2" />
+<file name="EventManager.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870060000000" remote="130602870060000000" Dst="2" />
+<file name="SharedEventManager.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870120000000" remote="130602870120000000" Dst="2" />
+<file name="SharedEventCollection.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870110000000" remote="130602870110000000" Dst="2" />
+<file name="ResponseCollection.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870110000000" remote="130602870110000000" Dst="2" />
+<file name="FilterChain.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870100000000" remote="130602870100000000" Dst="2" />
+<file name="EventCollection.php" server="www.peplanning.org.uk//var/www/html/peplanning/" local="130602870060000000" remote="130602870060000000" Dst="2" />
+</dwsync>

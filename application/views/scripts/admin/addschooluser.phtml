@@ -1,0 +1,78 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }
+$_GET['a'] = (isset($_GET['a']) ? $_GET['a'] : 0);
+?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <!--<div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>-->
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                        	<form id="admincreateschoolusersform_<?php echo $i?>" enctype="application/x-www-form-urlencoded" method="post" action="">
+                            	<dl class="zend_form">
+                            	<dt id="nameXschoolusercreate-label">&#160;</dt>
+								<dd id="nameXschoolusercreate-element">
+                                <input type="text" name="nameXschoolusercreate" id="nameXschoolusercreate" value="name" class="styled_input schoolusercreate" onfocus='if(this.value=="name")this.value="";' onblur='if(this.value=="")this.value="name";' />
+                                </dd>
+                                <dt id="usernameXschoolusercreate-label">&#160;</dt>
+                                <dd id="usernameXschoolusercreate-element">
+                                <input type="text" name="usernameXschoolusercreate" id="usernameXschoolusercreate" value="@<?php echo $this->email_domain?>" class="styled_input schoolusercreate" />
+                                </dd>
+                                <dt id="passwordXschoolusercreate-label">&#160;</dt>
+                                <dd id="passwordXschoolusercreate-element">
+                                <input type="text" name="passwordXschoolusercreate" id="passwordXschoolusercreate" value="<?php echo $this->password_suggestion?>" class="styled_input schoolusercreate"/>
+                                </dd>
+                            <input type="hidden" name="school_idXschoolusercreate" id="school_idXschoolusercreate" value="<?php echo $this->school_id?>" />
+                            <input type="hidden" name="postcodeXschoolusercreate" id="postcodeXschoolusercreate" value="<?php echo $this->postcode?>" />
+                            <input type="hidden" name="class_numXschoolusercreate" id="class_numXschoolusercreate" value="<?php echo $this->class_num?>" />
+                            <input type="hidden" name="schoolXschoolusercreate" id="schoolXschoolusercreate" value="<?php echo $this->school?>" />
+                            <input type="hidden" name="telephoneXschoolusercreate" id="telephoneXschoolusercreate]" value="<?php echo $this->telephone 	?>" />
+                            <input type="hidden" name="sub_fromXschoolusercreate" id="sub_fromXschoolusercreate]" value="<?php echo $this->sub_from?>" />
+                           </dl>
+                            </form>
+							
+                            
+                            <div id="button_change"><a href="javascript:void(0)" onclick="javascript:adminAddSchoolUser();"><span>OK</span></a></div>
+            				<div id="btn_cancel"><a href="javascript:void(0)" onclick="javascript:shutMeAndTakeMeHere('/admin');"><span>Cancel</span></a></div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                       <!--<div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div> 
+                            <?php }?>
+                        </div>-->  
+                    </td>
+                </tr>
+            </table>
+        </div>
+

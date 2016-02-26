@@ -1,0 +1,250 @@
+<?php 
+include_once("recaptchalib.php");
+$privatekey = "6LdQmPESAAAAAIYhvd1X3piy5s06tifVD2Ds0ROt";
+$confirm=$this->confirm;
+if($_GET['process']) $tab_selected=$_GET['process']; else $tab_selected=0;
+if($this->process) $tab_selected=$this->process;
+$form_height = 280 * $this->num_teachers;
+$info_margin = 150 * $this->num_teachers;
+?>
+<script>
+var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+<div id='school-signup-box' class='centred'>
+	<div id='school-signup-div'>
+    	<div class='school-logo'><a href='/'><img border=none src="/img/signup_logo.png"></a></div>
+    	<div id='school-signup-form-container'>
+        <ul class='school-signup-tabs'>
+        	<li><img class='tab-image' id='school-signup-1' border=none src="/img/school-signup-1.png" onclick="javascript:changeTabImage(this);"></li>
+            <li><img class='tab-image' id='school-signup-2' border=none src="/img/school-signup-2.png" onclick="javascript:changeTabImage(this);"></li>
+            <li><img class='tab-image' id='school-signup-3' border=none src="/img/school-signup-3.png" onclick="javascript:changeTabImage(this);"></li>
+            <li><img class='tab-image' id='school-signup-complete' border=none src="/img/school-signup-complete.png" onclick="javascript:changeTabImage(this);"></li>
+        </ul>
+        <div class='school-signup-panes'>
+        	<div>
+          		<form id='school-signup-form' name='signup-form' method="post" action='/auth/schoolsignup'>
+          		<input id='school_signup_school_name' name='school_signup_school_name' type="text" size=128
+                 <?php if(($this->values_0['school_signup_school_name'])&&($this->values_0['school_signup_school_name']!='school name')) echo "value='".$this->values_0['school_signup_school_name']."'"; 
+				 	   else echo "value='school name' onblur='if(this.value==\"\")this.value=\"school name\";$(\"#school_signup_school_name_hint\").html(\"\")' onfocus='if(this.value==\"school name\")this.value=\"\";$(\"#school_signup_school_name_hint\").html(\"Enter the name of your school\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_school_name_hint'>
+                <?php if(($this->response['result']==10)||($this->response['result']==11)) echo $this->response['detail']?>
+                </label>
+          		<input id='school_signup_school_address_1' name='school_signup_school_address_1' type="text" size=128
+                 <?php if(($this->values_0['school_signup_school_address_1'])&&($this->values_0['school_signup_school_address_1']!='school address')) echo "value='".$this->values_0['school_signup_school_address_1']."'"; 
+				 	   else echo "value='school address' onblur='if(this.value==\"\")this.value=\"school address\";$(\"#school_signup_school_address_1_hint\").html(\"\")' onfocus='if(this.value==\"school address\")this.value=\"\";$(\"#school_signup_school_address_1_hint\").html(\"Enter the first line of the school address\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_school_address_1_hint'>
+                <?php if($this->response['result']==10) echo $this->response['detail']?>
+                </label>
+                <input id='school_signup_school_address_2' name='school_signup_school_address_2' type="text" size=128
+                 <?php if(($this->values_0['school_signup_school_address_2'])&&($this->values_0['school_signup_school_address_2']!='school address')) echo "value='".$this->values_0['school_signup_school_address_2']."'"; 
+				 	   else echo "value='school address' onblur='if(this.value==\"\")this.value=\"school address\";$(\"#school_signup_school_address_2_hint\").html(\"\")' onfocus='if(this.value==\"school address\")this.value=\"\";$(\"#school_signup_school_address_2_hint\").html(\"Enter the second line of the school address\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_school_address_2_hint'>
+                <?php if($this->response['result']==10) echo $this->response['detail']?>
+                </label>
+                <input id='school_signup_school_postcode' name='school_signup_school_postcode' type="text" size=128
+                 <?php if(($this->values_0['school_signup_school_postcode'])&&($this->values_0['school_signup_school_postcode']!='school postcode')) echo "value='".$this->values_0['school_signup_school_postcode']."'"; 
+				 	   else echo "value='school postcode' onblur='if(this.value==\"\")this.value=\"school postcode\";$(\"#school_signup_school_postcode_hint\").html(\"\")'' onfocus='if(this.value==\"school postcode\")this.value=\"\";$(\"#school_signup_school_postcode_hint\").html(\"Enter the school postcode\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_school_postcode_hint'>
+                <?php if($this->response['result']==10) echo $this->response['detail']?>
+                </label>
+                
+                <input type='submit' id='school-signup-cancel' name='school-signup-cancel' value='Start Again' style='width:180px;display:none'/>
+                <input type='submit' id='school-signup-submit-1' name='school-signup-submit-1' style='width:180px;margin-right: 25px; margin-top: 0px;'
+                <?php if($this->response['result']!=1) echo "value='Try Again'";
+					  else echo "value='Next'";?>
+                />
+                </form>
+                 <div class='school-signup-information'>
+        			<p class='school-signup-color'>OK We need to start with some <span class="signup-bold">school</span> details. Then click <span class="signup-bold">Next</span></p>
+        		</div>
+            </div>
+            <div>
+            	<form id='school-signup-form' name='signup-form' method="post" action='/auth/schoolsignup'>
+          		<input id='school_signup_contact_name' name='school_signup_contact_name' type="text" size=128
+                 <?php if(($this->values_1['school_signup_contact_name'])&&($this->values_1['school_signup_contact_name']!='contact name')) echo "value='".$this->values_1['school_signup_contact_name']."'"; 
+				 	   else echo "value='contact name' onblur='if(this.value==\"\")this.value=\"contact name\";$(\"#school_signup_contact_name_hint\").html(\"\")'' onfocus='if(this.value==\"contact name\")this.value=\"\";$(\"#school_signup_contact_name_hint\").html(\"Name of the main school contact for PE Planning\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_contact_name_hint'>
+                <?php if($this->response['result']==20) echo $this->response['detail']?>
+                </label>
+          		<input id='school_signup_contact_email' name='school_signup_contact_email' type="text" size=128
+                 <?php if(($this->values_1['school_signup_contact_email'])&&($this->values_1['school_signup_contact_email']!='contact email')) echo "value='".$this->values_1['school_signup_contact_email']."'"; 
+				 	   else echo "value='contact email' onblur='if(this.value==\"\")this.value=\"contact email\";$(\"#school_signup_contact_email_hint\").html(\"\")' onfocus='if(this.value==\"contact email\")this.value=\"\";$(\"#school_signup_contact_email_hint\").html(\"Email address for the main school contact\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_contact_email_hint'>
+                <?php if(($this->response['result']==20)||($this->response['result']==21)) echo $this->response['detail']?>
+                </label>
+                <input id='school_signup_num_accounts' name='school_signup_num_accounts' type="text" size=128
+                 <?php if(($this->values_1['school_signup_num_accounts'])&&($this->values_1['school_signup_num_accounts']!='number of accounts')) echo "value='".$this->values_1['school_signup_num_accounts']."'"; 
+				 	   else echo "value='number of accounts' onblur='if(this.value==\"\")this.value=\"number of accounts\";$(\"#school_signup_num_accounts_hint\").html(\"\")' onfocus='if(this.value==\"number of accounts\")this.value=\"\";$(\"#school_signup_num_accounts_hint\").html(\"Number of accounts e.g. one account per class\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_num_accounts_hint'>
+                <?php if($this->response['result']==20) echo $this->response['detail']?>
+                </label>
+                <input id='school_signup_school_startdate' name='school_signup_school_startdate' type="text" size=128
+                 <?php if(($this->values_1['school_signup_school_startdate'])&&($this->values_1['school_signup_school_startdate']!='start date (dd-mm-yyyy)')) echo "value='".$this->values_1['school_signup_school_startdate']."'"; 
+				 	   else echo "value='start date (dd-mm-yyyy)' onblur='if(this.value==\"\")this.value=\"start date (dd-mm-yyyy)\";$(\"#school_signup_school_startdate_hint\").html(\"\")' onfocus='if(this.value==\"start date (dd-mm-yyyy)\")this.value=\"\";$(\"#school_signup_school_startdate_hint\").html(\"Start date (dd-mm-yyyy) for your subscription\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_school_startdate_hint'>
+                <?php if($this->response['result']==20) echo $this->response['detail']?>
+                </label>
+                
+                <input type='submit' id='school-signup-cancel' name='school-signup-cancel' value='Go back' style='width:180px'/>
+                <input type='submit' id='school-signup-submit-2' name='school-signup-submit-2' style='width:180px;margin-right: 25px; margin-top: -60px;'
+                <?php if($this->response['result']!=1) echo "value='Try Again'";
+					  else echo "value='Next'";?>
+                />
+                </form>
+                
+                <div class='school-signup-information'>
+        			<p class='school-signup-color'>Now some details about <span class="signup-bold">you </span>and how many <span class="signup-bold">teachers</span> will need to sign in</p>
+        		</div>
+            </div>
+          	<div>
+            	<form id='school-signup-form' name='signup-form' method="post" action='/auth/schoolsignup'>
+                <?php for($i = 1; $i <= $this->num_teachers; $i++) { ?>
+          		<input id='school_signup_teacher_name_<?php echo $i?>' name='school_signup_teacher_name_<?php echo $i?>' type="text" size=128
+                 <?php if(($this->values_2["school_signup_teacher_name_".$i.""])&&($this->values_2["school_signup_teacher_name_".$i.""]!='teacher '.$i.' name')) echo "value='".$this->values_2["school_signup_teacher_name_".$i.""]."'"; 
+				 	   else echo "value='teacher ".$i." name' onblur='if(this.value==\"\")this.value=\"teacher ".$i." name\"; else $(\"#school_signup_teacher_email_".$i."\").val(this.value+\"@".$this->school_domain."\");$(\"#school_signup_teacher_name_hint_".$i."\").html(\"\");$(\"#school_signup_teacher_password_".$i."\").val(\"".$this->password_suggestion."\");' onfocus='if(this.value==\"teacher ".$i." name\")this.value=\"\"; $(\"#school_signup_teacher_name_hint_".$i."\").html(\"Enter the teachers name\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_teacher_name_hint_<?php echo $i?>'>
+                <?php if($this->response['result']==30) echo $this->response['detail']?>
+                </label>
+          		<input id='school_signup_teacher_email_<?php echo $i?>' name='school_signup_teacher_email_<?php echo $i?>' type="text" size=128
+                 <?php if(($this->values_2["school_signup_teacher_email_".$i.""])&&($this->values_2["school_signup_teacher_email_".$i.""]!='teacher '.$i.' email')) echo "value='".$this->values_2["school_signup_teacher_email_".$i.""]."'"; 
+				 	   else echo "value='teacher ".$i." email' onblur='if(this.value==\"\")this.value=\"teacher ".$i." email\";$(\"#school_signup_teacher_email_hint_".$i."\").html(\"\")' onfocus='if(this.value==\"teacher ".$i." email\")this.value=\"\";$(\"#school_signup_teacher_email_hint_".$i."\").html(\"Suggested email address, amend as required\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_teacher_email_hint_<?php echo $i?>'>
+                <?php if(($this->response['result']==30)||($this->response['result']==30+$i)) echo $this->response['detail']?>
+                </label>
+                <!--<input id='school_signup_teacher_password_<?php echo $i?>' name='school_signup_teacher_password_<?php echo $i?>' type="text" size=128
+                 <?php if(($this->values_2["school_signup_teacher_password_".$i.""])&&($this->values_2["school_signup_teacher_password_".$i.""]!='teacher '.$i.' password')) echo "value='".$this->values_2["school_signup_teacher_password_".$i.""]."'"; 
+				 	   else echo "value='teacher ".$i." password' onblur='if(this.value==\"\")this.value=\"teacher ".$i." password\";$(\"#school_signup_teacher_password_hint_".$i."\").html(\"\")' onfocus='if(this.value==\"teacher ".$i." password\")this.value=\"\";$(\"#school_signup_teacher_password_hint_".$i."\").html(\"Suggested password, amend as required\")'";?>
+                      />
+                <label class='school-signup' id='school_signup_teacher_password_hint_<?php echo $i?>'>
+                <?php if($this->response['result']==30) echo $this->response['detail']?>
+                </label>-->
+                <?php }?>
+                <input type='submit' id='school-signup-cancel' name='school-signup-cancel' value='Go back' style='width:180px'/>
+                <input type='submit' id='school-signup-submit-3' name='school-signup-submit-3' style='width:180px;margin-right: 25px; margin-top: -60px;'
+                <?php if($this->response['result']!=1) echo "value='Try Again'";
+					  else echo "value='Next'";?>
+                />
+                </form>
+                <div class='school-signup-information'>
+        		<p class='school-signup-color'>Enter the required <span class="signup-bold">details</span> for all the <span class="school-signup-bold">teachers</span> who need an account</p>	
+        		</div>
+            </div>
+            <div>
+            	<form id='school-signup-form' name='signup-form' method="post" action='/auth/schoolsignup'>
+                <table cellpadding="20px" cellspacing="20px">
+                	<tr>
+                    	<th colspan="2">School Details</th>
+                    </tr>
+                	<tr>
+                    	<td width='200px'>School Name</td>
+                    	<td width='400px'><?php echo $this->values_0['school_signup_school_name']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>School Address</td>
+                    	<td width='400px'><?php echo $this->values_0['school_signup_school_address_1']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>School Address</td>
+                    	<td width='400px'><?php echo $this->values_0['school_signup_school_address_1']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>School Postcode</td>
+                    	<td width='400px'><?php echo $this->values_0['school_signup_school_postcode']?></td>
+                    </tr>
+                    <tr>
+                    	<td colspan=2><hr></td>
+                    </tr>
+                    <tr>
+                    	<th colspan="2">Additional Details</th>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>School Contact</td>
+                    	<td width='400px'><?php echo $this->values_1['school_signup_contact_name']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>School Contact Email</td>
+                    	<td width='400px'><?php echo $this->values_1['school_signup_contact_email']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>Number of Accounts</td>
+                    	<td width='400px'><?php echo $this->values_1['school_signup_num_accounts']?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>Subscription Start</td>
+                    	<td width='400px'><?php echo $this->values_1['school_signup_school_startdate']?></td>
+                    </tr>
+                    <tr>
+                    	<td colspan=2><hr></td>
+                    </tr>
+                    <tr>
+                    	<th colspan="2">Teacher Details</th>
+                    </tr>
+                    <?php for($i = 1; $i <= $this->num_teachers; $i++) { ?>
+                    <tr>
+                    	<th colspan="2">Teacher <?php echo $i?></th>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>Teacher's Name</td>
+                    	<td width='400px'><?php echo $this->values_2["school_signup_teacher_name_".$i.""]?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>Teacher's Email</td>
+                    	<td width='400px'><?php echo $this->values_2["school_signup_teacher_email_".$i.""]?></td>
+                    </tr>
+                    <tr>
+                    	<td width='200px'>Teacher's Password</td>
+                    	<td width='400px'><?php echo $this->values_2["school_signup_teacher_password_".$i.""]?></td>
+                    </tr>
+                    
+                    <?php }
+					?> 
+                </table>
+                <input type='submit' id='school-signup-cancel' name='school-signup-cancel' value='Go back' style='width:180px'/>
+                <input type='submit' id='school-signup-submit-4' name='school-signup-submit-4' style='width:180px;margin-right: 25px; margin-top: -60px;'
+                <?php if($this->response['result']!=1) echo "value='Try Again'";
+					  else echo "value='Sign up'";?>
+                />
+                </form>
+                <div id='startagain'>
+                	<a href='/auth/startagain?process=schoolsignup'>start again? click here to go back to the start</a>
+                </div>
+            </div>
+         </div>
+        
+    </div>
+</div>
+<script>
+var schoolSignUpTabs = $("ul.school-signup-tabs").tabs("div.school-signup-panes > div",
+					{initialIndex:<?php echo $tab_selected;?>,
+					 tabs:'img'
+					});
+$(document).ready(function() {
+	$("img.current").attr("src","/img/" + $("img.current").attr("id") + "-current.png");
+});
+function changeTabImage(currTab)
+{
+	$("img.current").attr("src","/img/" + $("img.current").attr("id") + ".png");
+	$(currTab).attr("src","/img/" + $(currTab).attr("id") + "-current.png");
+}
+</script>
+<?php if(($this->process == 2)||($this->process == 3)) {
+	echo "<script>
+	$('.school-signup-panes').css('height','".$form_height."px');
+	$('.school-signup-information').css('clear','both');
+	$('.school-signup-information').css('margin-top','-".$info_margin."px');
+	</script>";
+}
+
+?>

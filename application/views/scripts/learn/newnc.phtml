@@ -1,0 +1,88 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }
+$_GET['a'] = (isset($_GET['a']) ? $_GET['a'] : 0);
+?>
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_left_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->left_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->left_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->left_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->left_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="endorsements">
+                                    <table id="endorsements_content">
+                                        <tr>
+                                            <td valign="top">
+                                            <h3>PEplanning and the 2014 National Curriculum</h3>
+											<p>With PEplanning the transition from old to new curriculum is taken care of for you. Being an on-line service we are constantly updating the website with new resources and best practise guidance, the new curriculum is no exception. All resources on the website have been updated to reflect the new 2014 National Curriculum. </p>
+											<p>PEplanning provides detailed programmes of study that allow pupils to progress and achieve the aims set out in the new physical education curriculum. All units of work have been updated and linked to the new curriculum.</p>
+                                            <p>As always PEplanning is here to support schools and teachers in delivering high quality physical education experiences to their pupils. Our assessment tools allow you to track and record pupils progress in a quick and effective way, providing records of pupils attainment.</p>
+											<p>The 2014 Curriculum set out that children should be taught to:</p>
+                                            <h4>Key Stage 1</h4>
+                                            <ul>
+                                            <li>Master basic movements including running, jumping, throwing and catching, as well as developing balance, agility and co-ordination, and begin to apply these in a range of activities</li>
+                                            <li>Participate in team games, developing simple tactics for attacking and defending</li>
+                                            <li>Perform dances using simple movement patterns.</li>
+                                            </ul>
+                                            <h4>Key Stage 2</h4>
+                                            <ul>
+                                            <li>Use running, jumping, throwing and catching in isolation and in combination</li>
+                                            <li>Play competitive games, modified where appropriate [for example, badminton, basketball, cricket, football, hockey, netball, rounders and tennis], and apply basic principles suitable for attacking and defending</li>
+                                            <li>Develop flexibility, strength, technique, control and balance [for example, through athletics and gymnastics]</li>
+                                            <li>Perform dances using a range of movement patterns</li>
+                                            <li>Take part in outdoor and adventurous activity challenges both individually and within a team</li>
+                                            <li>Compare their performances with previous ones and demonstrate improvement to achieve their personal best</li>
+                                            </ul>
+                                            <p>PEplannings programmes of study have been designed to ensure pupils will develop the appropriate skills using a range of different sports as vehicles to teach them. Our sports themed approach to PE gives pupils a context they can relate to. Whilst our units are focussed on developing the skills set out in the curriculum, using sports such as hockey, cricket and gymnastics to deliver these skills helps engage and inspire pupils. It also gives teachers a frame of reference to work from.</p>
+                                            <p>As always if you would like any further information about PEplannings curriculum update or any other aspect of the service please don't hesitate to <a href="/contactus">contact us</a> </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php 
+
+if($_GET['a']) echo "<script type='text/javascript'>myToggle('#".$_GET['a']."')</script>";
+
+?>

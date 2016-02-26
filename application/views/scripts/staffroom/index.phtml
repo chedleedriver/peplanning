@@ -1,0 +1,698 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<!-- STAFFROOM CONTENT -->
+
+    <div id="staffroom_welcome">
+        <div id="staffroom_welcome_content">
+            <table width="100%">
+                <tr>
+                    <td width="70%" rowspan="2">
+                        <h1>Welcome to the Staffroom page <br>where you edit and print your lesson plans</h1>
+                    </td>
+                    <td width="30%" align="right" valign="center">
+                        <div id="staffroom_logo">
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td align="right" valign="center">
+                        <span class="staffroom_banner_small">Hi 
+                            <?php if ($this->level==0){?>
+                                <a href='javascript:void(0)'><b><?php echo $this->username?></b></a>, you are visiting</span>
+                            <?php } 
+                                elseif ($this->level==1) {?>
+                                <!--<a href='javascript:void(0)' onclick="javascript:editUser(<?php echo $this->id?>)"><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+1209600)-time())/86400)?> days.</span>-->
+                                <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/edituser'><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+1209600)-time())/86400)?> days.</span>
+                            <?php } 
+                                elseif ($this->level==4) {?>
+                                <!--<a href='javascript:void(0)' onclick="javascript:editUser(<?php echo $this->id?>)"><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+1209600)-time())/86400)?> days.</span>-->
+                                <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/edituser'><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?><br>Your Free subscription ends in <?php echo intval((($this->subscription+1209600)-time())/86400)?> days.</span>
+                            <?php } 
+                                elseif ($this->level==5) {?>
+                                <!--<a href='javascript:void(0)' onclick="javascript:editUser(<?php echo $this->id?>)"><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?></span>-->
+                                <a href='https://<?php echo $_SERVER['HTTP_HOST']?>/auth/edituser'><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?></span>
+                            <?php } 
+                                else {?>
+                                <a href='/admin'><b><?php echo $this->username?></b></a>, you are signed in<br>You last signed in <?php echo date("F dS, Y H:i",$this->last_login)?></span>
+                            <?php }?>
+                    </td>
+                  <tr>
+                    <td align="left" valign="middle">
+                        <div id="plan_info">
+                          <span  class="staffroom_banner_small">See our <a href="/learn/video">Video Page</a> for help on how to use the Staffroom</span>
+                        </div>
+                    </td>
+                  </tr>
+                    <tr>
+                        <td align="left" valign="middle">
+                        <?php if ($this->unit_count==0){?>
+                        <div id="plan_info">
+                            <span  class="staffroom_banner_small">You have 3 example plans saved and ready to work with.<br>Or click <a href="/createaplan">Plan a lesson</a> to create your own</span>
+                        </div>
+                        <?php } else {?>
+                        <div id="plan_info">
+                            <span  class="staffroom_banner_small">You have <?php echo $this->unit_count?> plans saved and ready to work with.</span>
+                        </div>
+                        <?php }?>
+                    </td>
+                    <td align="right" valign="middle">
+                        <?php if ($this->level==0){?>
+                            <span  class="staffroom_banner_small">already have a PEplanning account? <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/login">sign in</a></span> 
+                            <?php } 
+                            elseif ($this->level==4){?>
+                            <span  class="staffroom_banner_small">To subscribe in full or to find out more about the benefits of subscribing in full - click <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">here</a></span>
+                            <?php }?>
+                    </td>
+                    </tr>
+                </tr>
+            </table>
+        
+            </div>
+    </div>
+    <div id="staffroom">
+        <table class="stage">
+            <tr>
+                <td id="left_section" valign="top">
+                    <div class="mask">
+                    <div id="myplans_header"><span>select a plan</span></div>
+                    <div id="lesson-list" class="vertical">
+                        <div id="myplans_scroll" class="items mask">
+                            <?php $x=5; //separates scroll pages eg. 5 units per scroll page
+                               $y=0; //counts units
+                               $z=0; //counts units that are not in groups of 5
+                               $examples=array(9338,9337,9336);
+                               foreach($this->units as $unit){
+                                        if($this->curr_unit_id==$unit['id']){
+                                        $scroll_num=($y-$z)/5;
+                                        $init_title = $unit['description']; $init_lessons = $unit['id'];
+                                        $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        }
+                                        elseif($y==0){
+                                        $scroll_num=($y-$z)/5;
+                                        $init_title = $unit['description']; $init_lessons = $unit['id'];
+                                        $init_id = $unit['id'];$init_desc = $unit['description'];$init_level = $unit['level_id'];$init_topic = $unit['topic_id'];$init_numlessons = $unit['num_lessons'];
+                                        $init_params=array('unit-id'=>$unit['id'],'unit-level'=>$unit['level_id'],'unit-topic'=>$unit['topic_id'],'unit-numlessons'=>$unit['num_lessons']);
+                                        } $y++; //sets workspace to most recent plan
+                                        if(($x == 0)||($x==5)){?><div><?php }
+                                                
+                                            if(in_array($unit['id'], $examples)) echo "<div id='myplans_item_".$unit['id']."' class='item mask' style=\"background: url('/img/item_example.png')\">";
+                                            else echo "<div id='myplans_item_".$unit['id']."' class='item mask'>";
+                                            echo "<div id='myplans_item_item'><span class='item_title' onclick='javascript:getJQLessons(".$unit['id'].",\"".  htmlspecialchars($unit['description'],ENT_QUOTES)."\",".$unit['level_id'].",".$unit['topic_id'].",".$unit['num_lessons'].")'>".htmlspecialchars($unit['description'],ENT_QUOTES)."</span><br />";
+                                            echo "<span class='date'>".date('j M Y', strtotime($unit['date_created']))."</span><br /></div></div>";
+
+                                            $x--;
+                                            if($x==0){ $x=5; $z=0; ?></div><?php }else{$z++;};
+                                        }?>                                  
+                                        
+                        </div>
+                    </div>
+                   
+                    <?php if($z!=0){?></div><?php }?>
+                    <div id="sprite_bg_myplans_scroll">
+                        <div id="viewmore_up"><a class="prev"><span>VIEW MORE</span></a></div>
+                        <div id="viewback_down"><a class="next"><span>BACK</span></a></div>
+                    </div>
+                    </div>
+                </td>
+                <td id="left_section_spacing"></td>
+                <td id="middle_section" valign="top" class="vindent_middle"></td>
+                <td id="right_section" valign="top" class="vindent_right">
+                    <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                        </div>                   
+               </td>
+            </tr>
+        </table>
+    </div>
+<?php if(($this->level==4)&&(($this->reason>=1))||($this->reason=='plans')){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <?php if ($this->reason==2){?>
+        <div id="sub_message_header" class="overlay_header"><span>Welcome Back</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>You now have <?php echo intval((($this->subscription+2592000)-time())/86400)?> days of your free subscription remaining.</span></div>
+            <div id="sub_message_content">
+        
+                <h1> Welcome to PE Planning </h1>
+                <p>
+                  Thank you for creating a free Subscription account. You can now access all the services PEplanning has to offer. To see the range of services we offer have a look at our <a href='/learn/video'>video guides</a>. If you need any help getting started you can download our 'Guide to Using PEplanning' <a onclick="boxAction('userguide')">here</a>. You can also find out more about using PEplanning here - <a onclick="boxAction('staffroom')">How to use the stafrooom</a>
+                </p>
+                <p>
+                    If you have any problems or questions - <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">Get in touch</a>
+                </p>
+        <?php } elseif ($this->reason==3){?>
+        <div id="sub_message_header" class="overlay_header"><span>Welcome Back</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>You now have <?php echo intval((($this->subscription+2592000)-time())/86400)?> days of your free subscription remaining.</span></div>
+            <div id="sub_message_content">
+                 <table>
+                    <tr>
+                        <td width="40%" valign="top">
+                            <p>
+                                Hopefully you are getting to grips with PEplanning and both you and your class are enjoying your PE lessons. 
+                            </p>
+                            <p>
+                                If you have any questions about any aspect of our service please let us know - <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">Contact Us</a>
+                            </p>
+                            <p>
+                                T: 01535 644777
+                            </p>
+                            <p>
+                                E: <a href="mailto:info@peplanning.org.uk">info@peplanning.org.uk </a>
+                            </p>
+                        </td>
+                        <td width="10%"></td>
+                        <td width="50%" valign="top">
+                            <h1>
+                                Have you...
+                            </h1>
+                            <ul>
+                                <li>
+                                    Used our unique lesson planner
+                                </li>
+                                <li>
+                                    Looked at the assessment for learning options
+                                </li>
+                                <li>
+                                    Created your own bespoke lesson plans
+                                </li>
+                                <li>
+                                    Explored our range of sports
+                                </li>
+                                <li>
+                                    Looked at the 'Additional Resources'
+                                </li>
+                            </ul>
+                          <p>To find out more about these services watch our <a href='/learn/video'>video guides</a>.
+                        </td>
+                    </tr>
+                </table>
+         <?php } elseif ($this->reason=='plans') {
+         if ($this->level==4) {?>
+         <div id="sub_message_header" class="overlay_header"><span>Welcome Back</span></div>
+         <div id="sub_message_subheader" class="overlay_subheader"><span>You now have <?php echo intval((($this->subscription+2592000)-time())/86400)?> days of your free subscription remaining.</span></div>
+            <div id="sub_message_content">
+               <h1>10 Plans Created</h1>
+                <p>The PEplanning free subscription allows you to create 10 units of work to see how our service works and how we can support PE in your school.</p>
+                <p>As you have now created 10 units you...</p>
+                <ul>
+                                <li>
+                                    Can continue to access and teach these units
+                                </li>
+                                <li>
+                                    Are unable to create any further units
+                                </li>
+                                
+                            </ul>
+                <p>To continue to use PEplanning you need to become a subscribed user. To do this or find out more information visit our <a href="/auth/payment"> Payment Page </a></p>
+                <p>If you have any questions about any aspect of our service please let us know - <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">Contact Us</a></p>
+                <?php } else {
+                    ?>
+                <div id="sub_message_header" class="overlay_header"><span>Welcome Guest User</span></div>
+                <div id="sub_message_subheader" class="overlay_subheader"><span>&nbsp</span></div>
+                <div id="sub_message_content">
+                <h1>Too many plans</h1>
+                <p>As a guest user of PEplanning you are limited in the number of things you can do on the site</p>
+                <p>You have reached the limit for the number of plans you can create so now you can</p>
+                <ul>
+                                <li>
+                                    <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">Subscribe</a> to PEplanning for FREE and use it for 30 days
+                                </li>
+                                <li>
+                                    Continue to explore the site as a limited guest user
+                                </li>
+                                
+                            </ul>
+                <p>If you have any questions about any aspect of our service please let us know - <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">Contact Us</a></p>
+                 <?php }
+                 } else {?>
+                <div id="sub_message_header" class="overlay_header"><span>Welcome Back</span></div>
+                <div id="sub_message_subheader" class="overlay_subheader"><span>You now have <?php echo intval((($this->subscription+2592000)-time())/86400)?> days of your free subscription remaining.</span></div>
+                <div id="sub_message_content">
+                <p>PEplanning is a paid subscription service you can upgrade your account at anytime during your trial by visiting our <a href="/auth/payment"> Payment Page </a></p>
+                <p>If you upgrade your account at any point during your trial you’ll receive a 10% discount on your subscription cost.</p>
+                <p>If you have any questions about any aspect of our service please let us know - <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">Contact Us</a></p>
+                <?php }?>    
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="subscribed"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Subscription Successful</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Thank you for registering on the PEplanning website</span></div>
+            <div id="sub_message_content">
+                <h1>You have successfully created a PEplanning free subscription account</h1>
+                <p> This allows you to take an in-depth look at the range of resources we have to offer, including…</p>
+                <ul>
+                <li>Lesson planning</li>
+                <li>Assessment for learning</li>
+                <li>Additional resources</li>
+                </ul>
+                <p>Please take a moment to watch our series of <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/learn/video">video demonstrations</a> to help you make the most of the resources on the website.</p>
+                <p>If you have any question during your free subscription please don't hesitate to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us </a></p>
+                <p>Thank You</p>
+               
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if(($this->reason=="useredited")||($this->reason=="passwordchanged")){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Account Change Successful</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>You successfully made a change to your account with PE Planning</span></div>
+            <div id="sub_message_content">
+                <?php if($this->reason=="passwordchanged"){?>
+                <h1>Password change successful</h1>
+                <p>You have successfully changed your PEplanning password</p>
+                <?php } else {?>
+                <h1>You have changed your details</h1>
+                <?php }?>
+                <p> Further account details can be changed or updated at any time by clicking on your account name in the staffroom.</p>
+                <p></p>
+                   
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="feedback"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Feedback Successfully submitted</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Thanks for your time</span></div>
+            <div id="sub_message_content">
+                <h1>We hoped you enjoyed PEplanning</h1>
+                <p>Your feedback is very valuable in the on-going development of our service</p>
+                <p> We are sorry if you didn't feel the time was right for you to subscribe fully with us, however please come back and visit us again.</p>
+                <p></p>
+                   
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="payment"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Order Successfully Placed</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>&nbsp;</span></div>
+            <div id="sub_message_content">
+                <h1>Thank you for purchasing PEplanning</h1>
+                <p>We will now upgrade your account to full unlimited planning access</p>
+                <p>If you subscribed to PE School, an Account Registration Form has been emailed so you can create PEplanning accounts for all staff in your school at no extra cost.</p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>   
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="print_lesson_limit"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+    <?php if ($this->level==0) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Unable to Print Lesson Plan</span></div>
+            <div id="sub_message_content">
+                <h1>As you are a guest user you can only print the first lesson plan from any unit of work.</h1>
+                <p>If you would like to see more of PEplannings resources you can create a free subscription account – <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">click here</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>   
+            </div>
+    <?php } if ($this->level==1) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Your trial has ended</span></div>
+            <div id="sub_message_content">
+                <h1>As your trial has ended you can no longer print lesson plans</h1>
+                <p>If you wish to keep using our service you can <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">subscribe</a>. If you have any questions about subscribing feel free to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Alternatively if you have not had time to explore our full range of services please <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+     <?php }?>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="edit_lesson_limit"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <?php if ($this->level==0) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Unable to Edit Lesson Plan</span></div>
+            <div id="sub_message_content">
+                <h1>As you are a guest user you can only edit the first lesson plan from any unit of work.</h1>
+                <p>If you would like to see more of PEplannings resources you can create a free subscription account – <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">click here</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>   
+            </div>
+    <?php } if ($this->level==1) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Your trial has ended</span></div>
+            <div id="sub_message_content">
+                <h1>As your trial has ended you can no longer edit lesson plans</h1>
+                <p>If you wish to keep using our service you can <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">subscribe</a>. If you have any questions about subscribing feel free to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Alternatively if you have not had time to explore our full range of services please <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+     <?php }?>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="download"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <?php if ($this->level==0) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Unable to Access Additional Resources</span></div>
+            <div id="sub_message_content">
+                <h1>As you are a guest user you are unable to download any of the Additional Resources.</h1>
+                <p>If you would like to see more of PEplannings resources you can create a free subscription account – <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">click here</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>   
+            </div>
+    <?php } if ($this->level==1) {?>
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Your trial has ended</span></div>
+            <div id="sub_message_content">
+                <h1>As your trial has ended you can no longer access the Additional Resources</h1>
+                <p>For you and all staff in your school to have unlimited access to our resources from just £100 per school per year, <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">click here</a>. </p>
+                <p>Alternatively if you have not had time to explore our full range of services please <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+     <?php }?>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if($this->reason=="registered"){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Account Restriction in Place</span></div>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Your trial has ended</span></div>
+            <div id="sub_message_content">
+                <h1>Your PEplanning 30 day free subscription has come to an end.</h1>
+                <p>For you and all staff in your school to have unlimited access to our planning service from just £100 per school per year, <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">click here</a>. </p>
+                <p>Alternatively if you have not had time to explore our full range of services please <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+<?php if(($this->reason=="emailunsubscribed")||($this->reason=="emailnotunsubscribed")||($this->reason=="alreadyemailunsubscribed")){?>
+<div id="sub_message_div">
+<!-- user input dialog -->
+<div id="sub_message_content" class="overlay_content">
+        <div id="sub_message_header" class="overlay_header"><span>Email Removal Request</span></div>
+        <?php if($this->reason=="emailunsubscribed"){?>
+        <div id="sub_message_subheader" class="overlay_subheader"><span>Your request was successful!</span></div>
+			<div id="sub_message_content">
+                <h1>You will no longer receive emails from us.</h1>
+                <p>You can still have unlimited access to our planning service from just £100 per school per year simply <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">click here</a>. </p>
+                <p>If you have any questions about our range of services please <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a></p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+		<?php }?>
+        <?php if($this->reason=="emailnotunsubscribed"){?>
+        	<div id="sub_message_subheader" class="overlay_subheader"><span>Your request was not successful!</span></div>
+            <div id="sub_message_content">
+                <h1>You will continue to receive emails from us.</h1>
+                <p>Please feel free to try again or if you would prefer to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a> please use the link provided</p>
+                <p>You can still have unlimited access to our planning service from just £100 per school per year, simply <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">click here</a>. </p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+        <?php }?>
+        <?php if($this->reason=="alreadyemailunsubscribed"){?>
+        	<div id="sub_message_subheader" class="overlay_subheader"><span>Your have already requested this!</span></div>
+            <div id="sub_message_content">
+                <h1>You are already configured to not receive emails from us.</h1>
+                <p>If you would like to talk to us then please follow this link to <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/contactus">contact us</a> </p>
+                <p>You can still have unlimited access to our planning service from just £100 per school per year, simply <a href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/payment">click here</a>. </p>
+                <p>Thank you</p>
+                <p>The PEplanning Team</p>    
+            </div>
+        <?php }?>
+        <div id="sub_message_footer" class="overlay_footer"></div>
+        <div id="sub_message_buttons">
+            <div id="button_ok"><a href="javascript:void(0)" onclick="javascript:closeIt('sub_message_div');"><div>OK</div></a></div>
+        </div>
+    </div>
+</div>
+<script>
+    var signin = $("#sub_message_div").overlay({
+  mask: {
+    color: '#ffffff',
+    loadSpeed: 200,
+    opacity: 0.5
+  },
+        closeOnClick: false,
+        onLoad: function () {
+            $("body").css("overflow", "hidden");
+        },
+        onClose: function () {
+                $("body").css("overflow", "");
+        }
+        });
+        $("#sub_message_div").overlay().load();
+    
+</script>
+<?php }?>
+
+<script>
+$(document).ready(function() {
+    // initialize scrollable with mousewheel support
+    $("#lesson-list").scrollable({ vertical: true, mousewheel: false });
+     $("#lesson-list").data("scrollable").seekTo(<?php echo $scroll_num?>);
+});
+getJQLessons(<?php echo $init_id.",\"".$init_desc."\",".$init_level.",".$init_topic.",".$init_numlessons.",".$scroll_num?>);
+</script>

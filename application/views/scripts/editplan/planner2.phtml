@@ -1,0 +1,132 @@
+<div class="editplan-wrapper">
+	<div id="pageTopic" class="s-page topic-list">
+    	<h2 class="page-title">Topic List</h2>
+        	<ul>
+		  	<?php // take the topics from the controller and list them
+				$i=1;
+				$c=1;
+				foreach($this->topics as $topic)
+				{ 
+		  			echo "<li class='sub-tile tile-tiny tile-topic slideTextUp'><div><a href='#' onclick='selectPlanOption(\"Topic\",\"".$topic['id']."\")'>".$topic['name']."</a></div><div><a href='#' onclick='selectPlanOption(\"Topic\",\"".$topic['id']."\")'>".$topic['description']."</a></div></li>";
+					$i++;
+					$c++;
+					if($c==4) $c=1;
+				}
+		   ?>			
+		  	</ul>
+    	<div class="close-button s-close-button">x</div>
+  	</div>
+  	<div id="pageTheme" class="s-page theme-page">
+    	<div class="page-content">
+      		<h2 class="page-title">Select Theme</h2>
+            <ul>
+      			<li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','throwing')">Throwing</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','throwing')">Something about Throwing</a></div>
+                </li>
+                <li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','catching')">Catching</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','catching')">Something about Catching</a></div>
+                </li>
+                <li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','passing')">Passing</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','passing')">Something about Passing</a></div>
+                </li>
+                <li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','dribbling')">Dribbling</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','dribbling')">Something about Dribbling</a></div>
+                </li>
+            	<li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','shooting')">Shooting</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','shooting')">Something about Shooting</a></div>
+                </li>
+                <li class="sub-tile tile-tiny tile-theme slideTextUp">
+                <div>
+                <a href=# onclick="selectPlanOption('Theme','running')">Running</a>
+                </div>
+                <div><a href=# onclick="selectPlanOption('Theme','running')">Something about Running</a></div>
+                </li>
+            </ul>   
+    	</div>
+    	<div class="close-button s-close-button">x</div>
+  	</div>
+  	<div id="pageYear" class="s-page year-page">
+    	<div class="page-content">
+      		<h2 class="page-title">Select Year</h2>
+            <ul>
+      			<li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',1)">Year 1</a>
+                </li>
+                <li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',3)">Year 3</a>
+                </li>
+            	<li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',5)">Year 5</a>
+                </li>
+                <li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',2)">Year 2</a>
+                </li>
+            	<li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',4)">Year 4</a>
+                </li>
+                <li class="sub-tile tile-tiny tile-year">
+                <a href=# onclick="selectPlanOption('Year',6)">Year 6</a>
+                </li>
+            </ul>   
+    	</div>
+        <div class="close-button s-close-button">x</div>
+    </div>
+    <div class="dashboard clearfix">
+    <ul class="tiles">
+      <div class="col1 clearfix">
+        <li class="tile tile-2xbig tile-1 slideTextUp" data-page-type="s-page" data-page-name="year-page">
+		      <div id="planYear">
+        <?php if($this->planYear) echo "<p>Year ".$this->planYear."</p>"; else echo "<p>Select<br>Year</p>"; ?>    
+              </div>
+              <div>
+                  <p>Click to change the year group</p>
+              </div>
+        </li>
+      </div>
+      <div class="col2 clearfix">
+      	<li class="tile tile-2xbig tile-2 slideTextUp" data-page-type="s-page" data-page-name ="topic-list">
+          		<div id="planTopic">
+        <?php if($this->planTopic) echo "<p>".$this->planTopic."</p>"; else echo "<p>Select<br>Topic</p>"; ?>        
+                </div>
+          		<div>
+          			<p>Click to change the sport for your plan</p>
+          		</div>
+        </li>
+      </div>  
+      <div class="col3 clearfix">
+      	<li class="tile tile-2xbig tile-3 slideTextUp" data-page-type="s-page" data-page-name="theme-page">
+          		<div id="planTheme">
+        <?php if($this->planTheme) echo "<p>".$this->planTheme."</p>"; else echo "<p>Select<br>Theme</p>"; ?>        
+                </div>
+          		<div>
+          			<p>
+            			Click to change the theme for your plan
+            		</p>
+          		</div>
+        </li>
+      </div>
+	</ul>
+    </div>
+    <div id="goPlan" class="multicol">
+    	<div id="goPlanCaption">
+       <?php if($this->planStatus=="Steady") echo "<p>".$this->planStatus."</p>"; elseif($this->planStatus=="Go!") echo "<a href=# onclick='makePlan()'>Go!</a>"; else echo "<p>Ready</p>";?>
+        </div>
+    <input id="numSelections" type="hidden" value="<?php echo $this->num_selections ?>" />
+    </div>
+</div>
+    

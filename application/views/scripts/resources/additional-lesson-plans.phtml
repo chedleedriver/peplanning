@@ -1,0 +1,108 @@
+<?php if($_SERVER['HTTP_HOST'] == 'www.peplanning.org.uk') {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31237723-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php }?>
+<div id="resources">
+        <table id="resources_table" class="stage" border="0">
+            <tr>
+                <td colspan="3">
+                    <div class="resources_backto_staffroom"><a href="/resources"><span>back to Additional Resources</span></a></div>
+                    <div id="resources_title" align="left">
+                        <div id="resources_img_title_add_lesson_plans"><span></span></div>
+                        <div id="resources_subtitle"><span><p>Our additional national curriculum linked lesson plans are available to compliment our lesson planning service. We understand the importance of delivering a broad and engaging PE curriculum that includes a range of different sports. We are committed to making all sports available via our ‘Plan a lesson’ service, but the process of creating and testing new sports is a time consuming one. We have therefore made a range of set lesson plans available via this ‘Additional Lesson Plans’ area to support you in delivering different sports to your pupils.</p>
+                                                           <p>We will continue to introduce and create new sports in our usual way. Once a sports that is available via our ‘Plan a lesson’ function it will be removed from additional resources and you will be able to plan and create you own lessons in that sport.</p></span></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="resources_left_section" valign="top">
+                    <a id="resources_img_basketball" class="resources_img_display" href="/resources/basketball"><span></span></a>
+                    <a id="resources_img_volleyball" class="resources_img_display" href="/resources/volleyball"</a>
+                    <a id="resources_img_festivals_netball" class="resources_img_display" href="/resources/netball"</a>
+                    <a id="resources_img_handball" class="resources_img_display" href="/resources/handball"</a>
+                    <a id="resources_img_foundation" class="resources_img_display" href="/resources/workingwithothers"</a>
+                    <a id="resources_img_foundation" class="resources_img_display" href="/resources/throwingandcatching"</a>
+                    <a id="resources_img_foundation" class="resources_img_display" href="/resources/funandgames"</a>
+                    <a id="resources_img_tagrugby" class="resources_img_display" href="/resources/tagrugby"</a>
+                    <a id="resources_img_tennis" class="resources_img_display" href="/resources/tennis"</a>
+                    <!--<a id="resources_img_rugby" class="resources_img_display" href="#"</a>
+                    <a id="resources_img_golf" class="resources_img_display" href="#"</a>-->
+                    
+                    
+                    
+                </td>
+                <td id="left_section_spacing"></td>
+                <td id="middle_section" valign="top">
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/basketball">Basketball</a></span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/basketball">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle"><a href="/resources/volleyball">Volleyball</a></span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/volleyball">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Netball</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/netball">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Handball</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/handball">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Foundation - Working With Others</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/workingwithothers">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Foundation - Throwing And Catching</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/throwingandcatching">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Foundation - Fun And Games</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/funandgames">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Rugby</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/tagrugby">View resource</a></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Tennis</span></p>
+                        <span class="resources_midsection_desc"><a href="/resources/tennis">View resource</a></span>
+                    </div>
+                    <!--<div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Rugby</span></p>
+                        <span class="resources_midsection_desc"><p>Available Early 2014</p></span>
+                    </div>
+                    <div class="resources_mydisplay">
+                        <p><span class="resources_midsection_subtitle">Tri-Golf</span></p>
+                        <span class="resources_midsection_desc"><p>Available Spring 2014</p></span>
+                    </div>-->
+                    
+                    
+                </td>
+                <td id="resources_right_section" valign="top" class="vindent_right" rowspan="0">
+                    <div id="my_boxes">
+                            <?php for($i=1;$i<=$this->num_right_boxes;$i++){?>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]?>" class="promobox">
+                                <div class="box_content">
+                                    <div id="<?php echo "box_".$this->right_box_title[$i]."_content"?>">
+                                    </div>
+                                </div>
+                            <div id="<?php echo "box_".$this->right_box_title[$i]."_title"?>" class="promotitle"><a onclick="boxAction('<?php echo  $this->right_box_title[$i]?>')" class="box_link"><span>learn more about the <?php echo $this->right_box_title[$i]?></span></a></div>
+                            </div>
+                            <?php }?>
+                    </div>
+               </td>
+            </tr>
+        </table>
+    </div>
+    <div id="status_bar" style="display:none;"></div>

@@ -1,0 +1,11 @@
+<br /><br />
+<div id="view-content">
+	<?php foreach($this->topics as $topic) : 
+            echo $this->escape($topic->id)." - ";
+            echo $this->escape($topic->name)." - ";
+            echo $this->escape($topic->genre)." - ";
+            echo $this->escape($topic->status)." - ";
+            echo $this->escape($topic->description)."<br>";
+            endforeach;
+            ?>
+</div>

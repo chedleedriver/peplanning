@@ -1,0 +1,42 @@
+<div class="learn_content">
+            <table>
+                <tr>
+                    <td id="left_section" valign="top">
+                        
+                    </td>
+                    <td valign="top" id="learn_text" style="margin-left:20px;">
+                        <div id="content">
+                            <div id="learn_content">
+                                <div id="activate">
+                                    <table id="activate_content">
+                                        <tr>
+                                            <td valign="top">
+                                                <div>
+                                                    <?php if($this->activated==1){?>
+                                                    <h2>Congratulations - your activation was successful, welcome to PE Planning</h2>
+        
+                                                    <h2>You will now be taken to the 'Create a Plan' page to start using PE Planning...</h2>
+                                                    <?php }elseif($this->activated==2) {?>
+                                                    <h2>This is the activation page. You need to <a style="font-size:24px;" href="https://<?php echo $_SERVER['HTTP_HOST']?>/auth/subscribe">subscribe</a> to receive an activation key</h2>
+                                                    <?php }elseif($this->activated==3) {?>
+                                                    <h2>This is the activation page. You are already activated and signed in</h2>
+                                                    <?php }else{?>
+                                                    <h2>There was a problem with your activation</h2>
+                                                    <?php }?>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                       </div>
+                    </td>
+                    <td id="right_section" valign="top">
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php if($this->activated==1){?>
+<META http-equiv="refresh" content="5;URL=http://<?php echo $_SERVER['HTTP_HOST']?>/createaplan">
+<?php }?>
